@@ -1,3 +1,5 @@
-import {people} from "../data";import {SiteHeader} from "../components/SiteHeader";import {SiteFooter} from "../components/SiteFooter";
-const categories=["All disciplines","Arts & culture","Leadership","Science","Sport"];
-export default function PeoplePage(){return <main><SiteHeader active="people"/><section className="people-hero"><div><p className="eyebrow"><span/>People of the world</p><h1>Lives that<br/><em>left a mark.</em></h1></div><p>Meet the artists, thinkers, leaders, athletes and builders whose work changed how the world sees itself.</p></section><section className="people-section"><div className="category-line">{categories.map((x,i)=><span className={i===0?"selected":""} key={x}>{x}</span>)}</div><div className="people-grid">{people.map((p,i)=><article className="people-card" key={p.name}><div className="people-portrait" style={{background:p.tone}}><span>{p.initials}</span><small>{String(i+1).padStart(2,'0')}</small></div><div><small>{p.role} · {p.country}</small><h2>{p.name}</h2><p>{p.years}</p><span>Read the story →</span></div></article>)}</div><div className="people-quote"><small>From the archive</small><blockquote>“People are not just part of a country’s story. Very often, they are the way that story travels.”</blockquote><span>TerraScope editorial principle · 2026</span></div></section><SiteFooter/></main>}
+import {SiteHeader} from "../components/SiteHeader";
+import {SiteFooter} from "../components/SiteFooter";
+import FootballArchive from "./FootballArchive";
+
+export default function PeoplePage(){return <main className="football-people-page"><SiteHeader active="people"/><FootballArchive/><SiteFooter/></main>}

@@ -13,7 +13,7 @@ export function countrySlug(name: string) {
     .toLowerCase()
     .replace(/&/g, "and")
     .replace(/[^a-z0-9]+/g, "-")
-    .replace(/(^-|$)/g, "");
+    .replace(/(^-|-$)/g, "");
 }
 
 export function formatArea(area: number) {
