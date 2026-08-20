@@ -5,6 +5,11 @@ import Link from "next/link";
 import worldMap from "@svg-maps/world";
 import {atlasCountries, atlasRegions, regionColours, type AtlasRegion} from "../atlas-data";
 
+type WorldMapLocation = {
+  id: string;
+  path: string;
+};
+
 function validRegion(value?: string): AtlasRegion {
   return atlasRegions.includes(value as AtlasRegion) ? value as AtlasRegion : "All";
 }
@@ -41,7 +46,7 @@ export function WorldAtlas({initialRegion = "All", compact = false}:{initialRegi
       <div className="atlas-map-wrap">
         <svg viewBox={worldMap.viewBox} role="img" aria-labelledby="world-map-title">
           <title id="world-map-title">World map with selectable sovereign countries</title>
-          {worldMap.locations.map((location) => {
+          {worldMap.locations.map((location: WorldMapLocation) => {
             const country = byMapId.get(location.id);
             if (!country) return <path className="map-territory" key={location.id} d={location.path} />;
             const activeRegion = region === "All" || country.region === region;
