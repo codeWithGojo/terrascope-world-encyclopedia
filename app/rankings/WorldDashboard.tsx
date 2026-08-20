@@ -5,6 +5,11 @@ import Link from "next/link";
 import worldMap from "@svg-maps/world";
 import {atlasByCode, atlasCountries} from "../atlas-data";
 
+type WorldMapLocation = {
+  id: string;
+  path: string;
+};
+
 type Lens = "population" | "area" | "trending";
 
 const population = [
@@ -84,7 +89,7 @@ export default function WorldDashboard({children}:{children?:ReactNode}) {
         <div className="dashboard-map">
           <svg viewBox={worldMap.viewBox} role="img" aria-label="World map with featured TerraScope country profiles">
             <defs><pattern id="mapDots" width="4.8" height="4.8" patternUnits="userSpaceOnUse"><circle cx="1.4" cy="1.4" r="1.05" fill="#4a4a4f"/></pattern></defs>
-            {worldMap.locations.map((location)=>{
+            {worldMap.locations.map((location: WorldMapLocation)=>{
               const country=byMapId.get(location.id);
               return <path key={location.id} d={location.path} className={country?"dashboard-country":"dashboard-territory"}/>;
             })}
