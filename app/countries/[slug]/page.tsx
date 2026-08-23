@@ -4,6 +4,7 @@ import {atlasBySlug, atlasCountries, regionColours, type AtlasCountry} from "../
 import {footballProfiles, nigeriaFieldNotes, notableRoles, type FootballProfile} from "../../editorial-data";
 import {SiteHeader} from "../../components/SiteHeader";
 import {SiteFooter} from "../../components/SiteFooter";
+import {getLeader} from "../../leaders";
 
 export function generateStaticParams() { return atlasCountries.map((country) => ({slug: country.slug})); }
 
@@ -41,6 +42,10 @@ export default async function CountryPage({params}:{params: Promise<{slug: strin
   const editorial = country.editorial;
   const colour = editorial?.color ?? regionColours[country.region];
   const football = footballProfiles[country.code] ?? fallbackFootball(country);
+  const leader = editorial
+    ? { leader: editorial.leader, leaderTitle: editorial.leaderTitle, government: editorial.government, since: undefined as string | undefined }
+    : getLeader(country.code);
+  const dataQuality = editorial ? "full" : leader ? "core-plus" : "core";
   const notes = country.code === "NG" ? nigeriaFieldNotes : generatedNotes(country);
   const summary = editorial?.summary ?? `${country.name} is a sovereign state in ${country.subregion}. This profile connects its political geography, language, currency, borders and national football record to TerraScope’s complete world index.`;
   const essentialFacts = editorial ? [
@@ -53,7 +58,7 @@ export default async function CountryPage({params}:{params: Promise<{slug: strin
     <SiteHeader active="countries"/>
     <section className="profile-hero" style={{"--country": colour} as React.CSSProperties}>
       <div className="profile-breadcrumb"><Link href="/countries">195 countries</Link><span>→</span><Link href={`/countries?region=${country.region}`}>{country.region}</Link><span>→</span><b>{country.name}</b></div>
-      <div className="profile-title"><div><p>{country.official}</p><h1>{country.name}</h1><span>{country.subregion} · {country.code} / {country.cca3}</span></div><div className="profile-flag">{country.flag}</div></div>
+      <div className="profile-title"><div><p>{country.official}</p><h1>{country.name}</h1><span>{country.subregion} · {country.code} / {country.cca3}</span><span className={`data-quality data-quality--${dataQuality}`}>{dataQuality === "full" ? "Full editorial profile" : dataQuality === "core-plus" ? "Core + leadership record" : "Core geographic record"}</span></div><div className="profile-flag">{country.flag}</div></div>
       <p className="profile-summary">{summary}</p>
       <div className="profile-quick"><div><small>Capital</small><b>{country.capital}</b></div><div><small>{editorial ? "Population" : "Continent"}</small><b>{editorial?.populationLabel ?? country.region}</b></div><div><small>Land area</small><b>{country.areaLabel}</b></div><div><small>Football confederation</small><b>{football.confederation}</b></div></div>
     </section>
@@ -65,7 +70,7 @@ export default async function CountryPage({params}:{params: Promise<{slug: strin
 
         <section id="story" className="profile-section country-story"><p className="eyebrow"><span/>Beyond the quick facts</p><h2>{country.name}<br/><em>in depth.</em></h2><div className="story-grid">{notes.map((note, index) => <article key={note.title}><span>{String(index + 1).padStart(2, "0")}</span><h3>{note.title}</h3><p>{note.text}</p></article>)}</div></section>
 
-        <section id="government" className="profile-section"><p className="eyebrow"><span/>Leadership & state</p><h2>Government.</h2>{editorial ? <div className="leader-panel"><div className="leader-monogram">{editorial.leader.split(" ").map((name) => name[0]).slice(0, 2).join("")}</div><div><small>{editorial.leaderTitle} · current editorial record</small><h3>{editorial.leader}</h3><p>{editorial.government}</p></div></div> : <div className="government-record"><span>{country.code}</span><div><small>Core state record</small><h3>{country.official}</h3><p>This complete-index profile currently carries verified geographic data. Current political leadership is maintained in the extended editorial records because office-holders require continuous date-stamped verification.</p></div></div>}</section>
+        <section id="government" className="profile-section"><p className="eyebrow"><span/>Leadership & state</p><h2>Government.</h2>{leader ? <div className="leader-panel"><div className="leader-monogram">{leader.leader.split(/[\s/·]+/).filter(Boolean).map((name) => name[0]).slice(0, 2).join("").toUpperCase()}</div><div><small>{leader.leaderTitle}{leader.since ? ` · since ${leader.since}` : " · current record"}</small><h3>{leader.leader}</h3><p>{leader.government}</p></div></div> : <div className="government-record"><span>{country.code}</span><div><small>Core state record</small><h3>{country.official}</h3><p>This complete-index profile currently carries verified geographic data. Current political leadership is maintained in the extended editorial records because office-holders require continuous date-stamped verification.</p></div></div>}</section>
 
         {editorial && <section id="places" className="profile-section"><p className="eyebrow"><span/>Cities & landmarks</p><h2>Places.</h2><div className="place-columns"><div><small>Major cities</small>{editorial.cities.map((place, index) => <p key={place}><b>0{index + 1}</b>{place}</p>)}</div><div><small>Landmarks</small>{editorial.landmarks.map((place, index) => <p key={place}><b>0{index + 1}</b>{place}</p>)}</div></div></section>}
 
