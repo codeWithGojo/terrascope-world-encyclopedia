@@ -47,10 +47,21 @@ export type AtlasCountry = {
 
 const sovereignSet = new Set(["VA", "PS"]);
 
+/** Overrides for countries whose world-countries currency data is outdated or corrupted. */
+const currencyOverrides: Record<string, { labels: string[]; codes: string[] }> = {
+  // Zimbabwe: package still lists the old multi-currency basket (BWP, CNY, EUR…).
+  // Official currency since 2024 is Zimbabwe Gold (ZiG); USD remains widely used.
+  ZW: {
+    labels: ["Zimbabwe Gold (ZiG)", "United States dollar ($)"],
+    codes: ["ZWG", "USD"],
+  },
+};
+
 export const atlasCountries: AtlasCountry[] = worldCountries
   .filter((country) => country.unMember || sovereignSet.has(country.cca2))
   .map((country) => {
     const editorial = editorialByCode.get(country.cca2);
+    const override = currencyOverrides[country.cca2];
     const currencyEntries = Object.entries(country.currencies ?? {});
     const callingSuffix = country.idd.suffixes?.[0] ?? "";
     return {
@@ -65,8 +76,10 @@ export const atlasCountries: AtlasCountry[] = worldCountries
       capital: editorial?.capital ?? country.capital?.join(" · ") ?? "No official capital",
       area: country.area,
       areaLabel: editorial?.areaLabel ?? formatArea(country.area),
-      currencies: currencyEntries.map(([, currency]) => `${currency.name}${currency.symbol ? ` (${currency.symbol})` : ""}`),
-      currencyCodes: currencyEntries.map(([code]) => code),
+      currencies: override
+        ? override.labels
+        : currencyEntries.map(([, currency]) => `${currency.name}${currency.symbol ? ` (${currency.symbol})` : ""}`),
+      currencyCodes: override ? override.codes : currencyEntries.map(([code]) => code),
       languages: Object.values(country.languages ?? {}),
       calling: editorial?.calling ?? (`${country.idd.root ?? ""}${callingSuffix}` || "—"),
       tld: country.tld?.join(" · ") || "—",
