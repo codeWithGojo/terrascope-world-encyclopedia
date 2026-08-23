@@ -16,7 +16,7 @@ function Header() {
         <span className="brand-mark">T</span><span>TerraScope</span>
       </Link>
       <nav className="main-nav" aria-label="Main navigation">
-        <Link href="/countries">Countries</Link><Link href="/compare">Compare</Link><Link href="/rankings">Rankings</Link><Link href="/people">People</Link>
+        <Link href="/countries">Countries</Link><Link href="/compare">Compare</Link><Link href="/rankings">Rankings</Link><Link href="/people">Football Archive</Link>
       </nav>
       <Link className="nav-action" href="/countries">Open the atlas <span>↗</span></Link>
     </header>
