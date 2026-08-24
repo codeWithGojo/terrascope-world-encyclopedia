@@ -9,12 +9,12 @@ const positions:("All positions"|FootballPosition)[]=["All positions","Forward",
 const countryAliases:Record<string,string>={England:"united-kingdom","Northern Ireland":"united-kingdom","Soviet Union":"russia","Argentina · Spain":"argentina"};
 const slug=(country:string)=>countryAliases[country]??country.toLowerCase().normalize("NFD").replace(/[\u0300-\u036f]/g,"").replace(/[^a-z0-9]+/g,"-").replace(/(^-|-$)/g,"");
 
-export default function FootballArchive(){
-  const [query,setQuery]=useState("");
+export default function FootballArchive({initialQuery=""}:{initialQuery?:string}){
+  const [query,setQuery]=useState(initialQuery);
   const [era,setEra]=useState<(typeof eras)[number]>("All eras");
   const [position,setPosition]=useState<(typeof positions)[number]>("All positions");
   const [country,setCountry]=useState("All nations");
-  const [selected,setSelected]=useState<FootballPerson|null>(footballPeople[0]);
+  const [selected,setSelected]=useState<FootballPerson|null>(null);
   const [shortlist,setShortlist]=useState<string[]>([]);
   const countries=useMemo(()=>["All nations",...Array.from(new Set(footballPeople.map((person)=>person.country))).sort()],[]);
   const filtered=useMemo(()=>footballPeople.filter((person)=>{

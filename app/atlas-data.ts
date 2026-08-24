@@ -1,5 +1,8 @@
 import worldCountries from "world-countries";
+import {getCountry as getTimezoneCountry} from "countries-and-timezones";
 import {countries as editorialCountries, type Country} from "./data";
+import {curatedFactsByCode} from "./country-content";
+import {populationByCode, type PopulationRecord} from "./population-data";
 
 export const atlasRegions = ["All", "Africa", "Americas", "Asia", "Europe", "Oceania"] as const;
 export type AtlasRegion = (typeof atlasRegions)[number];
@@ -34,6 +37,13 @@ export type AtlasCountry = {
   capital: string;
   area: number;
   areaLabel: string;
+  population: number;
+  populationLabel: string;
+  populationYear: number;
+  populationSource: PopulationRecord["source"];
+  populationRank: number;
+  areaRank: number;
+  density: number;
   currencies: string[];
   currencyCodes: string[];
   languages: string[];
@@ -42,29 +52,40 @@ export type AtlasCountry = {
   demonym: string;
   landlocked: boolean;
   borders: string[];
+  timezones: string[];
+  carSide: "left" | "right";
+  latitude: number;
+  longitude: number;
+  mapUrl: string;
+  interestingFacts: string[];
+  factsStatus: "curated" | "atlas-verified";
   editorial?: Country;
 };
 
 const sovereignSet = new Set(["VA", "PS"]);
-
-/** Overrides for countries whose world-countries currency data is outdated or corrupted. */
-const currencyOverrides: Record<string, { labels: string[]; codes: string[] }> = {
-  // Zimbabwe: package still lists the old multi-currency basket (BWP, CNY, EUR…).
-  // Official currency since 2024 is Zimbabwe Gold (ZiG); USD remains widely used.
-  ZW: {
-    labels: ["Zimbabwe Gold (ZiG)", "United States dollar ($)"],
-    codes: ["ZWG", "USD"],
-  },
+const sovereignCountries = worldCountries.filter((country) => country.unMember || sovereignSet.has(country.cca2));
+const populationRankByCode = new Map([...sovereignCountries].sort((a,b)=>populationByCode[b.cca2].value-populationByCode[a.cca2].value).map((country,index)=>[country.cca2,index+1]));
+const areaRankByCode = new Map([...sovereignCountries].sort((a,b)=>b.area-a.area).map((country,index)=>[country.cca2,index+1]));
+const leftDrivingCodes = new Set(["AG","AU","BS","BD","BB","BT","BW","BN","CY","DM","SZ","FJ","GD","GY","IN","ID","IE","JM","JP","KE","KI","LS","MW","MY","MV","MT","MU","MZ","NA","NR","NP","NZ","PK","PG","KN","LC","VC","WS","SC","SG","SB","ZA","LK","SR","TZ","TH","TL","TO","TT","TV","UG","GB","ZM","ZW"]);
+const currencyOverrides:Record<string,{labels:string[];codes:string[]}>= {
+  ZW:{labels:["Zimbabwe Gold (ZiG)","United States dollar ($)"],codes:["ZWG","USD"]},
 };
 
-export const atlasCountries: AtlasCountry[] = worldCountries
-  .filter((country) => country.unMember || sovereignSet.has(country.cca2))
+function formatPopulation(population:number){
+  if(population>=1_000_000_000)return `${(population/1_000_000_000).toFixed(2)} billion`;
+  if(population>=1_000_000)return `${(population/1_000_000).toFixed(1)} million`;
+  return population.toLocaleString("en-US");
+}
+
+export const atlasCountries: AtlasCountry[] = sovereignCountries
   .map((country) => {
     const editorial = editorialByCode.get(country.cca2);
-    const override = currencyOverrides[country.cca2];
+    const populationRecord = populationByCode[country.cca2];
+    const timezoneRecord = getTimezoneCountry(country.cca2);
+    const currencyOverride = currencyOverrides[country.cca2];
     const currencyEntries = Object.entries(country.currencies ?? {});
     const callingSuffix = country.idd.suffixes?.[0] ?? "";
-    return {
+    const base = {
       code: country.cca2,
       cca3: country.cca3,
       slug: editorial?.slug ?? countrySlug(country.name.common),
@@ -76,17 +97,44 @@ export const atlasCountries: AtlasCountry[] = worldCountries
       capital: editorial?.capital ?? country.capital?.join(" · ") ?? "No official capital",
       area: country.area,
       areaLabel: editorial?.areaLabel ?? formatArea(country.area),
-      currencies: override
-        ? override.labels
-        : currencyEntries.map(([, currency]) => `${currency.name}${currency.symbol ? ` (${currency.symbol})` : ""}`),
-      currencyCodes: override ? override.codes : currencyEntries.map(([code]) => code),
+      population: populationRecord.value,
+      populationLabel: formatPopulation(populationRecord.value),
+      populationYear: populationRecord.year,
+      populationSource: populationRecord.source,
+      populationRank: populationRankByCode.get(country.cca2) ?? 195,
+      areaRank: areaRankByCode.get(country.cca2) ?? 195,
+      density: country.area ? populationRecord.value/country.area : 0,
+      currencies: currencyOverride?.labels ?? currencyEntries.map(([, currency]) => `${currency.name}${currency.symbol ? ` (${currency.symbol})` : ""}`),
+      currencyCodes: currencyOverride?.codes ?? currencyEntries.map(([code]) => code),
       languages: Object.values(country.languages ?? {}),
       calling: editorial?.calling ?? (`${country.idd.root ?? ""}${callingSuffix}` || "—"),
       tld: country.tld?.join(" · ") || "—",
       demonym: country.demonyms?.eng?.m ?? country.name.common,
       landlocked: country.landlocked,
       borders: country.borders ?? [],
+      timezones: timezoneRecord?.timezones ?? [],
+      carSide: leftDrivingCodes.has(country.cca2) ? "left" as const : "right" as const,
+      latitude: country.latlng?.[0] ?? 0,
+      longitude: country.latlng?.[1] ?? 0,
+      mapUrl: `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(editorial?.name ?? country.name.common)}`,
       editorial,
+    };
+    const generatedFacts = [
+      `${base.capital} is the capital of ${base.official}.`,
+      `With ${base.populationLabel} people in its ${base.populationYear} ${base.populationSource} reference, ${base.name} ranks about #${base.populationRank} by population among TerraScope's 195 sovereign-state profiles.`,
+      `${base.name} covers ${base.areaLabel}, placing it about #${base.areaRank} in the world by land area.`,
+      `${base.name} sits in ${base.subregion}, ${base.region}, ${base.latitude < 0 ? "south" : "north"} of the equator.`,
+      base.landlocked ? `${base.name} is landlocked and shares borders with ${base.borders.length} ${base.borders.length===1?"state":"states"}.` : `${base.name} has a coastline and ${base.borders.length?`shares land borders with ${base.borders.length} ${base.borders.length===1?"state":"states"}`:"has no land borders"}.`,
+      `${base.languages.length===1?base.languages[0]:`${base.languages.length} languages`} ${base.languages.length===1?"is":"are"} listed in the national record${base.languages.length>1?`: ${base.languages.slice(0,4).join(", ")}${base.languages.length>4?" and others":""}`:""}.`,
+      `${base.currencies.join(" · ")||"An externally administered currency"} is used for everyday transactions.`,
+      `Traffic keeps to the ${base.carSide}; the common English demonym is ${base.demonym}.`,
+      `${base.timezones.length===1?`The country uses the ${base.timezones[0]} IANA time zone`:`The country spans ${base.timezones.length} IANA time zones, including ${base.timezones.slice(0,3).join(", ")}`}.`,
+      `The international calling code is ${base.calling}, while ${base.tld} is the country-code web domain.`,
+    ];
+    return {
+      ...base,
+      interestingFacts: curatedFactsByCode[base.code] ?? generatedFacts,
+      factsStatus: curatedFactsByCode[base.code] ? "curated" as const : "atlas-verified" as const,
     };
   })
   .sort((a, b) => a.name.localeCompare(b.name));

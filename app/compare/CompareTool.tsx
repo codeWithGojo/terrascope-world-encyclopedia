@@ -1,207 +1,32 @@
 "use client";
 
-import { useState } from "react";
+import {useState} from "react";
 import Link from "next/link";
-import { atlasCountries } from "../atlas-data";
-import { countries as editorialCountries } from "../data";
+import {atlasCountries,regionColours,type AtlasCountry} from "../atlas-data";
+import {iqByCode} from "../iq-data";
 
-const editorialBySlug = new Map(editorialCountries.map((c) => [c.slug, c]));
+const number=(value:number)=>value.toLocaleString("en-US");
+const population=(value:number)=>value>=1e9?`${(value/1e9).toFixed(2)}B`:`${(value/1e6).toFixed(1)}M`;
+const colour=(country:AtlasCountry)=>country.editorial?.color??regionColours[country.region];
 
-function formatArea(n: number) {
-  return n >= 1_000_000
-    ? `${(n / 1_000_000).toFixed(2)}M km²`
-    : `${Math.round(n).toLocaleString("en-US")} km²`;
-}
-
-function formatPopulation(n: number) {
-  if (n >= 1e9) return `${(n / 1e9).toFixed(2)}B`;
-  if (n >= 1e6) return `${(n / 1e6).toFixed(1)}M`;
-  return n.toLocaleString("en-US");
-}
-
-type Row =
-  | { kind: "text"; label: string; a: string; b: string }
-  | { kind: "bar"; label: string; aValue: number; bValue: number; aLabel: string; bLabel: string; aColor: string; bColor: string };
-
-export default function CompareTool() {
-  const [first, setFirst] = useState("nigeria");
-  const [second, setSecond] = useState("japan");
-
-  const a = atlasCountries.find((c) => c.slug === first) ?? atlasCountries[0];
-  const b = atlasCountries.find((c) => c.slug === second) ?? atlasCountries[1];
-  const aEd = editorialBySlug.get(a.slug);
-  const bEd = editorialBySlug.get(b.slug);
-
-  const aColor = aEd?.color ?? "#3f766b";
-  const bColor = bEd?.color ?? "#c49a53";
-
-  const rows: Row[] = [
-    { kind: "text", label: "Capital", a: a.capital, b: b.capital },
-    { kind: "text", label: "Continent", a: a.region, b: b.region },
-    { kind: "text", label: "Subregion", a: a.subregion, b: b.subregion },
-    {
-      kind: "bar",
-      label: "Land area",
-      aValue: a.area,
-      bValue: b.area,
-      aLabel: formatArea(a.area),
-      bLabel: formatArea(b.area),
-      aColor,
-      bColor,
-    },
+export default function CompareTool(){
+  const [first,setFirst]=useState("nigeria");
+  const [second,setSecond]=useState("japan");
+  const a=atlasCountries.find((country)=>country.slug===first)??atlasCountries[0];
+  const b=atlasCountries.find((country)=>country.slug===second)??atlasCountries[1];
+  const rows=[
+    ["Official name",a.official,b.official],["Capital",a.capital,b.capital],["Region",`${a.subregion} · ${a.region}`,`${b.subregion} · ${b.region}`],
+    ["Population density",`${Math.round(a.density)} / km²`,`${Math.round(b.density)} / km²`],["Population rank",`#${a.populationRank} of 195`,`#${b.populationRank} of 195`],
+    ["Area rank",`#${a.areaRank} of 195`,`#${b.areaRank} of 195`],["Reported IQ rank",iqByCode.get(a.code)?`#${iqByCode.get(a.code)?.rank} · ${iqByCode.get(a.code)?.score.toFixed(2)}`:"Not in dataset",iqByCode.get(b.code)?`#${iqByCode.get(b.code)?.rank} · ${iqByCode.get(b.code)?.score.toFixed(2)}`:"Not in dataset"],
+    ["Languages",a.languages.join(" · ")||"—",b.languages.join(" · ")||"—"],["Currencies",a.currencies.join(" · ")||"—",b.currencies.join(" · ")||"—"],
+    ["Time zones",a.timezones.join(" · ")||"—",b.timezones.join(" · ")||"—"],["Driving side",a.carSide,b.carSide],["Land borders",String(a.borders.length),String(b.borders.length)],
+    ["Calling code",a.calling,b.calling],["Country domain",a.tld,b.tld],["Government",a.editorial?.government??"Editorial government record pending",b.editorial?.government??"Editorial government record pending"],
   ];
-
-  if (aEd?.population && bEd?.population) {
-    rows.push({
-      kind: "bar",
-      label: "Population",
-      aValue: aEd.population,
-      bValue: bEd.population,
-      aLabel: formatPopulation(aEd.population),
-      bLabel: formatPopulation(bEd.population),
-      aColor,
-      bColor,
-    });
-  } else {
-    rows.push({
-      kind: "text",
-      label: "Population",
-      a: aEd?.populationLabel ?? "— (extended profile)",
-      b: bEd?.populationLabel ?? "— (extended profile)",
-    });
-  }
-
-  rows.push(
-    {
-      kind: "text",
-      label: "Languages",
-      a: (aEd?.languages ?? a.languages).join(" · ") || "—",
-      b: (bEd?.languages ?? b.languages).join(" · ") || "—",
-    },
-    {
-      kind: "text",
-      label: "Currency",
-      a: aEd?.currency ?? (a.currencies.join(" · ") || "—"),
-      b: bEd?.currency ?? (b.currencies.join(" · ") || "—"),
-    },
-    {
-      kind: "text",
-      label: "Government",
-      a: aEd?.government ?? "— (extended profile)",
-      b: bEd?.government ?? "— (extended profile)",
-    },
-    {
-      kind: "text",
-      label: "Leader",
-      a: aEd ? `${aEd.leader} (${aEd.leaderTitle})` : "— (extended profile)",
-      b: bEd ? `${bEd.leader} (${bEd.leaderTitle})` : "— (extended profile)",
-    },
-    {
-      kind: "text",
-      label: "Life expectancy",
-      a: aEd?.lifeExpectancy ?? "—",
-      b: bEd?.lifeExpectancy ?? "—",
-    },
-    {
-      kind: "text",
-      label: "Internet access",
-      a: aEd?.internet ?? "—",
-      b: bEd?.internet ?? "—",
-    },
-    {
-      kind: "text",
-      label: "Nominal GDP",
-      a: aEd?.gdp ?? "—",
-      b: bEd?.gdp ?? "—",
-    },
-    {
-      kind: "text",
-      label: "Landlocked",
-      a: a.landlocked ? "Yes" : "No",
-      b: b.landlocked ? "Yes" : "No",
-    },
-    {
-      kind: "text",
-      label: "Land borders",
-      a: String(a.borders.length),
-      b: String(b.borders.length),
-    },
-  );
-
-  return (
-    <>
-      <div className="compare-selectors">
-        <label>
-          <span>Country A</span>
-          <select value={first} onChange={(e) => setFirst(e.target.value)}>
-            {atlasCountries
-              .filter((c) => c.slug !== second)
-              .map((c) => (
-                <option value={c.slug} key={c.slug}>
-                  {c.flag} {c.name}
-                </option>
-              ))}
-          </select>
-        </label>
-        <i>VERSUS</i>
-        <label>
-          <span>Country B</span>
-          <select value={second} onChange={(e) => setSecond(e.target.value)}>
-            {atlasCountries
-              .filter((c) => c.slug !== first)
-              .map((c) => (
-                <option value={c.slug} key={c.slug}>
-                  {c.flag} {c.name}
-                </option>
-              ))}
-          </select>
-        </label>
-      </div>
-
-      <div className="compare-head">
-        <div style={{ "--country": aColor } as React.CSSProperties}>
-          <span>{a.flag}</span>
-          <small>{a.subregion}</small>
-          <h2>{a.name}</h2>
-          <Link href={`/countries/${a.slug}`}>View profile ↗</Link>
-          {!aEd && <small className="compare-depth">Core geographic record</small>}
-        </div>
-        <div style={{ "--country": bColor } as React.CSSProperties}>
-          <span>{b.flag}</span>
-          <small>{b.subregion}</small>
-          <h2>{b.name}</h2>
-          <Link href={`/countries/${b.slug}`}>View profile ↗</Link>
-          {!bEd && <small className="compare-depth">Core geographic record</small>}
-        </div>
-      </div>
-
-      <div className="comparison-table">
-        {rows.map((row) => {
-          if (row.kind === "text") {
-            return (
-              <div className="comparison-row text" key={row.label}>
-                <p>{row.label}</p>
-                <b>{row.a}</b>
-                <b>{row.b}</b>
-              </div>
-            );
-          }
-          const max = Math.max(row.aValue, row.bValue, 1);
-          return (
-            <div className="comparison-row" key={row.label}>
-              <p>{row.label}</p>
-              <div>
-                <b>{row.aLabel}</b>
-                <i style={{ width: `${(row.aValue / max) * 100}%`, background: row.aColor }} />
-              </div>
-              <div>
-                <b>{row.bLabel}</b>
-                <i style={{ width: `${(row.bValue / max) * 100}%`, background: row.bColor }} />
-              </div>
-            </div>
-          );
-        })}
-      </div>
-    </>
-  );
+  function chooseFirst(next:string){if(next===second)setSecond(first);setFirst(next);}
+  function chooseSecond(next:string){if(next===first)setFirst(second);setSecond(next);}
+  return <>
+    <div className="compare-selectors"><label><span>Country A · 195 available</span><select value={first} onChange={(event)=>chooseFirst(event.target.value)}>{atlasCountries.map((country)=><option value={country.slug} key={country.slug}>{country.flag} {country.code} {country.name}</option>)}</select></label><i>VERSUS</i><label><span>Country B · 195 available</span><select value={second} onChange={(event)=>chooseSecond(event.target.value)}>{atlasCountries.map((country)=><option value={country.slug} key={country.slug}>{country.flag} {country.code} {country.name}</option>)}</select></label></div>
+    <div className="compare-head"><div style={{"--country":colour(a)} as React.CSSProperties}><span>{a.flag}</span><small>{a.subregion}</small><h2>{a.name}</h2><Link href={`/countries/${a.slug}`}>View profile ↗</Link></div><div style={{"--country":colour(b)} as React.CSSProperties}><span>{b.flag}</span><small>{b.subregion}</small><h2>{b.name}</h2><Link href={`/countries/${b.slug}`}>View profile ↗</Link></div></div>
+    <div className="comparison-table"><div className="comparison-row"><p>Population</p><div><b>{population(a.population)}</b><i style={{width:`${a.population/Math.max(a.population,b.population)*100}%`,background:colour(a)}}/></div><div><b>{population(b.population)}</b><i style={{width:`${b.population/Math.max(a.population,b.population)*100}%`,background:colour(b)}}/></div></div><div className="comparison-row"><p>Land area</p><div><b>{number(Math.round(a.area))} km²</b><i style={{width:`${a.area/Math.max(a.area,b.area)*100}%`,background:colour(a)}}/></div><div><b>{number(Math.round(b.area))} km²</b><i style={{width:`${b.area/Math.max(a.area,b.area)*100}%`,background:colour(b)}}/></div></div>{rows.map((row)=><div className="comparison-row text" key={row[0]}><p>{row[0]}</p><b>{row[1]}</b><b>{row[2]}</b></div>)}</div>
+  </>;
 }

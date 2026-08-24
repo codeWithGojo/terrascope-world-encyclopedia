@@ -5,12 +5,12 @@ import Link from "next/link";
 import worldMap from "@svg-maps/world";
 import {atlasByCode, atlasCountries} from "../atlas-data";
 
+type Lens = "population" | "area" | "trending";
+
 type WorldMapLocation = {
   id: string;
   path: string;
 };
-
-type Lens = "population" | "area" | "trending";
 
 const population = [
   ["IN","India","1.464B",1464],["CN","China","1.416B",1416],["US","United States","347M",347],
@@ -26,7 +26,6 @@ const trending = [
 ] as const;
 
 const lenses = {population,area,trending};
-const lensLabels:Record<Lens,string> = {population:"Most populous",area:"Largest by area",trending:"Trending profiles"};
 
 const markers = [
   {code:"US",x:22,y:37},{code:"BR",x:35,y:69},{code:"NG",x:49,y:58},{code:"GB",x:47,y:31},
@@ -67,7 +66,8 @@ export default function WorldDashboard({children}:{children?:ReactNode}) {
         <Link className="active" href="/rankings" aria-label="Dashboard"><NavIcon type="home"/><span>Dashboard</span></Link>
         <Link href="/countries" aria-label="Country atlas"><NavIcon type="atlas"/><span>Atlas</span></Link>
         <Link href="/compare" aria-label="Compare countries"><NavIcon type="compare"/><span>Compare</span></Link>
-        <Link href="/people" aria-label="People"><NavIcon type="people"/><span>People</span></Link>
+        <Link href="/rankings/iq" aria-label="IQ rankings"><NavIcon type="compare"/><span>IQ rankings</span></Link>
+        <Link href="/football-archive" aria-label="Football archive"><NavIcon type="people"/><span>Football archive</span></Link>
       </nav>
       <Link className="terra-sidebar-method" href="/method" aria-label="Method"><NavIcon type="method"/><span>Method</span></Link>
     </aside>
@@ -89,7 +89,7 @@ export default function WorldDashboard({children}:{children?:ReactNode}) {
         <div className="dashboard-map">
           <svg viewBox={worldMap.viewBox} role="img" aria-label="World map with featured TerraScope country profiles">
             <defs><pattern id="mapDots" width="4.8" height="4.8" patternUnits="userSpaceOnUse"><circle cx="1.4" cy="1.4" r="1.05" fill="#4a4a4f"/></pattern></defs>
-            {worldMap.locations.map((location: WorldMapLocation)=>{
+            {(worldMap.locations as WorldMapLocation[]).map((location)=>{
               const country=byMapId.get(location.id);
               return <path key={location.id} d={location.path} className={country?"dashboard-country":"dashboard-territory"}/>;
             })}

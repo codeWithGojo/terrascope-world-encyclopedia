@@ -1,0 +1,5 @@
+import {OnThisDayWidget} from "../components/OnThisDayWidget";
+import {SiteFooter} from "../components/SiteFooter";
+import {SiteHeader} from "../components/SiteHeader";
+
+export default function OnThisDayPage(){return <main className="on-this-day-page"><SiteHeader active="today"/><section className="on-this-day-hero"><p>TerraScope daily archive</p><div><h1>On this<br/><em>day.</em></h1><p>Selected anniversaries from national timelines, paired with one rotating fact from the complete 195-country atlas.</p></div></section><section className="on-this-day-body"><OnThisDayWidget/><aside><span>How it works</span><p>The anniversary layer uses exact month-and-day matches from TerraScope’s source-reviewed historical timelines. The field fact rotates deterministically with your local calendar date, so everyone receives a stable daily edition without a live tracking service.</p><p>The absence of an anniversary means the editorial timeline is still growing—not that nothing happened on that date.</p></aside></section><SiteFooter/></main>}

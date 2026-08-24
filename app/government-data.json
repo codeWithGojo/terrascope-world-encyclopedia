@@ -1,0 +1,445 @@
+{
+  "asOf": "2026-08-24",
+  "profiles": {
+    "NG": {
+      "system": "Federal presidential republic",
+      "timelineSource": {"label": "Encyclopaedia Britannica · Nigeria", "url": "https://www.britannica.com/place/Nigeria"},
+      "leader": {
+        "name": "Bola Ahmed Tinubu",
+        "role": "President",
+        "startDate": "2023-05-29",
+        "term": "First four-year term",
+        "bio": "An accountant, former senator and former governor of Lagos State, Tinubu became Nigeria’s president after winning the 2023 election.",
+        "nextElection": {
+          "label": "16 January 2027",
+          "note": "Presidential and National Assembly elections",
+          "source": {"label": "Associated Press · 2027 campaign calendar", "url": "https://apnews.com/article/968189aac7a053ac6b33f8b3d9003d18"}
+        },
+        "record": [
+          {"text": "Removed the petrol subsidy, ended monetary financing of the fiscal deficit and changed the foreign-exchange framework; the IMF says the package improved macroeconomic stability and resilience.", "source": {"label": "IMF · 2025 Article IV mission", "url": "https://www.imf.org/en/news/articles/2025/07/01/pr-25231-nigeria-imf-staff-completes-2025-article-iv-mission"}},
+          {"text": "The reforms strengthened foreign reserves and renewed portfolio inflows, while the government argued they prevented a deeper fiscal crisis.", "source": {"label": "Reuters · Nigeria reform assessment", "url": "https://www.reuters.com/world/africa/nigeria-reforms-helped-avert-economic-collapse-finance-minister-says-2026-08-19/"}}
+        ],
+        "scrutiny": [
+          {"text": "Subsidy removal and naira depreciation sharply raised living costs; inflation and reduced purchasing power remain central public concerns.", "source": {"label": "World Bank · Nigeria Development Update", "url": "https://www.worldbank.org/en/country/nigeria/publication/nigeria-development-update-ndu"}},
+          {"text": "Persistent killings, kidnappings and regional insecurity continue to draw criticism of the federal government’s security record.", "source": {"label": "Reuters · 2026 election issues", "url": "https://www.reuters.com/world/africa/campaigns-begin-nigeria-tinubus-re-election-bid-puts-his-party-trial-2026-08-19/"}}
+        ],
+        "sources": [
+          {"label": "State House · official biography", "url": "https://statehouse.gov.ng/team/bola-ahmed-tinubu/"},
+          {"label": "World Bank · Nigeria overview", "url": "https://www.worldbank.org/ext/en/country/nigeria"}
+        ]
+      },
+      "succession": [
+        {"name": "Muhammadu Buhari", "office": "President", "term": "2015–2023", "note": "Led the first opposition defeat of an incumbent president in Nigeria’s Fourth Republic."},
+        {"name": "Goodluck Jonathan", "office": "President", "term": "2010–2015", "note": "Conceded the 2015 election, enabling Nigeria’s first democratic transfer between parties."},
+        {"name": "Umaru Musa Yar’Adua", "office": "President", "term": "2007–2010", "note": "Advanced the Niger Delta amnesty programme before dying in office."},
+        {"name": "Olusegun Obasanjo", "office": "President", "term": "1999–2007", "note": "Opened the Fourth Republic after years of military government."}
+      ],
+      "timeline": [
+        {"date": "1960-10-01", "label": "1 Oct 1960", "title": "Independence", "text": "Nigeria became independent from the United Kingdom."},
+        {"date": "1963-10-01", "label": "1 Oct 1963", "title": "Federal republic", "text": "The country became a republic within the Commonwealth."},
+        {"date": "1970-01-15", "label": "15 Jan 1970", "title": "Civil war ended", "text": "The Nigerian Civil War ended after more than two and a half years."},
+        {"date": "1991-12-12", "label": "12 Dec 1991", "title": "Capital moved to Abuja", "text": "Abuja formally replaced Lagos as the federal capital."},
+        {"date": "1999-05-29", "label": "29 May 1999", "title": "Fourth Republic", "text": "Civilian rule returned under the current constitutional order."},
+        {"date": "2023-05-29", "label": "29 May 2023", "title": "Tinubu inaugurated", "text": "Bola Ahmed Tinubu began his first term as president."}
+      ]
+    },
+    "US": {
+      "system": "Federal presidential republic",
+      "timelineSource": {"label": "Encyclopaedia Britannica · United States", "url": "https://www.britannica.com/place/United-States"},
+      "leader": {
+        "name": "Donald J. Trump",
+        "role": "President",
+        "startDate": "2025-01-20",
+        "term": "Second, non-consecutive term",
+        "bio": "A business and media figure before entering politics, Trump is the 45th and 47th president and the second US president to serve non-consecutive terms.",
+        "nextElection": {"label": "7 November 2028", "note": "Presidential and congressional elections", "source": {"label": "USA.gov · presidential election process", "url": "https://www.usa.gov/presidential-election-process"}},
+        "record": [
+          {"text": "Signed the 2025 tax and spending law, extending major provisions of the 2017 tax code and adding deductions for tips and overtime.", "source": {"label": "White House · 2025 tax law", "url": "https://www.whitehouse.gov/releases/2025/07/president-trumps-one-big-beautiful-bill-is-now-the-law/"}},
+          {"text": "Made tariffs, immigration enforcement and a smaller federal workforce central parts of the administration’s second-term programme.", "source": {"label": "PBS NewsHour · first 100 days", "url": "https://www.pbs.org/newshour/politics/trump-has-reshaped-these-3-major-things-in-his-first-100-days"}}
+        ],
+        "scrutiny": [
+          {"text": "Independent budget analysis projected that the 2025 law would increase deficits and reduce health-insurance coverage for millions.", "source": {"label": "Associated Press · tax and spending law", "url": "https://abc7ny.com/post/president-donald-trump-plans-sign-tax-spending-cut-bill-white-house-july-4-picnic/16956399/"}},
+          {"text": "Tariff and immigration actions have faced court challenges, business uncertainty and human-rights criticism.", "source": {"label": "PBS NewsHour · second-term policy changes", "url": "https://www.pbs.org/newshour/politics/trump-has-reshaped-these-3-major-things-in-his-first-100-days"}}
+        ],
+        "sources": [{"label": "US Senate · 60th inaugural ceremonies", "url": "https://www.inaugural.senate.gov/60th-inaugural-ceremonies/"}]
+      },
+      "succession": [
+        {"name": "Joe Biden", "office": "President", "term": "2021–2025", "note": "Led the post-pandemic recovery programme and restored several multilateral alliances."},
+        {"name": "Donald J. Trump", "office": "President", "term": "2017–2021", "note": "First term centred on tax cuts, deregulation, immigration restrictions and an America First foreign policy."},
+        {"name": "Barack Obama", "office": "President", "term": "2009–2017", "note": "First Black president; signed the Affordable Care Act."},
+        {"name": "George W. Bush", "office": "President", "term": "2001–2009", "note": "His presidency was defined by the September 11 attacks and wars in Afghanistan and Iraq."}
+      ],
+      "timeline": [
+        {"date": "1776-07-04", "label": "4 Jul 1776", "title": "Declaration of Independence", "text": "The thirteen colonies declared independence from Great Britain."},
+        {"date": "1787-09-17", "label": "17 Sep 1787", "title": "Constitution signed", "text": "Delegates signed the federal Constitution in Philadelphia."},
+        {"date": "1865-12-06", "label": "6 Dec 1865", "title": "Slavery abolished", "text": "The Thirteenth Amendment was ratified."},
+        {"date": "1964-07-02", "label": "2 Jul 1964", "title": "Civil Rights Act", "text": "Landmark federal civil-rights legislation became law."},
+        {"date": "1969-07-20", "label": "20 Jul 1969", "title": "Moon landing", "text": "Apollo 11 astronauts became the first people to walk on the Moon."},
+        {"date": "2001-09-11", "label": "11 Sep 2001", "title": "September 11 attacks", "text": "Coordinated terrorist attacks killed nearly 3,000 people and reshaped US policy."}
+      ]
+    },
+    "BR": {
+      "system": "Federal presidential republic",
+      "timelineSource": {"label": "Encyclopaedia Britannica · Brazil", "url": "https://www.britannica.com/place/Brazil"},
+      "leader": {
+        "name": "Luiz Inácio Lula da Silva",
+        "role": "President",
+        "startDate": "2023-01-01",
+        "term": "Third term; seeking re-election in 2026",
+        "bio": "A former metalworker and union leader, Lula previously governed from 2003 to 2010 and returned to office after winning the 2022 election.",
+        "nextElection": {"label": "4 October 2026", "note": "First-round presidential and general elections; runoff scheduled for 25 October if required", "source": {"label": "TSE / 2026 election calendar summary", "url": "https://www.as-coa.org/articles/brazils-2026-elections-timeline-and-fast-facts"}},
+        "record": [
+          {"text": "Restored and expanded the Bolsa Família social-transfer programme and increased the real minimum wage.", "source": {"label": "Brazil federal government · social policy", "url": "https://www.gov.br/planalto/en"}},
+          {"text": "Amazon deforestation fell markedly during the first two years of the term as environmental enforcement was rebuilt.", "source": {"label": "Brazil space agency · PRODES monitoring", "url": "https://www.gov.br/inpe/en"}}
+        ],
+        "scrutiny": [
+          {"text": "Public debt, mandatory spending and compliance with the fiscal framework remain major constraints on the government’s programme.", "source": {"label": "Reuters · fiscal framework", "url": "https://www.reuters.com/world/americas/brazil-keep-fiscal-framework-spending-restraint-under-new-lula-term-minister-says-2026-08-20/"}},
+          {"text": "The administration has faced criticism from both environmental groups and agribusiness over the pace and distribution of development approvals.", "source": {"label": "OECD · Brazil economic survey", "url": "https://www.oecd.org/en/topics/sub-issues/economic-surveys/brazil-economic-snapshot.html"}}
+        ],
+        "sources": [{"label": "Presidency of Brazil · Planalto", "url": "https://www.gov.br/planalto/en"}]
+      },
+      "succession": [
+        {"name": "Jair Bolsonaro", "office": "President", "term": "2019–2023", "note": "Right-wing presidency marked by deregulation, polarisation and the COVID-19 pandemic."},
+        {"name": "Michel Temer", "office": "President", "term": "2016–2019", "note": "Assumed office after Dilma Rousseff’s impeachment and enacted labour and spending reforms."},
+        {"name": "Dilma Rousseff", "office": "President", "term": "2011–2016", "note": "Brazil’s first woman president; removed from office after impeachment."},
+        {"name": "Luiz Inácio Lula da Silva", "office": "President", "term": "2003–2011", "note": "Oversaw growth, poverty reduction and Brazil’s expanded diplomatic profile."}
+      ],
+      "timeline": [
+        {"date": "1822-09-07", "label": "7 Sep 1822", "title": "Independence declared", "text": "Pedro declared Brazil independent from Portugal."},
+        {"date": "1888-05-13", "label": "13 May 1888", "title": "Slavery abolished", "text": "The Golden Law abolished slavery."},
+        {"date": "1889-11-15", "label": "15 Nov 1889", "title": "Republic proclaimed", "text": "The monarchy was replaced by a republic."},
+        {"date": "1960-04-21", "label": "21 Apr 1960", "title": "Brasília inaugurated", "text": "The purpose-built city became the national capital."},
+        {"date": "1988-10-05", "label": "5 Oct 1988", "title": "Democratic constitution", "text": "A new constitution consolidated the return to civilian democracy."},
+        {"date": "2023-01-01", "label": "1 Jan 2023", "title": "Lula returned", "text": "Lula began a third, non-consecutive presidential term."}
+      ]
+    },
+    "IN": {
+      "system": "Federal parliamentary republic",
+      "timelineSource": {"label": "Encyclopaedia Britannica · India", "url": "https://www.britannica.com/place/India"},
+      "leader": {
+        "name": "Narendra Modi",
+        "role": "Prime Minister",
+        "startDate": "2014-05-26",
+        "term": "Third consecutive term; current ministry sworn 9 June 2024",
+        "bio": "A former chief minister of Gujarat and leader of the Bharatiya Janata Party, Modi has served as prime minister since 2014 and now leads a coalition government.",
+        "nextElection": {"label": "By June 2029", "note": "Next Lok Sabha election unless called earlier", "source": {"label": "Election Commission of India", "url": "https://www.eci.gov.in/"}},
+        "record": [
+          {"text": "Expanded digital public infrastructure, direct-benefit transfers and the nationwide Unified Payments Interface.", "source": {"label": "World Bank · India digital public infrastructure", "url": "https://www.worldbank.org/en/country/india"}},
+          {"text": "Maintained high public capital expenditure on roads, rail, energy and logistics while India remained among the fastest-growing major economies.", "source": {"label": "IMF · India country page", "url": "https://www.imf.org/en/Countries/IND"}}
+        ],
+        "scrutiny": [
+          {"text": "Job creation, rural incomes and inequality remain persistent economic challenges despite headline growth.", "source": {"label": "World Bank · India overview", "url": "https://www.worldbank.org/en/country/india/overview"}},
+          {"text": "Opposition parties, journalists and rights monitors have raised concerns about civic space, religious polarisation and institutional independence.", "source": {"label": "UN Human Rights · India", "url": "https://www.ohchr.org/en/countries/india"}}
+        ],
+        "sources": [{"label": "Prime Minister of India · official profile", "url": "https://www.pmindia.gov.in/en/pms-profile/"}]
+      },
+      "succession": [
+        {"name": "Manmohan Singh", "office": "Prime Minister", "term": "2004–2014", "note": "Economist and two-term leader of the United Progressive Alliance government."},
+        {"name": "Atal Bihari Vajpayee", "office": "Prime Minister", "term": "1998–2004", "note": "Led a BJP coalition, conducted nuclear tests and advanced India–Pakistan diplomacy."},
+        {"name": "H. D. Deve Gowda", "office": "Prime Minister", "term": "1996–1997", "note": "Led a United Front coalition after an inconclusive election."},
+        {"name": "P. V. Narasimha Rao", "office": "Prime Minister", "term": "1991–1996", "note": "Oversaw the beginning of India’s major economic liberalisation."}
+      ],
+      "timeline": [
+        {"date": "1947-08-15", "label": "15 Aug 1947", "title": "Independence", "text": "British rule ended and the subcontinent was partitioned into India and Pakistan."},
+        {"date": "1950-01-26", "label": "26 Jan 1950", "title": "Republic founded", "text": "The Constitution came into force."},
+        {"date": "1975-06-25", "label": "25 Jun 1975", "title": "Emergency declared", "text": "A national Emergency restricted political and civil liberties until 1977."},
+        {"date": "1991-07-24", "label": "24 Jul 1991", "title": "Economic liberalisation", "text": "A reform budget accelerated India’s shift toward a more open economy."},
+        {"date": "2014-05-26", "label": "26 May 2014", "title": "Modi took office", "text": "Narendra Modi began his first term as prime minister."},
+        {"date": "2023-08-23", "label": "23 Aug 2023", "title": "Chandrayaan-3 landed", "text": "India became the first country to land near the Moon’s south pole."}
+      ]
+    },
+    "DE": {
+      "system": "Federal parliamentary republic",
+      "timelineSource": {"label": "Encyclopaedia Britannica · Germany", "url": "https://www.britannica.com/place/Germany"},
+      "leader": {
+        "name": "Friedrich Merz",
+        "role": "Federal Chancellor",
+        "startDate": "2025-05-06",
+        "term": "First term; CDU/CSU–SPD coalition",
+        "bio": "A lawyer, former European Parliament member and long-time CDU politician, Merz returned to the Bundestag in 2021 and became chancellor after the 2025 federal election.",
+        "nextElection": {"label": "By spring 2029", "note": "Next Bundestag election unless called earlier", "source": {"label": "German Bundestag · electoral term", "url": "https://www.bundestag.de/en/parliament/elections"}},
+        "record": [
+          {"text": "Backed constitutional changes enabling a €500 billion infrastructure and climate-neutrality fund and greater defence borrowing.", "source": {"label": "German federal government · fiscal package", "url": "https://www.bundesregierung.de/breg-en/news"}},
+          {"text": "Created a dedicated Federal Ministry for Digital Transformation and Government Modernisation.", "source": {"label": "Federal government · formation of government", "url": "https://www.bundesregierung.de/breg-en/news/election-of-the-federal-chancellor-and-formation-of-government-2345212"}}
+        ],
+        "scrutiny": [
+          {"text": "The debt-financed investment package was criticised as a reversal of campaign-era fiscal positions.", "source": {"label": "German Bundestag · fiscal debate", "url": "https://www.bundestag.de/en"}},
+          {"text": "Merz failed the first parliamentary vote for chancellor before winning a second ballot on the same day, exposing coalition discipline concerns.", "source": {"label": "Federal government · chancellor election", "url": "https://www.bundesregierung.de/breg-en/news/election-of-the-federal-chancellor-and-formation-of-government-2345212"}}
+        ],
+        "sources": [{"label": "Federal Chancellor · official biography", "url": "https://www.bundeskanzler.de/bk-en/federal-chancellery/federal-chancellors-since-1949/friedrich-merz"}]
+      },
+      "succession": [
+        {"name": "Olaf Scholz", "office": "Federal Chancellor", "term": "2021–2025", "note": "Led the first federal traffic-light coalition of SPD, Greens and FDP."},
+        {"name": "Angela Merkel", "office": "Federal Chancellor", "term": "2005–2021", "note": "Germany’s first woman chancellor; led four governments through successive European crises."},
+        {"name": "Gerhard Schröder", "office": "Federal Chancellor", "term": "1998–2005", "note": "Led an SPD–Green coalition and introduced the Agenda 2010 labour reforms."},
+        {"name": "Helmut Kohl", "office": "Federal Chancellor", "term": "1982–1998", "note": "Chancellor during German reunification and a central architect of European integration."}
+      ],
+      "timeline": [
+        {"date": "1871-01-18", "label": "18 Jan 1871", "title": "German Empire proclaimed", "text": "German states united under a new empire."},
+        {"date": "1949-05-23", "label": "23 May 1949", "title": "Federal Republic founded", "text": "The Basic Law established West Germany’s constitutional order."},
+        {"date": "1961-08-13", "label": "13 Aug 1961", "title": "Berlin Wall built", "text": "East Germany closed the border through Berlin."},
+        {"date": "1989-11-09", "label": "9 Nov 1989", "title": "Berlin Wall opened", "text": "Border crossings opened after weeks of peaceful protest."},
+        {"date": "1990-10-03", "label": "3 Oct 1990", "title": "Reunification", "text": "East and West Germany formally reunited."},
+        {"date": "2025-05-06", "label": "6 May 2025", "title": "Merz elected chancellor", "text": "Friedrich Merz formed a CDU/CSU–SPD coalition government."}
+      ]
+    },
+    "JP": {
+      "system": "Unitary parliamentary constitutional monarchy",
+      "timelineSource": {"label": "Encyclopaedia Britannica · Japan", "url": "https://www.britannica.com/place/Japan"},
+      "leader": {
+        "name": "Sanae Takaichi",
+        "role": "Prime Minister",
+        "startDate": "2025-10-21",
+        "term": "First term; coalition led by the Liberal Democratic Party",
+        "bio": "A long-serving legislator and former economic-security minister, Takaichi became Japan’s first woman prime minister in October 2025.",
+        "nextElection": {"label": "By 2030", "note": "House of Representatives election; an earlier dissolution remains possible", "source": {"label": "Prime Minister’s Office of Japan", "url": "https://japan.kantei.go.jp/"}},
+        "record": [
+          {"text": "Became Japan’s first woman prime minister and led the governing party to a large mandate in the 2026 snap election.", "source": {"label": "Associated Press · Takaichi premiership", "url": "https://apnews.com/article/24b4a5e2a2b777139de66e38665ced0d"}},
+          {"text": "Prioritised cost-of-living measures, fiscal stimulus, defence capacity and the US–Japan alliance.", "source": {"label": "Council on Foreign Relations · policy profile", "url": "https://www.cfr.org/articles/prime-minister-takaichi-sanae-takes-charge"}}
+        ],
+        "scrutiny": [
+          {"text": "Her conservative positions on imperial succession, same-sex marriage and wartime history remain divisive.", "source": {"label": "Associated Press · leadership profile", "url": "https://apnews.com/article/24b4a5e2a2b777139de66e38665ced0d"}},
+          {"text": "Critics have questioned limited female representation in her cabinet and the government’s response to household economic pressure.", "source": {"label": "Associated Press · cabinet and policy scrutiny", "url": "https://apnews.com/article/66a020297f3b8da3b24d02fab11e64c4"}}
+        ],
+        "sources": [{"label": "Prime Minister’s Office of Japan", "url": "https://japan.kantei.go.jp/"}]
+      },
+      "succession": [
+        {"name": "Shigeru Ishiba", "office": "Prime Minister", "term": "2024–2025", "note": "Resigned after electoral setbacks weakened the governing coalition."},
+        {"name": "Fumio Kishida", "office": "Prime Minister", "term": "2021–2024", "note": "Advanced a ‘new capitalism’ agenda and a major increase in defence spending."},
+        {"name": "Yoshihide Suga", "office": "Prime Minister", "term": "2020–2021", "note": "Oversaw the delayed Tokyo Olympics and an accelerated vaccination campaign."},
+        {"name": "Shinzō Abe", "office": "Prime Minister", "term": "2012–2020", "note": "Japan’s longest-serving prime minister; associated with Abenomics and a more assertive security policy."}
+      ],
+      "timeline": [
+        {"date": "1868-01-03", "label": "3 Jan 1868", "title": "Meiji Restoration", "text": "Imperial rule was restored and rapid state modernisation followed."},
+        {"date": "1945-08-15", "label": "15 Aug 1945", "title": "War ended", "text": "Japan announced its surrender in the Second World War."},
+        {"date": "1947-05-03", "label": "3 May 1947", "title": "Postwar constitution", "text": "The current constitution came into force."},
+        {"date": "1964-10-01", "label": "1 Oct 1964", "title": "Shinkansen opened", "text": "The first high-speed rail line began service between Tokyo and Osaka."},
+        {"date": "2011-03-11", "label": "11 Mar 2011", "title": "Tōhoku disaster", "text": "A massive earthquake and tsunami caused the Fukushima nuclear disaster."},
+        {"date": "2025-10-21", "label": "21 Oct 2025", "title": "First woman prime minister", "text": "Sanae Takaichi was elected prime minister."}
+      ]
+    },
+    "FR": {
+      "system": "Unitary semi-presidential republic",
+      "timelineSource": {"label": "Encyclopaedia Britannica · France", "url": "https://www.britannica.com/place/France"},
+      "leader": {
+        "name": "Emmanuel Macron",
+        "role": "President",
+        "startDate": "2017-05-14",
+        "term": "Second five-year term",
+        "bio": "A former economy minister and founder of the centrist Renaissance movement, Macron won the presidency in 2017 and was re-elected in 2022.",
+        "nextElection": {"label": "18 April 2027", "note": "First-round presidential election; runoff scheduled for 2 May", "source": {"label": "Le Monde · official 2027 dates", "url": "https://www.lemonde.fr/en/politics/article/2026/07/02/choice-of-french-presidential-election-dates-raises-questions_6755069_5.html"}},
+        "record": [
+          {"text": "Advanced labour-market, tax and pension reforms, including a rise in the statutory retirement age to 64.", "source": {"label": "French government · pension reform", "url": "https://www.gouvernement.fr/actualite/reforme-des-retraites"}},
+          {"text": "Made deeper European defence, industrial and fiscal coordination central to France’s EU policy.", "source": {"label": "Élysée · European policy", "url": "https://www.elysee.fr/en/emmanuel-macron"}}
+        ],
+        "scrutiny": [
+          {"text": "The pension overhaul triggered sustained strikes and protests and was passed without a final National Assembly vote.", "source": {"label": "French Constitutional Council · pension law", "url": "https://www.conseil-constitutionnel.fr/en"}},
+          {"text": "The 2024 snap legislative election produced a fragmented parliament and recurring government instability.", "source": {"label": "French National Assembly", "url": "https://www.assemblee-nationale.fr/dyn/english"}}
+        ],
+        "sources": [{"label": "Élysée · official biography", "url": "https://www.elysee.fr/en/emmanuel-macron"}]
+      },
+      "succession": [
+        {"name": "François Hollande", "office": "President", "term": "2012–2017", "note": "Socialist president during terrorist attacks, labour reform and the Paris climate agreement."},
+        {"name": "Nicolas Sarkozy", "office": "President", "term": "2007–2012", "note": "Led France through the global financial and eurozone crises."},
+        {"name": "Jacques Chirac", "office": "President", "term": "1995–2007", "note": "Opposed the 2003 invasion of Iraq and acknowledged French responsibility in the Holocaust."},
+        {"name": "François Mitterrand", "office": "President", "term": "1981–1995", "note": "First Socialist president of the Fifth Republic and a major advocate of European integration."}
+      ],
+      "timeline": [
+        {"date": "1789-07-14", "label": "14 Jul 1789", "title": "Bastille stormed", "text": "The event became an enduring symbol of the French Revolution."},
+        {"date": "1792-09-22", "label": "22 Sep 1792", "title": "First Republic", "text": "France formally became a republic."},
+        {"date": "1944-08-25", "label": "25 Aug 1944", "title": "Paris liberated", "text": "German occupation of the capital ended."},
+        {"date": "1958-10-04", "label": "4 Oct 1958", "title": "Fifth Republic", "text": "The current constitution was promulgated."},
+        {"date": "1992-02-07", "label": "7 Feb 1992", "title": "Maastricht Treaty", "text": "France signed the treaty that created the European Union."},
+        {"date": "2017-05-14", "label": "14 May 2017", "title": "Macron inaugurated", "text": "Emmanuel Macron became president."}
+      ]
+    },
+    "ZA": {
+      "system": "Unitary parliamentary republic",
+      "timelineSource": {"label": "Encyclopaedia Britannica · South Africa", "url": "https://www.britannica.com/place/South-Africa"},
+      "leader": {
+        "name": "Cyril Ramaphosa",
+        "role": "President",
+        "startDate": "2018-02-15",
+        "term": "Second full term; re-elected by Parliament in June 2024",
+        "bio": "A former trade-union leader, constitutional negotiator and business executive, Ramaphosa became president after Jacob Zuma resigned.",
+        "nextElection": {"label": "2029", "note": "National and provincial elections; exact date not yet scheduled", "source": {"label": "Electoral Commission of South Africa", "url": "https://www.elections.org.za/"}},
+        "record": [
+          {"text": "Formed a multi-party Government of National Unity after the ANC lost its parliamentary majority in 2024.", "source": {"label": "Associated Press · 2024 coalition", "url": "https://apnews.com/article/2e3de777cb7deb1956bbffe6e607f006"}},
+          {"text": "Pursued electricity-market reforms and new generation capacity as the country worked to reduce severe load-shedding.", "source": {"label": "South African Presidency · energy action plan", "url": "https://www.thepresidency.gov.za/"}}
+        ],
+        "scrutiny": [
+          {"text": "Unemployment, inequality, crime and failing local services remain severe despite reform commitments.", "source": {"label": "World Bank · South Africa overview", "url": "https://www.worldbank.org/en/country/southafrica/overview"}},
+          {"text": "Progress on accountability after state capture has been criticised as slow and uneven.", "source": {"label": "South African government · state capture response", "url": "https://www.gov.za/issues/state-capture-commission"}}
+        ],
+        "sources": [{"label": "South African Presidency · official biography", "url": "https://www.thepresidency.gov.za/node/197"}]
+      },
+      "succession": [
+        {"name": "Jacob Zuma", "office": "President", "term": "2009–2018", "note": "Resigned amid corruption allegations and pressure from the governing ANC."},
+        {"name": "Kgalema Motlanthe", "office": "President", "term": "2008–2009", "note": "Served as interim president between Thabo Mbeki and Jacob Zuma."},
+        {"name": "Thabo Mbeki", "office": "President", "term": "1999–2008", "note": "Advanced African diplomacy and economic growth but faced lasting criticism over HIV/AIDS policy."},
+        {"name": "Nelson Mandela", "office": "President", "term": "1994–1999", "note": "South Africa’s first democratically elected president and a global symbol of reconciliation."}
+      ],
+      "timeline": [
+        {"date": "1910-05-31", "label": "31 May 1910", "title": "Union formed", "text": "The Union of South Africa joined four colonies under one government."},
+        {"date": "1948-05-26", "label": "26 May 1948", "title": "Apartheid government elected", "text": "The National Party began formalising apartheid."},
+        {"date": "1961-05-31", "label": "31 May 1961", "title": "Republic declared", "text": "South Africa left the Commonwealth and became a republic."},
+        {"date": "1990-02-11", "label": "11 Feb 1990", "title": "Mandela released", "text": "Nelson Mandela left prison after 27 years."},
+        {"date": "1994-04-27", "label": "27 Apr 1994", "title": "First democratic election", "text": "South Africans voted in the first election with universal adult suffrage."},
+        {"date": "1996-12-18", "label": "18 Dec 1996", "title": "Constitution signed", "text": "The post-apartheid Constitution became law."}
+      ]
+    },
+    "MX": {
+      "system": "Federal presidential republic",
+      "timelineSource": {"label": "Encyclopaedia Britannica · Mexico", "url": "https://www.britannica.com/place/Mexico"},
+      "leader": {
+        "name": "Claudia Sheinbaum",
+        "role": "President",
+        "startDate": "2024-10-01",
+        "term": "Single six-year term",
+        "bio": "A physicist and former head of government of Mexico City, Sheinbaum became Mexico’s first woman president after winning the 2024 election.",
+        "nextElection": {"label": "2030", "note": "Presidential election; exact date not yet scheduled", "source": {"label": "Instituto Nacional Electoral", "url": "https://www.ine.mx/"}},
+        "record": [
+          {"text": "Made passenger-rail expansion, port investment and completion of the Mexico City–Toluca rail link central infrastructure priorities.", "source": {"label": "Government of Mexico · presidency", "url": "https://www.gob.mx/presidencia"}},
+          {"text": "Expanded welfare commitments and established cabinet-level institutions for women, science and digital transformation.", "source": {"label": "Reuters · inauguration and programme", "url": "https://www.reuters.com/world/americas/mexicos-sheinbaum-takes-office-making-history-first-woman-president-2024-10-01/"}}
+        ],
+        "scrutiny": [
+          {"text": "The elected-judiciary reform has prompted concerns about judicial independence, political influence and investor confidence.", "source": {"label": "International Commission of Jurists · Mexico judicial reform", "url": "https://www.icj.org/country/mexico/"}},
+          {"text": "Organised crime, disappearances and violence against journalists remain major tests of the federal security strategy.", "source": {"label": "UN Human Rights · Mexico", "url": "https://www.ohchr.org/en/countries/mexico"}}
+        ],
+        "sources": [{"label": "Government of Mexico · Presidency", "url": "https://www.gob.mx/presidencia"}]
+      },
+      "succession": [
+        {"name": "Andrés Manuel López Obrador", "office": "President", "term": "2018–2024", "note": "Expanded social transfers and state-led development under the Fourth Transformation programme."},
+        {"name": "Enrique Peña Nieto", "office": "President", "term": "2012–2018", "note": "Passed energy, education and telecommunications reforms amid corruption scandals."},
+        {"name": "Felipe Calderón", "office": "President", "term": "2006–2012", "note": "Deployed the military extensively against organised crime."},
+        {"name": "Vicente Fox", "office": "President", "term": "2000–2006", "note": "Ended the PRI’s seventy-one-year hold on the presidency."}
+      ],
+      "timeline": [
+        {"date": "1810-09-16", "label": "16 Sep 1810", "title": "Independence struggle began", "text": "The Grito de Dolores launched the revolt against Spanish rule."},
+        {"date": "1821-09-27", "label": "27 Sep 1821", "title": "Independence achieved", "text": "The Army of the Three Guarantees entered Mexico City."},
+        {"date": "1910-11-20", "label": "20 Nov 1910", "title": "Mexican Revolution", "text": "An armed revolt began against the long rule of Porfirio Díaz."},
+        {"date": "1917-02-05", "label": "5 Feb 1917", "title": "Constitution adopted", "text": "Mexico adopted its current constitutional foundation."},
+        {"date": "1968-10-02", "label": "2 Oct 1968", "title": "Tlatelolco massacre", "text": "Security forces killed student demonstrators in Mexico City."},
+        {"date": "2024-10-01", "label": "1 Oct 2024", "title": "First woman president", "text": "Claudia Sheinbaum took office."}
+      ]
+    },
+    "EG": {
+      "system": "Unitary semi-presidential republic",
+      "timelineSource": {"label": "Encyclopaedia Britannica · Egypt", "url": "https://www.britannica.com/place/Egypt"},
+      "leader": {
+        "name": "Abdel Fattah el-Sisi",
+        "role": "President",
+        "startDate": "2014-06-08",
+        "term": "Third term; current six-year term began April 2024",
+        "bio": "A former defence minister and armed-forces commander, el-Sisi became president in 2014 after leading the military removal of Mohamed Morsi in 2013.",
+        "nextElection": {"label": "By 2030", "note": "Presidential election; exact date not yet scheduled", "source": {"label": "National Election Authority of Egypt", "url": "https://www.elections.eg/"}},
+        "record": [
+          {"text": "Oversaw large transport, energy and urban-construction programmes, including the New Administrative Capital.", "source": {"label": "Egypt Presidency · national projects", "url": "https://www.presidency.eg/en/"}},
+          {"text": "Expanded power generation and road infrastructure and negotiated repeated IMF-supported economic programmes.", "source": {"label": "IMF · Egypt country page", "url": "https://www.imf.org/en/Countries/EGY"}}
+        ],
+        "scrutiny": [
+          {"text": "Currency devaluations, debt-service costs and inflation have placed heavy pressure on household living standards.", "source": {"label": "World Bank · Egypt overview", "url": "https://www.worldbank.org/en/country/egypt/overview"}},
+          {"text": "Rights organisations document extensive restrictions on opposition, media, protest and civil society.", "source": {"label": "Human Rights Watch · Egypt", "url": "https://www.hrw.org/middle-east/north-africa/egypt"}}
+        ],
+        "sources": [{"label": "Associated Press · third-term inauguration", "url": "https://apnews.com/article/92afb877d1801fdc528d80a33aa625c4"}]
+      },
+      "succession": [
+        {"name": "Adly Mansour", "office": "Interim President", "term": "2013–2014", "note": "Constitutional court chief appointed interim leader after the military removed Mohamed Morsi."},
+        {"name": "Mohamed Morsi", "office": "President", "term": "2012–2013", "note": "First president elected after the 2011 uprising; removed by the military after mass protests."},
+        {"name": "Mohamed Hussein Tantawi", "office": "Acting head of state", "term": "2011–2012", "note": "Led the Supreme Council of the Armed Forces during the post-Mubarak transition."},
+        {"name": "Hosni Mubarak", "office": "President", "term": "1981–2011", "note": "Ruled for nearly thirty years before resigning during the Arab Spring uprising."}
+      ],
+      "timeline": [
+        {"date": "1922-02-28", "label": "28 Feb 1922", "title": "Independence declared", "text": "Britain ended its protectorate, though it retained substantial influence."},
+        {"date": "1952-07-23", "label": "23 Jul 1952", "title": "Free Officers revolution", "text": "Military officers overthrew King Farouk."},
+        {"date": "1953-06-18", "label": "18 Jun 1953", "title": "Republic proclaimed", "text": "The monarchy was formally abolished."},
+        {"date": "1979-03-26", "label": "26 Mar 1979", "title": "Peace treaty with Israel", "text": "Egypt became the first Arab state to recognise Israel."},
+        {"date": "2011-02-11", "label": "11 Feb 2011", "title": "Mubarak resigned", "text": "Mass protests ended Hosni Mubarak’s thirty-year rule."},
+        {"date": "2014-06-08", "label": "8 Jun 2014", "title": "El-Sisi inaugurated", "text": "Abdel Fattah el-Sisi began his presidency."}
+      ]
+    },
+    "AU": {
+      "system": "Federal parliamentary constitutional monarchy",
+      "timelineSource": {"label": "Encyclopaedia Britannica · Australia", "url": "https://www.britannica.com/place/Australia"},
+      "leader": {
+        "name": "Anthony Albanese",
+        "role": "Prime Minister",
+        "startDate": "2022-05-23",
+        "term": "Second term; re-elected May 2025",
+        "bio": "A long-serving Labor parliamentarian and former infrastructure minister, Albanese became prime minister in 2022 and won a larger second mandate in 2025.",
+        "nextElection": {"label": "By May 2028", "note": "House of Representatives election unless called earlier", "source": {"label": "Australian Electoral Commission", "url": "https://www.aec.gov.au/elections/federal_elections/"}},
+        "record": [
+          {"text": "Legislated a national 2030 emissions-reduction target and expanded renewable-energy and grid investment.", "source": {"label": "Australian government · Climate Change Act", "url": "https://www.dcceew.gov.au/climate-change/emissions-reduction"}},
+          {"text": "Won a second consecutive term in 2025, the first prime minister to do so in more than two decades.", "source": {"label": "PBS NewsHour · 2025 election", "url": "https://www.pbs.org/newshour/world/australian-prime-minister-albanese-wins-election-for-second-3-year-term"}}
+        ],
+        "scrutiny": [
+          {"text": "Housing affordability, rents and household living costs remain the government’s most persistent domestic pressures.", "source": {"label": "Australian Bureau of Statistics", "url": "https://www.abs.gov.au/"}},
+          {"text": "The 2023 Indigenous Voice referendum was defeated, exposing weaknesses in the government’s campaign and reconciliation strategy.", "source": {"label": "Australian Electoral Commission · referendum results", "url": "https://www.aec.gov.au/referendums/2023-referendum-results.htm"}}
+        ],
+        "sources": [{"label": "Prime Minister of Australia · official biography", "url": "https://www.pm.gov.au/about-prime-minister"}]
+      },
+      "succession": [
+        {"name": "Scott Morrison", "office": "Prime Minister", "term": "2018–2022", "note": "Led the country through major bushfires and the COVID-19 pandemic."},
+        {"name": "Malcolm Turnbull", "office": "Prime Minister", "term": "2015–2018", "note": "Legalised same-sex marriage after a national postal survey."},
+        {"name": "Tony Abbott", "office": "Prime Minister", "term": "2013–2015", "note": "Led a conservative government focused on border policy and repeal of carbon pricing."},
+        {"name": "Kevin Rudd", "office": "Prime Minister", "term": "2007–2010; 2013", "note": "Issued the national apology to the Stolen Generations and returned briefly in 2013."}
+      ],
+      "timeline": [
+        {"date": "1901-01-01", "label": "1 Jan 1901", "title": "Federation", "text": "Six colonies united as the Commonwealth of Australia."},
+        {"date": "1942-10-09", "label": "9 Oct 1942", "title": "Statute of Westminster adopted", "text": "Australia formalised legislative independence from Britain."},
+        {"date": "1967-05-27", "label": "27 May 1967", "title": "Referendum", "text": "Voters overwhelmingly supported constitutional changes relating to Aboriginal Australians."},
+        {"date": "1986-03-03", "label": "3 Mar 1986", "title": "Australia Act", "text": "Remaining constitutional links to the UK Parliament were ended."},
+        {"date": "2008-02-13", "label": "13 Feb 2008", "title": "National apology", "text": "Parliament apologised to Aboriginal and Torres Strait Islander Stolen Generations."},
+        {"date": "2022-05-23", "label": "23 May 2022", "title": "Albanese sworn in", "text": "Anthony Albanese became prime minister."}
+      ]
+    }
+  },
+  "regional": {
+    "NG": {
+      "title": "Nigeria’s states & federal capital",
+      "unitLabel": "State / territory",
+      "leaderLabel": "Governor / minister",
+      "note": "Nigeria has 36 elected state governors. The Federal Capital Territory is administered by a federally appointed minister rather than a governor.",
+      "source": {"label": "Nigeria Governors directory · cross-checked 24 Aug 2026", "url": "https://currentaffairs.ng/gov/"},
+      "units": [
+        {"name": "Abia", "office": "Governor", "leader": "Alex Otti", "startDate": "2023-05-29", "bio": "An economist and former bank chief executive who entered state politics on a public-finance and service-delivery platform.", "profileUrl": "https://en.wikipedia.org/wiki/Alex_Otti"},
+        {"name": "Adamawa", "office": "Governor", "leader": "Ahmadu Umaru Fintiri", "startDate": "2019-05-29", "bio": "A former speaker of the Adamawa State House of Assembly serving a second elected term as governor.", "profileUrl": "https://en.wikipedia.org/wiki/Ahmadu_Umaru_Fintiri"},
+        {"name": "Akwa Ibom", "office": "Governor", "leader": "Umo Eno", "startDate": "2023-05-29", "bio": "A pastor and hospitality entrepreneur who previously served as the state commissioner for lands and water resources.", "profileUrl": "https://en.wikipedia.org/wiki/Umo_Eno"},
+        {"name": "Anambra", "office": "Governor", "leader": "Charles Chukwuma Soludo", "startDate": "2022-03-17", "bio": "An economist and former governor of the Central Bank of Nigeria, re-elected to lead Anambra in 2025.", "profileUrl": "https://en.wikipedia.org/wiki/Charles_Soludo"},
+        {"name": "Bauchi", "office": "Governor", "leader": "Bala Abdulkadir Mohammed", "startDate": "2019-05-29", "bio": "A former senator and former federal minister of the Federal Capital Territory serving a second term.", "profileUrl": "https://en.wikipedia.org/wiki/Bala_Mohammed"},
+        {"name": "Bayelsa", "office": "Governor", "leader": "Douye Diri", "startDate": "2020-02-14", "bio": "A former member of the House of Representatives and senator who began a second term in 2024.", "profileUrl": "https://en.wikipedia.org/wiki/Douye_Diri"},
+        {"name": "Benue", "office": "Governor", "leader": "Hyacinth Alia", "startDate": "2023-05-29", "bio": "A Catholic priest before entering elective politics, with a public programme centred on salaries, infrastructure and agriculture.", "profileUrl": "https://en.wikipedia.org/wiki/Hyacinth_Alia"},
+        {"name": "Borno", "office": "Governor", "leader": "Babagana Umara Zulum", "startDate": "2019-05-29", "bio": "An engineer and university professor whose administration operates amid the long-running Boko Haram conflict.", "profileUrl": "https://en.wikipedia.org/wiki/Babagana_Umara_Zulum"},
+        {"name": "Cross River", "office": "Governor", "leader": "Bassey Edet Otu", "startDate": "2023-05-29", "bio": "A former member of both chambers of the National Assembly and long-time Cross River politician.", "profileUrl": "https://en.wikipedia.org/wiki/Bassey_Otu"},
+        {"name": "Delta", "office": "Governor", "leader": "Sheriff Oborevwori", "startDate": "2023-05-29", "bio": "A former speaker of the Delta State House of Assembly who moved from the legislature to the governorship.", "profileUrl": "https://en.wikipedia.org/wiki/Sheriff_Oborevwori"},
+        {"name": "Ebonyi", "office": "Governor", "leader": "Francis Nwifuru", "startDate": "2023-05-29", "bio": "A former speaker of the Ebonyi State House of Assembly with a background in building technology.", "profileUrl": "https://en.wikipedia.org/wiki/Francis_Nwifuru"},
+        {"name": "Edo", "office": "Governor", "leader": "Monday Okpebholo", "startDate": "2024-11-12", "bio": "A businessman and former senator elected governor in the 2024 off-cycle election.", "profileUrl": "https://en.wikipedia.org/wiki/Monday_Okpebholo"},
+        {"name": "Ekiti", "office": "Governor", "leader": "Biodun Oyebanji", "startDate": "2022-10-16", "bio": "A public administrator who previously served as secretary to the state government and in multiple cabinet roles.", "profileUrl": "https://en.wikipedia.org/wiki/Biodun_Oyebanji"},
+        {"name": "Enugu", "office": "Governor", "leader": "Peter Mbah", "startDate": "2023-05-29", "bio": "A lawyer and energy-sector entrepreneur who previously served as the state’s commissioner for finance.", "profileUrl": "https://en.wikipedia.org/wiki/Peter_Mbah"},
+        {"name": "Gombe", "office": "Governor", "leader": "Muhammadu Inuwa Yahaya", "startDate": "2019-05-29", "bio": "An accountant and former state commissioner for finance serving a second elected term.", "profileUrl": "https://en.wikipedia.org/wiki/Muhammadu_Inuwa_Yahaya"},
+        {"name": "Imo", "office": "Governor", "leader": "Hope Uzodimma", "startDate": "2020-01-15", "bio": "A former senator who became governor after a Supreme Court judgment and won a second term in 2023.", "profileUrl": "https://en.wikipedia.org/wiki/Hope_Uzodimma"},
+        {"name": "Jigawa", "office": "Governor", "leader": "Umar Namadi", "startDate": "2023-05-29", "bio": "An accountant and former deputy governor who previously chaired the state’s revenue service.", "profileUrl": "https://en.wikipedia.org/wiki/Umar_Namadi"},
+        {"name": "Kaduna", "office": "Governor", "leader": "Uba Sani", "startDate": "2023-05-29", "bio": "A former senator and civil-rights activist whose career also includes federal and state advisory roles.", "profileUrl": "https://en.wikipedia.org/wiki/Uba_Sani"},
+        {"name": "Kano", "office": "Governor", "leader": "Abba Kabir Yusuf", "startDate": "2023-05-29", "bio": "A civil engineer and former state works commissioner elected after a long-running opposition campaign.", "profileUrl": "https://en.wikipedia.org/wiki/Abba_Kabir_Yusuf"},
+        {"name": "Katsina", "office": "Governor", "leader": "Dikko Umar Radda", "startDate": "2023-05-29", "bio": "An economist and former director-general of Nigeria’s small-enterprise development agency.", "profileUrl": "https://en.wikipedia.org/wiki/Dikko_Umar_Radda"},
+        {"name": "Kebbi", "office": "Governor", "leader": "Nasir Idris", "startDate": "2023-05-29", "bio": "A teacher and trade-union leader who served as national president of the Nigeria Union of Teachers.", "profileUrl": "https://en.wikipedia.org/wiki/Nasir_Idris"},
+        {"name": "Kogi", "office": "Governor", "leader": "Ahmed Usman Ododo", "startDate": "2024-01-27", "bio": "An accountant and former auditor-general for local government elected in the 2023 off-cycle contest.", "profileUrl": "https://en.wikipedia.org/wiki/Ahmed_Usman_Ododo"},
+        {"name": "Kwara", "office": "Governor", "leader": "AbdulRahman AbdulRazaq", "startDate": "2019-05-29", "bio": "A lawyer and business executive serving a second term and a former chair of the Nigeria Governors’ Forum.", "profileUrl": "https://en.wikipedia.org/wiki/AbdulRahman_AbdulRazaq"},
+        {"name": "Lagos", "office": "Governor", "leader": "Babajide Sanwo-Olu", "startDate": "2019-05-29", "bio": "A former banker and senior state public administrator serving a second term in Nigeria’s largest urban economy.", "profileUrl": "https://en.wikipedia.org/wiki/Babajide_Sanwo-Olu"},
+        {"name": "Nasarawa", "office": "Governor", "leader": "Abdullahi Sule", "startDate": "2019-05-29", "bio": "An engineer and former industrial executive serving a second elected term.", "profileUrl": "https://en.wikipedia.org/wiki/Abdullahi_Sule"},
+        {"name": "Niger", "office": "Governor", "leader": "Mohammed Umar Bago", "startDate": "2023-05-29", "bio": "A former banker and three-term member of the House of Representatives.", "profileUrl": "https://en.wikipedia.org/wiki/Mohammed_Umar_Bago"},
+        {"name": "Ogun", "office": "Governor", "leader": "Dapo Abiodun", "startDate": "2019-05-29", "bio": "A business executive and former chair of the Oil and Gas Committee of Ogun State serving a second term.", "profileUrl": "https://en.wikipedia.org/wiki/Dapo_Abiodun"},
+        {"name": "Ondo", "office": "Governor", "leader": "Lucky Orimisan Aiyedatiwa", "startDate": "2023-12-27", "bio": "A business executive and former deputy governor who succeeded Rotimi Akeredolu and won the 2024 election.", "profileUrl": "https://en.wikipedia.org/wiki/Lucky_Aiyedatiwa"},
+        {"name": "Osun", "office": "Governor", "leader": "Ademola Adeleke", "startDate": "2022-11-27", "bio": "A businessman and former senator whose first term is scheduled to conclude after the 2026 state election cycle.", "profileUrl": "https://en.wikipedia.org/wiki/Ademola_Adeleke"},
+        {"name": "Oyo", "office": "Governor", "leader": "Seyi Makinde", "startDate": "2019-05-29", "bio": "An electrical engineer and energy entrepreneur serving a second term.", "profileUrl": "https://en.wikipedia.org/wiki/Seyi_Makinde"},
+        {"name": "Plateau", "office": "Governor", "leader": "Caleb Manasseh Mutfwang", "startDate": "2023-05-29", "bio": "A lawyer and former local-government chair whose administration faces persistent communal-security challenges.", "profileUrl": "https://en.wikipedia.org/wiki/Caleb_Mutfwang"},
+        {"name": "Rivers", "office": "Governor", "leader": "Siminalayi Fubara", "startDate": "2023-05-29", "bio": "An accountant and former state accountant-general, restored to office in September 2025 after a six-month federal emergency suspension.", "profileUrl": "https://en.wikipedia.org/wiki/Siminalayi_Fubara"},
+        {"name": "Sokoto", "office": "Governor", "leader": "Ahmad Aliyu Sokoto", "startDate": "2023-05-29", "bio": "An accountant and former deputy governor who also served as a federal water-resources commissioner.", "profileUrl": "https://en.wikipedia.org/wiki/Ahmad_Aliyu"},
+        {"name": "Taraba", "office": "Governor", "leader": "Agbu Kefas", "startDate": "2023-05-29", "bio": "A retired Nigerian Army lieutenant colonel and former party chair in Taraba State.", "profileUrl": "https://en.wikipedia.org/wiki/Agbu_Kefas"},
+        {"name": "Yobe", "office": "Governor", "leader": "Mai Mala Buni", "startDate": "2019-05-29", "bio": "A former national secretary and interim national chair of the All Progressives Congress serving a second term.", "profileUrl": "https://en.wikipedia.org/wiki/Mai_Mala_Buni"},
+        {"name": "Zamfara", "office": "Governor", "leader": "Dauda Lawal", "startDate": "2023-05-29", "bio": "A former bank executive whose administration has prioritised security and public-finance reform.", "profileUrl": "https://en.wikipedia.org/wiki/Dauda_Lawal"},
+        {"name": "Federal Capital Territory", "office": "Minister", "leader": "Nyesom Wike", "startDate": "2023-08-21", "bio": "A lawyer and former two-term governor of Rivers State appointed by the president to administer the FCT.", "profileUrl": "https://en.wikipedia.org/wiki/Nyesom_Wike"}
+      ]
+    }
+  }
+}

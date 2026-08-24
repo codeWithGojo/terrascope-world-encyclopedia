@@ -1,5 +1,7 @@
 import Link from "next/link";
 import {WorldAtlas} from "./components/WorldAtlas";
+import {OnThisDayWidget} from "./components/OnThisDayWidget";
+import {SiteHeader} from "./components/SiteHeader";
 
 const continents = [
   { name: "Africa", count: 54, pop: "1.5B", mark: "AF", size: "continent-hero", location: "Okonjima, Namibia", credit: "Nadine Marfurt", image: "https://images.unsplash.com/photo-1761078206756-68d3023f3021?auto=format&fit=crop&w=1800&q=84", copy: "Ancient landscapes, young cities and more genetic, linguistic and cultural diversity than any summary can contain." },
@@ -9,32 +11,18 @@ const continents = [
   { name: "Oceania", count: 14, pop: "46M", mark: "OC", size: "continent-standard", location: "Great Barrier Reef, Australia", credit: "Joan Li", image: "https://images.unsplash.com/photo-1650754621317-2646d1695edb?auto=format&fit=crop&w=1500&q=84", copy: "A blue continent: island nations, deep ocean cultures and ecosystems found nowhere else on Earth." },
 ];
 
-function Header() {
-  return (
-    <header className="site-header">
-      <Link className="brand" href="/" aria-label="TerraScope home">
-        <span className="brand-mark">T</span><span>TerraScope</span>
-      </Link>
-      <nav className="main-nav" aria-label="Main navigation">
-        <Link href="/countries">Countries</Link><Link href="/compare">Compare</Link><Link href="/rankings">Rankings</Link><Link href="/people">Football Archive</Link>
-      </nav>
-      <Link className="nav-action" href="/countries">Open the atlas <span>↗</span></Link>
-    </header>
-  );
-}
-
 export default function Home() {
   return (
     <main>
-      <Header />
+      <SiteHeader />
       <section className="hero">
         <div className="hero-copy">
           <p className="eyebrow"><span /> The living world almanac</p>
           <h1>Every country.<br /><em>One living atlas.</em></h1>
           <p className="hero-intro">Explore the people, places, histories and numbers that shape our planet—carefully organised and made beautifully clear.</p>
-          <form className="search-bar" action="/countries">
-            <span aria-hidden="true">⌕</span><label className="sr-only" htmlFor="country-search">Search countries and cities</label>
-            <input id="country-search" name="q" placeholder="Search a country, capital or region" /><button type="submit">Explore</button>
+          <form className="search-bar" action="/search">
+            <span aria-hidden="true">⌕</span><label className="sr-only" htmlFor="country-search">Search the whole TerraScope atlas</label>
+            <input id="country-search" name="q" placeholder="Search countries, cities, people or leaders" /><button type="submit">Search</button>
           </form>
           <p className="search-hint"><b>Popular:</b> Nigeria · Japan · Brazil · France</p>
         </div>
@@ -53,7 +41,7 @@ export default function Home() {
         <div className="lens-grid">
           <article><span>01</span><h3>Place</h3><p>Land, climate, cities, borders and the physical forces that shape daily life.</p></article>
           <article><span>02</span><h3>Power</h3><p>Presidents, institutions, economies and the systems organising each nation.</p></article>
-          <article><span>03</span><h3>People</h3><p>Languages, culture and the remarkable lives through which countries travel.</p></article>
+          <article><span>03</span><h3>Football</h3><p>More than 50 player dossiers connecting modern stars and legends to their nations.</p></article>
         </div>
       </section>
 
@@ -68,8 +56,8 @@ export default function Home() {
             <Link className="text-link" href="/countries/nigeria">Discover Nigeria <b>→</b></Link>
           </article>
           <div className="editorial-column" id="journal">
-            <article className="daily-fact"><span className="issue">Field note · 013</span><p className="quote-mark">“</p><h3>The Pacific Ocean is wider than the Moon.</h3><p>At its broadest, the Pacific spans roughly 19,000 km—more than five times the Moon’s diameter.</p><span className="field-link">Read the field note →</span></article>
-            <Link className="person-card" href="/people"><div className="portrait monogram">CN</div><div><small>People who shaped the world</small><h3>Chimamanda<br />Ngozi Adichie</h3><p>Writer · Nigeria</p></div><span>↗</span></Link>
+            <OnThisDayWidget compact/>
+            <Link className="person-card" href="/football-archive"><div className="portrait monogram">BS</div><div><small>Inside the football archive</small><h3>Bukayo<br />Saka</h3><p>Forward · England</p></div><span>↗</span></Link>
           </div>
         </div>
       </section>
@@ -88,14 +76,14 @@ export default function Home() {
         <div className="threads-heading"><p className="eyebrow"><span/> See the connections</p><h2>The world does not<br/><em>stop at borders.</em></h2></div>
         <div className="thread-list">
           <Link href="/compare"><span>01 · Compare</span><h3>What changes when two countries sit side by side?</h3><p>Compare scale, population, health, economies and systems without losing the human context.</p><b>Open comparison →</b></Link>
-          <Link href="/people"><span>02 · People</span><h3>Meet the lives that carried ideas around the world.</h3><p>Writers, leaders, artists, scientists and athletes connected back to the places that shaped them.</p><b>Browse notable people →</b></Link>
+          <Link href="/football-archive"><span>02 · Football archive</span><h3>Compare the players who changed the game.</h3><p>Open detailed career dossiers for legends and current stars, then shortlist two players side by side.</p><b>Browse football archive →</b></Link>
           <Link href="/rankings"><span>03 · Scale</span><h3>Make the planet’s biggest differences visible.</h3><p>Rankings turn abstract numbers into clear relationships—from population to land area.</p><b>View world rankings →</b></Link>
         </div>
       </section>
 
       <section className="atlas-cta"><small>TerraScope · Digital World Encyclopaedia</small><h2>Start with somewhere<br/>you <em>think</em> you know.</h2><div><Link href="/countries/nigeria">Discover Nigeria <span>↗</span></Link><Link href="/countries">Browse all profiles <span>→</span></Link></div></section>
 
-      <footer><div><span className="brand-mark light">T</span><h2>Go somewhere<br />you’ve never been.</h2></div><p>TerraScope is an independent digital atlas designed to make our complicated world easier—and more delightful—to understand.</p><div className="footer-bottom"><span>© 2026 TerraScope</span><span>Sources · Methodology · About</span><span>Lagos · WAT</span></div></footer>
+      <footer><div><span className="brand-mark light">T</span><h2>Go somewhere<br />you’ve never been.</h2></div><p>TerraScope is an independent digital atlas designed to make our complicated world easier—and more delightful—to understand.</p><div className="footer-bottom"><span>© 2026 TerraScope</span><nav aria-label="Footer navigation"><Link href="/search">Search</Link><Link href="/on-this-day">On this day</Link><Link href="/method">Sources & method</Link></nav><span>Lagos · WAT</span></div></footer>
     </main>
   );
 }
