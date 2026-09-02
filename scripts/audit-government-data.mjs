@@ -1,6 +1,7 @@
 import {readFile} from "node:fs/promises";
 
 const dataset=JSON.parse(await readFile(new URL("../app/government-data.json",import.meta.url),"utf8"));
+const reference=JSON.parse(await readFile(new URL("../app/country-reference-data.json",import.meta.url),"utf8"));
 const errors=[];
 const isUrl=(value)=>typeof value==="string"&&/^https:\/\//.test(value);
 const expect=(condition,message)=>{if(!condition)errors.push(message);};
@@ -8,6 +9,14 @@ const expect=(condition,message)=>{if(!condition)errors.push(message);};
 expect(/^\d{4}-\d{2}-\d{2}$/.test(dataset.asOf),"Dataset asOf must be YYYY-MM-DD.");
 const profileEntries=Object.entries(dataset.profiles??{});
 expect(profileEntries.length===11,`Expected 11 deep national profiles; found ${profileEntries.length}.`);
+const referenceEntries=Object.entries(reference.records??{});
+expect(referenceEntries.length===195,`Expected 195 complete country reference profiles; found ${referenceEntries.length}.`);
+for(const [code,profile] of referenceEntries){
+  expect(Boolean(profile.background),`${code}: historical background is missing.`);
+  expect(Boolean(profile.governmentType),`${code}: reference government type is missing.`);
+  expect(Boolean(profile.climate),`${code}: reference climate is missing.`);
+  expect(Boolean(profile.terrain),`${code}: reference terrain is missing.`);
+}
 
 for(const [code,profile] of profileEntries){
   const leader=profile.leader??{};
@@ -53,4 +62,4 @@ if(errors.length){
 
 const sourcedClaims=profileEntries.reduce((total,[,profile])=>total+profile.leader.record.length+profile.leader.scrutiny.length,0);
 const timelineEvents=profileEntries.reduce((total,[,profile])=>total+profile.timeline.length,0);
-console.log(`Government data audit passed: ${profileEntries.length} national profiles, ${sourcedClaims} sourced editorial claims, ${timelineEvents} timeline events and ${nigeria.units.length} Nigeria regional records (edition ${dataset.asOf}).`);
+console.log(`Government data audit passed: ${referenceEntries.length} complete reference profiles, ${profileEntries.length} deep dossiers, ${sourcedClaims} sourced editorial claims, ${timelineEvents} timeline events and ${nigeria.units.length} Nigeria regional records (edition ${dataset.asOf}).`);

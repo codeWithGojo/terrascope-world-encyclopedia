@@ -1,0 +1,4 @@
+import type {MetadataRoute} from "next";
+import {atlasCountries} from "./atlas-data";
+const base="https://terrascope-world-encyclopedia.vercel.app";
+export default function sitemap():MetadataRoute.Sitemap{const now=new Date();const staticPaths=["","/countries","/compare","/rankings","/rankings/iq","/rankings/most-visited","/football-archive","/on-this-day","/search","/method"];const rankingPaths=["economies","per-capita","population","football","legacy","low-income","integrity","territory"].map((id)=>`/rankings/${id}`);return [...staticPaths,...rankingPaths].map((path)=>({url:`${base}${path}`,lastModified:now,changeFrequency:(path.startsWith("/rankings")?"monthly":"weekly") as "monthly"|"weekly",priority:path===""?1:.8})).concat(atlasCountries.map((country)=>({url:`${base}/countries/${country.slug}`,lastModified:now,changeFrequency:"monthly" as const,priority:.7})));}

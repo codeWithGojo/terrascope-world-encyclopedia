@@ -5,12 +5,12 @@ import Link from "next/link";
 import {atlasByCode, atlasCountries} from "../atlas-data";
 
 type Entry = {code:string; name:string; flag:string; value:string; score:number; note?:string; slug?:string};
-type Category = {id:string; short:string; title:string; eyebrow:string; unit:string; date:string; description:string; source:string; sourceLabel:string; caution?:string; entries:Entry[]};
+export type Category = {id:string; short:string; title:string; eyebrow:string; unit:string; date:string; description:string; source:string; sourceLabel:string; caution?:string; entries:Entry[]};
 const entry = (code:string, name:string, flag:string, value:string, score:number, note?:string, slug?:string):Entry => ({code,name,flag,value,score,note,slug});
 
 const largest = [...atlasCountries].sort((a,b) => b.area-a.area).slice(0,10).map((country) => entry(country.code,country.name,country.flag,country.areaLabel,country.area,"Total area",country.slug));
 
-const categories: Category[] = [
+export const rankingCategories: Category[] = [
   {id:"economies",short:"Richest",title:"Largest economies",eyebrow:"Economic scale",unit:"Nominal GDP · current US$",date:"IMF WEO · 2026 estimate",description:"Total output measures the size of an economy, not how evenly prosperity is shared. Values are rounded to make comparison readable.",source:"https://data.imf.org/en",sourceLabel:"IMF World Economic Outlook",entries:[entry("US","United States","🇺🇸","≈ $31.8T",31.8),entry("CN","China","🇨🇳","≈ $20.7T",20.7),entry("DE","Germany","🇩🇪","≈ $5.0T",5.0),entry("IN","India","🇮🇳","≈ $4.5T",4.5),entry("JP","Japan","🇯🇵","≈ $4.5T",4.45),entry("GB","United Kingdom","🇬🇧","≈ $4.0T",4.0),entry("FR","France","🇫🇷","≈ $3.4T",3.4),entry("IT","Italy","🇮🇹","≈ $2.6T",2.6),entry("RU","Russia","🇷🇺","≈ $2.5T",2.5),entry("CA","Canada","🇨🇦","≈ $2.4T",2.4)]},
   {id:"per-capita",short:"Per person",title:"Highest income per person",eyebrow:"Average economic output",unit:"GDP per capita · current US$",date:"World Bank · 2024",description:"GDP per person divides national output by population. It is not a salary and does not describe inequality or household wealth.",source:"https://data.worldbank.org/indicator/NY.GDP.PCAP.CD",sourceLabel:"World Bank national accounts",caution:"Microstates and financial centres can rank unusually high because of small resident populations and cross-border activity.",entries:[entry("MC","Monaco","🇲🇨","≈ $288,000",288000),entry("LI","Liechtenstein","🇱🇮","≈ $206,000",206000),entry("LU","Luxembourg","🇱🇺","≈ $137,000",137000),entry("IE","Ireland","🇮🇪","≈ $112,000",112000),entry("CH","Switzerland","🇨🇭","≈ $104,000",104000),entry("SG","Singapore","🇸🇬","≈ $90,700",90700),entry("NO","Norway","🇳🇴","≈ $86,800",86800),entry("US","United States","🇺🇸","≈ $84,500",84500),entry("IS","Iceland","🇮🇸","≈ $82,700",82700),entry("QA","Qatar","🇶🇦","≈ $76,700",76700)]},
   {id:"population",short:"Population",title:"Most populous nations",eyebrow:"People and scale",unit:"Estimated residents",date:"UN WPP 2024 · mid-2025",description:"Population estimates are demographic models, not a single-day headcount. Values below are rounded from the UN’s latest revision.",source:"https://population.un.org/wpp/",sourceLabel:"UN World Population Prospects",entries:[entry("IN","India","🇮🇳","1.464B",1464),entry("CN","China","🇨🇳","1.416B",1416),entry("US","United States","🇺🇸","347M",347),entry("ID","Indonesia","🇮🇩","286M",286),entry("PK","Pakistan","🇵🇰","255M",255),entry("NG","Nigeria","🇳🇬","238M",238),entry("BR","Brazil","🇧🇷","213M",213),entry("BD","Bangladesh","🇧🇩","176M",176),entry("RU","Russia","🇷🇺","144M",144),entry("ET","Ethiopia","🇪🇹","135M",135)]},
@@ -26,19 +26,19 @@ function countryHref(item:Entry) {
   return `/countries/${atlasByCode.get(item.code)?.slug ?? ""}`;
 }
 
-export default function RankingsExplorer() {
-  const [active, setActive] = useState(categories[0].id);
-  const category = categories.find((item) => item.id === active) ?? categories[0];
+export default function RankingsExplorer({initialCategory="economies",detail=false}:{initialCategory?:string;detail?:boolean}) {
+  const [active, setActive] = useState(rankingCategories.some((item)=>item.id===initialCategory)?initialCategory:rankingCategories[0].id);
+  const category = rankingCategories.find((item) => item.id === active) ?? rankingCategories[0];
   const max = Math.max(...category.entries.map((item) => item.score));
   return <section className="ranking-explorer">
-    <div className="ranking-tabs" role="tablist" aria-label="World ranking categories">{categories.map((item) => <button type="button" role="tab" aria-selected={item.id === active} className={item.id === active ? "active" : ""} key={item.id} onClick={() => setActive(item.id)}><span>{item.short}</span><small>{item.entries.length}</small></button>)}</div>
+    <div className="ranking-tabs" role="tablist" aria-label="World ranking categories">{rankingCategories.map((item) => <button type="button" role="tab" aria-selected={item.id === active} className={item.id === active ? "active" : ""} key={item.id} onClick={() => setActive(item.id)}><span>{item.short}</span><small>{item.entries.length}</small></button>)}</div>
     <div className="ranking-dashboard">
       <header><div><p>{category.eyebrow}</p><h2>{category.title}</h2></div><div><small>{category.unit}</small><b>{category.date}</b></div></header>
       <p className="ranking-description">{category.description}</p>
       <div className="ranking-table">{category.entries.map((item,index) => <Link href={countryHref(item)} className="ranking-row" key={`${category.id}-${item.name}`}>
         <span className="ranking-position">{String(index + 1).padStart(2,"0")}</span><span className="ranking-flag">{item.flag}</span><div><b>{item.name}</b>{item.note && <small>{item.note}</small>}</div><strong>{item.value}</strong><i style={{width:`${Math.max(4,(item.score/max)*100)}%`}} />
       </Link>)}</div>
-      <footer className="ranking-method"><div><span>Source</span><a href={category.source} target="_blank" rel="noreferrer">{category.sourceLabel} ↗</a></div>{category.caution && <p>{category.caution}</p>}</footer>
+      <footer className="ranking-method"><div><span>Source</span><a href={category.source} target="_blank" rel="noreferrer">{category.sourceLabel} ↗</a></div><div className="ranking-footer-actions">{category.caution && <p>{category.caution}</p>}{!detail&&<Link href={`/rankings/${category.id}`}>Open dedicated {category.short.toLowerCase()} page →</Link>}</div></footer>
     </div>
   </section>;
 }

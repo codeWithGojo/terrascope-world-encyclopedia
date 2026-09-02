@@ -13,6 +13,7 @@ export function NotablePeopleGrid({people,country}:{people:NotablePerson[];count
   useEffect(() => {
     let cancelled=false;
     Promise.all(people.map(async (person) => {
+      if(person.image)return {...person,thumbnail:person.image};
       try {
         const response=await fetch(`https://en.wikipedia.org/api/rest_v1/page/summary/${person.wikipedia}`);
         if (!response.ok) return person;
@@ -25,7 +26,7 @@ export function NotablePeopleGrid({people,country}:{people:NotablePerson[];count
   const visible=useMemo(() => active==="All"?enriched:enriched.filter((person)=>person.category===active),[active,enriched]);
   return <div className="notable-people-module">
     <div className="people-filters" role="tablist" aria-label={`Filter notable people from ${country}`}>{categories.map((category)=><button type="button" role="tab" aria-selected={active===category} className={active===category?"active":""} onClick={()=>setActive(category)} key={category}>{category}</button>)}</div>
-    <div className="notable-people-grid" aria-busy={loading}>{visible.map((person)=><article key={person.name}>{person.thumbnail?<img src={person.thumbnail} alt=""/>:<div className="person-fallback">{person.name.split(" ").map((part)=>part[0]).slice(0,2).join("")}</div>}<div><small>{person.category}</small><h3>{person.name}</h3><p>{person.description}</p><a href={`https://en.wikipedia.org/wiki/${person.wikipedia}`} target="_blank" rel="noreferrer">Wikipedia ↗</a></div></article>)}</div>
+    <div className="notable-people-grid" aria-busy={loading}>{visible.map((person)=><article key={person.name}>{person.thumbnail?<img src={person.thumbnail} alt={`Portrait of ${person.name}`}/>:<div className="person-fallback" aria-label={person.name}>{person.name.split(" ").map((part)=>part[0]).slice(0,2).join("")}</div>}<div><small>{person.category}</small><h3>{person.name}</h3><p>{person.description}</p><a href={`https://en.wikipedia.org/wiki/${person.wikipedia}`} target="_blank" rel="noreferrer">Wikipedia ↗</a></div></article>)}</div>
     {!visible.length&&<div className="people-placeholder"><b>No profiles in this category yet</b><p>The next Wikidata refresh will backfill this filter.</p></div>}
     <p className="people-api-note">Names are seeded editorially; available portraits are loaded from Wikipedia’s public page-summary API.</p>
   </div>;
