@@ -7,6 +7,7 @@ import {
 } from "../../../../country-content";
 import {SiteHeader} from "../../../../components/SiteHeader";
 import {SiteFooter} from "../../../../components/SiteFooter";
+import {TravelImage} from "../../../../components/TravelImage";
 
 export function generateStaticParams() {
   return cityGuides.map((guide) => ({
@@ -83,12 +84,13 @@ export default async function CityGuidePage({
           <section id="see" className="city-guide-section">
             <p className="eyebrow"><span />Start here</p>
             <h2>Top<br /><em>attractions.</em></h2>
-            <div className="attraction-list">
+            <div className="attraction-list attraction-photo-grid">
               {guide.attractions.map((place, index) => (
-                <div key={place}>
+                <article key={place}>
+                  <div><TravelImage query={place} country={guide.country} alt={`${place}, ${guide.name}`}/></div>
                   <span>{String(index + 1).padStart(2, "0")}</span>
                   <b>{place}</b>
-                </div>
+                </article>
               ))}
             </div>
           </section>
@@ -160,7 +162,7 @@ export default async function CityGuidePage({
             <div className="city-gallery">
               {guide.gallery.map((photo) => (
                 <figure key={photo.url}>
-                  <img src={photo.url} alt={photo.alt} />
+                  <TravelImage query={photo.alt} country={guide.country} alt={photo.alt} />
                   <figcaption>
                     <b>{photo.alt}</b>
                     <span>{photo.credit}</span>
