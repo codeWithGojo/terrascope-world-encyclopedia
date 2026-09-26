@@ -1,12 +1,11 @@
 import Link from "next/link";
 import {WorldAtlas} from "./components/WorldAtlas";
-import {OnThisDayWidget} from "./components/OnThisDayWidget";
 import {SiteHeader} from "./components/SiteHeader";
 
 const continents = [
   { name: "Africa", count: 54, pop: "1.5B", mark: "AF", size: "continent-hero", location: "Okonjima, Namibia", credit: "Nadine Marfurt", image: "https://images.unsplash.com/photo-1761078206756-68d3023f3021?auto=format&fit=crop&w=1800&q=84", copy: "Ancient landscapes, young cities and more genetic, linguistic and cultural diversity than any summary can contain." },
-  { name: "Asia", count: 47, pop: "4.8B", mark: "AS", size: "continent-tall", location: "Mount Fuji, Japan", credit: "Sora Sagano", image: "https://images.unsplash.com/photo-1576077340307-94da37c83f8d?auto=format&fit=crop&w=1500&q=84", copy: "From the steppe to the Pacific: the world’s largest continent and home to almost three in every five people." },
-  { name: "Europe", count: 45, pop: "745M", mark: "EU", size: "continent-standard", location: "Alpstein, Switzerland", credit: "Niklas Tidbury", image: "https://images.unsplash.com/photo-1500885034674-0f41c11221f9?auto=format&fit=crop&w=1500&q=84", copy: "A compact continent of peninsulas, mountain corridors, old capitals and closely layered histories." },
+  { name: "Asia", count: 48, pop: "4.8B", mark: "AS", size: "continent-tall", location: "Mount Fuji, Japan", credit: "Sora Sagano", image: "https://images.unsplash.com/photo-1576077340307-94da37c83f8d?auto=format&fit=crop&w=1500&q=84", copy: "From the steppe to the Pacific: the world’s largest continent and home to almost three in every five people." },
+  { name: "Europe", count: 44, pop: "745M", mark: "EU", size: "continent-standard", location: "Alpstein, Switzerland", credit: "Niklas Tidbury", image: "https://images.unsplash.com/photo-1500885034674-0f41c11221f9?auto=format&fit=crop&w=1500&q=84", copy: "A compact continent of peninsulas, mountain corridors, old capitals and closely layered histories." },
   { name: "Americas", count: 35, pop: "1.04B", mark: "AM", size: "continent-wide", location: "Patagonia, Chile", credit: "Chris Stenger", image: "https://images.unsplash.com/photo-1598859409659-b88fc15bbc2f?auto=format&fit=crop&w=1800&q=84", copy: "Two vast landmasses joined by a narrow bridge, stretching from Arctic ice to the mountains of Patagonia." },
   { name: "Oceania", count: 14, pop: "46M", mark: "OC", size: "continent-standard", location: "Great Barrier Reef, Australia", credit: "Joan Li", image: "https://images.unsplash.com/photo-1650754621317-2646d1695edb?auto=format&fit=crop&w=1500&q=84", copy: "A blue continent: island nations, deep ocean cultures and ecosystems found nowhere else on Earth." },
 ];
@@ -20,9 +19,9 @@ export default function Home() {
           <p className="eyebrow"><span /> The living world almanac</p>
           <h1>Every country.<br /><em>One living atlas.</em></h1>
           <p className="hero-intro">Explore the people, places, histories and numbers that shape our planet—carefully organised and made beautifully clear.</p>
-          <form className="search-bar" action="/search">
-            <span aria-hidden="true">⌕</span><label className="sr-only" htmlFor="country-search">Search the whole TerraScope atlas</label>
-            <input id="country-search" name="q" placeholder="Search countries, cities, people or leaders" /><button type="submit">Search</button>
+          <form className="search-bar" action="/countries">
+            <span aria-hidden="true">⌕</span><label className="sr-only" htmlFor="country-search">Search countries and cities</label>
+            <input id="country-search" name="q" placeholder="Search a country, capital or region" /><button type="submit">Explore</button>
           </form>
           <p className="search-hint"><b>Popular:</b> Nigeria · Japan · Brazil · France</p>
         </div>
@@ -56,7 +55,7 @@ export default function Home() {
             <Link className="text-link" href="/countries/nigeria">Discover Nigeria <b>→</b></Link>
           </article>
           <div className="editorial-column" id="journal">
-            <OnThisDayWidget compact/>
+            <article className="daily-fact"><span className="issue">Field note · 013</span><p className="quote-mark">“</p><h3>The Pacific Ocean is wider than the Moon.</h3><p>At its broadest, the Pacific spans roughly 19,000 km—more than five times the Moon’s diameter.</p><span className="field-link">Read the field note →</span></article>
             <Link className="person-card" href="/football-archive"><div className="portrait monogram">BS</div><div><small>Inside the football archive</small><h3>Bukayo<br />Saka</h3><p>Forward · England</p></div><span>↗</span></Link>
           </div>
         </div>
@@ -83,7 +82,7 @@ export default function Home() {
 
       <section className="atlas-cta"><small>TerraScope · Digital World Encyclopaedia</small><h2>Start with somewhere<br/>you <em>think</em> you know.</h2><div><Link href="/countries/nigeria">Discover Nigeria <span>↗</span></Link><Link href="/countries">Browse all profiles <span>→</span></Link></div></section>
 
-      <footer><div><span className="brand-mark light">T</span><h2>Go somewhere<br />you’ve never been.</h2></div><p>TerraScope is an independent digital atlas designed to make our complicated world easier—and more delightful—to understand.</p><div className="footer-bottom"><span>© 2026 TerraScope</span><nav aria-label="Footer navigation"><Link href="/search">Search</Link><Link href="/on-this-day">On this day</Link><Link href="/method">Sources & method</Link></nav><span>Lagos · WAT</span></div></footer>
+      <footer><div><span className="brand-mark light">T</span><h2>Go somewhere<br />you’ve never been.</h2></div><p>TerraScope is an independent digital atlas designed to make our complicated world easier—and more delightful—to understand.</p><div className="footer-bottom"><span>© 2026 TerraScope</span><span>Sources · Methodology · About</span><span>Lagos · WAT</span></div></footer>
     </main>
   );
 }

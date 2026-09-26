@@ -7,7 +7,6 @@ import {
 } from "../../../../country-content";
 import {SiteHeader} from "../../../../components/SiteHeader";
 import {SiteFooter} from "../../../../components/SiteFooter";
-import {TravelImage} from "../../../../components/TravelImage";
 
 export function generateStaticParams() {
   return cityGuides.map((guide) => ({
@@ -63,7 +62,7 @@ export default async function CityGuidePage({
           <a href="#day-trips">Day trips</a>
           <a href="#move">Getting around</a>
           <a href="#local-tips">Local tips</a>
-          <a href="#gallery">Photo gallery</a>
+          {guide.gallery.length>0&&<a href="#gallery">Photo gallery</a>}
         </aside>
 
         <div>
@@ -84,13 +83,12 @@ export default async function CityGuidePage({
           <section id="see" className="city-guide-section">
             <p className="eyebrow"><span />Start here</p>
             <h2>Top<br /><em>attractions.</em></h2>
-            <div className="attraction-list attraction-photo-grid">
+            <div className="attraction-list">
               {guide.attractions.map((place, index) => (
-                <article key={place}>
-                  <div><TravelImage query={place} country={guide.country} alt={`${place}, ${guide.name}`}/></div>
+                <div key={place}>
                   <span>{String(index + 1).padStart(2, "0")}</span>
                   <b>{place}</b>
-                </article>
+                </div>
               ))}
             </div>
           </section>
@@ -156,13 +154,13 @@ export default async function CityGuidePage({
             </ol>
           </section>
 
-          <section id="gallery" className="city-guide-section">
+          {guide.gallery.length>0&&<section id="gallery" className="city-guide-section">
             <p className="eyebrow"><span />Open-image archive</p>
             <h2>City<br /><em>gallery.</em></h2>
             <div className="city-gallery">
               {guide.gallery.map((photo) => (
                 <figure key={photo.url}>
-                  <TravelImage query={photo.alt} country={guide.country} alt={photo.alt} />
+                  <img src={photo.url} alt={photo.alt} />
                   <figcaption>
                     <b>{photo.alt}</b>
                     <span>{photo.credit}</span>
@@ -170,7 +168,7 @@ export default async function CityGuidePage({
                 </figure>
               ))}
             </div>
-          </section>
+          </section>}
 
           <p className="source-note">
             Use this guide to shape an itinerary, then recheck opening hours,

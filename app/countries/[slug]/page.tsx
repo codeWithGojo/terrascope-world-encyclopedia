@@ -1,34 +1,24 @@
 import Link from "next/link";
-import type {Metadata} from "next";
 import {notFound} from "next/navigation";
 import {atlasBySlug, atlasCountries, regionColours, type AtlasCountry} from "../../atlas-data";
 import {footballProfiles, nigeriaFieldNotes, notableRoles, type FootballProfile} from "../../editorial-data";
 import {cityGuides,notablePeopleByCode,travelPlacesByCode} from "../../country-content";
-import {TravelImage} from "../../components/TravelImage";
-import {buildCountryTravelPlan} from "../../travel-data";
 import {iqByCode} from "../../iq-data";
-import {governmentByCode} from "../../government-data";
-import {countryReferenceByCode,countryReferenceData} from "../../country-reference-data";
 import {NotablePeopleGrid} from "../../components/NotablePeopleGrid";
-import {GovernmentSection,HistoricalTimeline} from "../../components/GovernmentSection";
 import {SiteHeader} from "../../components/SiteHeader";
 import {SiteFooter} from "../../components/SiteFooter";
 
 export function generateStaticParams() { return atlasCountries.map((country) => ({slug: country.slug})); }
-export async function generateMetadata({params}:{params:Promise<{slug:string}>}):Promise<Metadata>{const {slug}=await params;const country=atlasBySlug.get(slug);if(!country)return {};const title=`${country.name}: facts, government, history and travel`;const description=`Explore ${country.name}: essential facts, government, historical orientation, practical travel planning, football and notable people.`;return {title,description,alternates:{canonical:`/countries/${country.slug}`},openGraph:{title,description,type:"article",url:`/countries/${country.slug}`}};}
 
-const conmebolCodes=new Set(["AR","BO","BR","CL","CO","EC","PY","PE","UY","VE"]);
-const uefaCrossRegionCodes=new Set(["AM","AZ","CY","GE","IL","KZ","TR"]);
-function footballConfederation(country:AtlasCountry){if(country.region==="Africa")return "CAF";if(country.region==="Europe"||uefaCrossRegionCodes.has(country.code))return "UEFA";if(country.region==="Americas")return conmebolCodes.has(country.code)?"CONMEBOL":"CONCACAF";if(country.region==="Oceania")return country.code==="AU"?"AFC":"OFC";return "AFC";}
+const confederations: Record<AtlasCountry["region"], string> = {Africa:"CAF",Americas:"CONCACAF / CONMEBOL",Asia:"AFC",Europe:"UEFA",Oceania:"OFC"};
 
 function fallbackFootball(country: AtlasCountry): FootballProfile {
-  const confederation=footballConfederation(country);
   return {
     team: `${country.name} national football teams`,
-    confederation,
+    confederation: confederations[country.region],
     badge: country.code,
     worldCup: "Senior World Cup record tracked by the national association",
-    continental: `${confederation} competition record`,
+    continental: `${confederations[country.region]} competition record`,
     achievements:["Senior national-team competition record","Women’s national-team programme","Youth and Olympic football pathway","Domestic league and cup heritage"],
     current:[{name:"Senior national teams",note:"Current squads and qualification cycle"},{name:"Women’s programme",note:"Active national-team pathway"},{name:"Next generation",note:"Youth and Olympic-age prospects"}],
     legends:[{name:"Historic internationals",note:"Record caps, goals and landmark tournaments"},{name:"Pioneering coaches",note:"The tactical history of the national side"},{name:"Club heritage",note:"Domestic teams that shaped the game"}],
@@ -48,6 +38,19 @@ function generatedNotes(country: AtlasCountry) {
 }
 
 function travelWindow(country:AtlasCountry){
+  const featured:Record<string,string>={
+    NG:"November to February is generally drier in much of the country. Rainfall and harmattan conditions vary by region.",
+    EG:"October to April is usually more comfortable for outdoor monuments. Summer heat is intense in Upper Egypt.",
+    JP:"March to May and October to November are popular for mild weather; blossom and foliage dates vary.",
+    BR:"May to October is drier in much of the southeast, but the Amazon and northeast follow different patterns.",
+    FR:"April to June and September to October balance milder weather with major-city sightseeing.",
+    US:"Choose dates by region: desert summers, northern winters and hurricane seasons create very different trips.",
+    IN:"October to March works for many northern routes; monsoon and heat patterns vary widely by region.",
+    ZA:"November to March suits Cape summer; May to September is often preferred for northern wildlife viewing.",
+    MX:"November to April is drier on many routes; hurricane season affects some coasts from June to November.",
+    AU:"September to November and March to May suit many southern cities; the tropical north has separate wet and dry seasons.",
+  };
+  if(featured[country.code])return featured[country.code];
   if(Math.abs(country.latitude)<15)return "Warm conditions are common through much of the year. Compare local wet and dry seasons before fixing dates.";
   if(country.latitude<0)return "March–May and September–November are useful shoulder-season starting points; climate still varies sharply by region and altitude.";
   return "April–June and September–October are useful shoulder-season starting points; check local climate, altitude and festival dates before booking.";
@@ -58,18 +61,19 @@ export default async function CountryPage({params}:{params: Promise<{slug: strin
   const country = atlasBySlug.get(slug);
   if (!country) notFound();
   const editorial = country.editorial;
-  const governmentProfile = governmentByCode[country.code];
-  const reference = countryReferenceByCode[country.code];
-  const dataQuality = editorial&&governmentProfile?"full":governmentProfile?"core-plus":"reference";
   const colour = editorial?.color ?? regionColours[country.region];
   const football = footballProfiles[country.code] ?? fallbackFootball(country);
   const iq = iqByCode.get(country.code);
   const notablePeople = notablePeopleByCode[country.code] ?? [];
-  const travelPlan = buildCountryTravelPlan(country, reference.terrain, travelPlacesByCode[country.code] ?? []);
-  const displayedTravelPlaces = travelPlan.places;
+  const travelPlaces = travelPlacesByCode[country.code] ?? [];
   const guides = cityGuides.filter((guide) => guide.countryCode === country.code);
+  const renderTravelPlace = (place:(typeof travelPlaces)[number],index:number) => {
+    const guide = guides.find((item)=>item.name===place.name);
+    const relatedGuide = country.code==="EG" && ["Giza pyramid complex","Saqqara"].includes(place.name) ? guides.find((item)=>item.citySlug==="cairo") : undefined;
+    return <article key={place.name}><span>{String(index+1).padStart(2,"0")}</span><small>{place.kind}</small><h3>{place.name}</h3><p>{place.note}</p>{(guide||relatedGuide)&&<Link href={`/countries/${country.slug}/cities/${(guide||relatedGuide)?.citySlug}`}>Explore nearby city guide →</Link>}</article>;
+  };
   const notes = country.code === "NG" ? nigeriaFieldNotes : generatedNotes(country);
-  const summary = editorial?.summary ?? (reference.background || `${country.name} is a sovereign state in ${country.subregion}. This profile connects its political geography, government, history and travel context to TerraScope’s complete world index.`);
+  const summary = editorial?.summary ?? `${country.name} is a sovereign state in ${country.subregion}. This profile connects its political geography, language, currency, borders and national football record to TerraScope’s complete world index.`;
   const essentialFacts = editorial ? [
     ["Official name", country.official],["Capital", country.capital],["Population", `${country.populationLabel} · ${country.populationSource} ${country.populationYear}`],["Population rank", `#${country.populationRank} of 195`],["Land area", country.areaLabel],["Area rank", `#${country.areaRank} of 195`],["Currency", editorial.currency],["Languages", editorial.languages.join(" · ")],["Calling code", editorial.calling],["Time zone", editorial.timezone],["Driving side", country.carSide],["Population density", editorial.density],["Life expectancy", editorial.lifeExpectancy],["Internet access", editorial.internet],["Nominal GDP", editorial.gdp],["Independence / formation", editorial.independence],["Subregion", country.subregion],["Land borders", String(country.borders.length)],
   ] : [
@@ -80,13 +84,13 @@ export default async function CountryPage({params}:{params: Promise<{slug: strin
     <SiteHeader active="countries"/>
     <section className="profile-hero" style={{"--country": colour} as React.CSSProperties}>
       <div className="profile-breadcrumb"><Link href="/countries">195 countries</Link><span>→</span><Link href={`/countries?region=${country.region}`}>{country.region}</Link><span>→</span><b>{country.name}</b></div>
-      <div className="profile-title"><div><p>{country.official}</p><h1>{country.name}</h1><span>{country.subregion} · {country.code} / {country.cca3}</span><span className={`data-quality data-quality--${dataQuality}`}>{dataQuality==="full"?"Full editorial + government profile":dataQuality==="core-plus"?"Core + government profile":"Complete reference profile"}</span></div><div className="profile-flag" role="img" aria-label={`Flag of ${country.name}`}>{country.flag}</div></div>
+      <div className="profile-title"><div><p>{country.official}</p><h1>{country.name}</h1><span>{country.subregion} · {country.code} / {country.cca3}</span></div><div className="profile-flag">{country.flag}</div></div>
       <p className="profile-summary">{summary}</p>
-      <div className="profile-quick"><div><small>Capital</small><b>{country.capital}</b></div><div><small>Population</small><b>{country.populationLabel}</b></div><div><small>Land area</small><b>{country.areaLabel}</b></div><div><small>Football confederation</small><b>{football.confederation}</b></div><div className="iq-quick-card"><small>Reported IQ dataset</small>{iq?<b>#{iq.rank} · {iq.score.toFixed(2)}</b>:<b>Not included</b>}<Link href="/rankings/iq">Read scope & methodology ↗</Link></div></div>
+      <div className="profile-quick"><div><small>Capital</small><b>{country.capital}</b></div><div><small>Population</small><b>{country.populationLabel}</b></div><div><small>Land area</small><b>{country.areaLabel}</b></div><div><small>Football confederation</small><b>{football.confederation}</b></div><div className="iq-quick-card"><small>Reported IQ rank</small>{iq?<b>#{iq.rank} · {iq.score.toFixed(2)}</b>:<b>Data pending</b>}<Link href="/rankings/iq">Open full ranking ↗</Link></div></div>
     </section>
 
     <section className="profile-body">
-      <aside><b>On this page</b><a href="#overview">Essential facts</a><a href="#story">Country in depth</a><a href="#interesting-facts">10 interesting facts</a><a href="#government">Government record</a><a href="#timeline">Historical timeline</a><a href="#places">Travel file</a><a href="#football">Football dossier</a><a href="#people">Notable people</a><Link href="/rankings">Open world rankings ↗</Link></aside>
+      <aside><b>On this page</b><a href="#overview">Essential facts</a><a href="#story">Country in depth</a><a href="#interesting-facts">10 interesting facts</a><a href="#government">Leadership</a><a href="#places">Travel file</a><a href="#football">Football dossier</a><a href="#people">Notable people</a><Link href="/rankings">Open world rankings ↗</Link></aside>
       <div className="profile-content">
         <section id="overview"><p className="eyebrow"><span/>National record · {country.code}</p><h2>Essential<br/><em>facts.</em></h2><div className="fact-table expanded-facts">{essentialFacts.map(([key, value]) => <div key={key}><span>{key}</span><b>{value}</b></div>)}</div>{editorial && <blockquote><small>Field fact</small>{editorial.fact}</blockquote>}</section>
 
@@ -94,16 +98,14 @@ export default async function CountryPage({params}:{params: Promise<{slug: strin
 
         <section id="interesting-facts" className="profile-section interesting-facts-section"><p className="eyebrow"><span/>History · culture · geography</p><div className="section-title-row"><h2>10 interesting<br/><em>facts.</em></h2><span className={`content-status ${country.factsStatus}`}>{country.factsStatus === "curated" ? "Editorially curated" : "Atlas-verified core facts"}</span></div><ol>{country.interestingFacts.slice(0,10).map((fact,index)=><li key={fact}><span>{String(index+1).padStart(2,"0")}</span><p>{fact}</p></li>)}</ol></section>
 
-        <GovernmentSection country={country}/>
+        <section id="government" className="profile-section"><p className="eyebrow"><span/>Leadership & state</p><h2>Government.</h2>{editorial ? <div className="leader-panel"><div className="leader-monogram">{editorial.leader.split(" ").map((name) => name[0]).slice(0, 2).join("")}</div><div><small>{editorial.leaderTitle} · current editorial record</small><h3>{editorial.leader}</h3><p>{editorial.government}</p></div></div> : <div className="government-record"><span>{country.code}</span><div><small>Core state record</small><h3>{country.official}</h3><p>This complete-index profile currently carries verified geographic data. Current political leadership is maintained in the extended editorial records because office-holders require continuous date-stamped verification.</p></div></div>}</section>
 
-        <HistoricalTimeline country={country}/>
-
-        <section id="places" className="profile-section travel-file"><p className="eyebrow"><span/>Tourism & local discovery</p><div className="section-title-row"><h2>Travel<br/><em>guide.</em></h2><Link href="/rankings/most-visited">Global tourism ranking ↗</Link></div><div className="country-route-intro"><div><small>Best for</small><b>{travelPlan.bestFor}</b></div><div><small>Suggested first stay</small><b>{travelPlan.suggestedStay}</b></div><p>{travelPlan.route}</p></div><div className="travel-practical-grid"><article><small>When to start looking</small><b>{travelWindow(country)}</b></article><article><small>Languages</small><b>{country.languages.join(" · ")||"Confirm locally"}</b></article><article><small>Money</small><b>{country.currencies.join(" · ")||"Confirm locally"}</b></article><article><small>Getting around</small><b>Traffic keeps to the {country.carSide}. Check intercity options and local transport before arrival.</b></article><article><small>Time</small><b>{country.timezones.join(" · ")||"Confirm local time"}</b></article><article><small>Entry planning</small><b>Visa and health rules depend on your passport and can change. Verify them with official authorities before paying.</b></article></div><div className="travel-place-grid image-led">{displayedTravelPlaces.map((place,index)=>{const guide=guides.find((item)=>item.name.toLowerCase()===place.name.toLowerCase());return <article key={place.name}><div className="travel-place-image"><TravelImage query={place.name} country={country.name} alt={`${place.name}, ${country.name}`}/><span>{String(index+1).padStart(2,"0")}</span></div><div className="travel-place-copy"><small>{place.kind}</small><h3>{place.name}</h3><p>{place.note}</p>{guide?<Link href={`/countries/${country.slug}/cities/${guide.citySlug}`}>Open full city guide →</Link>:<a href={`https://en.wikipedia.org/wiki/Special:Search?search=${encodeURIComponent(`${place.name} ${country.name}`)}`} target="_blank" rel="noreferrer">Explore this place ↗</a>}</div></article>})}</div><div className="travel-research-links"><div><small>Independent destination guide</small><a href={`https://en.wikivoyage.org/wiki/${encodeURIComponent(country.name.replaceAll(" ","_"))}`} target="_blank" rel="noreferrer">Read {country.name} on Wikivoyage ↗</a></div><div><small>Current official advice</small><a href="https://www.gov.uk/foreign-travel-advice" target="_blank" rel="noreferrer">Check live travel advisories ↗</a></div><div><small>Map & orientation</small><a href={country.mapUrl} target="_blank" rel="noreferrer">Open verified map ↗</a></div></div>{guides.length>0&&<div className="guide-availability"><span>Detailed city guides</span><p>{guides.map((guide)=><Link key={guide.citySlug} href={`/countries/${country.slug}/cities/${guide.citySlug}`}>{guide.name} ↗</Link>)}</p></div>}</section>
+        <section id="places" className="profile-section travel-file"><p className="eyebrow"><span/>Tourism & local discovery</p><div className="section-title-row"><h2>Travel<br/><em>guide.</em></h2><Link href="/rankings/most-visited">Global tourism ranking ↗</Link></div><div className="travel-practical-grid"><article><small>When to start looking</small><b>{travelWindow(country)}</b></article><article><small>Languages</small><b>{(editorial?.languages??country.languages).join(" · ")||"Confirm locally"}</b></article><article><small>Money</small><b>{editorial?.currency||country.currencies.join(" · ")||"Confirm locally"}</b></article><article><small>Getting around</small><b>Traffic keeps to the {country.carSide}. Check intercity options and local transport before arrival.</b></article><article><small>Time</small><b>{country.timezones.join(" · ")||"Confirm local time"}</b></article><article><small>Entry planning</small><b>Visa and health rules depend on your passport and can change. Verify them with official authorities before paying.</b></article></div><div className="travel-place-grid">{travelPlaces.slice(0,6).map(renderTravelPlace)}</div>{travelPlaces.length>6&&<details className="more-travel-places"><summary>Explore {travelPlaces.length-6} more places in {country.name}</summary><div className="travel-place-grid">{travelPlaces.slice(6).map((place,index)=>renderTravelPlace(place,index+6))}</div></details>}<div className="travel-research-links"><div><small>Independent destination guide</small><a href={`https://en.wikivoyage.org/wiki/${encodeURIComponent(country.name.replaceAll(" ","_"))}`} target="_blank" rel="noreferrer">Read {country.name} on Wikivoyage ↗</a></div><div><small>Current official advice</small><a href="https://www.gov.uk/foreign-travel-advice" target="_blank" rel="noreferrer">Check live travel advisories ↗</a></div><div><small>Map & orientation</small><a href={country.mapUrl} target="_blank" rel="noreferrer">Open map ↗</a></div></div>{guides.length>0&&<div className="guide-availability"><span>Detailed city guides</span><p>{guides.map((guide)=><Link key={guide.citySlug} href={`/countries/${country.slug}/cities/${guide.citySlug}`}>{guide.name} ↗</Link>)}</p></div>}</section>
 
         <section id="football" className="profile-section football-section"><p className="eyebrow"><span/>National game file</p><div className="football-title"><div><h2>Football<br/><em>dossier.</em></h2><p>{football.team} · {football.confederation}</p></div><span>{football.badge}</span></div><div className="football-record"><div><small>World stage</small><b>{football.worldCup}</b></div><div><small>Continental record</small><b>{football.continental}</b></div></div><div className="achievement-list">{football.achievements.map((achievement, index) => <div key={achievement}><span>🏆</span><b>{achievement}</b><small>{String(index + 1).padStart(2, "0")}</small></div>)}</div><div className="football-icons"><div><small>Current icons / active watch</small>{football.current.map((person) => <article key={person.name}><span>{person.name.split(" ").map((part) => part[0]).slice(0, 2).join("")}</span><div><b>{person.name}</b><p>{person.note}</p></div></article>)}</div><div><small>Legends / heritage file</small>{football.legends.map((person) => <article key={person.name}><span>{person.name.split(" ").map((part) => part[0]).slice(0, 2).join("")}</span><div><b>{person.name}</b><p>{person.note}</p></div></article>)}</div></div></section>
 
-        <section id="people" className="profile-section"><p className="eyebrow"><span/>Culture & achievement</p><h2>Notable<br/><em>people.</em></h2>{notablePeople.length?<NotablePeopleGrid people={notablePeople} country={country.name}/>:editorial?<div className="notable-list expanded-people">{editorial.notable.map((name, index) => <div key={name}><span>{name.split(" ").map((part) => part[0]).slice(0, 2).join("")}</span><b>{name}</b><small>{notableRoles[name] ?? `Featured ${country.name} profile · ${String(index + 1).padStart(2, "0")}`}</small></div>)}</div>:<div className="people-placeholder people-discovery"><b>Continue the people trail</b><p>TerraScope does not auto-generate unsourced celebrity lists. Use these live reference paths for people associated with {country.name}, or open the curated football archive.</p><div><a href={`https://www.wikidata.org/w/index.php?search=${encodeURIComponent(`people from ${country.name}`)}`} target="_blank" rel="noreferrer">Search Wikidata ↗</a><a href={`https://en.wikipedia.org/wiki/Category:${encodeURIComponent(`${country.name} people`)}`} target="_blank" rel="noreferrer">Browse Wikipedia categories ↗</a><Link href="/football-archive">Football archive →</Link></div></div>}</section>
-        <p className="source-note">Geographic structure: ISO 3166 / world-countries reference data. Population: World Bank SP.POP.TOTL latest available observation, with Vatican City’s official 2024 resident count used for that record. Government, historical orientation, climate and terrain reference fields: {countryReferenceData.source.label}. Time zones: IANA-linked country data. Football honours are historical records through the 2024–25 editorial cycle; current-player panels are curated highlights, not complete squads. Date-sensitive government dossiers state their edition; verify later leadership changes through the linked source.</p>
+        <section id="people" className="profile-section"><p className="eyebrow"><span/>Culture & achievement</p><h2>Notable<br/><em>people.</em></h2>{notablePeople.length?<NotablePeopleGrid people={notablePeople} country={country.name}/>:editorial?<div className="notable-list expanded-people">{editorial.notable.map((name, index) => <div key={name}><span>{name.split(" ").map((part) => part[0]).slice(0, 2).join("")}</span><b>{name}</b><small>{notableRoles[name] ?? `Featured ${country.name} profile · ${String(index + 1).padStart(2, "0")}`}</small></div>)}</div>:<div className="people-placeholder"><b>Notable people data coming soon</b><p>Writers, artists, scientists, leaders and athletes from {country.name} will appear after the next Wikidata refresh and editorial review.</p><Link href="/football-archive">Browse the football archive →</Link></div>}</section>
+        <p className="source-note">Geographic structure: ISO 3166 / world-countries reference data. Population: World Bank SP.POP.TOTL latest available observation, with Vatican City’s official 2024 resident count used for that record. Time zones: IANA-linked country data. Football honours are historical records through the 2024–25 editorial cycle; current-player panels are curated highlights, not complete squads. Political leaders are shown only on date-maintained extended profiles.</p>
       </div>
     </section>
     <SiteFooter/>

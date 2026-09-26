@@ -67,9 +67,6 @@ const sovereignCountries = worldCountries.filter((country) => country.unMember |
 const populationRankByCode = new Map([...sovereignCountries].sort((a,b)=>populationByCode[b.cca2].value-populationByCode[a.cca2].value).map((country,index)=>[country.cca2,index+1]));
 const areaRankByCode = new Map([...sovereignCountries].sort((a,b)=>b.area-a.area).map((country,index)=>[country.cca2,index+1]));
 const leftDrivingCodes = new Set(["AG","AU","BS","BD","BB","BT","BW","BN","CY","DM","SZ","FJ","GD","GY","IN","ID","IE","JM","JP","KE","KI","LS","MW","MY","MV","MT","MU","MZ","NA","NR","NP","NZ","PK","PG","KN","LC","VC","WS","SC","SG","SB","ZA","LK","SR","TZ","TH","TL","TO","TT","TV","UG","GB","ZM","ZW"]);
-const currencyOverrides:Record<string,{labels:string[];codes:string[]}>= {
-  ZW:{labels:["Zimbabwe Gold (ZiG)","United States dollar ($)"],codes:["ZWG","USD"]},
-};
 
 function formatPopulation(population:number){
   if(population>=1_000_000_000)return `${(population/1_000_000_000).toFixed(2)} billion`;
@@ -82,7 +79,6 @@ export const atlasCountries: AtlasCountry[] = sovereignCountries
     const editorial = editorialByCode.get(country.cca2);
     const populationRecord = populationByCode[country.cca2];
     const timezoneRecord = getTimezoneCountry(country.cca2);
-    const currencyOverride = currencyOverrides[country.cca2];
     const currencyEntries = Object.entries(country.currencies ?? {});
     const callingSuffix = country.idd.suffixes?.[0] ?? "";
     const base = {
@@ -96,7 +92,7 @@ export const atlasCountries: AtlasCountry[] = sovereignCountries
       subregion: country.subregion || country.region,
       capital: editorial?.capital ?? country.capital?.join(" · ") ?? "No official capital",
       area: country.area,
-      areaLabel: editorial?.areaLabel ?? formatArea(country.area),
+      areaLabel: formatArea(country.area),
       population: populationRecord.value,
       populationLabel: formatPopulation(populationRecord.value),
       populationYear: populationRecord.year,
@@ -104,8 +100,8 @@ export const atlasCountries: AtlasCountry[] = sovereignCountries
       populationRank: populationRankByCode.get(country.cca2) ?? 195,
       areaRank: areaRankByCode.get(country.cca2) ?? 195,
       density: country.area ? populationRecord.value/country.area : 0,
-      currencies: currencyOverride?.labels ?? currencyEntries.map(([, currency]) => `${currency.name}${currency.symbol ? ` (${currency.symbol})` : ""}`),
-      currencyCodes: currencyOverride?.codes ?? currencyEntries.map(([code]) => code),
+      currencies: currencyEntries.map(([, currency]) => `${currency.name}${currency.symbol ? ` (${currency.symbol})` : ""}`),
+      currencyCodes: currencyEntries.map(([code]) => code),
       languages: Object.values(country.languages ?? {}),
       calling: editorial?.calling ?? (`${country.idd.root ?? ""}${callingSuffix}` || "—"),
       tld: country.tld?.join(" · ") || "—",
