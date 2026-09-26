@@ -205,3 +205,4 @@
   .travel-practical-grid article{min-height:125px}
   .city-guide-hero h1{font-size:clamp(50px,14vw,76px);line-height:.95}
 }
+.city-gallery figcaption a{font-size:10px;color:#ddd;text-decoration:underline;text-underline-offset:3px}

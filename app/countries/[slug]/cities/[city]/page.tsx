@@ -163,7 +163,7 @@ export default async function CityGuidePage({
                   <img src={photo.url} alt={photo.alt} />
                   <figcaption>
                     <b>{photo.alt}</b>
-                    <span>{photo.credit}</span>
+                    <a href={photo.url.startsWith("/travel/")?`https://commons.wikimedia.org/wiki/File:${photo.url.slice("/travel/".length)}`:photo.url} target="_blank" rel="noreferrer">{photo.credit} ↗</a>
                   </figcaption>
                 </figure>
               ))}
