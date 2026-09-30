@@ -9,8 +9,8 @@ const positions:("All positions"|FootballPosition)[]=["All positions","Forward",
 const countryAliases:Record<string,string>={England:"united-kingdom","Northern Ireland":"united-kingdom","Soviet Union":"russia","Argentina · Spain":"argentina"};
 const slug=(country:string)=>countryAliases[country]??country.toLowerCase().normalize("NFD").replace(/[\u0300-\u036f]/g,"").replace(/[^a-z0-9]+/g,"-").replace(/(^-|-$)/g,"");
 
-export default function FootballArchive({initialQuery=""}:{initialQuery?:string}){
-  const [query,setQuery]=useState(initialQuery);
+export default function FootballArchive(){
+  const [query,setQuery]=useState("");
   const [era,setEra]=useState<(typeof eras)[number]>("All eras");
   const [position,setPosition]=useState<(typeof positions)[number]>("All positions");
   const [country,setCountry]=useState("All nations");
@@ -57,7 +57,7 @@ export default function FootballArchive({initialQuery=""}:{initialQuery?:string}
         <header><div className="dossier-monogram"><span>{selected.initials}</span><i>{selected.flag}</i></div><div><small>{selected.era} · {selected.position}</small><h2>{selected.name}</h2><p>{selected.country} · {selected.years}</p></div></header>
         <div className="dossier-body">
           <div className="dossier-story"><span>Career story</span><p>{selected.story}</p><span>How they played</span><p>{selected.style}</p><span>Why they matter</span><p>{selected.legacy}</p></div>
-          <aside><div><small>Notable clubs</small><p>{selected.clubs}</p></div><div><small>Defining honours</small><ul>{selected.honours.map((honour)=><li key={honour}>{honour}</li>)}</ul></div><Link href={`/countries/${slug(selected.country)}`}>Explore {selected.country} <span>↗</span></Link><button className={shortlist.includes(selected.name)?"active":""} onClick={()=>toggleShortlist(selected.name)}>{shortlist.includes(selected.name)?"✓ Added to comparison":"＋ Add to comparison"}</button></aside>
+          <aside><div><small>Selected career clubs · historical</small><p>{selected.clubs}</p></div><div><small>Defining honours</small><ul>{selected.honours.map((honour)=><li key={honour}>{honour}</li>)}</ul></div><Link href={`/countries/${slug(selected.country)}`}>Explore {selected.country} <span>↗</span></Link><button className={shortlist.includes(selected.name)?"active":""} onClick={()=>toggleShortlist(selected.name)}>{shortlist.includes(selected.name)?"✓ Added to comparison":"＋ Add to comparison"}</button></aside>
         </div>
       </section>
     </div>}

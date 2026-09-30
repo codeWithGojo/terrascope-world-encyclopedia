@@ -1,14 +1,15 @@
+import {atlasCountries,atlasByCode} from "./atlas-data";
+import {worldPopulation,populationDataset} from "./population-data";
 import Link from "next/link";
 import {WorldAtlas} from "./components/WorldAtlas";
-import {OnThisDayWidget} from "./components/OnThisDayWidget";
 import {SiteHeader} from "./components/SiteHeader";
 
 const continents = [
-  { name: "Africa", count: 54, pop: "1.5B", mark: "AF", size: "continent-hero", location: "Okonjima, Namibia", credit: "Nadine Marfurt", image: "https://images.unsplash.com/photo-1761078206756-68d3023f3021?auto=format&fit=crop&w=1800&q=84", copy: "Ancient landscapes, young cities and more genetic, linguistic and cultural diversity than any summary can contain." },
-  { name: "Asia", count: 47, pop: "4.8B", mark: "AS", size: "continent-tall", location: "Mount Fuji, Japan", credit: "Sora Sagano", image: "https://images.unsplash.com/photo-1576077340307-94da37c83f8d?auto=format&fit=crop&w=1500&q=84", copy: "From the steppe to the Pacific: the world’s largest continent and home to almost three in every five people." },
-  { name: "Europe", count: 45, pop: "745M", mark: "EU", size: "continent-standard", location: "Alpstein, Switzerland", credit: "Niklas Tidbury", image: "https://images.unsplash.com/photo-1500885034674-0f41c11221f9?auto=format&fit=crop&w=1500&q=84", copy: "A compact continent of peninsulas, mountain corridors, old capitals and closely layered histories." },
-  { name: "Americas", count: 35, pop: "1.04B", mark: "AM", size: "continent-wide", location: "Patagonia, Chile", credit: "Chris Stenger", image: "https://images.unsplash.com/photo-1598859409659-b88fc15bbc2f?auto=format&fit=crop&w=1800&q=84", copy: "Two vast landmasses joined by a narrow bridge, stretching from Arctic ice to the mountains of Patagonia." },
-  { name: "Oceania", count: 14, pop: "46M", mark: "OC", size: "continent-standard", location: "Great Barrier Reef, Australia", credit: "Joan Li", image: "https://images.unsplash.com/photo-1650754621317-2646d1695edb?auto=format&fit=crop&w=1500&q=84", copy: "A blue continent: island nations, deep ocean cultures and ecosystems found nowhere else on Earth." },
+  { name: "Africa", mark: "AF", size: "continent-hero", location: "Okonjima, Namibia", credit: "Nadine Marfurt", image: "/continents/africa.jpg", copy: "Ancient landscapes, young cities and more genetic, linguistic and cultural diversity than any summary can contain." },
+  { name: "Asia", mark: "AS", size: "continent-tall", location: "Mount Fuji, Japan", credit: "Sora Sagano", image: "/continents/asia.jpg", copy: "From the steppe to the Pacific: the world’s largest continent and home to almost three in every five people." },
+  { name: "Europe", mark: "EU", size: "continent-standard", location: "Alpstein, Switzerland", credit: "Niklas Tidbury", image: "/continents/europe.jpg", copy: "A compact continent of peninsulas, mountain corridors, old capitals and closely layered histories." },
+  { name: "Americas", mark: "AM", size: "continent-wide", location: "Patagonia, Chile", credit: "Chris Stenger", image: "/continents/americas.jpg", copy: "Two vast landmasses joined by a narrow bridge, stretching from Arctic ice to the mountains of Patagonia." },
+  { name: "Oceania", mark: "OC", size: "continent-standard", location: "Great Barrier Reef, Australia", credit: "Joan Li", image: "/continents/oceania.jpg", copy: "A blue continent: island nations, deep ocean cultures and ecosystems found nowhere else on Earth." },
 ];
 
 export default function Home() {
@@ -20,9 +21,9 @@ export default function Home() {
           <p className="eyebrow"><span /> The living world almanac</p>
           <h1>Every country.<br /><em>One living atlas.</em></h1>
           <p className="hero-intro">Explore the people, places, histories and numbers that shape our planet—carefully organised and made beautifully clear.</p>
-          <form className="search-bar" action="/search">
-            <span aria-hidden="true">⌕</span><label className="sr-only" htmlFor="country-search">Search the whole TerraScope atlas</label>
-            <input id="country-search" name="q" placeholder="Search countries, cities, people or leaders" /><button type="submit">Search</button>
+          <form className="search-bar" action="/countries">
+            <span aria-hidden="true">⌕</span><label className="sr-only" htmlFor="country-search">Search countries and cities</label>
+            <input id="country-search" name="q" placeholder="Search a country, capital or region" /><button type="submit">Explore</button>
           </form>
           <p className="search-hint"><b>Popular:</b> Nigeria · Japan · Brazil · France</p>
         </div>
@@ -30,9 +31,9 @@ export default function Home() {
       </section>
 
       <section className="global-strip" aria-label="Global statistics">
-        <div><small>World population</small><strong>8.2<em>billion</em></strong></div><div><small>Sovereign country profiles</small><strong>195</strong></div>
-        <div><small>Living languages</small><strong>7,164</strong></div><div><small>Land area</small><strong>149<em>million km²</em></strong></div>
-        <p>Figures are presented as rounded editorial estimates. Every profile includes its source and edition date.</p>
+        <div><small>World population · {worldPopulation.year}</small><strong>{(worldPopulation.value/1e9).toFixed(2)}<em>billion</em></strong></div><div><small>Sovereign country profiles</small><strong>195</strong></div>
+        <div><small>Languages in atlas register</small><strong>{new Set(atlasCountries.flatMap(c=>c.languages)).size}</strong></div><div><small>Total indexed country area</small><strong>{(atlasCountries.reduce((sum,c)=>sum+c.area,0)/1e6).toFixed(1)}<em>million km²</em></strong></div>
+        <p>Population source: World Bank · refreshed {populationDataset.refreshedAt}. Country observations retain their reporting years. <Link href="/method#data-register">Sources & definitions ↗</Link></p>
       </section>
 
       <section className="atlas-principle">
@@ -52,11 +53,11 @@ export default function Home() {
             <div className="feature-topline"><span>Country of the day</span><b>01 / 195</b></div><div className="flag nigeria" aria-label="Flag of Nigeria"><i /></div>
             <div className="country-title"><div><small>Federal Republic of</small><h3>Nigeria</h3></div><span className="country-code">NG</span></div>
             <p>A nation of more than 250 ethnic groups, where ancient kingdoms, global music and Africa’s largest city meet.</p>
-            <dl><div><dt>Capital</dt><dd>Abuja</dd></div><div><dt>Population</dt><dd>≈ 237.5M</dd></div><div><dt>Languages</dt><dd>English + 500</dd></div></dl>
+            <dl><div><dt>Capital</dt><dd>Abuja</dd></div><div><dt>Population</dt><dd>{atlasByCode.get("NG")?.populationLabel} · {atlasByCode.get("NG")?.populationYear}</dd></div><div><dt>Languages</dt><dd>English + 500</dd></div></dl>
             <Link className="text-link" href="/countries/nigeria">Discover Nigeria <b>→</b></Link>
           </article>
           <div className="editorial-column" id="journal">
-            <OnThisDayWidget compact/>
+            <article className="daily-fact"><span className="issue">Field note · 013</span><p className="quote-mark">“</p><h3>The Pacific Ocean is wider than the Moon.</h3><p>At its broadest, the Pacific spans roughly 19,000 km—more than five times the Moon’s diameter.</p><span className="field-link">Read the field note →</span></article>
             <Link className="person-card" href="/football-archive"><div className="portrait monogram">BS</div><div><small>Inside the football archive</small><h3>Bukayo<br />Saka</h3><p>Forward · England</p></div><span>↗</span></Link>
           </div>
         </div>
@@ -67,7 +68,7 @@ export default function Home() {
         <div className="continent-gallery">
           {continents.map((continent, index) => <Link href={`/countries?region=${continent.name}`} className={`continent-photo ${continent.size}`} key={continent.name} style={{backgroundImage:`linear-gradient(180deg,rgba(10,26,21,.04),rgba(10,26,21,.84)),url(${continent.image})`}}>
             <div className="continent-photo-top"><span>0{index + 1} · {continent.mark}</span><small>{continent.location}<br/>Photo: {continent.credit} / Unsplash</small></div>
-            <div className="continent-photo-copy"><p>{continent.copy}</p><div><h3>{continent.name}</h3><span>{continent.count} countries · {continent.pop} people</span></div><i>Explore chapter ↗</i></div>
+            <div className="continent-photo-copy"><p>{continent.copy}</p><div><h3>{continent.name}</h3><span>{atlasCountries.filter(c=>c.region===continent.name).length} countries · {(()=>{const total=atlasCountries.filter(c=>c.region===continent.name).reduce((sum,c)=>sum+c.population,0);return total>=1e9?`${(total/1e9).toFixed(2)}B`:`${(total/1e6).toFixed(0)}M`;})()} people · mixed observation years</span></div><i>Explore chapter ↗</i></div>
           </Link>)}
         </div>
       </section>
@@ -77,13 +78,13 @@ export default function Home() {
         <div className="thread-list">
           <Link href="/compare"><span>01 · Compare</span><h3>What changes when two countries sit side by side?</h3><p>Compare scale, population, health, economies and systems without losing the human context.</p><b>Open comparison →</b></Link>
           <Link href="/football-archive"><span>02 · Football archive</span><h3>Compare the players who changed the game.</h3><p>Open detailed career dossiers for legends and current stars, then shortlist two players side by side.</p><b>Browse football archive →</b></Link>
-          <Link href="/rankings"><span>03 · Scale</span><h3>Make the planet’s biggest differences visible.</h3><p>Rankings turn abstract numbers into clear relationships—from population to land area.</p><b>View world rankings →</b></Link>
+          <Link href="/rankings"><span>03 · Scale</span><h3>Make the planet’s biggest differences visible.</h3><p>Rankings turn abstract numbers into clear relationships—from population to total area.</p><b>View world rankings →</b></Link>
         </div>
       </section>
 
       <section className="atlas-cta"><small>TerraScope · Digital World Encyclopaedia</small><h2>Start with somewhere<br/>you <em>think</em> you know.</h2><div><Link href="/countries/nigeria">Discover Nigeria <span>↗</span></Link><Link href="/countries">Browse all profiles <span>→</span></Link></div></section>
 
-      <footer><div><span className="brand-mark light">T</span><h2>Go somewhere<br />you’ve never been.</h2></div><p>TerraScope is an independent digital atlas designed to make our complicated world easier—and more delightful—to understand.</p><div className="footer-bottom"><span>© 2026 TerraScope</span><nav aria-label="Footer navigation"><Link href="/search">Search</Link><Link href="/on-this-day">On this day</Link><Link href="/method">Sources & method</Link></nav><span>Lagos · WAT</span></div></footer>
+      <footer><div><span className="brand-mark light">T</span><h2>Go somewhere<br />you’ve never been.</h2></div><p>TerraScope is an independent digital atlas designed to make our complicated world easier—and more delightful—to understand.</p><div className="footer-bottom"><span>© 2026 TerraScope</span><span>Sources · Methodology · About</span><span>Lagos · WAT</span></div></footer>
     </main>
   );
 }

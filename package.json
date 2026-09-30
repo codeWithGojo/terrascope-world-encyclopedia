@@ -15,8 +15,8 @@
     "validate:artifact": "bash scripts/validate-artifact.sh",
     "lint": "bash scripts/sites-env.sh -- eslint . --ignore-pattern dist --ignore-pattern .next",
     "data:audit": "node scripts/audit-country-content.mjs",
-    "data:government": "node scripts/audit-government-data.mjs",
     "data:population": "bash scripts/sites-env.sh -- node scripts/refresh-population.mjs",
+    "data:indicators": "bash scripts/sites-env.sh -- node scripts/refresh-indicators.mjs",
     "data:notable": "node scripts/refresh-notable-people.mjs",
     "db:generate": "bash scripts/sites-env.sh -- drizzle-kit generate"
   },

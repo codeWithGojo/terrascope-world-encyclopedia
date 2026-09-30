@@ -67,9 +67,6 @@ const sovereignCountries = worldCountries.filter((country) => country.unMember |
 const populationRankByCode = new Map([...sovereignCountries].sort((a,b)=>populationByCode[b.cca2].value-populationByCode[a.cca2].value).map((country,index)=>[country.cca2,index+1]));
 const areaRankByCode = new Map([...sovereignCountries].sort((a,b)=>b.area-a.area).map((country,index)=>[country.cca2,index+1]));
 const leftDrivingCodes = new Set(["AG","AU","BS","BD","BB","BT","BW","BN","CY","DM","SZ","FJ","GD","GY","IN","ID","IE","JM","JP","KE","KI","LS","MW","MY","MV","MT","MU","MZ","NA","NR","NP","NZ","PK","PG","KN","LC","VC","WS","SC","SG","SB","ZA","LK","SR","TZ","TH","TL","TO","TT","TV","UG","GB","ZM","ZW"]);
-const currencyOverrides:Record<string,{labels:string[];codes:string[]}>= {
-  ZW:{labels:["Zimbabwe Gold (ZiG)","United States dollar ($)"],codes:["ZWG","USD"]},
-};
 
 function formatPopulation(population:number){
   if(population>=1_000_000_000)return `${(population/1_000_000_000).toFixed(2)} billion`;
@@ -82,8 +79,7 @@ export const atlasCountries: AtlasCountry[] = sovereignCountries
     const editorial = editorialByCode.get(country.cca2);
     const populationRecord = populationByCode[country.cca2];
     const timezoneRecord = getTimezoneCountry(country.cca2);
-    const currencyOverride = currencyOverrides[country.cca2];
-    const currencyEntries = Object.entries(country.currencies ?? {});
+    const currencyEntries = Object.entries(country.cca2==="BG"?{EUR:{name:"Euro",symbol:"€"}}:country.currencies ?? {});
     const callingSuffix = country.idd.suffixes?.[0] ?? "";
     const base = {
       code: country.cca2,
@@ -96,7 +92,7 @@ export const atlasCountries: AtlasCountry[] = sovereignCountries
       subregion: country.subregion || country.region,
       capital: editorial?.capital ?? country.capital?.join(" · ") ?? "No official capital",
       area: country.area,
-      areaLabel: editorial?.areaLabel ?? formatArea(country.area),
+      areaLabel: formatArea(country.area),
       population: populationRecord.value,
       populationLabel: formatPopulation(populationRecord.value),
       populationYear: populationRecord.year,
@@ -104,9 +100,9 @@ export const atlasCountries: AtlasCountry[] = sovereignCountries
       populationRank: populationRankByCode.get(country.cca2) ?? 195,
       areaRank: areaRankByCode.get(country.cca2) ?? 195,
       density: country.area ? populationRecord.value/country.area : 0,
-      currencies: currencyOverride?.labels ?? currencyEntries.map(([, currency]) => `${currency.name}${currency.symbol ? ` (${currency.symbol})` : ""}`),
-      currencyCodes: currencyOverride?.codes ?? currencyEntries.map(([code]) => code),
-      languages: Object.values(country.languages ?? {}),
+      currencies: currencyEntries.map(([, currency]) => `${currency.name}${currency.symbol ? ` (${currency.symbol})` : ""}`),
+      currencyCodes: currencyEntries.map(([code]) => code),
+      languages: country.cca2==="ZA"?[...Object.values(country.languages ?? {}),"South African Sign Language"].filter((v,i,a)=>a.indexOf(v)===i):Object.values(country.languages ?? {}),
       calling: editorial?.calling ?? (`${country.idd.root ?? ""}${callingSuffix}` || "—"),
       tld: country.tld?.join(" · ") || "—",
       demonym: country.demonyms?.eng?.m ?? country.name.common,
@@ -122,7 +118,7 @@ export const atlasCountries: AtlasCountry[] = sovereignCountries
     const generatedFacts = [
       `${base.capital} is the capital of ${base.official}.`,
       `With ${base.populationLabel} people in its ${base.populationYear} ${base.populationSource} reference, ${base.name} ranks about #${base.populationRank} by population among TerraScope's 195 sovereign-state profiles.`,
-      `${base.name} covers ${base.areaLabel}, placing it about #${base.areaRank} in the world by land area.`,
+      `${base.name} covers ${base.areaLabel}, placing it about #${base.areaRank} in the world by total area.`,
       `${base.name} sits in ${base.subregion}, ${base.region}, ${base.latitude < 0 ? "south" : "north"} of the equator.`,
       base.landlocked ? `${base.name} is landlocked and shares borders with ${base.borders.length} ${base.borders.length===1?"state":"states"}.` : `${base.name} has a coastline and ${base.borders.length?`shares land borders with ${base.borders.length} ${base.borders.length===1?"state":"states"}`:"has no land borders"}.`,
       `${base.languages.length===1?base.languages[0]:`${base.languages.length} languages`} ${base.languages.length===1?"is":"are"} listed in the national record${base.languages.length>1?`: ${base.languages.slice(0,4).join(", ")}${base.languages.length>4?" and others":""}`:""}.`,

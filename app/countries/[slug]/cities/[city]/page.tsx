@@ -1,3 +1,5 @@
+import {discoverySources} from "../../../../discovery-guides";
+import {funFor} from "../../../../fun-activities";
 import Link from "next/link";
 import {notFound} from "next/navigation";
 import {
@@ -7,7 +9,6 @@ import {
 } from "../../../../country-content";
 import {SiteHeader} from "../../../../components/SiteHeader";
 import {SiteFooter} from "../../../../components/SiteFooter";
-import {TravelImage} from "../../../../components/TravelImage";
 
 export function generateStaticParams() {
   return cityGuides.map((guide) => ({
@@ -53,17 +54,18 @@ export default async function CityGuidePage({
         </div>
       </section>
 
+      <p className="trip-country-action"><Link href={`/trips?destination=${encodeURIComponent(guide.country)}&city=${encodeURIComponent(guide.name)}`}>Plan a trip to {guide.name}</Link></p>
       <section className="city-guide-body">
         <aside>
           <b>Plan the city</b>
           <a href="#neighbourhoods">Where to stay</a>
           <a href="#see">What to see</a>
           <a href="#itinerary">Three-day plan</a>
-          <a href="#food">What to eat</a>
+          <a href="#fun">Fun & group outings</a><a href="#food">What to eat</a>
           <a href="#day-trips">Day trips</a>
           <a href="#move">Getting around</a>
           <a href="#local-tips">Local tips</a>
-          <a href="#gallery">Photo gallery</a>
+          {guide.gallery.length>0&&<a href="#gallery">Photo gallery</a>}
         </aside>
 
         <div>
@@ -84,13 +86,12 @@ export default async function CityGuidePage({
           <section id="see" className="city-guide-section">
             <p className="eyebrow"><span />Start here</p>
             <h2>Top<br /><em>attractions.</em></h2>
-            <div className="attraction-list attraction-photo-grid">
+            <div className="attraction-list">
               {guide.attractions.map((place, index) => (
-                <article key={place}>
-                  <div><TravelImage query={place} country={guide.country} alt={`${place}, ${guide.name}`}/></div>
+                <div key={place}>
                   <span>{String(index + 1).padStart(2, "0")}</span>
                   <b>{place}</b>
-                </article>
+                </div>
               ))}
             </div>
           </section>
@@ -108,6 +109,8 @@ export default async function CityGuidePage({
               ))}
             </div>
           </section>
+
+          <section id="fun" className="city-guide-section"><p className="eyebrow"><span/>Dates · groups · a day off</p><h2>Make time<br/><em>for fun.</em></h2><p className="source-note">These are outing ideas, not a claim that every activity operates in {guide.name}. Provider references are marked where checked; confirm the venue, access, date and quote.</p><div className="city-fun-grid">{funFor(guide.country,guide.name).map(activity=><article key={activity.name}><small>{activity.setting} · {activity.group}</small><h3>{activity.name}</h3><p>{activity.note}</p>{activity.sourceUrl?<a href={activity.sourceUrl} target="_blank" rel="noreferrer">{activity.provider} · checked {activity.checkedAt} ↗</a>:<a href={`https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(activity.name+" "+guide.name+" "+guide.country)}`} target="_blank" rel="noreferrer">Find a local venue ↗</a>}</article>)}</div><p className="trip-country-action"><Link href={`/trips?destination=${encodeURIComponent(guide.country)}&city=${encodeURIComponent(guide.name)}`}>Pick fun activities for my budget →</Link></p></section>
 
           <section id="food" className="city-guide-section">
             <p className="eyebrow"><span />Taste the city</p>
@@ -156,22 +159,23 @@ export default async function CityGuidePage({
             </ol>
           </section>
 
-          <section id="gallery" className="city-guide-section">
+          {guide.gallery.length>0&&<section id="gallery" className="city-guide-section">
             <p className="eyebrow"><span />Open-image archive</p>
             <h2>City<br /><em>gallery.</em></h2>
             <div className="city-gallery">
               {guide.gallery.map((photo) => (
                 <figure key={photo.url}>
-                  <TravelImage query={photo.alt} country={guide.country} alt={photo.alt} />
+                  <img src={photo.url} alt={photo.alt} />
                   <figcaption>
                     <b>{photo.alt}</b>
-                    <span>{photo.credit}</span>
+                    <a href={photo.url.startsWith("/travel/")?`https://commons.wikimedia.org/wiki/File:${photo.url.slice("/travel/".length)}`:photo.url} target="_blank" rel="noreferrer">{photo.credit} ↗</a>
                   </figcaption>
                 </figure>
               ))}
             </div>
-          </section>
+          </section>}
 
+          {discoverySources[path]&&<p className="source-note">Heritage reference: <a href={discoverySources[path].url} target="_blank" rel="noreferrer">{discoverySources[path].label} ↗</a> · checked {discoverySources[path].checkedAt}. Travel notes are editorial planning guidance, not a live operating schedule.</p>}
           <p className="source-note">
             Use this guide to shape an itinerary, then recheck opening hours,
             reservations, entry rules, transport disruption and official travel

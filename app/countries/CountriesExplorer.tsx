@@ -19,7 +19,7 @@ export default function CountriesExplorer({initialQuery = "", initialRegion = "A
     <div className="explorer-tools">
       <label><span>Search the index</span><input value={query} onChange={(event) => setQuery(event.target.value)} placeholder="Country, capital or region…"/></label>
       <label><span>Continent</span><select value={region} onChange={(event) => setRegion(event.target.value as AtlasRegion)}>{atlasRegions.map((name) => <option key={name}>{name}</option>)}</select></label>
-      <label><span>Sort by</span><select value={sort} onChange={(event) => setSort(event.target.value)}><option value="name">A–Z</option><option value="area">Land area</option><option value="region">Continent</option></select></label>
+      <label><span>Sort by</span><select value={sort} onChange={(event) => setSort(event.target.value)}><option value="name">A–Z</option><option value="area">Total area</option><option value="region">Continent</option></select></label>
     </div>
     <div className="results-line"><span><b>{visible.length}</b> of 195 country profiles</span><span>Geographic index · 2026 edition</span></div>
     <div className="country-grid">{visible.map((country, index) => {
@@ -28,7 +28,7 @@ export default function CountriesExplorer({initialQuery = "", initialRegion = "A
         <div className="card-top"><span>{String(index + 1).padStart(3, "0")}</span><b>{country.code}</b></div>
         <div className="emoji-flag" role="img" aria-label={`${country.name} flag`}>{country.flag}</div>
         <small>{country.subregion}</small><h2>{country.name}</h2><p>{country.capital}</p>
-        <div className="card-stats"><span><small>{editorial ? "Population" : "Official name"}</small>{editorial?.populationLabel ?? country.official}</span><span><small>Area</small>{country.areaLabel}</span></div>
+        <div className="card-stats"><span><small>{editorial ? "Population" : "Official name"}</small>{editorial?`${country.populationLabel} · ${country.populationYear}`:country.official}</span><span><small>Area</small>{country.areaLabel}</span></div>
         <div className="card-leader"><small>{editorial ? editorial.leaderTitle : "Currency"}</small><span>{editorial?.leader ?? (country.currencies.join(" · ") || "No national currency")}</span></div>
         <i>{editorial ? "Open extended profile" : "Open country record"} →</i>
       </Link>;
