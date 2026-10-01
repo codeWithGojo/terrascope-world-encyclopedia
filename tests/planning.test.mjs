@@ -48,3 +48,17 @@ test('a quoted fun allowance changes selection and survives itinerary export',()
  const paint=options.find(a=>a.name.startsWith('Sip and paint'));
  const text=itineraryText(draft,guide,[paint],{[paint.id]:'15000'});assert.ok(text.includes('30,000'));assert.ok(text.includes('https://sipandpaint.ng/'));assert.ok(text.includes('checked 2026-09-30'));
 });
+
+test('named interests beat cheaper generic Fun activities when they fit the budget',()=>{
+ const options=activitiesFor({...guide,funActivities:funFor('Nigeria','Lagos')},'Fun, swimming, paintball, movie',1000000);
+ const picks=pickActivities(options,{},7000000,2,2);
+ const selected=options.filter(a=>picks.includes(a.id));
+ for(const name of ['Paintball','Swimming / pool day','Movies'])assert.ok(selected.some(a=>a.name===name),name);
+ assert.ok(selected.reduce((sum,a)=>sum+a.perPerson*2,0)<=7000000);
+ assert.ok(selected.reduce((sum,a)=>sum+a.slots,0)<=4);
+ const paint=options.find(a=>a.name==='Paintball');
+ const reduced=pickActivities(options,{[paint.id]:'100000'},7000000,2,2);
+ assert.ok(!reduced.includes(paint.id));
+ const generic=activitiesFor({...guide,funActivities:funFor('Nigeria','Lagos')},'Fun and things I like',1000000);
+ assert.ok(generic.filter(a=>a.category==='Fun').every(a=>a.interestScore===100));
+});

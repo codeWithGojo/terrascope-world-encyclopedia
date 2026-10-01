@@ -1,13 +1,23 @@
 export type PlannerGuide = { country:string; name:string; slug:string; attractions:string[]; food:string[]; neighbourhoods:{name:string;note:string}[]; dayTrips:{name:string;note:string}[]; transport:string; safety:string; coverage?:string; funActivities?:{name:string;note:string;multiplier:number;setting:string;group:string;sourceUrl?:string;provider?:string;checkedAt?:string}[] };
 export type Draft = {destination:string;city:string;startDate:string;endDate:string;travelers:number;budget:string;currency:string;interests:string;notes:string;stay:string;transport:string;meals:string;reserve:string;allowance:string};
-export type Activity = {id:string;name:string;category:string;note:string;perPerson:number;slots:number;match:boolean; sourceUrl?:string; provider?:string; checkedAt?:string; setting?:string; group?:string; needsVenue?:boolean};
+export type Activity = {id:string;name:string;category:string;note:string;perPerson:number;slots:number;match:boolean;interestScore?:number; sourceUrl?:string; provider?:string; checkedAt?:string; setting?:string; group?:string; needsVenue?:boolean};
 export const allowances:Record<string,string>={NGN:"10000",USD:"20",EUR:"20",GBP:"15"};
 export const money=(minor:number,currency:string)=>new Intl.NumberFormat("en-NG",{style:"currency",currency,maximumFractionDigits:2}).format(minor/100);
 export const toMinor=(value:string)=>/^\d+(\.\d{1,2})?$/.test(value)&&Number(value)<=1e9?Math.round(Number(value)*100):0;
 export const daysBetween=(start:string,end:string)=>{if(![start,end].every(s=>/^\d{4}-\d{2}-\d{2}$/.test(s)&&Number(s.slice(0,4))>=2000&&Number(s.slice(0,4))<=2100&&Number.isFinite(Date.parse(s))&&new Date(s).toISOString().slice(0,10)===s))return 0;const n=(Date.parse(end)-Date.parse(start))/86400000+1;return Number.isInteger(n)&&n>0&&n<=91?n:0;};
 export function activitiesFor(guide:PlannerGuide,interests:string,allowance:number):Activity[]{
- const words=interests.toLowerCase().split(/[^\p{L}\p{N}]+/u).filter(w=>w.length>2);
- const make=(name:string,category:string,note:string,multiplier:number,slots=1):Activity=>({id:category+":"+name,name,category,note,perPerson:Math.round(allowance*multiplier),slots,match:words.some(w=>(name+" "+category+" "+note).toLowerCase().includes(w))});
+ const stopWords=new Set(["and","the","with","for","want","visit","enjoy","like","more","things","activity","activities","please"]);
+ const categoryWords=new Set(["fun","food","culture","nature","history","outdoor","city","highlight","walk","trip","day","local","creative","outing"]);
+ const tokens=(value:string)=>value.toLowerCase().normalize("NFD").replace(/[\u0300-\u036f]/g,"").split(/[^\p{L}\p{N}]+/u).filter(w=>w.length>2&&!stopWords.has(w)).map(w=>w.endsWith("s")&&w.length>3?w.slice(0,-1):w);
+ const words=tokens(interests);
+ const make=(name:string,category:string,note:string,multiplier:number,slots=1):Activity=>{
+  const named=tokens(name),all=tokens(name+" "+category+" "+note);
+  const specific=words.some(w=>!categoryWords.has(w)&&named.includes(w));
+  const match=specific||words.some(w=>all.includes(w));
+  // One named experience outweighs all 182 possible generic half-day matches.
+  const interestScore=specific?20000:match?100:1;
+  return {id:category+":"+name,name,category,note,perPerson:Math.round(allowance*multiplier),slots,match,interestScore};
+ };
  return [...guide.attractions.map(name=>make(name,/museum|art|gallery|heritage|temple|mosque|palace|hall|historic|pyramid/i.test(name)?"Culture & history":/park|lake|beach|nature|coast|mountain|garden|waterfront/i.test(name)?"Nature & outdoors":"City highlights","Visit from the TerraScope city guide. Confirm access and opening hours.",1)),...guide.food.map(name=>make("Try "+name,"Food & local flavours","An optional tasting allowance, additional to your regular meal budget.",.5)),...guide.neighbourhoods.map(place=>make("Explore "+place.name,"Neighbourhood walk",place.note+" No admission allowance included; transport stays in your transport budget.",0)),...guide.dayTrips.map(place=>make(place.name,"Day trip",place.note+" Uses a full day; allow for return travel.",2,2)),...(guide.funActivities||[]).map(option=>({...make(option.name,"Fun",option.note,option.multiplier),sourceUrl:option.sourceUrl,provider:option.provider,checkedAt:option.checkedAt,setting:option.setting,group:option.group,needsVenue:!option.provider}))];
 }
 export function pickActivities(activities:Activity[],costs:Record<string,string>,available:number,travelers:number,days:number):string[]{
@@ -15,7 +25,7 @@ export function pickActivities(activities:Activity[],costs:Record<string,string>
  type Choice={cost:number;score:number;slots:number;ids:string[]};
  let states:Choice[]=[{cost:0,score:0,slots:0,ids:[]}];
  for(const activity of activities){const raw=costs[activity.id];if(raw!==undefined&&(!/^\d+(\.\d{1,2})?$/.test(raw)||Number(raw)>1e9))continue;const cost=(raw===undefined?activity.perPerson:toMinor(raw))*travelers;
-  const additions=states.filter(s=>s.cost+cost<=available&&s.slots+activity.slots<=days*2).map(s=>({cost:s.cost+cost,score:s.score+(activity.match?100:1),slots:s.slots+activity.slots,ids:[...s.ids,activity.id]}));
+  const additions=states.filter(s=>s.cost+cost<=available&&s.slots+activity.slots<=days*2).map(s=>({cost:s.cost+cost,score:s.score+(activity.interestScore??(activity.match?100:1)),slots:s.slots+activity.slots,ids:[...s.ids,activity.id]}));
   const grouped=new Map<number,Choice[]>();for(const s of [...states,...additions]){const group=grouped.get(s.slots)||[];group.push(s);grouped.set(s.slots,group);}
   states=[];for(const group of grouped.values()){group.sort((a,b)=>a.cost-b.cost||b.score-a.score||b.ids.length-a.ids.length);let best=-1,bestCount=-1;for(const s of group){if(s.score>best||(s.score===best&&s.ids.length>bestCount)){states.push(s);best=s.score;bestCount=s.ids.length;}}}
  }
