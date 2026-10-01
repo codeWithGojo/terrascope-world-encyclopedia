@@ -114,3 +114,9 @@ The timeout defaults can be overridden for a controlled canary with `SITES_INSTA
 The dispatcher provides the stable authenticated user ID. Reads and itinerary updates enforce ownership server-side; requests without identity return 401. Writes check request origin. Retrying an identical brief does not create a duplicate. Currency values are stored as integer minor units. New schema changes are generated through Drizzle and included in the saved source and deployment archive.
 
 Run `node --test tests/trips.test.mjs` for disposable SQLite persistence, tenant isolation, duplicate protection, validation and itinerary updates. Run `npm run db:generate` after schema changes; preserve applied migrations. Existing atlas data, galleries, comparisons and rankings are retained.
+
+## Public Vercel release
+
+The public Vercel build uses `NEXT_PUBLIC_STORAGE_MODE=browser`. New records are stored in IndexedDB on the visitor's browser, without a login. They do not sync across devices and clearing site data removes them. No private account records are included. Private Sites builds keep the existing identity-bound D1 API.
+
+Download saved itineraries to keep an independent copy.

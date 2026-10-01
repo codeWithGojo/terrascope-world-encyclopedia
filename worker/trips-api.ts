@@ -1,10 +1,10 @@
 interface Statement {bind(...values:unknown[]):Statement;all():Promise<{results:Record<string,unknown>[]}>;run():Promise<{meta:{changes:number}}>;}
 export interface TripDatabase {prepare(sql:string):Statement;}
 const json=(data:unknown,status=200)=>Response.json(data,{status,headers:{"Cache-Control":"no-store","X-Content-Type-Options":"nosniff"}});
-function text(value:unknown,max:number,required=false){const s=typeof value==="string"?value.trim():"";if(s.length>max||(required&&!s))throw new Error(`Enter ${required?"a value":"text"} of at most ${max} characters.`);return s;}
-const uuid=(id:unknown)=>typeof id==="string"&&/^[a-f0-9]{8}-[a-f0-9]{4}-4[a-f0-9]{3}-[89ab][a-f0-9]{3}-[a-f0-9]{12}$/i.test(id);
-function validDate(s:string){if(!/^\d{4}-\d{2}-\d{2}$/.test(s)||Number(s.slice(0,4))<2000||Number(s.slice(0,4))>2100)return false;const d=new Date(s+"T00:00:00Z");return Number.isFinite(d.getTime())&&d.toISOString().slice(0,10)===s;}
-function minor(value:unknown){if(!/^\d+(\.\d{1,2})?$/.test(String(value)))throw new Error("Enter a valid budget with at most two decimal places.");const n=Math.round(Number(value)*100);if(!Number.isSafeInteger(n)||n<=0||n>100000000000)throw new Error("Enter a budget greater than zero and no more than 1 billion.");return n;}
+export function text(value:unknown,max:number,required=false){const s=typeof value==="string"?value.trim():"";if(s.length>max||(required&&!s))throw new Error(`Enter ${required?"a value":"text"} of at most ${max} characters.`);return s;}
+export const uuid=(id:unknown)=>typeof id==="string"&&/^[a-f0-9]{8}-[a-f0-9]{4}-4[a-f0-9]{3}-[89ab][a-f0-9]{3}-[a-f0-9]{12}$/i.test(id);
+export function validDate(s:string){if(!/^\d{4}-\d{2}-\d{2}$/.test(s)||Number(s.slice(0,4))<2000||Number(s.slice(0,4))>2100)return false;const d=new Date(s+"T00:00:00Z");return Number.isFinite(d.getTime())&&d.toISOString().slice(0,10)===s;}
+export function minor(value:unknown){if(!/^\d+(\.\d{1,2})?$/.test(String(value)))throw new Error("Enter a valid budget with at most two decimal places.");const n=Math.round(Number(value)*100);if(!Number.isSafeInteger(n)||n<=0||n>100000000000)throw new Error("Enter a budget greater than zero and no more than 1 billion.");return n;}
 export async function handleTripsApi(request:Request,db?:TripDatabase):Promise<Response>{
   const owner=request.headers.get("oai-authenticated-user-id"),url=new URL(request.url);
   if(!owner)return json({error:"Sign in to access your trip briefs."},401);
