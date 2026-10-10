@@ -18,9 +18,9 @@ export default function Home() {
       <SiteHeader />
       <section className="hero">
         <div className="hero-copy">
-          <p className="eyebrow"><span /> The living world almanac</p>
-          <h1>Every country.<br /><em>One living atlas.</em></h1>
-          <p className="hero-intro">Explore the people, places, histories and numbers that shape our planet—carefully organised and made beautifully clear.</p>
+          <p className="eyebrow"><span /> Countries, cities & travel</p>
+          <h1>Find your next<br /><em>place to explore.</em></h1>
+          <p className="hero-intro">Browse country profiles, compare destinations, or plan an outing around your interests and budget.</p>
           <form className="search-bar" action="/countries">
             <span aria-hidden="true">⌕</span><label className="sr-only" htmlFor="country-search">Search countries and cities</label>
             <input id="country-search" name="q" placeholder="Search a country, capital or region" /><button type="submit">Explore</button>
@@ -37,8 +37,8 @@ export default function Home() {
       </section>
 
       <section className="atlas-principle">
-        <div className="principle-lead"><p className="eyebrow"><span /> A different kind of reference</p><h2>Not a list of facts.<br/><em>A portrait of a planet.</em></h2></div>
-        <div className="principle-copy"><p>TerraScope connects statistics to the places and people behind them. Every profile is designed to answer three questions at once: <b>where is it, how does it work, and what makes it unforgettable?</b></p><Link href="/countries">Enter the country index <span>→</span></Link></div>
+        <div className="principle-lead"><p className="eyebrow"><span /> A different kind of reference</p><h2>Know a place<br/><em>before you go.</em></h2></div>
+        <div className="principle-copy"><p>Country profiles bring together geography, city guides, people and published statistics. Use them to get your bearings, then open the trip planner to work out what fits your visit.</p><Link href="/countries">Enter the country index <span>→</span></Link></div>
         <div className="lens-grid">
           <article><span>01</span><h3>Place</h3><p>Land, climate, cities, borders and the physical forces that shape daily life.</p></article>
           <article><span>02</span><h3>Power</h3><p>Presidents, institutions, economies and the systems organising each nation.</p></article>
@@ -47,7 +47,7 @@ export default function Home() {
       </section>
 
       <section className="discovery" id="explore">
-        <div className="section-heading"><div><p className="eyebrow"><span /> Start exploring</p><h2>A world worth<br /><em>knowing.</em></h2></div><p>Begin with today’s featured nation, browse by continent, or follow the trail of a remarkable person.</p></div>
+        <div className="section-heading"><div><p className="eyebrow"><span /> Start exploring</p><h2>Start with<br /><em>Nigeria.</em></h2></div><p>Begin with today’s featured nation, browse by continent, or follow the trail of a remarkable person.</p></div>
         <div className="feature-grid">
           <article className="country-feature">
             <div className="feature-topline"><span>Country of the day</span><b>01 / 195</b></div><div className="flag nigeria" aria-label="Flag of Nigeria"><i /></div>
@@ -57,14 +57,14 @@ export default function Home() {
             <Link className="text-link" href="/countries/nigeria">Discover Nigeria <b>→</b></Link>
           </article>
           <div className="editorial-column" id="journal">
-            <article className="daily-fact"><span className="issue">Field note · 013</span><p className="quote-mark">“</p><h3>The Pacific Ocean is wider than the Moon.</h3><p>At its broadest, the Pacific spans roughly 19,000 km—more than five times the Moon’s diameter.</p><span className="field-link">Read the field note →</span></article>
+            <article className="daily-fact"><span className="issue">Field note · 013</span><p className="quote-mark">“</p><h3>The Pacific Ocean is wider than the Moon.</h3><p>At its broadest, the Pacific spans roughly 19,000 km—more than five times the Moon’s diameter.</p><Link className="field-link" href="/countries">Explore country profiles →</Link></article>
             <Link className="person-card" href="/football-archive"><div className="portrait monogram">BS</div><div><small>Inside the football archive</small><h3>Bukayo<br />Saka</h3><p>Forward · England</p></div><span>↗</span></Link>
           </div>
         </div>
       </section>
 
       <section className="continents" id="continents">
-        <div className="section-heading compact"><div><p className="eyebrow"><span /> The continental chapters</p><h2>Five regions.<br /><em>Endless worlds.</em></h2></div><p>These photographs are visual gateways—not definitions. Open a chapter to explore the countries, environments and histories within it.</p></div>
+        <div className="section-heading compact"><div><p className="eyebrow"><span /> The continental chapters</p><h2>Browse<br /><em>by region.</em></h2></div><p>These photographs are visual gateways—not definitions. Open a chapter to explore the countries, environments and histories within it.</p></div>
         <div className="continent-gallery">
           {continents.map((continent, index) => <Link href={`/countries?region=${continent.name}`} className={`continent-photo ${continent.size}`} key={continent.name} style={{backgroundImage:`linear-gradient(180deg,rgba(10,26,21,.04),rgba(10,26,21,.84)),url(${continent.image})`}}>
             <div className="continent-photo-top"><span>0{index + 1} · {continent.mark}</span><small>{continent.location}<br/>Photo: {continent.credit} / Unsplash</small></div>
@@ -74,7 +74,7 @@ export default function Home() {
       </section>
 
       <section className="world-threads">
-        <div className="threads-heading"><p className="eyebrow"><span/> See the connections</p><h2>The world does not<br/><em>stop at borders.</em></h2></div>
+        <div className="threads-heading"><p className="eyebrow"><span/> See the connections</p><h2>Compare places.<br/><em>Follow a different interest.</em></h2></div>
         <div className="thread-list">
           <Link href="/compare"><span>01 · Compare</span><h3>What changes when two countries sit side by side?</h3><p>Compare scale, population, health, economies and systems without losing the human context.</p><b>Open comparison →</b></Link>
           <Link href="/football-archive"><span>02 · Football archive</span><h3>Compare the players who changed the game.</h3><p>Open detailed career dossiers for legends and current stars, then shortlist two players side by side.</p><b>Browse football archive →</b></Link>
@@ -82,9 +82,9 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="atlas-cta"><small>TerraScope · Digital World Encyclopaedia</small><h2>Start with somewhere<br/>you <em>think</em> you know.</h2><div><Link href="/countries/nigeria">Discover Nigeria <span>↗</span></Link><Link href="/countries">Browse all profiles <span>→</span></Link></div></section>
+      <section className="atlas-cta"><small>TerraScope · Digital World Encyclopaedia</small><h2>Where would you like to go?</h2><div><Link href="/countries/nigeria">Discover Nigeria <span>↗</span></Link><Link href="/countries">Browse all profiles <span>→</span></Link></div></section>
 
-      <footer><div><span className="brand-mark light">T</span><h2>Go somewhere<br />you’ve never been.</h2></div><p>TerraScope is an independent digital atlas designed to make our complicated world easier—and more delightful—to understand.</p><div className="footer-bottom"><span>© 2026 TerraScope</span><span>Sources · Methodology · About</span><span>Lagos · WAT</span></div></footer>
+      <footer><div><span className="brand-mark light">T</span><h2>Go somewhere<br />you’ve never been.</h2></div><p>TerraScope is an independent digital atlas designed to make our complicated world easier—and more delightful—to understand.</p><div className="footer-bottom"><span>© 2026 TerraScope</span><Link href="/method#data-register">Sources &amp; methodology</Link><span>Lagos · WAT</span></div></footer>
     </main>
   );
 }
