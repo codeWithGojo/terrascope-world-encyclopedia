@@ -1,0 +1,6 @@
+import {build} from 'esbuild';
+import {mkdtemp,rm} from 'node:fs/promises';
+import {tmpdir} from 'node:os';
+import {join} from 'node:path';
+const dir=await mkdtemp(join(tmpdir(),'terrascope-discovery-'));
+try{const outfile=join(dir,'prepare.mjs');await build({entryPoints:['scripts/prepare-discovery.ts'],bundle:true,platform:'node',format:'esm',outfile});await import(outfile);}finally{await rm(dir,{recursive:true,force:true});}

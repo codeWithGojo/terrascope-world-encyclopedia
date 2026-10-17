@@ -20,9 +20,9 @@ export default function Home() {
       <SiteHeader />
       <section className="hero">
         <div className="hero-copy">
-          <p className="eyebrow"><span /> An atlas for the curious</p>
-          <h1>There’s a whole<br /><em>world out there.</em></h1>
-          <p className="hero-intro">Step into a new landscape. Find the story behind a place. Get lost in football history. A small escape can start right here.</p>
+          <p className="eyebrow"><span /> A little curiosity. A whole planet.</p>
+          <h1>The world.<br /><em>Closer than ever.</em></h1>
+          <p className="hero-intro">Spin the globe. Follow a story. Escape somewhere beautiful, without a ticket. Your next discovery is a touch away.</p>
           <div className="hero-actions"><Link href="/escape" className="ts-button">Take me somewhere <span>↗</span></Link><Link href="/countries">Explore 195 countries →</Link></div>
           <form className="search-bar" action="/countries">
             <span aria-hidden="true">⌕</span><label className="sr-only" htmlFor="country-search">Search countries and cities</label>
@@ -32,6 +32,7 @@ export default function Home() {
         </div>
         <MovingGlobe />
       </section>
+
 
       <section className="home-experience-links" aria-label="Ways to explore"><Link href="/escape"><span>01 / Escape</span><b>A change of scene.</b><small>Free 360° views & photo journeys ↗</small></Link><Link href="/countries"><span>02 / Discover</span><b>A world worth knowing.</b><small>Countries, people & historic places ↗</small></Link><Link href="/football-archive/greats"><span>03 / Debate</span><b>The names that live on.</b><small>Club legends, league greats & the GOAT list ↗</small></Link></section>
 

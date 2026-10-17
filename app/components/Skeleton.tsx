@@ -1,0 +1,1 @@
+export function Skeleton({className="",label="Loading"}:{className?:string;label?:string}){return <div className={`skeleton ${className}`} role="status" aria-label={label}><span className="sr-only">{label}…</span></div>;}

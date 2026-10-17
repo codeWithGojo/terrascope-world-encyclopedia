@@ -1,0 +1,2006 @@
+{
+  "schemaVersion": 1,
+  "id": "temperature",
+  "label": "Average annual temperature",
+  "unit": "°C",
+  "year": 2020,
+  "period": "1991-2020",
+  "source": {
+    "name": "World Bank Climate Change Knowledge Portal / CRU",
+    "url": "https://climateknowledgeportal.worldbank.org/download-data",
+    "metadataUrl": "https://climateknowledgeportal.worldbank.org/metadata",
+    "officialCollectionDocumentation": "https://worldbank.github.io/climateknowledgeportal/docs/collections/cru-x0.5.html",
+    "retrievedAt": "2026-10-17T08:26:26Z"
+  },
+  "measurement": "Nationally aggregated annual mean surface air temperature for the 1991–2020 climate normal. This is a long-run climate average, not the current weather or a forecast. Values were read from period-labelled official country-profile text or tables.",
+  "status": "partial-verified-seed-global-download-blocked",
+  "license": {
+    "name": "CC BY 4.0 for CCKP datasets unless specifically labelled otherwise; underlying CRU metadata cites the UK Open Government Licence v3",
+    "url": "https://climateknowledgeportal.worldbank.org/index.php/download-data",
+    "underlyingLicenseUrl": "https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/",
+    "attribution": "World Bank: Climate Change Knowledge Portal, CRU surface air temperature data; Climatic Research Unit (University of East Anglia) and Met Office. Extraction and ISO2 normalization by TerraScope.",
+    "note": "CCKP has dataset-specific terms. The general World Bank website terms differ and must not be used to relabel a dataset. Preserve per-dataset notices when bulk data is materialized."
+  },
+  "coverage": {
+    "atlasCountries": 195,
+    "atlasWithValues": 8,
+    "missingAtlasCodes": [
+      "AD",
+      "AE",
+      "AF",
+      "AG",
+      "AL",
+      "AM",
+      "AO",
+      "AR",
+      "AT",
+      "AU",
+      "AZ",
+      "BA",
+      "BB",
+      "BE",
+      "BF",
+      "BG",
+      "BH",
+      "BI",
+      "BJ",
+      "BN",
+      "BO",
+      "BS",
+      "BT",
+      "BW",
+      "BY",
+      "BZ",
+      "CA",
+      "CD",
+      "CF",
+      "CG",
+      "CH",
+      "CI",
+      "CL",
+      "CM",
+      "CN",
+      "CO",
+      "CR",
+      "CU",
+      "CV",
+      "CY",
+      "CZ",
+      "DE",
+      "DK",
+      "DM",
+      "DO",
+      "DZ",
+      "EC",
+      "EE",
+      "EG",
+      "ER",
+      "ES",
+      "ET",
+      "FI",
+      "FJ",
+      "FM",
+      "FR",
+      "GA",
+      "GB",
+      "GD",
+      "GE",
+      "GH",
+      "GM",
+      "GN",
+      "GQ",
+      "GR",
+      "GT",
+      "GW",
+      "GY",
+      "HN",
+      "HR",
+      "HT",
+      "HU",
+      "ID",
+      "IE",
+      "IL",
+      "IN",
+      "IQ",
+      "IR",
+      "IS",
+      "IT",
+      "JM",
+      "JO",
+      "JP",
+      "KE",
+      "KG",
+      "KH",
+      "KI",
+      "KM",
+      "KN",
+      "KP",
+      "KR",
+      "KW",
+      "KZ",
+      "LA",
+      "LB",
+      "LC",
+      "LI",
+      "LK",
+      "LR",
+      "LS",
+      "LT",
+      "LU",
+      "LV",
+      "LY",
+      "MA",
+      "MC",
+      "MD",
+      "ME",
+      "MG",
+      "MH",
+      "MK",
+      "ML",
+      "MM",
+      "MN",
+      "MR",
+      "MT",
+      "MU",
+      "MV",
+      "MW",
+      "MZ",
+      "NA",
+      "NE",
+      "NI",
+      "NL",
+      "NO",
+      "NP",
+      "NR",
+      "NZ",
+      "OM",
+      "PE",
+      "PG",
+      "PH",
+      "PK",
+      "PL",
+      "PS",
+      "PT",
+      "PW",
+      "PY",
+      "QA",
+      "RO",
+      "RS",
+      "RU",
+      "RW",
+      "SA",
+      "SB",
+      "SC",
+      "SD",
+      "SE",
+      "SG",
+      "SI",
+      "SK",
+      "SL",
+      "SM",
+      "SN",
+      "SO",
+      "SR",
+      "SS",
+      "ST",
+      "SV",
+      "SY",
+      "SZ",
+      "TD",
+      "TG",
+      "TH",
+      "TJ",
+      "TL",
+      "TM",
+      "TN",
+      "TO",
+      "TR",
+      "TT",
+      "TV",
+      "TZ",
+      "UA",
+      "UG",
+      "US",
+      "UY",
+      "UZ",
+      "VA",
+      "VC",
+      "VE",
+      "VN",
+      "VU",
+      "WS",
+      "ZA",
+      "ZM",
+      "ZW"
+    ],
+    "worldRanksAvailable": false
+  },
+  "limitations": [
+    "The official CCKP all_countries API was inaccessible through the available tool network. The included seed is intentionally incomplete.",
+    "Never compute or display a world rank from this eight-country seed. Show rank unavailable until a consistent global dataset is imported.",
+    "No interpolation, climate-zone proxy, capital-city average, or invented country value was used.",
+    "Do not merge profile averages with a different source period into this 1991–2020 layer."
+  ],
+  "byCountry": {
+    "AD": {
+      "code": "AD",
+      "value": null,
+      "year": 2020,
+      "period": "1991-2020",
+      "rank": null,
+      "rankScope": null,
+      "missingReason": "Global CCKP download unavailable; no matching 1991–2020 national value verified in this research seed."
+    },
+    "AE": {
+      "code": "AE",
+      "value": null,
+      "year": 2020,
+      "period": "1991-2020",
+      "rank": null,
+      "rankScope": null,
+      "missingReason": "Global CCKP download unavailable; no matching 1991–2020 national value verified in this research seed."
+    },
+    "AF": {
+      "code": "AF",
+      "value": null,
+      "year": 2020,
+      "period": "1991-2020",
+      "rank": null,
+      "rankScope": null,
+      "missingReason": "Global CCKP download unavailable; no matching 1991–2020 national value verified in this research seed."
+    },
+    "AG": {
+      "code": "AG",
+      "value": null,
+      "year": 2020,
+      "period": "1991-2020",
+      "rank": null,
+      "rankScope": null,
+      "missingReason": "Global CCKP download unavailable; no matching 1991–2020 national value verified in this research seed."
+    },
+    "AL": {
+      "code": "AL",
+      "value": null,
+      "year": 2020,
+      "period": "1991-2020",
+      "rank": null,
+      "rankScope": null,
+      "missingReason": "Global CCKP download unavailable; no matching 1991–2020 national value verified in this research seed."
+    },
+    "AM": {
+      "code": "AM",
+      "value": null,
+      "year": 2020,
+      "period": "1991-2020",
+      "rank": null,
+      "rankScope": null,
+      "missingReason": "Global CCKP download unavailable; no matching 1991–2020 national value verified in this research seed."
+    },
+    "AO": {
+      "code": "AO",
+      "value": null,
+      "year": 2020,
+      "period": "1991-2020",
+      "rank": null,
+      "rankScope": null,
+      "missingReason": "Global CCKP download unavailable; no matching 1991–2020 national value verified in this research seed."
+    },
+    "AR": {
+      "code": "AR",
+      "value": null,
+      "year": 2020,
+      "period": "1991-2020",
+      "rank": null,
+      "rankScope": null,
+      "missingReason": "Global CCKP download unavailable; no matching 1991–2020 national value verified in this research seed."
+    },
+    "AT": {
+      "code": "AT",
+      "value": null,
+      "year": 2020,
+      "period": "1991-2020",
+      "rank": null,
+      "rankScope": null,
+      "missingReason": "Global CCKP download unavailable; no matching 1991–2020 national value verified in this research seed."
+    },
+    "AU": {
+      "code": "AU",
+      "value": null,
+      "year": 2020,
+      "period": "1991-2020",
+      "rank": null,
+      "rankScope": null,
+      "missingReason": "Global CCKP download unavailable; no matching 1991–2020 national value verified in this research seed."
+    },
+    "AZ": {
+      "code": "AZ",
+      "value": null,
+      "year": 2020,
+      "period": "1991-2020",
+      "rank": null,
+      "rankScope": null,
+      "missingReason": "Global CCKP download unavailable; no matching 1991–2020 national value verified in this research seed."
+    },
+    "BA": {
+      "code": "BA",
+      "value": null,
+      "year": 2020,
+      "period": "1991-2020",
+      "rank": null,
+      "rankScope": null,
+      "missingReason": "Global CCKP download unavailable; no matching 1991–2020 national value verified in this research seed."
+    },
+    "BB": {
+      "code": "BB",
+      "value": null,
+      "year": 2020,
+      "period": "1991-2020",
+      "rank": null,
+      "rankScope": null,
+      "missingReason": "Global CCKP download unavailable; no matching 1991–2020 national value verified in this research seed."
+    },
+    "BD": {
+      "code": "BD",
+      "value": 25.71,
+      "publicationYear": 2023,
+      "sourceUrl": "https://climateknowledgeportal.worldbank.org/sites/default/files/country-profiles/16813-WB_Bangladesh%20Country%20Profile-WEB.pdf",
+      "location": "Climate Overview / page 7",
+      "year": 2020,
+      "period": "1991-2020",
+      "rank": null,
+      "rankScope": null,
+      "retrievedAt": "2026-10-17T08:26:26Z"
+    },
+    "BE": {
+      "code": "BE",
+      "value": null,
+      "year": 2020,
+      "period": "1991-2020",
+      "rank": null,
+      "rankScope": null,
+      "missingReason": "Global CCKP download unavailable; no matching 1991–2020 national value verified in this research seed."
+    },
+    "BF": {
+      "code": "BF",
+      "value": null,
+      "year": 2020,
+      "period": "1991-2020",
+      "rank": null,
+      "rankScope": null,
+      "missingReason": "Global CCKP download unavailable; no matching 1991–2020 national value verified in this research seed."
+    },
+    "BG": {
+      "code": "BG",
+      "value": null,
+      "year": 2020,
+      "period": "1991-2020",
+      "rank": null,
+      "rankScope": null,
+      "missingReason": "Global CCKP download unavailable; no matching 1991–2020 national value verified in this research seed."
+    },
+    "BH": {
+      "code": "BH",
+      "value": null,
+      "year": 2020,
+      "period": "1991-2020",
+      "rank": null,
+      "rankScope": null,
+      "missingReason": "Global CCKP download unavailable; no matching 1991–2020 national value verified in this research seed."
+    },
+    "BI": {
+      "code": "BI",
+      "value": null,
+      "year": 2020,
+      "period": "1991-2020",
+      "rank": null,
+      "rankScope": null,
+      "missingReason": "Global CCKP download unavailable; no matching 1991–2020 national value verified in this research seed."
+    },
+    "BJ": {
+      "code": "BJ",
+      "value": null,
+      "year": 2020,
+      "period": "1991-2020",
+      "rank": null,
+      "rankScope": null,
+      "missingReason": "Global CCKP download unavailable; no matching 1991–2020 national value verified in this research seed."
+    },
+    "BN": {
+      "code": "BN",
+      "value": null,
+      "year": 2020,
+      "period": "1991-2020",
+      "rank": null,
+      "rankScope": null,
+      "missingReason": "Global CCKP download unavailable; no matching 1991–2020 national value verified in this research seed."
+    },
+    "BO": {
+      "code": "BO",
+      "value": null,
+      "year": 2020,
+      "period": "1991-2020",
+      "rank": null,
+      "rankScope": null,
+      "missingReason": "Global CCKP download unavailable; no matching 1991–2020 national value verified in this research seed."
+    },
+    "BR": {
+      "code": "BR",
+      "value": 25.6,
+      "publicationYear": 2021,
+      "sourceUrl": "https://climateknowledgeportal.worldbank.org/sites/default/files/2021-07/15915-WB_Brazil%20Country%20Profile-WEB.pdf",
+      "location": "Table 2 / page 6",
+      "note": "Use the explicitly period-labelled table value. This report’s prose rounds to 25°C. A later 2025 report says approximately 25.5°C without a clear period in the retrieved excerpt.",
+      "year": 2020,
+      "period": "1991-2020",
+      "rank": null,
+      "rankScope": null,
+      "retrievedAt": "2026-10-17T08:26:26Z"
+    },
+    "BS": {
+      "code": "BS",
+      "value": null,
+      "year": 2020,
+      "period": "1991-2020",
+      "rank": null,
+      "rankScope": null,
+      "missingReason": "Global CCKP download unavailable; no matching 1991–2020 national value verified in this research seed."
+    },
+    "BT": {
+      "code": "BT",
+      "value": null,
+      "year": 2020,
+      "period": "1991-2020",
+      "rank": null,
+      "rankScope": null,
+      "missingReason": "Global CCKP download unavailable; no matching 1991–2020 national value verified in this research seed."
+    },
+    "BW": {
+      "code": "BW",
+      "value": null,
+      "year": 2020,
+      "period": "1991-2020",
+      "rank": null,
+      "rankScope": null,
+      "missingReason": "Global CCKP download unavailable; no matching 1991–2020 national value verified in this research seed."
+    },
+    "BY": {
+      "code": "BY",
+      "value": null,
+      "year": 2020,
+      "period": "1991-2020",
+      "rank": null,
+      "rankScope": null,
+      "missingReason": "Global CCKP download unavailable; no matching 1991–2020 national value verified in this research seed."
+    },
+    "BZ": {
+      "code": "BZ",
+      "value": null,
+      "year": 2020,
+      "period": "1991-2020",
+      "rank": null,
+      "rankScope": null,
+      "missingReason": "Global CCKP download unavailable; no matching 1991–2020 national value verified in this research seed."
+    },
+    "CA": {
+      "code": "CA",
+      "value": null,
+      "year": 2020,
+      "period": "1991-2020",
+      "rank": null,
+      "rankScope": null,
+      "missingReason": "Global CCKP download unavailable; no matching 1991–2020 national value verified in this research seed."
+    },
+    "CD": {
+      "code": "CD",
+      "value": null,
+      "year": 2020,
+      "period": "1991-2020",
+      "rank": null,
+      "rankScope": null,
+      "missingReason": "Global CCKP download unavailable; no matching 1991–2020 national value verified in this research seed."
+    },
+    "CF": {
+      "code": "CF",
+      "value": null,
+      "year": 2020,
+      "period": "1991-2020",
+      "rank": null,
+      "rankScope": null,
+      "missingReason": "Global CCKP download unavailable; no matching 1991–2020 national value verified in this research seed."
+    },
+    "CG": {
+      "code": "CG",
+      "value": null,
+      "year": 2020,
+      "period": "1991-2020",
+      "rank": null,
+      "rankScope": null,
+      "missingReason": "Global CCKP download unavailable; no matching 1991–2020 national value verified in this research seed."
+    },
+    "CH": {
+      "code": "CH",
+      "value": null,
+      "year": 2020,
+      "period": "1991-2020",
+      "rank": null,
+      "rankScope": null,
+      "missingReason": "Global CCKP download unavailable; no matching 1991–2020 national value verified in this research seed."
+    },
+    "CI": {
+      "code": "CI",
+      "value": null,
+      "year": 2020,
+      "period": "1991-2020",
+      "rank": null,
+      "rankScope": null,
+      "missingReason": "Global CCKP download unavailable; no matching 1991–2020 national value verified in this research seed."
+    },
+    "CL": {
+      "code": "CL",
+      "value": null,
+      "year": 2020,
+      "period": "1991-2020",
+      "rank": null,
+      "rankScope": null,
+      "missingReason": "Global CCKP download unavailable; no matching 1991–2020 national value verified in this research seed."
+    },
+    "CM": {
+      "code": "CM",
+      "value": null,
+      "year": 2020,
+      "period": "1991-2020",
+      "rank": null,
+      "rankScope": null,
+      "missingReason": "Global CCKP download unavailable; no matching 1991–2020 national value verified in this research seed."
+    },
+    "CN": {
+      "code": "CN",
+      "value": null,
+      "year": 2020,
+      "period": "1991-2020",
+      "rank": null,
+      "rankScope": null,
+      "missingReason": "Global CCKP download unavailable; no matching 1991–2020 national value verified in this research seed."
+    },
+    "CO": {
+      "code": "CO",
+      "value": null,
+      "year": 2020,
+      "period": "1991-2020",
+      "rank": null,
+      "rankScope": null,
+      "missingReason": "Global CCKP download unavailable; no matching 1991–2020 national value verified in this research seed."
+    },
+    "CR": {
+      "code": "CR",
+      "value": null,
+      "year": 2020,
+      "period": "1991-2020",
+      "rank": null,
+      "rankScope": null,
+      "missingReason": "Global CCKP download unavailable; no matching 1991–2020 national value verified in this research seed."
+    },
+    "CU": {
+      "code": "CU",
+      "value": null,
+      "year": 2020,
+      "period": "1991-2020",
+      "rank": null,
+      "rankScope": null,
+      "missingReason": "Global CCKP download unavailable; no matching 1991–2020 national value verified in this research seed."
+    },
+    "CV": {
+      "code": "CV",
+      "value": null,
+      "year": 2020,
+      "period": "1991-2020",
+      "rank": null,
+      "rankScope": null,
+      "missingReason": "Global CCKP download unavailable; no matching 1991–2020 national value verified in this research seed."
+    },
+    "CY": {
+      "code": "CY",
+      "value": null,
+      "year": 2020,
+      "period": "1991-2020",
+      "rank": null,
+      "rankScope": null,
+      "missingReason": "Global CCKP download unavailable; no matching 1991–2020 national value verified in this research seed."
+    },
+    "CZ": {
+      "code": "CZ",
+      "value": null,
+      "year": 2020,
+      "period": "1991-2020",
+      "rank": null,
+      "rankScope": null,
+      "missingReason": "Global CCKP download unavailable; no matching 1991–2020 national value verified in this research seed."
+    },
+    "DE": {
+      "code": "DE",
+      "value": null,
+      "year": 2020,
+      "period": "1991-2020",
+      "rank": null,
+      "rankScope": null,
+      "missingReason": "Global CCKP download unavailable; no matching 1991–2020 national value verified in this research seed."
+    },
+    "DJ": {
+      "code": "DJ",
+      "value": 28.5,
+      "publicationYear": 2023,
+      "sourceUrl": "https://climateknowledgeportal.worldbank.org/sites/default/files/country-profiles/16697-WB_Djibouti%20Country%20Profile-WEB.pdf",
+      "location": "Climate Overview / page 7",
+      "year": 2020,
+      "period": "1991-2020",
+      "rank": null,
+      "rankScope": null,
+      "retrievedAt": "2026-10-17T08:26:26Z"
+    },
+    "DK": {
+      "code": "DK",
+      "value": null,
+      "year": 2020,
+      "period": "1991-2020",
+      "rank": null,
+      "rankScope": null,
+      "missingReason": "Global CCKP download unavailable; no matching 1991–2020 national value verified in this research seed."
+    },
+    "DM": {
+      "code": "DM",
+      "value": null,
+      "year": 2020,
+      "period": "1991-2020",
+      "rank": null,
+      "rankScope": null,
+      "missingReason": "Global CCKP download unavailable; no matching 1991–2020 national value verified in this research seed."
+    },
+    "DO": {
+      "code": "DO",
+      "value": null,
+      "year": 2020,
+      "period": "1991-2020",
+      "rank": null,
+      "rankScope": null,
+      "missingReason": "Global CCKP download unavailable; no matching 1991–2020 national value verified in this research seed."
+    },
+    "DZ": {
+      "code": "DZ",
+      "value": null,
+      "year": 2020,
+      "period": "1991-2020",
+      "rank": null,
+      "rankScope": null,
+      "missingReason": "Global CCKP download unavailable; no matching 1991–2020 national value verified in this research seed."
+    },
+    "EC": {
+      "code": "EC",
+      "value": null,
+      "year": 2020,
+      "period": "1991-2020",
+      "rank": null,
+      "rankScope": null,
+      "missingReason": "Global CCKP download unavailable; no matching 1991–2020 national value verified in this research seed."
+    },
+    "EE": {
+      "code": "EE",
+      "value": null,
+      "year": 2020,
+      "period": "1991-2020",
+      "rank": null,
+      "rankScope": null,
+      "missingReason": "Global CCKP download unavailable; no matching 1991–2020 national value verified in this research seed."
+    },
+    "EG": {
+      "code": "EG",
+      "value": null,
+      "year": 2020,
+      "period": "1991-2020",
+      "rank": null,
+      "rankScope": null,
+      "missingReason": "Global CCKP download unavailable; no matching 1991–2020 national value verified in this research seed."
+    },
+    "ER": {
+      "code": "ER",
+      "value": null,
+      "year": 2020,
+      "period": "1991-2020",
+      "rank": null,
+      "rankScope": null,
+      "missingReason": "Global CCKP download unavailable; no matching 1991–2020 national value verified in this research seed."
+    },
+    "ES": {
+      "code": "ES",
+      "value": null,
+      "year": 2020,
+      "period": "1991-2020",
+      "rank": null,
+      "rankScope": null,
+      "missingReason": "Global CCKP download unavailable; no matching 1991–2020 national value verified in this research seed."
+    },
+    "ET": {
+      "code": "ET",
+      "value": null,
+      "year": 2020,
+      "period": "1991-2020",
+      "rank": null,
+      "rankScope": null,
+      "missingReason": "Global CCKP download unavailable; no matching 1991–2020 national value verified in this research seed."
+    },
+    "FI": {
+      "code": "FI",
+      "value": null,
+      "year": 2020,
+      "period": "1991-2020",
+      "rank": null,
+      "rankScope": null,
+      "missingReason": "Global CCKP download unavailable; no matching 1991–2020 national value verified in this research seed."
+    },
+    "FJ": {
+      "code": "FJ",
+      "value": null,
+      "year": 2020,
+      "period": "1991-2020",
+      "rank": null,
+      "rankScope": null,
+      "missingReason": "Global CCKP download unavailable; no matching 1991–2020 national value verified in this research seed."
+    },
+    "FM": {
+      "code": "FM",
+      "value": null,
+      "year": 2020,
+      "period": "1991-2020",
+      "rank": null,
+      "rankScope": null,
+      "missingReason": "Global CCKP download unavailable; no matching 1991–2020 national value verified in this research seed."
+    },
+    "FR": {
+      "code": "FR",
+      "value": null,
+      "year": 2020,
+      "period": "1991-2020",
+      "rank": null,
+      "rankScope": null,
+      "missingReason": "Global CCKP download unavailable; no matching 1991–2020 national value verified in this research seed."
+    },
+    "GA": {
+      "code": "GA",
+      "value": null,
+      "year": 2020,
+      "period": "1991-2020",
+      "rank": null,
+      "rankScope": null,
+      "missingReason": "Global CCKP download unavailable; no matching 1991–2020 national value verified in this research seed."
+    },
+    "GB": {
+      "code": "GB",
+      "value": null,
+      "year": 2020,
+      "period": "1991-2020",
+      "rank": null,
+      "rankScope": null,
+      "missingReason": "Global CCKP download unavailable; no matching 1991–2020 national value verified in this research seed."
+    },
+    "GD": {
+      "code": "GD",
+      "value": null,
+      "year": 2020,
+      "period": "1991-2020",
+      "rank": null,
+      "rankScope": null,
+      "missingReason": "Global CCKP download unavailable; no matching 1991–2020 national value verified in this research seed."
+    },
+    "GE": {
+      "code": "GE",
+      "value": null,
+      "year": 2020,
+      "period": "1991-2020",
+      "rank": null,
+      "rankScope": null,
+      "missingReason": "Global CCKP download unavailable; no matching 1991–2020 national value verified in this research seed."
+    },
+    "GH": {
+      "code": "GH",
+      "value": null,
+      "year": 2020,
+      "period": "1991-2020",
+      "rank": null,
+      "rankScope": null,
+      "missingReason": "Global CCKP download unavailable; no matching 1991–2020 national value verified in this research seed."
+    },
+    "GM": {
+      "code": "GM",
+      "value": null,
+      "year": 2020,
+      "period": "1991-2020",
+      "rank": null,
+      "rankScope": null,
+      "missingReason": "Global CCKP download unavailable; no matching 1991–2020 national value verified in this research seed."
+    },
+    "GN": {
+      "code": "GN",
+      "value": null,
+      "year": 2020,
+      "period": "1991-2020",
+      "rank": null,
+      "rankScope": null,
+      "missingReason": "Global CCKP download unavailable; no matching 1991–2020 national value verified in this research seed."
+    },
+    "GQ": {
+      "code": "GQ",
+      "value": null,
+      "year": 2020,
+      "period": "1991-2020",
+      "rank": null,
+      "rankScope": null,
+      "missingReason": "Global CCKP download unavailable; no matching 1991–2020 national value verified in this research seed."
+    },
+    "GR": {
+      "code": "GR",
+      "value": null,
+      "year": 2020,
+      "period": "1991-2020",
+      "rank": null,
+      "rankScope": null,
+      "missingReason": "Global CCKP download unavailable; no matching 1991–2020 national value verified in this research seed."
+    },
+    "GT": {
+      "code": "GT",
+      "value": null,
+      "year": 2020,
+      "period": "1991-2020",
+      "rank": null,
+      "rankScope": null,
+      "missingReason": "Global CCKP download unavailable; no matching 1991–2020 national value verified in this research seed."
+    },
+    "GW": {
+      "code": "GW",
+      "value": null,
+      "year": 2020,
+      "period": "1991-2020",
+      "rank": null,
+      "rankScope": null,
+      "missingReason": "Global CCKP download unavailable; no matching 1991–2020 national value verified in this research seed."
+    },
+    "GY": {
+      "code": "GY",
+      "value": null,
+      "year": 2020,
+      "period": "1991-2020",
+      "rank": null,
+      "rankScope": null,
+      "missingReason": "Global CCKP download unavailable; no matching 1991–2020 national value verified in this research seed."
+    },
+    "HN": {
+      "code": "HN",
+      "value": null,
+      "year": 2020,
+      "period": "1991-2020",
+      "rank": null,
+      "rankScope": null,
+      "missingReason": "Global CCKP download unavailable; no matching 1991–2020 national value verified in this research seed."
+    },
+    "HR": {
+      "code": "HR",
+      "value": null,
+      "year": 2020,
+      "period": "1991-2020",
+      "rank": null,
+      "rankScope": null,
+      "missingReason": "Global CCKP download unavailable; no matching 1991–2020 national value verified in this research seed."
+    },
+    "HT": {
+      "code": "HT",
+      "value": null,
+      "year": 2020,
+      "period": "1991-2020",
+      "rank": null,
+      "rankScope": null,
+      "missingReason": "Global CCKP download unavailable; no matching 1991–2020 national value verified in this research seed."
+    },
+    "HU": {
+      "code": "HU",
+      "value": null,
+      "year": 2020,
+      "period": "1991-2020",
+      "rank": null,
+      "rankScope": null,
+      "missingReason": "Global CCKP download unavailable; no matching 1991–2020 national value verified in this research seed."
+    },
+    "ID": {
+      "code": "ID",
+      "value": null,
+      "year": 2020,
+      "period": "1991-2020",
+      "rank": null,
+      "rankScope": null,
+      "missingReason": "Global CCKP download unavailable; no matching 1991–2020 national value verified in this research seed."
+    },
+    "IE": {
+      "code": "IE",
+      "value": null,
+      "year": 2020,
+      "period": "1991-2020",
+      "rank": null,
+      "rankScope": null,
+      "missingReason": "Global CCKP download unavailable; no matching 1991–2020 national value verified in this research seed."
+    },
+    "IL": {
+      "code": "IL",
+      "value": null,
+      "year": 2020,
+      "period": "1991-2020",
+      "rank": null,
+      "rankScope": null,
+      "missingReason": "Global CCKP download unavailable; no matching 1991–2020 national value verified in this research seed."
+    },
+    "IN": {
+      "code": "IN",
+      "value": null,
+      "year": 2020,
+      "period": "1991-2020",
+      "rank": null,
+      "rankScope": null,
+      "missingReason": "Global CCKP download unavailable; no matching 1991–2020 national value verified in this research seed."
+    },
+    "IQ": {
+      "code": "IQ",
+      "value": null,
+      "year": 2020,
+      "period": "1991-2020",
+      "rank": null,
+      "rankScope": null,
+      "missingReason": "Global CCKP download unavailable; no matching 1991–2020 national value verified in this research seed."
+    },
+    "IR": {
+      "code": "IR",
+      "value": null,
+      "year": 2020,
+      "period": "1991-2020",
+      "rank": null,
+      "rankScope": null,
+      "missingReason": "Global CCKP download unavailable; no matching 1991–2020 national value verified in this research seed."
+    },
+    "IS": {
+      "code": "IS",
+      "value": null,
+      "year": 2020,
+      "period": "1991-2020",
+      "rank": null,
+      "rankScope": null,
+      "missingReason": "Global CCKP download unavailable; no matching 1991–2020 national value verified in this research seed."
+    },
+    "IT": {
+      "code": "IT",
+      "value": null,
+      "year": 2020,
+      "period": "1991-2020",
+      "rank": null,
+      "rankScope": null,
+      "missingReason": "Global CCKP download unavailable; no matching 1991–2020 national value verified in this research seed."
+    },
+    "JM": {
+      "code": "JM",
+      "value": null,
+      "year": 2020,
+      "period": "1991-2020",
+      "rank": null,
+      "rankScope": null,
+      "missingReason": "Global CCKP download unavailable; no matching 1991–2020 national value verified in this research seed."
+    },
+    "JO": {
+      "code": "JO",
+      "value": null,
+      "year": 2020,
+      "period": "1991-2020",
+      "rank": null,
+      "rankScope": null,
+      "missingReason": "Global CCKP download unavailable; no matching 1991–2020 national value verified in this research seed."
+    },
+    "JP": {
+      "code": "JP",
+      "value": null,
+      "year": 2020,
+      "period": "1991-2020",
+      "rank": null,
+      "rankScope": null,
+      "missingReason": "Global CCKP download unavailable; no matching 1991–2020 national value verified in this research seed."
+    },
+    "KE": {
+      "code": "KE",
+      "value": null,
+      "year": 2020,
+      "period": "1991-2020",
+      "rank": null,
+      "rankScope": null,
+      "missingReason": "Global CCKP download unavailable; no matching 1991–2020 national value verified in this research seed."
+    },
+    "KG": {
+      "code": "KG",
+      "value": null,
+      "year": 2020,
+      "period": "1991-2020",
+      "rank": null,
+      "rankScope": null,
+      "missingReason": "Global CCKP download unavailable; no matching 1991–2020 national value verified in this research seed."
+    },
+    "KH": {
+      "code": "KH",
+      "value": null,
+      "year": 2020,
+      "period": "1991-2020",
+      "rank": null,
+      "rankScope": null,
+      "missingReason": "Global CCKP download unavailable; no matching 1991–2020 national value verified in this research seed."
+    },
+    "KI": {
+      "code": "KI",
+      "value": null,
+      "year": 2020,
+      "period": "1991-2020",
+      "rank": null,
+      "rankScope": null,
+      "missingReason": "Global CCKP download unavailable; no matching 1991–2020 national value verified in this research seed."
+    },
+    "KM": {
+      "code": "KM",
+      "value": null,
+      "year": 2020,
+      "period": "1991-2020",
+      "rank": null,
+      "rankScope": null,
+      "missingReason": "Global CCKP download unavailable; no matching 1991–2020 national value verified in this research seed."
+    },
+    "KN": {
+      "code": "KN",
+      "value": null,
+      "year": 2020,
+      "period": "1991-2020",
+      "rank": null,
+      "rankScope": null,
+      "missingReason": "Global CCKP download unavailable; no matching 1991–2020 national value verified in this research seed."
+    },
+    "KP": {
+      "code": "KP",
+      "value": null,
+      "year": 2020,
+      "period": "1991-2020",
+      "rank": null,
+      "rankScope": null,
+      "missingReason": "Global CCKP download unavailable; no matching 1991–2020 national value verified in this research seed."
+    },
+    "KR": {
+      "code": "KR",
+      "value": null,
+      "year": 2020,
+      "period": "1991-2020",
+      "rank": null,
+      "rankScope": null,
+      "missingReason": "Global CCKP download unavailable; no matching 1991–2020 national value verified in this research seed."
+    },
+    "KW": {
+      "code": "KW",
+      "value": null,
+      "year": 2020,
+      "period": "1991-2020",
+      "rank": null,
+      "rankScope": null,
+      "missingReason": "Global CCKP download unavailable; no matching 1991–2020 national value verified in this research seed."
+    },
+    "KZ": {
+      "code": "KZ",
+      "value": null,
+      "year": 2020,
+      "period": "1991-2020",
+      "rank": null,
+      "rankScope": null,
+      "missingReason": "Global CCKP download unavailable; no matching 1991–2020 national value verified in this research seed."
+    },
+    "LA": {
+      "code": "LA",
+      "value": null,
+      "year": 2020,
+      "period": "1991-2020",
+      "rank": null,
+      "rankScope": null,
+      "missingReason": "Global CCKP download unavailable; no matching 1991–2020 national value verified in this research seed."
+    },
+    "LB": {
+      "code": "LB",
+      "value": null,
+      "year": 2020,
+      "period": "1991-2020",
+      "rank": null,
+      "rankScope": null,
+      "missingReason": "Global CCKP download unavailable; no matching 1991–2020 national value verified in this research seed."
+    },
+    "LC": {
+      "code": "LC",
+      "value": null,
+      "year": 2020,
+      "period": "1991-2020",
+      "rank": null,
+      "rankScope": null,
+      "missingReason": "Global CCKP download unavailable; no matching 1991–2020 national value verified in this research seed."
+    },
+    "LI": {
+      "code": "LI",
+      "value": null,
+      "year": 2020,
+      "period": "1991-2020",
+      "rank": null,
+      "rankScope": null,
+      "missingReason": "Global CCKP download unavailable; no matching 1991–2020 national value verified in this research seed."
+    },
+    "LK": {
+      "code": "LK",
+      "value": null,
+      "year": 2020,
+      "period": "1991-2020",
+      "rank": null,
+      "rankScope": null,
+      "missingReason": "Global CCKP download unavailable; no matching 1991–2020 national value verified in this research seed."
+    },
+    "LR": {
+      "code": "LR",
+      "value": null,
+      "year": 2020,
+      "period": "1991-2020",
+      "rank": null,
+      "rankScope": null,
+      "missingReason": "Global CCKP download unavailable; no matching 1991–2020 national value verified in this research seed."
+    },
+    "LS": {
+      "code": "LS",
+      "value": null,
+      "year": 2020,
+      "period": "1991-2020",
+      "rank": null,
+      "rankScope": null,
+      "missingReason": "Global CCKP download unavailable; no matching 1991–2020 national value verified in this research seed."
+    },
+    "LT": {
+      "code": "LT",
+      "value": null,
+      "year": 2020,
+      "period": "1991-2020",
+      "rank": null,
+      "rankScope": null,
+      "missingReason": "Global CCKP download unavailable; no matching 1991–2020 national value verified in this research seed."
+    },
+    "LU": {
+      "code": "LU",
+      "value": null,
+      "year": 2020,
+      "period": "1991-2020",
+      "rank": null,
+      "rankScope": null,
+      "missingReason": "Global CCKP download unavailable; no matching 1991–2020 national value verified in this research seed."
+    },
+    "LV": {
+      "code": "LV",
+      "value": null,
+      "year": 2020,
+      "period": "1991-2020",
+      "rank": null,
+      "rankScope": null,
+      "missingReason": "Global CCKP download unavailable; no matching 1991–2020 national value verified in this research seed."
+    },
+    "LY": {
+      "code": "LY",
+      "value": null,
+      "year": 2020,
+      "period": "1991-2020",
+      "rank": null,
+      "rankScope": null,
+      "missingReason": "Global CCKP download unavailable; no matching 1991–2020 national value verified in this research seed."
+    },
+    "MA": {
+      "code": "MA",
+      "value": null,
+      "year": 2020,
+      "period": "1991-2020",
+      "rank": null,
+      "rankScope": null,
+      "missingReason": "Global CCKP download unavailable; no matching 1991–2020 national value verified in this research seed."
+    },
+    "MC": {
+      "code": "MC",
+      "value": null,
+      "year": 2020,
+      "period": "1991-2020",
+      "rank": null,
+      "rankScope": null,
+      "missingReason": "Global CCKP download unavailable; no matching 1991–2020 national value verified in this research seed."
+    },
+    "MD": {
+      "code": "MD",
+      "value": null,
+      "year": 2020,
+      "period": "1991-2020",
+      "rank": null,
+      "rankScope": null,
+      "missingReason": "Global CCKP download unavailable; no matching 1991–2020 national value verified in this research seed."
+    },
+    "ME": {
+      "code": "ME",
+      "value": null,
+      "year": 2020,
+      "period": "1991-2020",
+      "rank": null,
+      "rankScope": null,
+      "missingReason": "Global CCKP download unavailable; no matching 1991–2020 national value verified in this research seed."
+    },
+    "MG": {
+      "code": "MG",
+      "value": null,
+      "year": 2020,
+      "period": "1991-2020",
+      "rank": null,
+      "rankScope": null,
+      "missingReason": "Global CCKP download unavailable; no matching 1991–2020 national value verified in this research seed."
+    },
+    "MH": {
+      "code": "MH",
+      "value": null,
+      "year": 2020,
+      "period": "1991-2020",
+      "rank": null,
+      "rankScope": null,
+      "missingReason": "Global CCKP download unavailable; no matching 1991–2020 national value verified in this research seed."
+    },
+    "MK": {
+      "code": "MK",
+      "value": null,
+      "year": 2020,
+      "period": "1991-2020",
+      "rank": null,
+      "rankScope": null,
+      "missingReason": "Global CCKP download unavailable; no matching 1991–2020 national value verified in this research seed."
+    },
+    "ML": {
+      "code": "ML",
+      "value": null,
+      "year": 2020,
+      "period": "1991-2020",
+      "rank": null,
+      "rankScope": null,
+      "missingReason": "Global CCKP download unavailable; no matching 1991–2020 national value verified in this research seed."
+    },
+    "MM": {
+      "code": "MM",
+      "value": null,
+      "year": 2020,
+      "period": "1991-2020",
+      "rank": null,
+      "rankScope": null,
+      "missingReason": "Global CCKP download unavailable; no matching 1991–2020 national value verified in this research seed."
+    },
+    "MN": {
+      "code": "MN",
+      "value": null,
+      "year": 2020,
+      "period": "1991-2020",
+      "rank": null,
+      "rankScope": null,
+      "missingReason": "Global CCKP download unavailable; no matching 1991–2020 national value verified in this research seed."
+    },
+    "MR": {
+      "code": "MR",
+      "value": null,
+      "year": 2020,
+      "period": "1991-2020",
+      "rank": null,
+      "rankScope": null,
+      "missingReason": "Global CCKP download unavailable; no matching 1991–2020 national value verified in this research seed."
+    },
+    "MT": {
+      "code": "MT",
+      "value": null,
+      "year": 2020,
+      "period": "1991-2020",
+      "rank": null,
+      "rankScope": null,
+      "missingReason": "Global CCKP download unavailable; no matching 1991–2020 national value verified in this research seed."
+    },
+    "MU": {
+      "code": "MU",
+      "value": null,
+      "year": 2020,
+      "period": "1991-2020",
+      "rank": null,
+      "rankScope": null,
+      "missingReason": "Global CCKP download unavailable; no matching 1991–2020 national value verified in this research seed."
+    },
+    "MV": {
+      "code": "MV",
+      "value": null,
+      "year": 2020,
+      "period": "1991-2020",
+      "rank": null,
+      "rankScope": null,
+      "missingReason": "Global CCKP download unavailable; no matching 1991–2020 national value verified in this research seed."
+    },
+    "MW": {
+      "code": "MW",
+      "value": null,
+      "year": 2020,
+      "period": "1991-2020",
+      "rank": null,
+      "rankScope": null,
+      "missingReason": "Global CCKP download unavailable; no matching 1991–2020 national value verified in this research seed."
+    },
+    "MX": {
+      "code": "MX",
+      "value": 21.31,
+      "publicationYear": 2023,
+      "sourceUrl": "https://climateknowledgeportal.worldbank.org/sites/default/files/country-profiles/15634-WB_Mexico%20Country%20Profile-WEB%20%282%29.pdf",
+      "location": "Climate Overview",
+      "year": 2020,
+      "period": "1991-2020",
+      "rank": null,
+      "rankScope": null,
+      "retrievedAt": "2026-10-17T08:26:26Z"
+    },
+    "MY": {
+      "code": "MY",
+      "value": 25.4,
+      "publicationYear": 2021,
+      "sourceUrl": "https://climateknowledgeportal.worldbank.org/sites/default/files/2021-08/15868-WB_Malaysia%20Country%20Profile-WEB.pdf",
+      "location": "Annual Cycle / page 5",
+      "year": 2020,
+      "period": "1991-2020",
+      "rank": null,
+      "rankScope": null,
+      "retrievedAt": "2026-10-17T08:26:26Z"
+    },
+    "MZ": {
+      "code": "MZ",
+      "value": null,
+      "year": 2020,
+      "period": "1991-2020",
+      "rank": null,
+      "rankScope": null,
+      "missingReason": "Global CCKP download unavailable; no matching 1991–2020 national value verified in this research seed."
+    },
+    "NA": {
+      "code": "NA",
+      "value": null,
+      "year": 2020,
+      "period": "1991-2020",
+      "rank": null,
+      "rankScope": null,
+      "missingReason": "Global CCKP download unavailable; no matching 1991–2020 national value verified in this research seed."
+    },
+    "NE": {
+      "code": "NE",
+      "value": null,
+      "year": 2020,
+      "period": "1991-2020",
+      "rank": null,
+      "rankScope": null,
+      "missingReason": "Global CCKP download unavailable; no matching 1991–2020 national value verified in this research seed."
+    },
+    "NG": {
+      "code": "NG",
+      "value": 27.2,
+      "publicationYear": 2021,
+      "sourceUrl": "https://climateknowledgeportal.worldbank.org/sites/default/files/2021-07/15918-WB_Nigeria%20Country%20Profile-WEB.pdf",
+      "location": "Table 2 / page 6",
+      "year": 2020,
+      "period": "1991-2020",
+      "rank": null,
+      "rankScope": null,
+      "retrievedAt": "2026-10-17T08:26:26Z"
+    },
+    "NI": {
+      "code": "NI",
+      "value": null,
+      "year": 2020,
+      "period": "1991-2020",
+      "rank": null,
+      "rankScope": null,
+      "missingReason": "Global CCKP download unavailable; no matching 1991–2020 national value verified in this research seed."
+    },
+    "NL": {
+      "code": "NL",
+      "value": null,
+      "year": 2020,
+      "period": "1991-2020",
+      "rank": null,
+      "rankScope": null,
+      "missingReason": "Global CCKP download unavailable; no matching 1991–2020 national value verified in this research seed."
+    },
+    "NO": {
+      "code": "NO",
+      "value": null,
+      "year": 2020,
+      "period": "1991-2020",
+      "rank": null,
+      "rankScope": null,
+      "missingReason": "Global CCKP download unavailable; no matching 1991–2020 national value verified in this research seed."
+    },
+    "NP": {
+      "code": "NP",
+      "value": null,
+      "year": 2020,
+      "period": "1991-2020",
+      "rank": null,
+      "rankScope": null,
+      "missingReason": "Global CCKP download unavailable; no matching 1991–2020 national value verified in this research seed."
+    },
+    "NR": {
+      "code": "NR",
+      "value": null,
+      "year": 2020,
+      "period": "1991-2020",
+      "rank": null,
+      "rankScope": null,
+      "missingReason": "Global CCKP download unavailable; no matching 1991–2020 national value verified in this research seed."
+    },
+    "NZ": {
+      "code": "NZ",
+      "value": null,
+      "year": 2020,
+      "period": "1991-2020",
+      "rank": null,
+      "rankScope": null,
+      "missingReason": "Global CCKP download unavailable; no matching 1991–2020 national value verified in this research seed."
+    },
+    "OM": {
+      "code": "OM",
+      "value": null,
+      "year": 2020,
+      "period": "1991-2020",
+      "rank": null,
+      "rankScope": null,
+      "missingReason": "Global CCKP download unavailable; no matching 1991–2020 national value verified in this research seed."
+    },
+    "PA": {
+      "code": "PA",
+      "value": 25.6,
+      "publicationYear": 2023,
+      "sourceUrl": "https://climateknowledgeportal.worldbank.org/sites/default/files/country-profiles/16805-WB_Panama%20Country%20Profile-WEB.pdf",
+      "location": "Climate Overview / page 7",
+      "year": 2020,
+      "period": "1991-2020",
+      "rank": null,
+      "rankScope": null,
+      "retrievedAt": "2026-10-17T08:26:26Z"
+    },
+    "PE": {
+      "code": "PE",
+      "value": null,
+      "year": 2020,
+      "period": "1991-2020",
+      "rank": null,
+      "rankScope": null,
+      "missingReason": "Global CCKP download unavailable; no matching 1991–2020 national value verified in this research seed."
+    },
+    "PG": {
+      "code": "PG",
+      "value": null,
+      "year": 2020,
+      "period": "1991-2020",
+      "rank": null,
+      "rankScope": null,
+      "missingReason": "Global CCKP download unavailable; no matching 1991–2020 national value verified in this research seed."
+    },
+    "PH": {
+      "code": "PH",
+      "value": null,
+      "year": 2020,
+      "period": "1991-2020",
+      "rank": null,
+      "rankScope": null,
+      "missingReason": "Global CCKP download unavailable; no matching 1991–2020 national value verified in this research seed."
+    },
+    "PK": {
+      "code": "PK",
+      "value": null,
+      "year": 2020,
+      "period": "1991-2020",
+      "rank": null,
+      "rankScope": null,
+      "missingReason": "Global CCKP download unavailable; no matching 1991–2020 national value verified in this research seed."
+    },
+    "PL": {
+      "code": "PL",
+      "value": null,
+      "year": 2020,
+      "period": "1991-2020",
+      "rank": null,
+      "rankScope": null,
+      "missingReason": "Global CCKP download unavailable; no matching 1991–2020 national value verified in this research seed."
+    },
+    "PS": {
+      "code": "PS",
+      "value": null,
+      "year": 2020,
+      "period": "1991-2020",
+      "rank": null,
+      "rankScope": null,
+      "missingReason": "Global CCKP download unavailable; no matching 1991–2020 national value verified in this research seed."
+    },
+    "PT": {
+      "code": "PT",
+      "value": null,
+      "year": 2020,
+      "period": "1991-2020",
+      "rank": null,
+      "rankScope": null,
+      "missingReason": "Global CCKP download unavailable; no matching 1991–2020 national value verified in this research seed."
+    },
+    "PW": {
+      "code": "PW",
+      "value": null,
+      "year": 2020,
+      "period": "1991-2020",
+      "rank": null,
+      "rankScope": null,
+      "missingReason": "Global CCKP download unavailable; no matching 1991–2020 national value verified in this research seed."
+    },
+    "PY": {
+      "code": "PY",
+      "value": null,
+      "year": 2020,
+      "period": "1991-2020",
+      "rank": null,
+      "rankScope": null,
+      "missingReason": "Global CCKP download unavailable; no matching 1991–2020 national value verified in this research seed."
+    },
+    "QA": {
+      "code": "QA",
+      "value": null,
+      "year": 2020,
+      "period": "1991-2020",
+      "rank": null,
+      "rankScope": null,
+      "missingReason": "Global CCKP download unavailable; no matching 1991–2020 national value verified in this research seed."
+    },
+    "RO": {
+      "code": "RO",
+      "value": null,
+      "year": 2020,
+      "period": "1991-2020",
+      "rank": null,
+      "rankScope": null,
+      "missingReason": "Global CCKP download unavailable; no matching 1991–2020 national value verified in this research seed."
+    },
+    "RS": {
+      "code": "RS",
+      "value": null,
+      "year": 2020,
+      "period": "1991-2020",
+      "rank": null,
+      "rankScope": null,
+      "missingReason": "Global CCKP download unavailable; no matching 1991–2020 national value verified in this research seed."
+    },
+    "RU": {
+      "code": "RU",
+      "value": null,
+      "year": 2020,
+      "period": "1991-2020",
+      "rank": null,
+      "rankScope": null,
+      "missingReason": "Global CCKP download unavailable; no matching 1991–2020 national value verified in this research seed."
+    },
+    "RW": {
+      "code": "RW",
+      "value": null,
+      "year": 2020,
+      "period": "1991-2020",
+      "rank": null,
+      "rankScope": null,
+      "missingReason": "Global CCKP download unavailable; no matching 1991–2020 national value verified in this research seed."
+    },
+    "SA": {
+      "code": "SA",
+      "value": null,
+      "year": 2020,
+      "period": "1991-2020",
+      "rank": null,
+      "rankScope": null,
+      "missingReason": "Global CCKP download unavailable; no matching 1991–2020 national value verified in this research seed."
+    },
+    "SB": {
+      "code": "SB",
+      "value": null,
+      "year": 2020,
+      "period": "1991-2020",
+      "rank": null,
+      "rankScope": null,
+      "missingReason": "Global CCKP download unavailable; no matching 1991–2020 national value verified in this research seed."
+    },
+    "SC": {
+      "code": "SC",
+      "value": null,
+      "year": 2020,
+      "period": "1991-2020",
+      "rank": null,
+      "rankScope": null,
+      "missingReason": "Global CCKP download unavailable; no matching 1991–2020 national value verified in this research seed."
+    },
+    "SD": {
+      "code": "SD",
+      "value": null,
+      "year": 2020,
+      "period": "1991-2020",
+      "rank": null,
+      "rankScope": null,
+      "missingReason": "Global CCKP download unavailable; no matching 1991–2020 national value verified in this research seed."
+    },
+    "SE": {
+      "code": "SE",
+      "value": null,
+      "year": 2020,
+      "period": "1991-2020",
+      "rank": null,
+      "rankScope": null,
+      "missingReason": "Global CCKP download unavailable; no matching 1991–2020 national value verified in this research seed."
+    },
+    "SG": {
+      "code": "SG",
+      "value": null,
+      "year": 2020,
+      "period": "1991-2020",
+      "rank": null,
+      "rankScope": null,
+      "missingReason": "Global CCKP download unavailable; no matching 1991–2020 national value verified in this research seed."
+    },
+    "SI": {
+      "code": "SI",
+      "value": null,
+      "year": 2020,
+      "period": "1991-2020",
+      "rank": null,
+      "rankScope": null,
+      "missingReason": "Global CCKP download unavailable; no matching 1991–2020 national value verified in this research seed."
+    },
+    "SK": {
+      "code": "SK",
+      "value": null,
+      "year": 2020,
+      "period": "1991-2020",
+      "rank": null,
+      "rankScope": null,
+      "missingReason": "Global CCKP download unavailable; no matching 1991–2020 national value verified in this research seed."
+    },
+    "SL": {
+      "code": "SL",
+      "value": null,
+      "year": 2020,
+      "period": "1991-2020",
+      "rank": null,
+      "rankScope": null,
+      "missingReason": "Global CCKP download unavailable; no matching 1991–2020 national value verified in this research seed."
+    },
+    "SM": {
+      "code": "SM",
+      "value": null,
+      "year": 2020,
+      "period": "1991-2020",
+      "rank": null,
+      "rankScope": null,
+      "missingReason": "Global CCKP download unavailable; no matching 1991–2020 national value verified in this research seed."
+    },
+    "SN": {
+      "code": "SN",
+      "value": null,
+      "year": 2020,
+      "period": "1991-2020",
+      "rank": null,
+      "rankScope": null,
+      "missingReason": "Global CCKP download unavailable; no matching 1991–2020 national value verified in this research seed."
+    },
+    "SO": {
+      "code": "SO",
+      "value": null,
+      "year": 2020,
+      "period": "1991-2020",
+      "rank": null,
+      "rankScope": null,
+      "missingReason": "Global CCKP download unavailable; no matching 1991–2020 national value verified in this research seed."
+    },
+    "SR": {
+      "code": "SR",
+      "value": null,
+      "year": 2020,
+      "period": "1991-2020",
+      "rank": null,
+      "rankScope": null,
+      "missingReason": "Global CCKP download unavailable; no matching 1991–2020 national value verified in this research seed."
+    },
+    "SS": {
+      "code": "SS",
+      "value": null,
+      "year": 2020,
+      "period": "1991-2020",
+      "rank": null,
+      "rankScope": null,
+      "missingReason": "Global CCKP download unavailable; no matching 1991–2020 national value verified in this research seed."
+    },
+    "ST": {
+      "code": "ST",
+      "value": null,
+      "year": 2020,
+      "period": "1991-2020",
+      "rank": null,
+      "rankScope": null,
+      "missingReason": "Global CCKP download unavailable; no matching 1991–2020 national value verified in this research seed."
+    },
+    "SV": {
+      "code": "SV",
+      "value": null,
+      "year": 2020,
+      "period": "1991-2020",
+      "rank": null,
+      "rankScope": null,
+      "missingReason": "Global CCKP download unavailable; no matching 1991–2020 national value verified in this research seed."
+    },
+    "SY": {
+      "code": "SY",
+      "value": null,
+      "year": 2020,
+      "period": "1991-2020",
+      "rank": null,
+      "rankScope": null,
+      "missingReason": "Global CCKP download unavailable; no matching 1991–2020 national value verified in this research seed."
+    },
+    "SZ": {
+      "code": "SZ",
+      "value": null,
+      "year": 2020,
+      "period": "1991-2020",
+      "rank": null,
+      "rankScope": null,
+      "missingReason": "Global CCKP download unavailable; no matching 1991–2020 national value verified in this research seed."
+    },
+    "TD": {
+      "code": "TD",
+      "value": null,
+      "year": 2020,
+      "period": "1991-2020",
+      "rank": null,
+      "rankScope": null,
+      "missingReason": "Global CCKP download unavailable; no matching 1991–2020 national value verified in this research seed."
+    },
+    "TG": {
+      "code": "TG",
+      "value": null,
+      "year": 2020,
+      "period": "1991-2020",
+      "rank": null,
+      "rankScope": null,
+      "missingReason": "Global CCKP download unavailable; no matching 1991–2020 national value verified in this research seed."
+    },
+    "TH": {
+      "code": "TH",
+      "value": null,
+      "year": 2020,
+      "period": "1991-2020",
+      "rank": null,
+      "rankScope": null,
+      "missingReason": "Global CCKP download unavailable; no matching 1991–2020 national value verified in this research seed."
+    },
+    "TJ": {
+      "code": "TJ",
+      "value": null,
+      "year": 2020,
+      "period": "1991-2020",
+      "rank": null,
+      "rankScope": null,
+      "missingReason": "Global CCKP download unavailable; no matching 1991–2020 national value verified in this research seed."
+    },
+    "TL": {
+      "code": "TL",
+      "value": null,
+      "year": 2020,
+      "period": "1991-2020",
+      "rank": null,
+      "rankScope": null,
+      "missingReason": "Global CCKP download unavailable; no matching 1991–2020 national value verified in this research seed."
+    },
+    "TM": {
+      "code": "TM",
+      "value": null,
+      "year": 2020,
+      "period": "1991-2020",
+      "rank": null,
+      "rankScope": null,
+      "missingReason": "Global CCKP download unavailable; no matching 1991–2020 national value verified in this research seed."
+    },
+    "TN": {
+      "code": "TN",
+      "value": null,
+      "year": 2020,
+      "period": "1991-2020",
+      "rank": null,
+      "rankScope": null,
+      "missingReason": "Global CCKP download unavailable; no matching 1991–2020 national value verified in this research seed."
+    },
+    "TO": {
+      "code": "TO",
+      "value": null,
+      "year": 2020,
+      "period": "1991-2020",
+      "rank": null,
+      "rankScope": null,
+      "missingReason": "Global CCKP download unavailable; no matching 1991–2020 national value verified in this research seed."
+    },
+    "TR": {
+      "code": "TR",
+      "value": null,
+      "year": 2020,
+      "period": "1991-2020",
+      "rank": null,
+      "rankScope": null,
+      "missingReason": "Global CCKP download unavailable; no matching 1991–2020 national value verified in this research seed."
+    },
+    "TT": {
+      "code": "TT",
+      "value": null,
+      "year": 2020,
+      "period": "1991-2020",
+      "rank": null,
+      "rankScope": null,
+      "missingReason": "Global CCKP download unavailable; no matching 1991–2020 national value verified in this research seed."
+    },
+    "TV": {
+      "code": "TV",
+      "value": null,
+      "year": 2020,
+      "period": "1991-2020",
+      "rank": null,
+      "rankScope": null,
+      "missingReason": "Global CCKP download unavailable; no matching 1991–2020 national value verified in this research seed."
+    },
+    "TZ": {
+      "code": "TZ",
+      "value": null,
+      "year": 2020,
+      "period": "1991-2020",
+      "rank": null,
+      "rankScope": null,
+      "missingReason": "Global CCKP download unavailable; no matching 1991–2020 national value verified in this research seed."
+    },
+    "UA": {
+      "code": "UA",
+      "value": null,
+      "year": 2020,
+      "period": "1991-2020",
+      "rank": null,
+      "rankScope": null,
+      "missingReason": "Global CCKP download unavailable; no matching 1991–2020 national value verified in this research seed."
+    },
+    "UG": {
+      "code": "UG",
+      "value": null,
+      "year": 2020,
+      "period": "1991-2020",
+      "rank": null,
+      "rankScope": null,
+      "missingReason": "Global CCKP download unavailable; no matching 1991–2020 national value verified in this research seed."
+    },
+    "US": {
+      "code": "US",
+      "value": null,
+      "year": 2020,
+      "period": "1991-2020",
+      "rank": null,
+      "rankScope": null,
+      "missingReason": "Global CCKP download unavailable; no matching 1991–2020 national value verified in this research seed."
+    },
+    "UY": {
+      "code": "UY",
+      "value": null,
+      "year": 2020,
+      "period": "1991-2020",
+      "rank": null,
+      "rankScope": null,
+      "missingReason": "Global CCKP download unavailable; no matching 1991–2020 national value verified in this research seed."
+    },
+    "UZ": {
+      "code": "UZ",
+      "value": null,
+      "year": 2020,
+      "period": "1991-2020",
+      "rank": null,
+      "rankScope": null,
+      "missingReason": "Global CCKP download unavailable; no matching 1991–2020 national value verified in this research seed."
+    },
+    "VA": {
+      "code": "VA",
+      "value": null,
+      "year": 2020,
+      "period": "1991-2020",
+      "rank": null,
+      "rankScope": null,
+      "missingReason": "Global CCKP download unavailable; no matching 1991–2020 national value verified in this research seed."
+    },
+    "VC": {
+      "code": "VC",
+      "value": null,
+      "year": 2020,
+      "period": "1991-2020",
+      "rank": null,
+      "rankScope": null,
+      "missingReason": "Global CCKP download unavailable; no matching 1991–2020 national value verified in this research seed."
+    },
+    "VE": {
+      "code": "VE",
+      "value": null,
+      "year": 2020,
+      "period": "1991-2020",
+      "rank": null,
+      "rankScope": null,
+      "missingReason": "Global CCKP download unavailable; no matching 1991–2020 national value verified in this research seed."
+    },
+    "VN": {
+      "code": "VN",
+      "value": null,
+      "year": 2020,
+      "period": "1991-2020",
+      "rank": null,
+      "rankScope": null,
+      "missingReason": "Global CCKP download unavailable; no matching 1991–2020 national value verified in this research seed."
+    },
+    "VU": {
+      "code": "VU",
+      "value": null,
+      "year": 2020,
+      "period": "1991-2020",
+      "rank": null,
+      "rankScope": null,
+      "missingReason": "Global CCKP download unavailable; no matching 1991–2020 national value verified in this research seed."
+    },
+    "WS": {
+      "code": "WS",
+      "value": null,
+      "year": 2020,
+      "period": "1991-2020",
+      "rank": null,
+      "rankScope": null,
+      "missingReason": "Global CCKP download unavailable; no matching 1991–2020 national value verified in this research seed."
+    },
+    "YE": {
+      "code": "YE",
+      "value": 25.54,
+      "publicationYear": 2023,
+      "sourceUrl": "https://climateknowledgeportal.worldbank.org/sites/default/files/country-profiles/16696-WB_Yemen%20Country%20Profile-WEB.pdf",
+      "location": "Climate Overview",
+      "year": 2020,
+      "period": "1991-2020",
+      "rank": null,
+      "rankScope": null,
+      "retrievedAt": "2026-10-17T08:26:26Z"
+    },
+    "ZA": {
+      "code": "ZA",
+      "value": null,
+      "year": 2020,
+      "period": "1991-2020",
+      "rank": null,
+      "rankScope": null,
+      "missingReason": "Global CCKP download unavailable; no matching 1991–2020 national value verified in this research seed."
+    },
+    "ZM": {
+      "code": "ZM",
+      "value": null,
+      "year": 2020,
+      "period": "1991-2020",
+      "rank": null,
+      "rankScope": null,
+      "missingReason": "Global CCKP download unavailable; no matching 1991–2020 national value verified in this research seed."
+    },
+    "ZW": {
+      "code": "ZW",
+      "value": null,
+      "year": 2020,
+      "period": "1991-2020",
+      "rank": null,
+      "rankScope": null,
+      "missingReason": "Global CCKP download unavailable; no matching 1991–2020 national value verified in this research seed."
+    }
+  }
+}

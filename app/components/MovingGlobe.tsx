@@ -1,34 +1,18 @@
 "use client";
-import {useEffect,useRef,useState} from "react";
-import Link from "next/link";
-import {createSurface} from "./webgl";
-
-const shader=`uniform float rotation;
-void main(){
- vec2 p=(uv*2.-1.)*vec2(aspect,1.); float r=length(p);
- if(r>.83){gl_FragColor=vec4(.11,.55,.65,max(0.,(.92-r)*1.3));return;}
- vec3 n=vec3(p/.83,sqrt(max(0.,1.-dot(p,p)/(.83*.83))));
- float lon=atan(n.z,n.x)+rotation; vec2 tex=vec2(fract(lon/6.2831853+.5),asin(n.y)/3.14159265+.5);
- vec3 colour=texture2D(image,tex).rgb; float light=.18+.82*max(0.,dot(n,normalize(vec3(-.6,.5,1.))));
- vec3 air=vec3(.12,.57,.66)*pow(1.-n.z,3.)*.65;
- gl_FragColor=vec4(colour*light+air,1.);
-}`;
-
-export function MovingGlobe(){
- const canvas=useRef<HTMLCanvasElement>(null);const [failed,setFailed]=useState(false);
- useEffect(()=>{
-  const element=canvas.current;if(!element)return;
-  let surface:ReturnType<typeof createSurface>|undefined,frame=0,alive=true,ready=false,visible=true,rotation=.65,last=0;
-  const media=matchMedia("(prefers-reduced-motion: reduce)");
-  const moving=()=>document.documentElement.dataset.motion!=="off"&&!media.matches&&!document.hidden&&visible;
-  const draw=(now:number)=>{frame=0;if(!alive||!ready)return;if(moving()){if(last)rotation+=(Math.min(now-last,60)/1000)*.055;last=now;}else last=0;surface?.draw({rotation});if(moving())frame=requestAnimationFrame(draw);};
-  const resume=()=>{if(!frame)frame=requestAnimationFrame(draw);};
-  const lost=(event:Event)=>{event.preventDefault();setFailed(true);};
-  try{surface=createSurface(element,shader);surface.load("/escape/earth.jpg").then(()=>{ready=true;resume();}).catch(()=>{if(alive)setFailed(true);});}catch{setFailed(true);}
-  const observer=new IntersectionObserver(([entry])=>{visible=entry.isIntersecting;resume();});observer.observe(element);
-  const resize=new ResizeObserver(resume);resize.observe(element);
-  document.addEventListener("visibilitychange",resume);window.addEventListener("terrascope-motion",resume);media.addEventListener("change",resume);element.addEventListener("webglcontextlost",lost);
-  return()=>{alive=false;cancelAnimationFrame(frame);observer.disconnect();resize.disconnect();surface?.dispose();document.removeEventListener("visibilitychange",resume);window.removeEventListener("terrascope-motion",resume);media.removeEventListener("change",resume);element.removeEventListener("webglcontextlost",lost);};
- },[]);
- return <div className="orbit-stage"><div className="orbit-line orbit-line-one"/><div className="orbit-line orbit-line-two"/>{failed?<div className="globe-fallback" role="img" aria-label="Earth, with oceans and continents"/>:<canvas ref={canvas} className="earth-canvas" role="img" aria-label="A slowly rotating three-dimensional Earth. Use the Motion control to pause."/>}<span className="orbit-coordinate">23.5° N · A world of possibilities</span><Link href="/countries" className="orbit-label"><i/>195 countries. One shared home.<span>Explore the atlas ↗</span></Link><span className="earth-credit">Earth imagery: NASA / Blue Marble</span></div>;
+import {useEffect,useState} from 'react';
+import dynamic from 'next/dynamic';
+import Link from 'next/link';
+import {LayerSheet} from "./discovery/LayerSheet";
+import type {GlobeLayer,LayerId} from '../globe-types';
+import {formatLayerValue} from '../globe-types';
+import type {GlobeCountry} from './discovery/globe-math';
+const GlobeCanvas=dynamic(()=>import('./discovery/GlobeCanvas').then(m=>m.GlobeCanvas),{ssr:false,loading:()=> <div className="globe-loading" role="status">Opening your atlas<span>Drag, discover, disappear for a while.</span></div>});
+const layers:{id:LayerId;label:string;icon:string}[]=[{id:'population',label:'Population',icon:'◌'},{id:'gdp',label:'GDP',icon:'↗'},{id:'perCapita',label:'GDP / person',icon:'◈'},{id:'happiness',label:'Happiness',icon:'☀'},{id:'iq',label:'IQ averages',icon:'◇'},{id:'temperature',label:'Temperature',icon:'°'}];
+export function MovingGlobe({markers=[],compact=false}:{markers?:string[];compact?:boolean}){
+ const [countries,setCountries]=useState<GlobeCountry[]>([]),[selected,setSelected]=useState('NG'),[hovered,setHovered]=useState(''),[layerId,setLayerId]=useState<LayerId|'none'>('none'),[layer,setLayer]=useState<GlobeLayer|null>(null),[loading,setLoading]=useState(false),[error,setError]=useState(''),[retry,setRetry]=useState(0),[sheet,setSheet]=useState(false),[locked,setLocked]=useState(false);
+ useEffect(()=>{const abort=new AbortController();fetch('/data/globe-countries.json',{signal:abort.signal}).then(r=>{if(!r.ok)throw Error('Country directory unavailable.');return r.json() as Promise<GlobeCountry[]>;}).then(setCountries).catch(e=>{if(e.name!=='AbortError')setError(e.message);});const fly=(e:Event)=>{const code=(e as CustomEvent<string>).detail;if(code)setSelected(code);};window.addEventListener('terrascope-fly',fly);try{const code=sessionStorage.getItem('terrascope-fly');if(code){setSelected(code);sessionStorage.removeItem('terrascope-fly');}}catch{}return()=>{abort.abort();window.removeEventListener('terrascope-fly',fly);};},[retry]);
+ useEffect(()=>{if(layerId==='none'){setLayer(null);setLoading(false);setError('');setLocked(false);return;}const abort=new AbortController();setLoading(true);setError('');setLocked(false);fetch(`/api/globe-layers?layer=${layerId}`,{signal:abort.signal}).then(async r=>{if(r.status===402){setLocked(true);setLayer(null);return null;}if(!r.ok)throw Error('This data layer could not load.');return r.json() as Promise<GlobeLayer>;}).then(value=>{if(value)setLayer(value);}).catch(e=>{if(e.name!=='AbortError'){setLayer(null);setError(e.message);}}).finally(()=>{if(!abort.signal.aborted)setLoading(false);});return()=>abort.abort();},[layerId,retry]);
+ const country=countries.find(c=>c.code===(hovered||selected)),chosen=countries.find(c=>c.code===selected),value=country&&layer?.values[country.code];
+ const layerControls=<><button type="button" aria-pressed={layerId==='none'} onClick={()=>{setLayerId('none');setSheet(false);}}>◎ <span>Explore</span></button>{layers.map((l)=><button key={l.id} type="button" aria-pressed={layerId===l.id} onClick={()=>{setLayerId(l.id);setSheet(false);}}><span aria-hidden="true">{l.icon}</span><span>{l.label}</span></button>)}</>;
+ return <div className={`globe-studio ${compact?'globe-compact':''}`} id={compact?undefined:'globe'}><div className="globe-topline"><span><i/> YOUR WORLD, WITHIN REACH</span><span>195 countries</span></div><div className="globe-stage" data-native-motion><GlobeCanvas countries={countries} selected={selected} onSelect={setSelected} onHover={setHovered} layer={layer} markers={markers}/><span className="globe-orbit-label">A different perspective.</span>{country&&<div className="globe-tooltip" aria-live="polite"><span>{country.flag} {country.name}</span>{layer?<><strong>{value?formatLayerValue(layer,value.value):'No published value'}</strong><small>{value?`${value.year} · ${value.rank?`World rank #${value.rank}`:'World rank unavailable'}`:'Missing observations are left uncoloured.'}</small></>:<><strong>{country.capital}</strong><small>{country.region}</small></>}</div>}<span className="globe-instructions">Drag to turn · Tap to discover</span></div><div className="globe-country-controls"><label className="sr-only" htmlFor={compact?'game-globe-country':'globe-country'}>Fly to any country</label><select id={compact?'game-globe-country':'globe-country'} value={selected} onChange={e=>setSelected(e.target.value)}>{countries.length?countries.map(c=><option key={c.code} value={c.code}>{c.flag} {c.name}</option>):<option value="NG">Loading countries…</option>}</select>{chosen&&<Link href={`/countries/${chosen.slug}`} aria-label={`Open ${chosen.name} country page`}>Explore {chosen.name} <span>↗</span></Link>}</div><button type="button" className="layer-sheet-trigger" onClick={()=>setSheet(true)} aria-haspopup="dialog">◫ Data layers <span>{layer?.label??'Explore'} ⌃</span></button><div className="globe-layer-switcher" aria-label="Globe data layers">{layerControls}</div>{sheet&&<LayerSheet onClose={()=>setSheet(false)}>{layerControls}</LayerSheet>}{loading&&<div className="globe-layer-note" role="status"><span className="loading-dot"/> Loading the {layers.find(l=>l.id===layerId)?.label.toLowerCase()} lens…</div>}{error&&<p className="error-state" role="alert">{error} <button type="button" onClick={()=>setRetry(v=>v+1)}>Try again</button></p>}{locked&&<div className="globe-paywall"><div className="blurred-preview" aria-hidden="true"><span>▂ ▄ ▆ ▃ █ ▅</span></div><b>See the world through another lens.</b><p>Unlock this dataset with TerraScope Pro.</p><Link className="ts-button" href="/pro">Explore Pro ↗</Link></div>}{layer&&!loading&&!locked&&<div className="globe-legend"><div><span>{formatLayerValue(layer,layer.min)}</span><i/><span>{formatLayerValue(layer,layer.max)}</span></div><p><b>{layer.label}</b> · {layer.period} · {layer.coverage}/195 countries <span>□ No data</span></p><details><summary>Source & how it’s measured</summary><p>{layer.measurement}</p><p>{layer.rankNote}</p><a href={layer.sourceUrl} target="_blank" rel="noreferrer">{layer.source} ↗</a>{layer.licenseNote&&<p>Commercial redistribution permission is being reviewed before a paid launch.</p>}</details></div>}<p className="globe-source">Reference boundaries: mledoze / World Borders · <a href="/data/world-boundaries.json">Data</a> · <a href="/data/world-boundaries-LICENSE.txt">ODbL</a></p></div>;
 }

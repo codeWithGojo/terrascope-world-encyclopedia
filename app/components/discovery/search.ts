@@ -1,0 +1,4 @@
+export type SearchEntry={id:string;label:string;group:string;detail:string;href:string;countryCode?:string;keywords?:string};
+export const normalize=(value:string)=>value.normalize('NFD').replace(/[\u0300-\u036f]/g,'').toLowerCase().replace(/[^a-z0-9 ]/g,'');
+export function fuzzyScore(query:string,value:string):number{const q=normalize(query).trim(),v=normalize(value);if(!q)return 1;if(v===q)return 1000;if(v.startsWith(q))return 800-q.length;if(v.includes(q))return 650-v.indexOf(q);let at=0,gaps=0,last=-1;for(const letter of q){const i=v.indexOf(letter,at);if(i<0)return 0;if(last>=0)gaps+=i-last-1;last=i;at=i+1;}return Math.max(1,350-gaps*8-v.length);}
+export function searchEntries(entries:SearchEntry[],query:string){return entries.map(e=>({entry:e,score:Math.max(fuzzyScore(query,e.label),fuzzyScore(query,`${e.label} ${e.detail} ${e.keywords??''}`)*.75)})).filter(e=>e.score>0).sort((a,b)=>b.score-a.score).slice(0,48).map(e=>e.entry);}

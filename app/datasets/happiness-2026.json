@@ -1,0 +1,2375 @@
+{
+  "schemaVersion": 1,
+  "id": "happiness",
+  "label": "Life evaluation",
+  "unit": "Cantril Ladder score (0–10)",
+  "year": 2026,
+  "period": "2023-2025",
+  "source": {
+    "name": "World Happiness Report 2026 / Gallup World Poll",
+    "url": "https://www.worldhappiness.report/data-sharing/",
+    "dataUrl": "https://files.worldhappiness.report/WHR26_Data_Figure_2.1.xlsx",
+    "extractedFromUrl": "https://files.worldhappiness.report/WHR26_Statistical_Appendix.pdf",
+    "extractedFromPages": [
+      27,
+      28,
+      29
+    ],
+    "extractedFromFigures": [
+      7,
+      8,
+      9
+    ],
+    "methodologyUrl": "https://www.worldhappiness.report/faq/",
+    "citation": "Helliwell, J. F., Layard, R., Sachs, J. D., De Neve, J.-E., Aknin, L. B., & Wang, S. (Eds.). (2026). World Happiness Report 2026. University of Oxford: Wellbeing Research Centre.",
+    "retrievedAt": "2026-10-17T08:26:26Z",
+    "extraction": "Numeric scores and published ranks parsed from the official PDF text. The official XLSX was identified but the tool could not materialize that content type. No values were estimated or imputed."
+  },
+  "measurement": "National survey averages of answers to the Cantril Ladder life-evaluation question on a 0–10 scale, averaged over the report’s 2023–2025 window where available. These are reported life evaluations, not a composite score of six explanatory factors. Ranks and rank confidence intervals are those published by WHR.",
+  "license": {
+    "status": "commercial-redistribution-not-explicitly-confirmed",
+    "url": "https://www.worldhappiness.report/data-sharing/",
+    "note": "The official site allows the Figure 2.1 data to be downloaded for free. It does not state an explicit CC or commercial redistribution license on the consulted data-sharing or FAQ pages. Do not treat a free-download statement as a commercial license; confirm permission before selling this layer or redistributing it as a paid dataset."
+  },
+  "coverage": {
+    "sourceCountriesAndTerritories": 147,
+    "atlasCountries": 195,
+    "atlasWithValues": 144,
+    "missingAtlasCodes": [
+      "AD",
+      "AG",
+      "AO",
+      "BB",
+      "BI",
+      "BN",
+      "BS",
+      "BT",
+      "BY",
+      "CF",
+      "CU",
+      "CV",
+      "DJ",
+      "DM",
+      "ER",
+      "FJ",
+      "FM",
+      "GD",
+      "GQ",
+      "GW",
+      "GY",
+      "HT",
+      "KI",
+      "KN",
+      "KP",
+      "LC",
+      "LI",
+      "MC",
+      "MH",
+      "MV",
+      "NR",
+      "PG",
+      "PW",
+      "QA",
+      "RW",
+      "SB",
+      "SC",
+      "SD",
+      "SM",
+      "SR",
+      "SS",
+      "ST",
+      "SY",
+      "TL",
+      "TM",
+      "TO",
+      "TV",
+      "VA",
+      "VC",
+      "VU",
+      "WS"
+    ],
+    "additionalSourceTerritories": [
+      "XK",
+      "TW",
+      "HK"
+    ]
+  },
+  "byCountry": {
+    "AD": {
+      "code": "AD",
+      "sourceName": "Andorra",
+      "value": null,
+      "year": 2026,
+      "period": "2023-2025",
+      "rank": null,
+      "rankConfidenceInterval": null,
+      "missingReason": "Not covered by the 147-country/territory WHR 2026 ranking."
+    },
+    "AE": {
+      "code": "AE",
+      "sourceName": "United Arab Emirates",
+      "value": 6.821,
+      "year": 2026,
+      "period": "2023-2025",
+      "rank": 21,
+      "rankConfidenceInterval": [
+        12,
+        31
+      ]
+    },
+    "AF": {
+      "code": "AF",
+      "sourceName": "Afghanistan",
+      "value": 1.446,
+      "year": 2026,
+      "period": "2023-2025",
+      "rank": 147,
+      "rankConfidenceInterval": [
+        147,
+        147
+      ]
+    },
+    "AG": {
+      "code": "AG",
+      "sourceName": "Antigua and Barbuda",
+      "value": null,
+      "year": 2026,
+      "period": "2023-2025",
+      "rank": null,
+      "rankConfidenceInterval": null,
+      "missingReason": "Not covered by the 147-country/territory WHR 2026 ranking."
+    },
+    "AL": {
+      "code": "AL",
+      "sourceName": "Albania",
+      "value": 5.662,
+      "year": 2026,
+      "period": "2023-2025",
+      "rank": 86,
+      "rankConfidenceInterval": [
+        76,
+        92
+      ]
+    },
+    "AM": {
+      "code": "AM",
+      "sourceName": "Armenia",
+      "value": 5.584,
+      "year": 2026,
+      "period": "2023-2025",
+      "rank": 89,
+      "rankConfidenceInterval": [
+        79,
+        93
+      ]
+    },
+    "AO": {
+      "code": "AO",
+      "sourceName": "Angola",
+      "value": null,
+      "year": 2026,
+      "period": "2023-2025",
+      "rank": null,
+      "rankConfidenceInterval": null,
+      "missingReason": "Not covered by the 147-country/territory WHR 2026 ranking."
+    },
+    "AR": {
+      "code": "AR",
+      "sourceName": "Argentina",
+      "value": 6.43,
+      "year": 2026,
+      "period": "2023-2025",
+      "rank": 44,
+      "rankConfidenceInterval": [
+        34,
+        55
+      ]
+    },
+    "AT": {
+      "code": "AT",
+      "sourceName": "Austria",
+      "value": 6.845,
+      "year": 2026,
+      "period": "2023-2025",
+      "rank": 19,
+      "rankConfidenceInterval": [
+        11,
+        30
+      ]
+    },
+    "AU": {
+      "code": "AU",
+      "sourceName": "Australia",
+      "value": 6.916,
+      "year": 2026,
+      "period": "2023-2025",
+      "rank": 15,
+      "rankConfidenceInterval": [
+        9,
+        25
+      ]
+    },
+    "AZ": {
+      "code": "AZ",
+      "sourceName": "Azerbaijan",
+      "value": 4.993,
+      "year": 2026,
+      "period": "2023-2025",
+      "rank": 102,
+      "rankConfidenceInterval": [
+        96,
+        104
+      ]
+    },
+    "BA": {
+      "code": "BA",
+      "sourceName": "Bosnia and Herzegovina",
+      "value": 6.381,
+      "year": 2026,
+      "period": "2023-2025",
+      "rank": 47,
+      "rankConfidenceInterval": [
+        37,
+        58
+      ]
+    },
+    "BB": {
+      "code": "BB",
+      "sourceName": "Barbados",
+      "value": null,
+      "year": 2026,
+      "period": "2023-2025",
+      "rank": null,
+      "rankConfidenceInterval": null,
+      "missingReason": "Not covered by the 147-country/territory WHR 2026 ranking."
+    },
+    "BD": {
+      "code": "BD",
+      "sourceName": "Bangladesh",
+      "value": 4.319,
+      "year": 2026,
+      "period": "2023-2025",
+      "rank": 127,
+      "rankConfidenceInterval": [
+        117,
+        133
+      ]
+    },
+    "BE": {
+      "code": "BE",
+      "sourceName": "Belgium",
+      "value": 6.926,
+      "year": 2026,
+      "period": "2023-2025",
+      "rank": 14,
+      "rankConfidenceInterval": [
+        9,
+        24
+      ]
+    },
+    "BF": {
+      "code": "BF",
+      "sourceName": "Burkina Faso",
+      "value": 4.455,
+      "year": 2026,
+      "period": "2023-2025",
+      "rank": 123,
+      "rankConfidenceInterval": [
+        111,
+        131
+      ]
+    },
+    "BG": {
+      "code": "BG",
+      "sourceName": "Bulgaria",
+      "value": 5.703,
+      "year": 2026,
+      "period": "2023-2025",
+      "rank": 84,
+      "rankConfidenceInterval": [
+        76,
+        91
+      ]
+    },
+    "BH": {
+      "code": "BH",
+      "sourceName": "Bahrain",
+      "value": 6.254,
+      "year": 2026,
+      "period": "2023-2025",
+      "rank": 55,
+      "rankConfidenceInterval": [
+        43,
+        66
+      ]
+    },
+    "BI": {
+      "code": "BI",
+      "sourceName": "Burundi",
+      "value": null,
+      "year": 2026,
+      "period": "2023-2025",
+      "rank": null,
+      "rankConfidenceInterval": null,
+      "missingReason": "Not covered by the 147-country/territory WHR 2026 ranking."
+    },
+    "BJ": {
+      "code": "BJ",
+      "sourceName": "Benin",
+      "value": 4.393,
+      "year": 2026,
+      "period": "2023-2025",
+      "rank": 124,
+      "rankConfidenceInterval": [
+        113,
+        131
+      ]
+    },
+    "BN": {
+      "code": "BN",
+      "sourceName": "Brunei",
+      "value": null,
+      "year": 2026,
+      "period": "2023-2025",
+      "rank": null,
+      "rankConfidenceInterval": null,
+      "missingReason": "Not covered by the 147-country/territory WHR 2026 ranking."
+    },
+    "BO": {
+      "code": "BO",
+      "sourceName": "Bolivia",
+      "value": 5.835,
+      "year": 2026,
+      "period": "2023-2025",
+      "rank": 78,
+      "rankConfidenceInterval": [
+        67,
+        86
+      ]
+    },
+    "BR": {
+      "code": "BR",
+      "sourceName": "Brazil",
+      "value": 6.634,
+      "year": 2026,
+      "period": "2023-2025",
+      "rank": 32,
+      "rankConfidenceInterval": [
+        22,
+        43
+      ]
+    },
+    "BS": {
+      "code": "BS",
+      "sourceName": "Bahamas",
+      "value": null,
+      "year": 2026,
+      "period": "2023-2025",
+      "rank": null,
+      "rankConfidenceInterval": null,
+      "missingReason": "Not covered by the 147-country/territory WHR 2026 ranking."
+    },
+    "BT": {
+      "code": "BT",
+      "sourceName": "Bhutan",
+      "value": null,
+      "year": 2026,
+      "period": "2023-2025",
+      "rank": null,
+      "rankConfidenceInterval": null,
+      "missingReason": "Not covered by the 147-country/territory WHR 2026 ranking."
+    },
+    "BW": {
+      "code": "BW",
+      "sourceName": "Botswana",
+      "value": 3.464,
+      "year": 2026,
+      "period": "2023-2025",
+      "rank": 143,
+      "rankConfidenceInterval": [
+        142,
+        145
+      ]
+    },
+    "BY": {
+      "code": "BY",
+      "sourceName": "Belarus",
+      "value": null,
+      "year": 2026,
+      "period": "2023-2025",
+      "rank": null,
+      "rankConfidenceInterval": null,
+      "missingReason": "Not covered by the 147-country/territory WHR 2026 ranking."
+    },
+    "BZ": {
+      "code": "BZ",
+      "sourceName": "Belize",
+      "value": 6.711,
+      "year": 2026,
+      "period": "2023-2025",
+      "rank": 27,
+      "rankConfidenceInterval": [
+        10,
+        48
+      ]
+    },
+    "CA": {
+      "code": "CA",
+      "sourceName": "Canada",
+      "value": 6.741,
+      "year": 2026,
+      "period": "2023-2025",
+      "rank": 25,
+      "rankConfidenceInterval": [
+        16,
+        41
+      ]
+    },
+    "CD": {
+      "code": "CD",
+      "sourceName": "DR Congo",
+      "value": 3.761,
+      "year": 2026,
+      "period": "2023-2025",
+      "rank": 140,
+      "rankConfidenceInterval": [
+        136,
+        142
+      ]
+    },
+    "CF": {
+      "code": "CF",
+      "sourceName": "Central African Republic",
+      "value": null,
+      "year": 2026,
+      "period": "2023-2025",
+      "rank": null,
+      "rankConfidenceInterval": null,
+      "missingReason": "Not covered by the 147-country/territory WHR 2026 ranking."
+    },
+    "CG": {
+      "code": "CG",
+      "sourceName": "Congo",
+      "value": 4.456,
+      "year": 2026,
+      "period": "2023-2025",
+      "rank": 122,
+      "rankConfidenceInterval": [
+        110,
+        131
+      ]
+    },
+    "CH": {
+      "code": "CH",
+      "sourceName": "Switzerland",
+      "value": 7.018,
+      "year": 2026,
+      "period": "2023-2025",
+      "rank": 10,
+      "rankConfidenceInterval": [
+        9,
+        19
+      ]
+    },
+    "CI": {
+      "code": "CI",
+      "sourceName": "Côte d’Ivoire",
+      "value": 5.148,
+      "year": 2026,
+      "period": "2023-2025",
+      "rank": 98,
+      "rankConfidenceInterval": [
+        93,
+        103
+      ]
+    },
+    "CL": {
+      "code": "CL",
+      "sourceName": "Chile",
+      "value": 6.302,
+      "year": 2026,
+      "period": "2023-2025",
+      "rank": 50,
+      "rankConfidenceInterval": [
+        43,
+        62
+      ]
+    },
+    "CM": {
+      "code": "CM",
+      "sourceName": "Cameroon",
+      "value": 5.083,
+      "year": 2026,
+      "period": "2023-2025",
+      "rank": 100,
+      "rankConfidenceInterval": [
+        94,
+        104
+      ]
+    },
+    "CN": {
+      "code": "CN",
+      "sourceName": "China",
+      "value": 6.074,
+      "year": 2026,
+      "period": "2023-2025",
+      "rank": 65,
+      "rankConfidenceInterval": [
+        61,
+        80
+      ]
+    },
+    "CO": {
+      "code": "CO",
+      "sourceName": "Colombia",
+      "value": 6.04,
+      "year": 2026,
+      "period": "2023-2025",
+      "rank": 68,
+      "rankConfidenceInterval": [
+        54,
+        78
+      ]
+    },
+    "CR": {
+      "code": "CR",
+      "sourceName": "Costa Rica",
+      "value": 7.439,
+      "year": 2026,
+      "period": "2023-2025",
+      "rank": 4,
+      "rankConfidenceInterval": [
+        2,
+        4
+      ]
+    },
+    "CU": {
+      "code": "CU",
+      "sourceName": "Cuba",
+      "value": null,
+      "year": 2026,
+      "period": "2023-2025",
+      "rank": null,
+      "rankConfidenceInterval": null,
+      "missingReason": "Not covered by the 147-country/territory WHR 2026 ranking."
+    },
+    "CV": {
+      "code": "CV",
+      "sourceName": "Cape Verde",
+      "value": null,
+      "year": 2026,
+      "period": "2023-2025",
+      "rank": null,
+      "rankConfidenceInterval": null,
+      "missingReason": "Not covered by the 147-country/territory WHR 2026 ranking."
+    },
+    "CY": {
+      "code": "CY",
+      "sourceName": "Cyprus",
+      "value": 6.126,
+      "year": 2026,
+      "period": "2023-2025",
+      "rank": 62,
+      "rankConfidenceInterval": [
+        49,
+        72
+      ]
+    },
+    "CZ": {
+      "code": "CZ",
+      "sourceName": "Czechia",
+      "value": 6.821,
+      "year": 2026,
+      "period": "2023-2025",
+      "rank": 20,
+      "rankConfidenceInterval": [
+        12,
+        30
+      ]
+    },
+    "DE": {
+      "code": "DE",
+      "sourceName": "Germany",
+      "value": 6.882,
+      "year": 2026,
+      "period": "2023-2025",
+      "rank": 17,
+      "rankConfidenceInterval": [
+        10,
+        26
+      ]
+    },
+    "DJ": {
+      "code": "DJ",
+      "sourceName": "Djibouti",
+      "value": null,
+      "year": 2026,
+      "period": "2023-2025",
+      "rank": null,
+      "rankConfidenceInterval": null,
+      "missingReason": "Not covered by the 147-country/territory WHR 2026 ranking."
+    },
+    "DK": {
+      "code": "DK",
+      "sourceName": "Denmark",
+      "value": 7.539,
+      "year": 2026,
+      "period": "2023-2025",
+      "rank": 3,
+      "rankConfidenceInterval": [
+        2,
+        4
+      ]
+    },
+    "DM": {
+      "code": "DM",
+      "sourceName": "Dominica",
+      "value": null,
+      "year": 2026,
+      "period": "2023-2025",
+      "rank": null,
+      "rankConfidenceInterval": null,
+      "missingReason": "Not covered by the 147-country/territory WHR 2026 ranking."
+    },
+    "DO": {
+      "code": "DO",
+      "sourceName": "Dominican Republic",
+      "value": 6.093,
+      "year": 2026,
+      "period": "2023-2025",
+      "rank": 64,
+      "rankConfidenceInterval": [
+        49,
+        76
+      ]
+    },
+    "DZ": {
+      "code": "DZ",
+      "sourceName": "Algeria",
+      "value": 5.714,
+      "year": 2026,
+      "period": "2023-2025",
+      "rank": 83,
+      "rankConfidenceInterval": [
+        76,
+        92
+      ]
+    },
+    "EC": {
+      "code": "EC",
+      "sourceName": "Ecuador",
+      "value": 6.144,
+      "year": 2026,
+      "period": "2023-2025",
+      "rank": 59,
+      "rankConfidenceInterval": [
+        49,
+        72
+      ]
+    },
+    "EE": {
+      "code": "EE",
+      "sourceName": "Estonia",
+      "value": 6.41,
+      "year": 2026,
+      "period": "2023-2025",
+      "rank": 46,
+      "rankConfidenceInterval": [
+        37,
+        55
+      ]
+    },
+    "EG": {
+      "code": "EG",
+      "sourceName": "Egypt",
+      "value": 3.862,
+      "year": 2026,
+      "period": "2023-2025",
+      "rank": 139,
+      "rankConfidenceInterval": [
+        134,
+        141
+      ]
+    },
+    "ER": {
+      "code": "ER",
+      "sourceName": "Eritrea",
+      "value": null,
+      "year": 2026,
+      "period": "2023-2025",
+      "rank": null,
+      "rankConfidenceInterval": null,
+      "missingReason": "Not covered by the 147-country/territory WHR 2026 ranking."
+    },
+    "ES": {
+      "code": "ES",
+      "sourceName": "Spain",
+      "value": 6.54,
+      "year": 2026,
+      "period": "2023-2025",
+      "rank": 41,
+      "rankConfidenceInterval": [
+        28,
+        49
+      ]
+    },
+    "ET": {
+      "code": "ET",
+      "sourceName": "Ethiopia",
+      "value": 3.985,
+      "year": 2026,
+      "period": "2023-2025",
+      "rank": 135,
+      "rankConfidenceInterval": [
+        132,
+        139
+      ]
+    },
+    "FI": {
+      "code": "FI",
+      "sourceName": "Finland",
+      "value": 7.764,
+      "year": 2026,
+      "period": "2023-2025",
+      "rank": 1,
+      "rankConfidenceInterval": [
+        1,
+        1
+      ]
+    },
+    "FJ": {
+      "code": "FJ",
+      "sourceName": "Fiji",
+      "value": null,
+      "year": 2026,
+      "period": "2023-2025",
+      "rank": null,
+      "rankConfidenceInterval": null,
+      "missingReason": "Not covered by the 147-country/territory WHR 2026 ranking."
+    },
+    "FM": {
+      "code": "FM",
+      "sourceName": "Micronesia",
+      "value": null,
+      "year": 2026,
+      "period": "2023-2025",
+      "rank": null,
+      "rankConfidenceInterval": null,
+      "missingReason": "Not covered by the 147-country/territory WHR 2026 ranking."
+    },
+    "FR": {
+      "code": "FR",
+      "sourceName": "France",
+      "value": 6.586,
+      "year": 2026,
+      "period": "2023-2025",
+      "rank": 35,
+      "rankConfidenceInterval": [
+        25,
+        45
+      ]
+    },
+    "GA": {
+      "code": "GA",
+      "sourceName": "Gabon",
+      "value": 5.167,
+      "year": 2026,
+      "period": "2023-2025",
+      "rank": 96,
+      "rankConfidenceInterval": [
+        93,
+        103
+      ]
+    },
+    "GB": {
+      "code": "GB",
+      "sourceName": "United Kingdom",
+      "value": 6.694,
+      "year": 2026,
+      "period": "2023-2025",
+      "rank": 29,
+      "rankConfidenceInterval": [
+        19,
+        42
+      ]
+    },
+    "GD": {
+      "code": "GD",
+      "sourceName": "Grenada",
+      "value": null,
+      "year": 2026,
+      "period": "2023-2025",
+      "rank": null,
+      "rankConfidenceInterval": null,
+      "missingReason": "Not covered by the 147-country/territory WHR 2026 ranking."
+    },
+    "GE": {
+      "code": "GE",
+      "sourceName": "Georgia",
+      "value": 5.517,
+      "year": 2026,
+      "period": "2023-2025",
+      "rank": 91,
+      "rankConfidenceInterval": [
+        85,
+        93
+      ]
+    },
+    "GH": {
+      "code": "GH",
+      "sourceName": "Ghana",
+      "value": 4.554,
+      "year": 2026,
+      "period": "2023-2025",
+      "rank": 115,
+      "rankConfidenceInterval": [
+        109,
+        127
+      ]
+    },
+    "GM": {
+      "code": "GM",
+      "sourceName": "Gambia",
+      "value": 4.306,
+      "year": 2026,
+      "period": "2023-2025",
+      "rank": 128,
+      "rankConfidenceInterval": [
+        109,
+        130
+      ]
+    },
+    "GN": {
+      "code": "GN",
+      "sourceName": "Guinea",
+      "value": 4.609,
+      "year": 2026,
+      "period": "2023-2025",
+      "rank": 113,
+      "rankConfidenceInterval": [
+        105,
+        127
+      ]
+    },
+    "GQ": {
+      "code": "GQ",
+      "sourceName": "Equatorial Guinea",
+      "value": null,
+      "year": 2026,
+      "period": "2023-2025",
+      "rank": null,
+      "rankConfidenceInterval": null,
+      "missingReason": "Not covered by the 147-country/territory WHR 2026 ranking."
+    },
+    "GR": {
+      "code": "GR",
+      "sourceName": "Greece",
+      "value": 5.697,
+      "year": 2026,
+      "period": "2023-2025",
+      "rank": 85,
+      "rankConfidenceInterval": [
+        76,
+        92
+      ]
+    },
+    "GT": {
+      "code": "GT",
+      "sourceName": "Guatemala",
+      "value": 6.533,
+      "year": 2026,
+      "period": "2023-2025",
+      "rank": 42,
+      "rankConfidenceInterval": [
+        26,
+        50
+      ]
+    },
+    "GW": {
+      "code": "GW",
+      "sourceName": "Guinea-Bissau",
+      "value": null,
+      "year": 2026,
+      "period": "2023-2025",
+      "rank": null,
+      "rankConfidenceInterval": null,
+      "missingReason": "Not covered by the 147-country/territory WHR 2026 ranking."
+    },
+    "GY": {
+      "code": "GY",
+      "sourceName": "Guyana",
+      "value": null,
+      "year": 2026,
+      "period": "2023-2025",
+      "rank": null,
+      "rankConfidenceInterval": null,
+      "missingReason": "Not covered by the 147-country/territory WHR 2026 ranking."
+    },
+    "HN": {
+      "code": "HN",
+      "sourceName": "Honduras",
+      "value": 6.096,
+      "year": 2026,
+      "period": "2023-2025",
+      "rank": 63,
+      "rankConfidenceInterval": [
+        50,
+        76
+      ]
+    },
+    "HR": {
+      "code": "HR",
+      "sourceName": "Croatia",
+      "value": 6.009,
+      "year": 2026,
+      "period": "2023-2025",
+      "rank": 70,
+      "rankConfidenceInterval": [
+        56,
+        78
+      ]
+    },
+    "HT": {
+      "code": "HT",
+      "sourceName": "Haiti",
+      "value": null,
+      "year": 2026,
+      "period": "2023-2025",
+      "rank": null,
+      "rankConfidenceInterval": null,
+      "missingReason": "Not covered by the 147-country/territory WHR 2026 ranking."
+    },
+    "HU": {
+      "code": "HU",
+      "sourceName": "Hungary",
+      "value": 5.937,
+      "year": 2026,
+      "period": "2023-2025",
+      "rank": 74,
+      "rankConfidenceInterval": [
+        61,
+        80
+      ]
+    },
+    "ID": {
+      "code": "ID",
+      "sourceName": "Indonesia",
+      "value": 5.617,
+      "year": 2026,
+      "period": "2023-2025",
+      "rank": 87,
+      "rankConfidenceInterval": [
+        79,
+        92
+      ]
+    },
+    "IE": {
+      "code": "IE",
+      "sourceName": "Ireland",
+      "value": 6.928,
+      "year": 2026,
+      "period": "2023-2025",
+      "rank": 13,
+      "rankConfidenceInterval": [
+        9,
+        24
+      ]
+    },
+    "IL": {
+      "code": "IL",
+      "sourceName": "Israel",
+      "value": 7.187,
+      "year": 2026,
+      "period": "2023-2025",
+      "rank": 8,
+      "rankConfidenceInterval": [
+        5,
+        9
+      ]
+    },
+    "IN": {
+      "code": "IN",
+      "sourceName": "India",
+      "value": 4.536,
+      "year": 2026,
+      "period": "2023-2025",
+      "rank": 116,
+      "rankConfidenceInterval": [
+        109,
+        127
+      ]
+    },
+    "IQ": {
+      "code": "IQ",
+      "sourceName": "Iraq",
+      "value": 5.212,
+      "year": 2026,
+      "period": "2023-2025",
+      "rank": 95,
+      "rankConfidenceInterval": [
+        93,
+        101
+      ]
+    },
+    "IR": {
+      "code": "IR",
+      "sourceName": "Iran",
+      "value": 5.151,
+      "year": 2026,
+      "period": "2023-2025",
+      "rank": 97,
+      "rankConfidenceInterval": [
+        93,
+        103
+      ]
+    },
+    "IS": {
+      "code": "IS",
+      "sourceName": "Iceland",
+      "value": 7.54,
+      "year": 2026,
+      "period": "2023-2025",
+      "rank": 2,
+      "rankConfidenceInterval": [
+        2,
+        4
+      ]
+    },
+    "IT": {
+      "code": "IT",
+      "sourceName": "Italy",
+      "value": 6.574,
+      "year": 2026,
+      "period": "2023-2025",
+      "rank": 38,
+      "rankConfidenceInterval": [
+        26,
+        46
+      ]
+    },
+    "JM": {
+      "code": "JM",
+      "sourceName": "Jamaica",
+      "value": 6.305,
+      "year": 2026,
+      "period": "2023-2025",
+      "rank": 49,
+      "rankConfidenceInterval": [
+        30,
+        73
+      ]
+    },
+    "JO": {
+      "code": "JO",
+      "sourceName": "Jordan",
+      "value": 4.478,
+      "year": 2026,
+      "period": "2023-2025",
+      "rank": 119,
+      "rankConfidenceInterval": [
+        109,
+        131
+      ]
+    },
+    "JP": {
+      "code": "JP",
+      "sourceName": "Japan",
+      "value": 6.13,
+      "year": 2026,
+      "period": "2023-2025",
+      "rank": 61,
+      "rankConfidenceInterval": [
+        49,
+        72
+      ]
+    },
+    "KE": {
+      "code": "KE",
+      "sourceName": "Kenya",
+      "value": 4.674,
+      "year": 2026,
+      "period": "2023-2025",
+      "rank": 110,
+      "rankConfidenceInterval": [
+        104,
+        125
+      ]
+    },
+    "KG": {
+      "code": "KG",
+      "sourceName": "Kyrgyzstan",
+      "value": 6.049,
+      "year": 2026,
+      "period": "2023-2025",
+      "rank": 66,
+      "rankConfidenceInterval": [
+        55,
+        76
+      ]
+    },
+    "KH": {
+      "code": "KH",
+      "sourceName": "Cambodia",
+      "value": 4.462,
+      "year": 2026,
+      "period": "2023-2025",
+      "rank": 121,
+      "rankConfidenceInterval": [
+        110,
+        131
+      ]
+    },
+    "KI": {
+      "code": "KI",
+      "sourceName": "Kiribati",
+      "value": null,
+      "year": 2026,
+      "period": "2023-2025",
+      "rank": null,
+      "rankConfidenceInterval": null,
+      "missingReason": "Not covered by the 147-country/territory WHR 2026 ranking."
+    },
+    "KM": {
+      "code": "KM",
+      "sourceName": "Comoros",
+      "value": 3.925,
+      "year": 2026,
+      "period": "2023-2025",
+      "rank": 136,
+      "rankConfidenceInterval": [
+        133,
+        141
+      ]
+    },
+    "KN": {
+      "code": "KN",
+      "sourceName": "Saint Kitts and Nevis",
+      "value": null,
+      "year": 2026,
+      "period": "2023-2025",
+      "rank": null,
+      "rankConfidenceInterval": null,
+      "missingReason": "Not covered by the 147-country/territory WHR 2026 ranking."
+    },
+    "KP": {
+      "code": "KP",
+      "sourceName": "North Korea",
+      "value": null,
+      "year": 2026,
+      "period": "2023-2025",
+      "rank": null,
+      "rankConfidenceInterval": null,
+      "missingReason": "Not covered by the 147-country/territory WHR 2026 ranking."
+    },
+    "KR": {
+      "code": "KR",
+      "sourceName": "Republic of Korea",
+      "value": 6.04,
+      "year": 2026,
+      "period": "2023-2025",
+      "rank": 67,
+      "rankConfidenceInterval": [
+        55,
+        76
+      ]
+    },
+    "KW": {
+      "code": "KW",
+      "sourceName": "Kuwait",
+      "value": 6.543,
+      "year": 2026,
+      "period": "2023-2025",
+      "rank": 40,
+      "rankConfidenceInterval": [
+        27,
+        50
+      ]
+    },
+    "KZ": {
+      "code": "KZ",
+      "sourceName": "Kazakhstan",
+      "value": 6.633,
+      "year": 2026,
+      "period": "2023-2025",
+      "rank": 33,
+      "rankConfidenceInterval": [
+        24,
+        43
+      ]
+    },
+    "LA": {
+      "code": "LA",
+      "sourceName": "Lao PDR",
+      "value": 5.515,
+      "year": 2026,
+      "period": "2023-2025",
+      "rank": 92,
+      "rankConfidenceInterval": [
+        83,
+        93
+      ]
+    },
+    "LB": {
+      "code": "LB",
+      "sourceName": "Lebanon",
+      "value": 3.723,
+      "year": 2026,
+      "period": "2023-2025",
+      "rank": 141,
+      "rankConfidenceInterval": [
+        136,
+        142
+      ]
+    },
+    "LC": {
+      "code": "LC",
+      "sourceName": "Saint Lucia",
+      "value": null,
+      "year": 2026,
+      "period": "2023-2025",
+      "rank": null,
+      "rankConfidenceInterval": null,
+      "missingReason": "Not covered by the 147-country/territory WHR 2026 ranking."
+    },
+    "LI": {
+      "code": "LI",
+      "sourceName": "Liechtenstein",
+      "value": null,
+      "year": 2026,
+      "period": "2023-2025",
+      "rank": null,
+      "rankConfidenceInterval": null,
+      "missingReason": "Not covered by the 147-country/territory WHR 2026 ranking."
+    },
+    "LK": {
+      "code": "LK",
+      "sourceName": "Sri Lanka",
+      "value": 4.013,
+      "year": 2026,
+      "period": "2023-2025",
+      "rank": 134,
+      "rankConfidenceInterval": [
+        132,
+        139
+      ]
+    },
+    "LR": {
+      "code": "LR",
+      "sourceName": "Liberia",
+      "value": 4.28,
+      "year": 2026,
+      "period": "2023-2025",
+      "rank": 130,
+      "rankConfidenceInterval": [
+        117,
+        133
+      ]
+    },
+    "LS": {
+      "code": "LS",
+      "sourceName": "Lesotho",
+      "value": 4.375,
+      "year": 2026,
+      "period": "2023-2025",
+      "rank": 126,
+      "rankConfidenceInterval": [
+        112,
+        133
+      ]
+    },
+    "LT": {
+      "code": "LT",
+      "sourceName": "Lithuania",
+      "value": 6.704,
+      "year": 2026,
+      "period": "2023-2025",
+      "rank": 28,
+      "rankConfidenceInterval": [
+        19,
+        42
+      ]
+    },
+    "LU": {
+      "code": "LU",
+      "sourceName": "Luxembourg",
+      "value": 7.063,
+      "year": 2026,
+      "period": "2023-2025",
+      "rank": 9,
+      "rankConfidenceInterval": [
+        8,
+        17
+      ]
+    },
+    "LV": {
+      "code": "LV",
+      "sourceName": "Latvia",
+      "value": 6.365,
+      "year": 2026,
+      "period": "2023-2025",
+      "rank": 48,
+      "rankConfidenceInterval": [
+        39,
+        58
+      ]
+    },
+    "LY": {
+      "code": "LY",
+      "sourceName": "Libya",
+      "value": 5.731,
+      "year": 2026,
+      "period": "2023-2025",
+      "rank": 81,
+      "rankConfidenceInterval": [
+        76,
+        90
+      ]
+    },
+    "MA": {
+      "code": "MA",
+      "sourceName": "Morocco",
+      "value": 4.646,
+      "year": 2026,
+      "period": "2023-2025",
+      "rank": 112,
+      "rankConfidenceInterval": [
+        105,
+        125
+      ]
+    },
+    "MC": {
+      "code": "MC",
+      "sourceName": "Monaco",
+      "value": null,
+      "year": 2026,
+      "period": "2023-2025",
+      "rank": null,
+      "rankConfidenceInterval": null,
+      "missingReason": "Not covered by the 147-country/territory WHR 2026 ranking."
+    },
+    "MD": {
+      "code": "MD",
+      "sourceName": "Republic of Moldova",
+      "value": 5.851,
+      "year": 2026,
+      "period": "2023-2025",
+      "rank": 77,
+      "rankConfidenceInterval": [
+        67,
+        86
+      ]
+    },
+    "ME": {
+      "code": "ME",
+      "sourceName": "Montenegro",
+      "value": 6.139,
+      "year": 2026,
+      "period": "2023-2025",
+      "rank": 60,
+      "rankConfidenceInterval": [
+        49,
+        72
+      ]
+    },
+    "MG": {
+      "code": "MG",
+      "sourceName": "Madagascar",
+      "value": 4.174,
+      "year": 2026,
+      "period": "2023-2025",
+      "rank": 132,
+      "rankConfidenceInterval": [
+        126,
+        135
+      ]
+    },
+    "MH": {
+      "code": "MH",
+      "sourceName": "Marshall Islands",
+      "value": null,
+      "year": 2026,
+      "period": "2023-2025",
+      "rank": null,
+      "rankConfidenceInterval": null,
+      "missingReason": "Not covered by the 147-country/territory WHR 2026 ranking."
+    },
+    "MK": {
+      "code": "MK",
+      "sourceName": "North Macedonia",
+      "value": 5.719,
+      "year": 2026,
+      "period": "2023-2025",
+      "rank": 82,
+      "rankConfidenceInterval": [
+        76,
+        91
+      ]
+    },
+    "ML": {
+      "code": "ML",
+      "sourceName": "Mali",
+      "value": 4.588,
+      "year": 2026,
+      "period": "2023-2025",
+      "rank": 114,
+      "rankConfidenceInterval": [
+        106,
+        127
+      ]
+    },
+    "MM": {
+      "code": "MM",
+      "sourceName": "Myanmar",
+      "value": 4.287,
+      "year": 2026,
+      "period": "2023-2025",
+      "rank": 129,
+      "rankConfidenceInterval": [
+        118,
+        133
+      ]
+    },
+    "MN": {
+      "code": "MN",
+      "sourceName": "Mongolia",
+      "value": 5.936,
+      "year": 2026,
+      "period": "2023-2025",
+      "rank": 75,
+      "rankConfidenceInterval": [
+        61,
+        80
+      ]
+    },
+    "MR": {
+      "code": "MR",
+      "sourceName": "Mauritania",
+      "value": 4.473,
+      "year": 2026,
+      "period": "2023-2025",
+      "rank": 120,
+      "rankConfidenceInterval": [
+        110,
+        130
+      ]
+    },
+    "MT": {
+      "code": "MT",
+      "sourceName": "Malta",
+      "value": 6.436,
+      "year": 2026,
+      "period": "2023-2025",
+      "rank": 43,
+      "rankConfidenceInterval": [
+        34,
+        55
+      ]
+    },
+    "MU": {
+      "code": "MU",
+      "sourceName": "Mauritius",
+      "value": 5.939,
+      "year": 2026,
+      "period": "2023-2025",
+      "rank": 73,
+      "rankConfidenceInterval": [
+        61,
+        80
+      ]
+    },
+    "MV": {
+      "code": "MV",
+      "sourceName": "Maldives",
+      "value": null,
+      "year": 2026,
+      "period": "2023-2025",
+      "rank": null,
+      "rankConfidenceInterval": null,
+      "missingReason": "Not covered by the 147-country/territory WHR 2026 ranking."
+    },
+    "MW": {
+      "code": "MW",
+      "sourceName": "Malawi",
+      "value": 3.284,
+      "year": 2026,
+      "period": "2023-2025",
+      "rank": 145,
+      "rankConfidenceInterval": [
+        142,
+        146
+      ]
+    },
+    "MX": {
+      "code": "MX",
+      "sourceName": "Mexico",
+      "value": 6.972,
+      "year": 2026,
+      "period": "2023-2025",
+      "rank": 12,
+      "rankConfidenceInterval": [
+        9,
+        24
+      ]
+    },
+    "MY": {
+      "code": "MY",
+      "sourceName": "Malaysia",
+      "value": 6.005,
+      "year": 2026,
+      "period": "2023-2025",
+      "rank": 71,
+      "rankConfidenceInterval": [
+        55,
+        78
+      ]
+    },
+    "MZ": {
+      "code": "MZ",
+      "sourceName": "Mozambique",
+      "value": 5.336,
+      "year": 2026,
+      "period": "2023-2025",
+      "rank": 93,
+      "rankConfidenceInterval": [
+        91,
+        100
+      ]
+    },
+    "NA": {
+      "code": "NA",
+      "sourceName": "Namibia",
+      "value": 4.781,
+      "year": 2026,
+      "period": "2023-2025",
+      "rank": 108,
+      "rankConfidenceInterval": [
+        103,
+        114
+      ]
+    },
+    "NE": {
+      "code": "NE",
+      "sourceName": "Niger",
+      "value": 4.94,
+      "year": 2026,
+      "period": "2023-2025",
+      "rank": 103,
+      "rankConfidenceInterval": [
+        96,
+        108
+      ]
+    },
+    "NG": {
+      "code": "NG",
+      "sourceName": "Nigeria",
+      "value": 4.788,
+      "year": 2026,
+      "period": "2023-2025",
+      "rank": 106,
+      "rankConfidenceInterval": [
+        103,
+        114
+      ]
+    },
+    "NI": {
+      "code": "NI",
+      "sourceName": "Nicaragua",
+      "value": 6.301,
+      "year": 2026,
+      "period": "2023-2025",
+      "rank": 51,
+      "rankConfidenceInterval": [
+        39,
+        64
+      ]
+    },
+    "NL": {
+      "code": "NL",
+      "sourceName": "Netherlands",
+      "value": 7.223,
+      "year": 2026,
+      "period": "2023-2025",
+      "rank": 7,
+      "rankConfidenceInterval": [
+        5,
+        8
+      ]
+    },
+    "NO": {
+      "code": "NO",
+      "sourceName": "Norway",
+      "value": 7.242,
+      "year": 2026,
+      "period": "2023-2025",
+      "rank": 6,
+      "rankConfidenceInterval": [
+        5,
+        8
+      ]
+    },
+    "NP": {
+      "code": "NP",
+      "sourceName": "Nepal",
+      "value": 5.147,
+      "year": 2026,
+      "period": "2023-2025",
+      "rank": 99,
+      "rankConfidenceInterval": [
+        93,
+        103
+      ]
+    },
+    "NR": {
+      "code": "NR",
+      "sourceName": "Nauru",
+      "value": null,
+      "year": 2026,
+      "period": "2023-2025",
+      "rank": null,
+      "rankConfidenceInterval": null,
+      "missingReason": "Not covered by the 147-country/territory WHR 2026 ranking."
+    },
+    "NZ": {
+      "code": "NZ",
+      "sourceName": "New Zealand",
+      "value": 6.995,
+      "year": 2026,
+      "period": "2023-2025",
+      "rank": 11,
+      "rankConfidenceInterval": [
+        9,
+        20
+      ]
+    },
+    "OM": {
+      "code": "OM",
+      "sourceName": "Oman",
+      "value": 6.197,
+      "year": 2026,
+      "period": "2023-2025",
+      "rank": 58,
+      "rankConfidenceInterval": [
+        43,
+        76
+      ]
+    },
+    "PA": {
+      "code": "PA",
+      "sourceName": "Panama",
+      "value": 6.547,
+      "year": 2026,
+      "period": "2023-2025",
+      "rank": 39,
+      "rankConfidenceInterval": [
+        26,
+        50
+      ]
+    },
+    "PE": {
+      "code": "PE",
+      "sourceName": "Peru",
+      "value": 5.974,
+      "year": 2026,
+      "period": "2023-2025",
+      "rank": 72,
+      "rankConfidenceInterval": [
+        57,
+        79
+      ]
+    },
+    "PG": {
+      "code": "PG",
+      "sourceName": "Papua New Guinea",
+      "value": null,
+      "year": 2026,
+      "period": "2023-2025",
+      "rank": null,
+      "rankConfidenceInterval": null,
+      "missingReason": "Not covered by the 147-country/territory WHR 2026 ranking."
+    },
+    "PH": {
+      "code": "PH",
+      "sourceName": "Philippines",
+      "value": 6.206,
+      "year": 2026,
+      "period": "2023-2025",
+      "rank": 56,
+      "rankConfidenceInterval": [
+        47,
+        70
+      ]
+    },
+    "PK": {
+      "code": "PK",
+      "sourceName": "Pakistan",
+      "value": 4.868,
+      "year": 2026,
+      "period": "2023-2025",
+      "rank": 104,
+      "rankConfidenceInterval": [
+        100,
+        112
+      ]
+    },
+    "PL": {
+      "code": "PL",
+      "sourceName": "Poland",
+      "value": 6.768,
+      "year": 2026,
+      "period": "2023-2025",
+      "rank": 24,
+      "rankConfidenceInterval": [
+        15,
+        34
+      ]
+    },
+    "PS": {
+      "code": "PS",
+      "sourceName": "State of Palestine",
+      "value": 4.694,
+      "year": 2026,
+      "period": "2023-2025",
+      "rank": 109,
+      "rankConfidenceInterval": [
+        104,
+        121
+      ]
+    },
+    "PT": {
+      "code": "PT",
+      "sourceName": "Portugal",
+      "value": 6.029,
+      "year": 2026,
+      "period": "2023-2025",
+      "rank": 69,
+      "rankConfidenceInterval": [
+        55,
+        78
+      ]
+    },
+    "PW": {
+      "code": "PW",
+      "sourceName": "Palau",
+      "value": null,
+      "year": 2026,
+      "period": "2023-2025",
+      "rank": null,
+      "rankConfidenceInterval": null,
+      "missingReason": "Not covered by the 147-country/territory WHR 2026 ranking."
+    },
+    "PY": {
+      "code": "PY",
+      "sourceName": "Paraguay",
+      "value": 6.198,
+      "year": 2026,
+      "period": "2023-2025",
+      "rank": 57,
+      "rankConfidenceInterval": [
+        47,
+        70
+      ]
+    },
+    "QA": {
+      "code": "QA",
+      "sourceName": "Qatar",
+      "value": null,
+      "year": 2026,
+      "period": "2023-2025",
+      "rank": null,
+      "rankConfidenceInterval": null,
+      "missingReason": "Not covered by the 147-country/territory WHR 2026 ranking."
+    },
+    "RO": {
+      "code": "RO",
+      "sourceName": "Romania",
+      "value": 6.629,
+      "year": 2026,
+      "period": "2023-2025",
+      "rank": 34,
+      "rankConfidenceInterval": [
+        24,
+        43
+      ]
+    },
+    "RS": {
+      "code": "RS",
+      "sourceName": "Serbia",
+      "value": 6.691,
+      "year": 2026,
+      "period": "2023-2025",
+      "rank": 30,
+      "rankConfidenceInterval": [
+        19,
+        43
+      ]
+    },
+    "RU": {
+      "code": "RU",
+      "sourceName": "Russian Federation",
+      "value": 5.834,
+      "year": 2026,
+      "period": "2023-2025",
+      "rank": 79,
+      "rankConfidenceInterval": [
+        70,
+        86
+      ]
+    },
+    "RW": {
+      "code": "RW",
+      "sourceName": "Rwanda",
+      "value": null,
+      "year": 2026,
+      "period": "2023-2025",
+      "rank": null,
+      "rankConfidenceInterval": null,
+      "missingReason": "Not covered by the 147-country/territory WHR 2026 ranking."
+    },
+    "SA": {
+      "code": "SA",
+      "sourceName": "Saudi Arabia",
+      "value": 6.817,
+      "year": 2026,
+      "period": "2023-2025",
+      "rank": 22,
+      "rankConfidenceInterval": [
+        12,
+        31
+      ]
+    },
+    "SB": {
+      "code": "SB",
+      "sourceName": "Solomon Islands",
+      "value": null,
+      "year": 2026,
+      "period": "2023-2025",
+      "rank": null,
+      "rankConfidenceInterval": null,
+      "missingReason": "Not covered by the 147-country/territory WHR 2026 ranking."
+    },
+    "SC": {
+      "code": "SC",
+      "sourceName": "Seychelles",
+      "value": null,
+      "year": 2026,
+      "period": "2023-2025",
+      "rank": null,
+      "rankConfidenceInterval": null,
+      "missingReason": "Not covered by the 147-country/territory WHR 2026 ranking."
+    },
+    "SD": {
+      "code": "SD",
+      "sourceName": "Sudan",
+      "value": null,
+      "year": 2026,
+      "period": "2023-2025",
+      "rank": null,
+      "rankConfidenceInterval": null,
+      "missingReason": "Not covered by the 147-country/territory WHR 2026 ranking."
+    },
+    "SE": {
+      "code": "SE",
+      "sourceName": "Sweden",
+      "value": 7.255,
+      "year": 2026,
+      "period": "2023-2025",
+      "rank": 5,
+      "rankConfidenceInterval": [
+        5,
+        8
+      ]
+    },
+    "SG": {
+      "code": "SG",
+      "sourceName": "Singapore",
+      "value": 6.585,
+      "year": 2026,
+      "period": "2023-2025",
+      "rank": 36,
+      "rankConfidenceInterval": [
+        25,
+        45
+      ]
+    },
+    "SI": {
+      "code": "SI",
+      "sourceName": "Slovenia",
+      "value": 6.868,
+      "year": 2026,
+      "period": "2023-2025",
+      "rank": 18,
+      "rankConfidenceInterval": [
+        11,
+        26
+      ]
+    },
+    "SK": {
+      "code": "SK",
+      "sourceName": "Slovakia",
+      "value": 6.255,
+      "year": 2026,
+      "period": "2023-2025",
+      "rank": 54,
+      "rankConfidenceInterval": [
+        47,
+        65
+      ]
+    },
+    "SL": {
+      "code": "SL",
+      "sourceName": "Sierra Leone",
+      "value": 3.251,
+      "year": 2026,
+      "period": "2023-2025",
+      "rank": 146,
+      "rankConfidenceInterval": [
+        144,
+        146
+      ]
+    },
+    "SM": {
+      "code": "SM",
+      "sourceName": "San Marino",
+      "value": null,
+      "year": 2026,
+      "period": "2023-2025",
+      "rank": null,
+      "rankConfidenceInterval": null,
+      "missingReason": "Not covered by the 147-country/territory WHR 2026 ranking."
+    },
+    "SN": {
+      "code": "SN",
+      "sourceName": "Senegal",
+      "value": 4.787,
+      "year": 2026,
+      "period": "2023-2025",
+      "rank": 107,
+      "rankConfidenceInterval": [
+        102,
+        114
+      ]
+    },
+    "SO": {
+      "code": "SO",
+      "sourceName": "Somalia",
+      "value": 4.508,
+      "year": 2026,
+      "period": "2023-2025",
+      "rank": 117,
+      "rankConfidenceInterval": [
+        109,
+        129
+      ]
+    },
+    "SR": {
+      "code": "SR",
+      "sourceName": "Suriname",
+      "value": null,
+      "year": 2026,
+      "period": "2023-2025",
+      "rank": null,
+      "rankConfidenceInterval": null,
+      "missingReason": "Not covered by the 147-country/territory WHR 2026 ranking."
+    },
+    "SS": {
+      "code": "SS",
+      "sourceName": "South Sudan",
+      "value": null,
+      "year": 2026,
+      "period": "2023-2025",
+      "rank": null,
+      "rankConfidenceInterval": null,
+      "missingReason": "Not covered by the 147-country/territory WHR 2026 ranking."
+    },
+    "ST": {
+      "code": "ST",
+      "sourceName": "São Tomé and Príncipe",
+      "value": null,
+      "year": 2026,
+      "period": "2023-2025",
+      "rank": null,
+      "rankConfidenceInterval": null,
+      "missingReason": "Not covered by the 147-country/territory WHR 2026 ranking."
+    },
+    "SV": {
+      "code": "SV",
+      "sourceName": "El Salvador",
+      "value": 6.578,
+      "year": 2026,
+      "period": "2023-2025",
+      "rank": 37,
+      "rankConfidenceInterval": [
+        25,
+        48
+      ]
+    },
+    "SY": {
+      "code": "SY",
+      "sourceName": "Syria",
+      "value": null,
+      "year": 2026,
+      "period": "2023-2025",
+      "rank": null,
+      "rankConfidenceInterval": null,
+      "missingReason": "Not covered by the 147-country/territory WHR 2026 ranking."
+    },
+    "SZ": {
+      "code": "SZ",
+      "sourceName": "Eswatini",
+      "value": 3.909,
+      "year": 2026,
+      "period": "2023-2025",
+      "rank": 137,
+      "rankConfidenceInterval": [
+        133,
+        141
+      ]
+    },
+    "TD": {
+      "code": "TD",
+      "sourceName": "Chad",
+      "value": 4.385,
+      "year": 2026,
+      "period": "2023-2025",
+      "rank": 125,
+      "rankConfidenceInterval": [
+        113,
+        132
+      ]
+    },
+    "TG": {
+      "code": "TG",
+      "sourceName": "Togo",
+      "value": 4.277,
+      "year": 2026,
+      "period": "2023-2025",
+      "rank": 131,
+      "rankConfidenceInterval": [
+        121,
+        133
+      ]
+    },
+    "TH": {
+      "code": "TH",
+      "sourceName": "Thailand",
+      "value": 6.296,
+      "year": 2026,
+      "period": "2023-2025",
+      "rank": 52,
+      "rankConfidenceInterval": [
+        43,
+        64
+      ]
+    },
+    "TJ": {
+      "code": "TJ",
+      "sourceName": "Tajikistan",
+      "value": 5.591,
+      "year": 2026,
+      "period": "2023-2025",
+      "rank": 88,
+      "rankConfidenceInterval": [
+        79,
+        92
+      ]
+    },
+    "TL": {
+      "code": "TL",
+      "sourceName": "Timor-Leste",
+      "value": null,
+      "year": 2026,
+      "period": "2023-2025",
+      "rank": null,
+      "rankConfidenceInterval": null,
+      "missingReason": "Not covered by the 147-country/territory WHR 2026 ranking."
+    },
+    "TM": {
+      "code": "TM",
+      "sourceName": "Turkmenistan",
+      "value": null,
+      "year": 2026,
+      "period": "2023-2025",
+      "rank": null,
+      "rankConfidenceInterval": null,
+      "missingReason": "Not covered by the 147-country/territory WHR 2026 ranking."
+    },
+    "TN": {
+      "code": "TN",
+      "sourceName": "Tunisia",
+      "value": 4.798,
+      "year": 2026,
+      "period": "2023-2025",
+      "rank": 105,
+      "rankConfidenceInterval": [
+        103,
+        113
+      ]
+    },
+    "TO": {
+      "code": "TO",
+      "sourceName": "Tonga",
+      "value": null,
+      "year": 2026,
+      "period": "2023-2025",
+      "rank": null,
+      "rankConfidenceInterval": null,
+      "missingReason": "Not covered by the 147-country/territory WHR 2026 ranking."
+    },
+    "TR": {
+      "code": "TR",
+      "sourceName": "Türkiye",
+      "value": 5.3,
+      "year": 2026,
+      "period": "2023-2025",
+      "rank": 94,
+      "rankConfidenceInterval": [
+        93,
+        99
+      ]
+    },
+    "TT": {
+      "code": "TT",
+      "sourceName": "Trinidad and Tobago",
+      "value": 5.905,
+      "year": 2026,
+      "period": "2023-2025",
+      "rank": 76,
+      "rankConfidenceInterval": [
+        55,
+        89
+      ]
+    },
+    "TV": {
+      "code": "TV",
+      "sourceName": "Tuvalu",
+      "value": null,
+      "year": 2026,
+      "period": "2023-2025",
+      "rank": null,
+      "rankConfidenceInterval": null,
+      "missingReason": "Not covered by the 147-country/territory WHR 2026 ranking."
+    },
+    "TZ": {
+      "code": "TZ",
+      "sourceName": "Tanzania",
+      "value": 3.902,
+      "year": 2026,
+      "period": "2023-2025",
+      "rank": 138,
+      "rankConfidenceInterval": [
+        133,
+        141
+      ]
+    },
+    "UA": {
+      "code": "UA",
+      "sourceName": "Ukraine",
+      "value": 4.658,
+      "year": 2026,
+      "period": "2023-2025",
+      "rank": 111,
+      "rankConfidenceInterval": [
+        104,
+        124
+      ]
+    },
+    "UG": {
+      "code": "UG",
+      "sourceName": "Uganda",
+      "value": 4.491,
+      "year": 2026,
+      "period": "2023-2025",
+      "rank": 118,
+      "rankConfidenceInterval": [
+        109,
+        130
+      ]
+    },
+    "US": {
+      "code": "US",
+      "sourceName": "United States",
+      "value": 6.816,
+      "year": 2026,
+      "period": "2023-2025",
+      "rank": 23,
+      "rankConfidenceInterval": [
+        12,
+        30
+      ]
+    },
+    "UY": {
+      "code": "UY",
+      "sourceName": "Uruguay",
+      "value": 6.635,
+      "year": 2026,
+      "period": "2023-2025",
+      "rank": 31,
+      "rankConfidenceInterval": [
+        24,
+        43
+      ]
+    },
+    "UZ": {
+      "code": "UZ",
+      "sourceName": "Uzbekistan",
+      "value": 6.283,
+      "year": 2026,
+      "period": "2023-2025",
+      "rank": 53,
+      "rankConfidenceInterval": [
+        43,
+        65
+      ]
+    },
+    "VA": {
+      "code": "VA",
+      "sourceName": "Vatican City",
+      "value": null,
+      "year": 2026,
+      "period": "2023-2025",
+      "rank": null,
+      "rankConfidenceInterval": null,
+      "missingReason": "Not covered by the 147-country/territory WHR 2026 ranking."
+    },
+    "VC": {
+      "code": "VC",
+      "sourceName": "Saint Vincent and the Grenadines",
+      "value": null,
+      "year": 2026,
+      "period": "2023-2025",
+      "rank": null,
+      "rankConfidenceInterval": null,
+      "missingReason": "Not covered by the 147-country/territory WHR 2026 ranking."
+    },
+    "VE": {
+      "code": "VE",
+      "sourceName": "Venezuela",
+      "value": 5.756,
+      "year": 2026,
+      "period": "2023-2025",
+      "rank": 80,
+      "rankConfidenceInterval": [
+        73,
+        89
+      ]
+    },
+    "VN": {
+      "code": "VN",
+      "sourceName": "Viet Nam",
+      "value": 6.428,
+      "year": 2026,
+      "period": "2023-2025",
+      "rank": 45,
+      "rankConfidenceInterval": [
+        36,
+        55
+      ]
+    },
+    "VU": {
+      "code": "VU",
+      "sourceName": "Vanuatu",
+      "value": null,
+      "year": 2026,
+      "period": "2023-2025",
+      "rank": null,
+      "rankConfidenceInterval": null,
+      "missingReason": "Not covered by the 147-country/territory WHR 2026 ranking."
+    },
+    "WS": {
+      "code": "WS",
+      "sourceName": "Samoa",
+      "value": null,
+      "year": 2026,
+      "period": "2023-2025",
+      "rank": null,
+      "rankConfidenceInterval": null,
+      "missingReason": "Not covered by the 147-country/territory WHR 2026 ranking."
+    },
+    "YE": {
+      "code": "YE",
+      "sourceName": "Yemen",
+      "value": 3.532,
+      "year": 2026,
+      "period": "2023-2025",
+      "rank": 142,
+      "rankConfidenceInterval": [
+        140,
+        145
+      ]
+    },
+    "ZA": {
+      "code": "ZA",
+      "sourceName": "South Africa",
+      "value": 5.009,
+      "year": 2026,
+      "period": "2023-2025",
+      "rank": 101,
+      "rankConfidenceInterval": [
+        95,
+        104
+      ]
+    },
+    "ZM": {
+      "code": "ZM",
+      "sourceName": "Zambia",
+      "value": 4.106,
+      "year": 2026,
+      "period": "2023-2025",
+      "rank": 133,
+      "rankConfidenceInterval": [
+        127,
+        138
+      ]
+    },
+    "ZW": {
+      "code": "ZW",
+      "sourceName": "Zimbabwe",
+      "value": 3.346,
+      "year": 2026,
+      "period": "2023-2025",
+      "rank": 144,
+      "rankConfidenceInterval": [
+        142,
+        146
+      ]
+    }
+  },
+  "additionalSourceTerritories": {
+    "XK": {
+      "code": "XK",
+      "sourceName": "Kosovo",
+      "value": 6.91,
+      "year": 2026,
+      "period": "2023-2025",
+      "rank": 16,
+      "rankConfidenceInterval": [
+        9,
+        26
+      ]
+    },
+    "TW": {
+      "code": "TW",
+      "sourceName": "Taiwan Province of China",
+      "value": 6.714,
+      "year": 2026,
+      "period": "2023-2025",
+      "rank": 26,
+      "rankConfidenceInterval": [
+        18,
+        41
+      ]
+    },
+    "HK": {
+      "code": "HK",
+      "sourceName": "Hong Kong SAR of China",
+      "value": 5.569,
+      "year": 2026,
+      "period": "2023-2025",
+      "rank": 90,
+      "rankConfidenceInterval": [
+        79,
+        93
+      ]
+    }
+  }
+}

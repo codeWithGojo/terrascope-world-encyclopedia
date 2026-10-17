@@ -1,0 +1,3 @@
+"use client";
+import {useEffect,useRef} from 'react';
+export function LayerSheet({children,onClose}:{children:React.ReactNode;onClose:()=>void}){const ref=useRef<HTMLDialogElement>(null);useEffect(()=>{const d=ref.current;d?.showModal();return()=>d?.close();},[]);return <dialog ref={ref} className="layer-sheet-modal" aria-labelledby="layer-sheet-title" onCancel={onClose} onClick={e=>{if(e.target===ref.current)onClose();}}><div className="layer-sheet"><div><h3 id="layer-sheet-title">A different lens.</h3><button type="button" className="icon-button" autoFocus onClick={onClose} aria-label="Close data layers">×</button></div>{children}</div></dialog>;}

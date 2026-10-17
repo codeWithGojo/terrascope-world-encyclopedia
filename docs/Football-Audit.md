@@ -1,0 +1,122 @@
+# Football archive audit — 17 October 2026
+
+36 clubs and six domestic leagues each have a top ten, and the global top ten has Cristiano Ronaldo and Lionel Messi sharing first place. Rankings are editorial.
+
+245 of 357 distinct players have a sourced selected personal award, record or official recognition. 112 do not yet have a verified entry. These profiles explicitly show that gap. A team trophy is not substituted for a personal award, and the register is not a complete career award tally.
+
+The Premier League source was re-opened to check Salah’s four Golden Boots and second Player of the Season award through 2024/25; the FIGC Hall of Fame source and UEFA’s Messi records were also checked. The inherited remaining source register has not all been re-researched in this continuation.
+
+## Remaining individual-honour research
+
+- Rachid Mekhloufi
+- Bernard Lacombe
+- Raí
+- Mustapha Dahleb
+- Luis Fernández
+- Basile Boli
+- Roger Magnusson
+- Chris Waddle
+- Fabien Barthez
+- Fleury Di Nallo
+- Sidney Govou
+- Robert Herbin
+- Dominique Rocheteau
+- Osvaldo Piazza
+- Jean-Michel Larqué
+- Gérard Janvion
+- Ivan Ćurković
+- Loïc Perrin
+- Claude Puel
+- Patrice Rio
+- José Touré
+- Roman Weidenfeller
+- Mats Hummels
+- Manfred Burgsmüller
+- Rainer Bonhof
+- Herbert Wimmer
+- Wolfgang Kleff
+- Uwe Kamps
+- Patrick Herrmann
+- Felix Magath
+- Thomas von Heesen
+- Horst Schnoor
+- Rafael van der Vaart
+- David Jarolím
+- Claudio Pizarro
+- Johan Micoud
+- Andreas Herzog
+- José Ángel Iribar
+- Rafael 'Pichichi' Moreno
+- Agustín 'Piru' Gainza
+- Julen Guerrero
+- Joseba Etxeberria
+- Cuco Ziganda
+- José Luis Panizo
+- Dani Ruiz-Bazán
+- Aritz Aduriz
+- Antonio Puchades
+- David Albelda
+- Fernando Gómez
+- Ricardo Arias
+- Guillermo Campanal
+- Antonio Puerta
+- José Antonio Reyes
+- Ivan Rakitić
+- Antonio Juliano
+- Careca
+- Giuseppe Bruscolotti
+- Lorenzo Insigne
+- Mudashiru Lawal
+- Rabiu Ali
+- Felix Owolabi
+- Haruna Ilerika
+- Emeka Nwanna
+- Muri Ogunbiyi
+- Obinna Nwaneri
+- Onyekachi Okonkwo
+- Dele Aiyenugba
+- Joetex Frimpong
+- Victor Ezeji
+- David Tyavkase
+- Stephen Worgu
+- Aloysius Atuegbu
+- Luke 'Jazz' Okpala
+- Godwin Achebe
+- Sylvanus Okpala
+- Dominic Ezeani
+- Okey Isima
+- Louis Igwilo
+- Jay-Jay Okocha
+- Best Ogedegbe
+- Taiwo Ogunjobi
+- Dimeji Lawal
+- Ajibade Babalade
+- Duke Udi
+- Olumide Harris
+- Muhammad Gambo
+- Theophilus Afelokhai
+- Ahmed Musa
+- Ahmed Garba
+- Sani Kaita
+- Victor Namo
+- Adamu Hassan
+- Mustapha Musa
+- Peter Egharevba
+- Kadiri Ikhana
+- Henry Ogboe
+- George Omokaro
+- Francis Monidafe
+- Julius Aghahowa
+- Peter Odemwingie
+- Augustine Eguavoen
+- Bright Omokaro
+- David Adiele
+- Thompson Oliha
+- Uche Okechukwu
+- Mobi Oparaku
+- Julius Ubido
+- Edward Ansah
+- Friday Ekpo
+- Etim Esin
+- Benjamin Nzeakor
+- Chijioke Ejiogu

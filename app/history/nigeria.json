@@ -1,0 +1,64 @@
+{
+  "country": "NG",
+  "title": "Nigeria through time",
+  "checkedAt": "2026-10-17",
+  "note": "A pilot timeline of selected moments; this is not a complete history.",
+  "events": [
+    {
+      "year": 1960,
+      "date": "1 October 1960",
+      "title": "Independence",
+      "summary": "Nigeria became independent from Britain as a federation with a parliamentary government. The moment followed decades of political organising and constitutional negotiation.",
+      "category": "independence",
+      "sourceLabel": "US Office of the Historian",
+      "sourceUrl": "https://history.state.gov/countries/nigeria"
+    },
+    {
+      "year": 1967,
+      "endYear": 1970,
+      "date": "1967–1970",
+      "title": "The Nigerian Civil War",
+      "summary": "War followed the Eastern Region’s declaration of Biafra. Civilians endured mass displacement, hunger and violence. Its consequences continue to shape public memory and debates about the federation.",
+      "category": "war",
+      "sourceLabel": "ICRC · People on War: Nigeria",
+      "sourceUrl": "https://www.icrc.org/eng/assets/files/other/nigeria.pdf"
+    },
+    {
+      "year": 1970,
+      "date": "January 1970",
+      "title": "The war ends",
+      "summary": "Biafra’s surrender ended the civil war. Reconstruction, relief and reconciliation became urgent tasks for communities across the affected regions.",
+      "category": "war",
+      "sourceLabel": "ICRC historical account",
+      "sourceUrl": "https://www.icrc.org/eng/assets/files/other/nigeria.pdf"
+    },
+    {
+      "year": 1986,
+      "date": "1986",
+      "title": "Wole Soyinka receives the Nobel Prize",
+      "summary": "The Nigerian playwright and poet received the Nobel Prize in Literature, a landmark in the international recognition of African writing.",
+      "category": "culture",
+      "sourceLabel": "The Nobel Prize",
+      "sourceUrl": "https://www.nobelprize.org/prizes/literature/1986/summary/"
+    },
+    {
+      "year": 1999,
+      "date": "29 May 1999",
+      "title": "Return to civilian rule",
+      "summary": "Olusegun Obasanjo was sworn in as an elected president, beginning the Fourth Republic after a long period of military government. The 1999 constitution entered into force the same day.",
+      "category": "politics",
+      "sourceLabel": "Federal Ministry of Information and WIPO Lex",
+      "sourceUrl": "https://fmino.gov.ng/may-29th-in-nigerias-history/"
+    },
+    {
+      "year": 2005,
+      "endYear": 2006,
+      "date": "2005–2006",
+      "title": "Paris Club debt agreement",
+      "summary": "Nigeria negotiated a major debt treatment with Paris Club creditors, combining debt relief with payments and buybacks. The deal substantially changed the country’s external debt position.",
+      "category": "economy",
+      "sourceLabel": "Nigeria Debt Management Office",
+      "sourceUrl": "https://www.dmo.gov.ng/publications/other-publications/nigeria-debt-relief"
+    }
+  ]
+}

@@ -1,0 +1,4 @@
+export type LayerId='population'|'gdp'|'perCapita'|'happiness'|'iq'|'temperature';
+export type LayerValue={value:number;year:number;rank:number|null};
+export type GlobeLayer={id:LayerId;label:string;unit:string;source:string;sourceUrl:string;period:string;measurement:string;coverage:number;rankNote:string;values:Record<string,LayerValue|null>;min:number;max:number;scale:'linear'|'log';licenseNote?:string};
+export function formatLayerValue(layer:Pick<GlobeLayer,'id'>,value:number){if(layer.id==='temperature')return `${value.toFixed(1)}°C`;if(layer.id==='happiness')return value.toFixed(3);if(layer.id==='iq')return value.toFixed(2);return `${layer.id==='gdp'||layer.id==='perCapita'?'US$ ':''}${new Intl.NumberFormat('en',{notation:value>=1e6?'compact':'standard',maximumFractionDigits:1}).format(value)}`;}

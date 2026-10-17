@@ -1,0 +1,13 @@
+import assert from 'node:assert/strict';
+import test from 'node:test';
+import fs from 'node:fs';
+import {geoArea,geoContains,geoOrthographic,geoPath} from 'd3-geo';
+import {searchEntries} from '../app/components/discovery/search.ts';
+import {distanceKm,layerFraction} from '../app/components/discovery/globe-math.ts';
+const countries=JSON.parse(fs.readFileSync(new URL('../public/data/globe-countries.json',import.meta.url)));
+const features=JSON.parse(fs.readFileSync(new URL('../public/data/world-boundaries.json',import.meta.url))).features;
+const index=JSON.parse(fs.readFileSync(new URL('../public/data/discovery-index.json',import.meta.url)));
+test('all 195 sovereign profiles are discoverable on the globe and in the lazy index',()=>{assert.equal(countries.length,195);assert.equal(features.length,195);for(const c of countries){assert.ok(features.find(f=>f.properties.code===c.code),c.code);assert.ok(index.find(e=>e.id===`country-${c.code}`),c.code);}for(const group of ['Countries','Cities','Leaders','Landmarks','Leagues','Players'])assert.ok(index.some(e=>e.group===group),group);});
+test('spherical country picking identifies real boundaries on either hemisphere',()=>{for(const [code,p] of [['NG',[8,9]],['US',[-100,40]],['JP',[139,36]],['BR',[-52,-10]],['AU',[135,-25]],['IT',[12,43]]]){const f=features.find(f=>f.properties.code===code);assert.ok(geoContains(f,p),code);assert.ok(geoArea(f)<Math.PI*2,code);const projection=geoOrthographic().rotate([-p[0],-p[1]]).scale(200).translate([250,250]);const xy=projection(p),inverse=projection.invert(xy);assert.ok(Math.abs(inverse[0]-p[0])<.001);assert.ok(geoPath(projection)(f).length>10);}});
+test('fuzzy search handles accents, partial names and popular aliases',()=>{assert.equal(searchEntries(index,'nigria')[0].label,'Nigeria');assert.ok(searchEntries(index,'Salah').some(e=>e.label==='Mohamed Salah'));assert.ok(searchEntries(index,'CR7').some(e=>e.label==='Cristiano Ronaldo'));assert.equal(searchEntries(index,'zzzzzzzzz').length,0);});
+test('layer scales are bounded and great-circle hints use kilometres',()=>{assert.equal(layerFraction(10,1,100,'log'),.5);assert.equal(layerFraction(-1,0,1,'linear'),0);assert.equal(distanceKm([0,0],[0,0]),0);assert.ok(Math.abs(distanceKm([0,0],[90,0])-10008)<2);});
