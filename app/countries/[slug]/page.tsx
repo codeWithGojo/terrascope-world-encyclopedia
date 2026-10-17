@@ -1,4 +1,11 @@
 import Link from "next/link";
+import type {Metadata} from "next";
+import {getViewer} from "../../auth/viewer";
+import {ProGate} from "../../components/ProGate";
+import {historyByCode} from "../../history";
+import {HistoryTimeline} from "../../components/country/HistoryTimeline";
+import {LiveWidgets} from "../../components/country/LiveWidgets";
+import {ShareCountry} from "../../components/country/ShareCountry";
 import {notFound} from "next/navigation";
 import {atlasBySlug, atlasCountries, regionColours, type AtlasCountry} from "../../atlas-data";
 import {footballProfiles, nigeriaFieldNotes, notableRoles, type FootballProfile} from "../../editorial-data";
@@ -12,7 +19,15 @@ import {SiteFooter} from "../../components/SiteFooter";
 import {CountryDiscovery} from "../../components/CountryDiscovery";
 import {ElectionCountdown} from "../../components/ElectionCountdown";
 
+export const dynamic="force-dynamic";
 export function generateStaticParams() { return atlasCountries.map((country) => ({slug: country.slug})); }
+
+export async function generateMetadata({params}:{params:Promise<{slug:string}>}):Promise<Metadata> {
+  const {slug}=await params,country=atlasBySlug.get(slug);
+  if(!country)return {title:'Country not found | TerraScope'};
+  const origin=process.env.NEXT_PUBLIC_SITE_URL||'https://terrascope-world-encyclopedia.vercel.app';
+  return {title:`${country.name} · History, facts & travel | TerraScope`,openGraph:{title:`Discover ${country.name}`,images:[{url:new URL(`/api/countries/${slug}/card?size=landscape`,origin).href,width:600,height:315}]},twitter:{card:'summary_large_image'}};
+}
 
 const confederations: Record<AtlasCountry["region"], string> = {Africa:"CAF",Americas:"CONCACAF / CONMEBOL",Asia:"AFC",Europe:"UEFA",Oceania:"OFC"};
 
@@ -62,6 +77,7 @@ function travelWindow(country:AtlasCountry){
 
 export default async function CountryPage({params}:{params: Promise<{slug: string}>}) {
   const {slug} = await params;
+  const {features}=await getViewer();
   const country = atlasBySlug.get(slug);
   if (!country) notFound();
   const editorial = country.editorial;
@@ -98,7 +114,7 @@ export default async function CountryPage({params}:{params: Promise<{slug: strin
     </section>
 
     <section className="profile-body">
-      <aside><b>On this page</b><a href="#overview">Essential facts</a><a href="#statistics">Economy & wellbeing</a><a href="#story">Country in depth</a><a href="#interesting-facts">10 interesting facts</a><a href="#more-facts">Six more discoveries</a><a href="#heritage">Historic places</a><a href="#government">Leadership</a><a href="#next-election">Next election</a><a href="#places">Travel file</a><a href="#football">Football dossier</a><a href="#people">Notable people</a><Link href="/escape">Take a virtual escape ↗</Link><Link href="/rankings">Open world rankings ↗</Link></aside>
+      <aside><b>On this page</b><a href="#overview">Essential facts</a><a href="#statistics">Economy & wellbeing</a><a href="#story">Country in depth</a>{historyByCode[country.code]&&<a href="#history">History timeline</a>}<a href="#live">Time, weather & money</a><a href="#share-country">Share a country card</a><a href="#interesting-facts">10 interesting facts</a><a href="#more-facts">Six more discoveries</a><a href="#heritage">Historic places</a><a href="#government">Leadership</a><a href="#next-election">Next election</a><a href="#places">Travel file</a><a href="#football">Football dossier</a><a href="#people">Notable people</a><Link href="/escape">Take a virtual escape ↗</Link><Link href="/rankings">Open world rankings ↗</Link></aside>
       <div className="profile-content">
         <section id="overview"><p className="eyebrow"><span/>National record · {country.code}</p><h2>Essential<br/><em>facts.</em></h2><div className="fact-table expanded-facts">{essentialFacts.map(([key, value]) => <div key={key}><span>{key}</span><b>{value}</b></div>)}</div>{editorial && <blockquote><small>Field fact</small>{editorial.fact}</blockquote>}</section>
 
@@ -108,6 +124,9 @@ export default async function CountryPage({params}:{params: Promise<{slug: strin
 
         <section id="interesting-facts" className="profile-section interesting-facts-section"><p className="eyebrow"><span/>History · culture · geography</p><div className="section-title-row"><h2>10 interesting<br/><em>facts.</em></h2><span className={`content-status ${country.factsStatus}`}>{country.factsStatus === "curated" ? "Editorially curated" : "Atlas-verified core facts"}</span></div><ol>{country.interestingFacts.slice(0,10).map((fact,index)=><li key={fact}><span>{String(index+1).padStart(2,"0")}</span><p>{fact}</p></li>)}</ol></section>
 
+        {historyByCode[country.code]&&(features.history?<HistoryTimeline history={historyByCode[country.code]}/>:<section id="history" className="profile-section"><ProGate title="Nigeria through time"><div className="pro-preview"><b>{historyByCode[country.code].events[0].date} · {historyByCode[country.code].events[0].title}</b><p>{historyByCode[country.code].events[0].summary}</p></div></ProGate></section>)}
+        <LiveWidgets slug={country.slug} name={country.name} timezones={country.timezones} localCurrency={country.currencyCodes[0]??'USD'} currencies={country.currencyCodes}/>
+        <ShareCountry slug={country.slug} name={country.name} pro={features.hdExport}/>
         <CountryDiscovery country={country}/>
         <section id="government" className="profile-section"><p className="eyebrow"><span/>Leadership & state</p><h2>Government.</h2>{editorial ? <div className="leader-panel"><div className="leader-monogram">{editorial.leader.split(" ").map((name) => name[0]).slice(0, 2).join("")}</div><div><small>{editorial.leaderTitle} · official reference checked {leadershipCheckedAt}</small><h3>{editorial.leader}</h3><p>{editorial.government}</p><a href={leadershipSources[country.code]} target="_blank" rel="noreferrer">Official leadership reference ↗</a></div></div> : <div className="government-record"><span>{country.code}</span><div><small>Core state record</small><h3>{country.official}</h3><p>This complete-index profile currently carries verified geographic data. Current political leadership is maintained in the extended editorial records because office-holders require continuous date-stamped verification.</p></div></div>}</section>
         <section id="next-election" className="profile-section"><p className="eyebrow"><span/>The next national vote</p><h2>Election<br/><em>watch.</em></h2><ElectionCountdown code={country.code} country={country.name}/></section>

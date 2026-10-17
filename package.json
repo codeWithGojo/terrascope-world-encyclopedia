@@ -18,16 +18,21 @@
     "data:population": "bash scripts/sites-env.sh -- node scripts/refresh-population.mjs",
     "data:indicators": "bash scripts/sites-env.sh -- node scripts/refresh-indicators.mjs",
     "data:notable": "node scripts/refresh-notable-people.mjs",
-    "db:generate": "bash scripts/sites-env.sh -- drizzle-kit generate"
+    "db:generate": "bash scripts/sites-env.sh -- drizzle-kit generate",
+    "test:features": "node --import ./tests/ts-loader.mjs --test tests/country-features.test.mjs tests/engagement.test.mjs tests/football-audit.test.mjs tests/discovery.test.mjs tests/theme.test.mjs"
   },
   "dependencies": {
+    "@supabase/ssr": "0.12.7",
+    "@supabase/supabase-js": "2.118.0",
     "@svg-maps/world": "^2.0.0",
     "countries-and-timezones": "3.10.0",
     "drizzle-orm": "0.45.2",
     "next": "16.2.6",
     "react": "19.2.6",
     "react-dom": "19.2.6",
-    "world-countries": "^5.1.0"
+    "world-countries": "^5.1.0",
+    "d3-geo": "3.1.1",
+    "framer-motion": "14.3.0"
   },
   "devDependencies": {
     "@cloudflare/vite-plugin": "1.37.1",
@@ -45,7 +50,8 @@
     "typescript": "5.9.3",
     "vinext": "0.0.50",
     "vite": "8.0.13",
-    "wrangler": "4.92.0"
+    "wrangler": "4.92.0",
+    "@types/d3-geo": "3.1.1"
   },
   "type": "module",
   "displayName": "TerraScope World Encyclopedia"

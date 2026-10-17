@@ -1,0 +1,65 @@
+{
+  "reviewedAt": "2026-10-17T08:26:26Z",
+  "status": "Official provider pages checked; real API responses could not be fetched in the tool network.",
+  "openMeteo": {
+    "termsUrl": "https://open-meteo.com/en/terms",
+    "pricingUrl": "https://open-meteo.com/en/pricing",
+    "docsUrl": "https://open-meteo.com/en/docs",
+    "freeApiCommercialUse": false,
+    "subscriptionAppIsCommercial": true,
+    "freeTierLimits": { "minute": 600, "hour": 5000, "day": 10000 },
+    "commercialUseRequires": "Paid API subscription, dedicated customer endpoint and API key",
+    "customerEndpoint": "https://customer-api.open-meteo.com/v1/forecast",
+    "prototypeEndpoint": "https://api.open-meteo.com/v1/forecast",
+    "serverOnlySecretEnv": "OPEN_METEO_API_KEY",
+    "apiKeyQueryParameter": "apikey",
+    "dataLicense": "CC BY 4.0",
+    "attributionRequired": true,
+    "recommendedAttribution": "Weather data by Open-Meteo, CC BY 4.0. Forecast shown for the selected city or capital; not the whole country.",
+    "launchRule": "Configure the commercial customer API before charging subscriptions or displaying ads. The fact that the underlying weather data has an open license does not waive the free hosted API's non-commercial service restriction."
+  },
+  "frankfurter": {
+    "docsUrl": "https://frankfurter.dev/",
+    "termsUrl": "https://frankfurter.dev/license/",
+    "version": "v2",
+    "latestRatesEndpoint": "https://api.frankfurter.dev/v2/rates?base=USD&quotes=EUR,GBP,NGN",
+    "singleRateEndpointPattern": "https://api.frankfurter.dev/v2/rate/{base}/{quote}",
+    "currenciesEndpoint": "https://api.frankfurter.dev/v2/currencies",
+    "apiKeyRequired": false,
+    "blendedRatesFreeForCommercialUse": true,
+    "cacheAllowedAndEncouraged": true,
+    "monthlyOrDailyCaps": false,
+    "abuseRateLimiting": true,
+    "providerSpecificTermsApply": true,
+    "recommendedChoice": "Default v2 blended rates for a travel estimate. Show rate observation date and explicitly label converted amounts as estimates. Preserve server-side stale-cache fallback; do not invent a rate when a currency has no provider coverage.",
+    "ecb": {
+      "providerEndpoint": "https://api.frankfurter.dev/v2/providers/ecb/rates",
+      "termsUrl": "https://www.ecb.europa.eu/services/using-our-site/disclaimer/html/index.en.html",
+      "conditions": [
+        "Reproduce accurately and cite the ECB as the source.",
+        "If ECB information is incorporated in sold documents, tell buyers before payment and every time they access it that it is obtainable free from the ECB.",
+        "Disclose modifications to the source information."
+      ],
+      "coverageNote": "The ECB provider alone does not cover every world currency. Do not use ECB-only/v1 support as evidence that the chosen local currency will be available."
+    }
+  },
+  "worldHappinessReport": {
+    "dataSharingUrl": "https://www.worldhappiness.report/data-sharing/",
+    "faqUrl": "https://www.worldhappiness.report/faq/",
+    "downloadUrl": "https://files.worldhappiness.report/WHR26_Data_Figure_2.1.xlsx",
+    "reportYear": 2026,
+    "downloadIsFree": true,
+    "explicitCommercialRedistributionLicenseFound": false,
+    "requiredFollowUpBeforePaidDatasetLaunch": "Confirm the commercial redistribution terms with the World Happiness Report / data rights holder. Attribute the report in the meantime and do not describe the dataset as CC BY without an actual license."
+  },
+  "worldBankClimate": {
+    "sourceUrl": "https://climateknowledgeportal.worldbank.org/download-data",
+    "datasetTermsUrl": "https://climateknowledgeportal.worldbank.org/index.php/download-data",
+    "metadataUrl": "https://climateknowledgeportal.worldbank.org/index.php/metadata",
+    "datasetLicense": "CC BY 4.0 unless labelled otherwise, subject to additional dataset terms",
+    "underlyingCruLicenseUrl": "https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/",
+    "attributionRequired": true,
+    "documentationLicenseIsNotDataLicense": true,
+    "note": "The worldbank/climateknowledgeportal GitHub documentation is MPL, while CCKP dataset notices refer to CC BY 4.0 and CRU metadata cites OGL v3. Preserve the relevant dataset notice rather than assigning the docs license to the data."
+  }
+}

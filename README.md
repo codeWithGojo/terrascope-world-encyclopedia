@@ -131,3 +131,8 @@ Download saved itineraries to keep an independent copy.
 - `docs/TerraScope-Product-Pitch.md` explains positioning, a short pitch, launch ideas and the release's factual boundaries. No outbound posting or analytics are added.
 
 Validation: `node --test tests/data.test.mjs tests/planning.test.mjs tests/trips.test.mjs tests/exploration.test.mjs`; `npx tsc --noEmit`; after the Worker build, `node --test tests/rendered-html.test.mjs`. Existing D1 permissions and Vercel browser-mode trip behaviour are retained.
+
+
+## Country features continuation — 17 October 2026
+
+History pilot, live country widgets, share cards, daily game, optional Supabase accounts and three server-checked Pro features are described in [docs/Country-Features-Setup.md](docs/Country-Features-Setup.md). Payments remain closed. Use `npm run test:features` for targeted verification.

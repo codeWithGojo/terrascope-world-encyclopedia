@@ -38,7 +38,7 @@ test('election clocks respect reference-zone midnight, election day and expiry',
  for(const election of electionRegister){assert.ok(election.sourceUrl.startsWith('https://'));assert.doesNotThrow(()=>new Intl.DateTimeFormat('en',{timeZone:election.timezone}));if(election.status==='confirmed')assert.match(election.date,/^\d{4}-\d{2}-\d{2}$/);else assert.equal(election.date,undefined);}
 });
 test('football lists keep club, league and career rankings distinct, with complete sources',()=>{
- assert.equal(footballGreats.length,5);assert.equal(globalGoats.length,20);assert.ok(greatnessMethod.note.includes('Subjective'));
- const clubs=footballGreats.flatMap(l=>l.clubs);assert.equal(clubs.length,30);assert.equal(new Set(clubs.map(x=>x.id)).size,30);
- for(const league of footballGreats){assert.equal(league.clubs.length,6);assert.equal(league.players.length,10);assert.equal(new Set(league.players.map(x=>x.name)).size,10);for(const club of league.clubs){assert.equal(club.players.length,5);assert.equal(new Set(club.players.map(x=>x.name)).size,5);assert.ok(club.sourceUrl.startsWith('https://'));for(const player of club.players)assert.ok(player.reason.length>30);}}
+ assert.equal(footballGreats.length,6);assert.equal(globalGoats.length,10);assert.ok(greatnessMethod.note.includes('Subjective'));
+ const clubs=footballGreats.flatMap(l=>l.clubs);assert.equal(clubs.length,36);assert.equal(new Set(clubs.map(x=>x.id)).size,36);
+ for(const league of footballGreats){assert.equal(league.clubs.length,6);assert.equal(league.players.length,10);assert.equal(new Set(league.players.map(x=>x.name)).size,10);for(const club of league.clubs){assert.equal(club.players.length,10);assert.equal(new Set(club.players.map(x=>x.name)).size,10);assert.ok(club.sourceUrl.startsWith('https://'));for(const player of club.players)assert.ok(player.reason.length>30);}}
 });

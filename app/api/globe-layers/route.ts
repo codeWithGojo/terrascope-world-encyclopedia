@@ -1,0 +1,2 @@
+import {getLayer,layerIds,type LayerId} from '../../globe-layers';
+export async function GET(request:Request){const url=new URL(request.url);const id=url.searchParams.get('layer');if(!id){return Response.json(layerIds.map(id=>{const {values,...metadata}=getLayer(id);return metadata;}),{headers:{'Cache-Control':'public, max-age=3600'}});}if(!layerIds.includes(id as LayerId))return Response.json({error:'Unknown data layer'},{status:400});return Response.json(getLayer(id as LayerId),{headers:{'Cache-Control':'public, max-age=3600'}});}
