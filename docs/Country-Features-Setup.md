@@ -14,13 +14,17 @@ This continues the Phase 1/2 checkpoint. The cinematic **Explore the Planet** im
 
 ## Account setup
 
-No existing connected Supabase project was named TerraScope. No unrelated project's database was changed, no project was created, and `supabase/setup.sql` has **not** been applied remotely.
+TerraScope now uses the **DEV BOYZ** organization, selected by the owner after the personal organization's free active-project limit blocked creation. The project is `uzcvmoxjfgsmutfuvsks`, in `eu-west-1`, and was quoted at $0/month. No existing project was paused or changed.
 
-1. Choose or create the intended TerraScope Supabase project.
-2. Set its Auth site URL to the deployed origin. Allow `<origin>/auth/callback` and `<origin>/auth/callback?recovery=1` as redirects. Keep email confirmation enabled and configure production email delivery before public signup.
-3. Set the two public environment variables below in the intended Vercel environment, then redeploy. They must be present at build time for the account client.
-4. Run `supabase/setup.sql` in that project's SQL editor. It adds only the result table, a `(user_id, day)` primary key, owner SELECT/INSERT RLS policies and restricted grants. Pro status is never stored in the user-writable result table.
-5. Confirm a fresh signup, email confirmation, login, reset, logout and two-device game sync using real accounts. These provider-dependent flows have not been verified without the target project.
+`supabase/setup.sql` was applied as the `create_terrascope_daily_games` migration. The table has RLS enabled, owner SELECT/INSERT policies, no anonymous grants, and no UPDATE or DELETE grants for authenticated users. Transactional checks confirmed that another user's write, a future result and anonymous reads are rejected. The owner's current-day write passes RLS before the expected missing-test-user foreign-key rejection. No test users or results were retained. Supabase's security advisor returned no notices.
+
+Vercel's **production** environment now contains the publishable connection key, `https://uzcvmoxjfgsmutfuvsks.supabase.co`, and the canonical site origin. Preview and development environments do not share this production database configuration. Only public browser credentials are used; no service-role key is stored in the website.
+
+Remaining provider setup:
+
+1. In [Auth URL Configuration](https://supabase.com/dashboard/project/uzcvmoxjfgsmutfuvsks/auth/url-configuration), set Site URL to `https://terrascope-world-encyclopedia.vercel.app`. Add `https://terrascope-world-encyclopedia.vercel.app/auth/callback` and `https://terrascope-world-encyclopedia.vercel.app/auth/callback?recovery=1` to allowed redirects. Keep email confirmation enabled. The connected Supabase tools do not expose these settings; dashboard access is required.
+2. Configure [custom SMTP](https://supabase.com/dashboard/project/uzcvmoxjfgsmutfuvsks/auth/smtp) before public signup. Supabase's built-in sender is restricted to organization team members and intended for testing. Email credentials have not been provided.
+3. Confirm a fresh signup, email confirmation, login, reset, logout and two-device game sync using real accounts after the provider settings are ready. These email-dependent and signed-in flows remain unverified.
 
 | Variable | Purpose | Required now? |
 | --- | --- | --- |
@@ -50,7 +54,7 @@ The proxy refreshes account cookies and marks personalised responses private/no-
 
 Run `npm run test:features`, `npx tsc --noEmit` and `npm run build:vercel`. The feature tests cover cache coalescing/outages, missing forecast values, exact card sizes, globe boundary picking and search, UTC puzzle changes, answer concealment, guess validation, practice/hard mode, direction/distance, deduplicated streaks, forged HD requests, cross-origin writes and football coverage/ranks/source status.
 
-The existing data, planning, trip-permission and exploration tests are retained. PNG generation was exercised directly, and standard landscape output was visually inspected. Live weather and NGN reference responses were retrieved successfully. A supported browser-control plugin was unavailable, so full browser/mobile interaction QA has not been completed. Supabase email delivery, account sync and a real signed-in Pro account still require the chosen project.
+The existing data, planning, trip-permission and exploration tests are retained. PNG generation was exercised directly, and standard landscape output was visually inspected. Live weather and NGN reference responses were retrieved successfully. The DEV BOYZ account database passed the access-policy checks described above. A supported browser-control plugin was unavailable, so full browser/mobile interaction QA has not been completed. Email confirmation, password recovery, signed-in account sync and a real Pro account still require provider configuration and end-to-end verification.
 
 ## Changed areas
 
