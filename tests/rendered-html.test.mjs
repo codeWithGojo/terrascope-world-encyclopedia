@@ -4,7 +4,7 @@ import test from "node:test";
 const developmentPreviewMeta =
   /<meta(?=[^>]*\bname=["']codex-preview["'])(?=[^>]*\bcontent=["']development["'])[^>]*>/i;
 
-test("renders development preview metadata", async () => {
+test("renders TerraScope's production homepage without development metadata", async () => {
   const workerUrl = new URL("../dist/server/index.js", import.meta.url);
   workerUrl.searchParams.set("test", `${process.pid}-${Date.now()}`);
   const { default: worker } = await import(workerUrl.href);
@@ -29,7 +29,10 @@ test("renders development preview metadata", async () => {
     response.headers.get("content-type") ?? "",
     /^text\/html\b/i,
   );
-  assert.match(await response.text(), developmentPreviewMeta);
+  const html=await response.text();
+  assert.match(html, /TerraScope/);
+  assert.match(html, /Take me somewhere/);
+  assert.doesNotMatch(html, developmentPreviewMeta);
 });
 
 
@@ -46,6 +49,10 @@ test("refreshed country records, new city guides and the Fun planner render thro
   ['/trips?destination=Nigeria&city=Lagos',[/Paintball/,/Swimming \/ pool day/,/Sip and paint/,/Shoothouse/,/Rage room/,/Movies/,/Pick activities for my budget/,/Indoor/,/Outdoor/]],
   ['/compare',[/GDP per person/,/Life expectancy at birth/,/Total area/]],
   ['/method',[/countries have at least one metric/,/detailed city guides/,/fun activity types/]],
+  ['/escape',[/Somewhere else/,/360° panorama/,/photo journey/i,/exploration passport/]],
+  ['/football-archive/greats',[/Club icons/,/League greats/,/The GOAT list/,/Manchester United/,/Subjective/]],
+  ['/elections',[/Official polling date/,/expected|Expected/,/INEC/,/No.*date|Exact dates/]],
+  ['/countries/nigeria',[/Places with/,/Osun-Osogbo Sacred Grove/,/Election/,/Six more|A little/]],
  ]){
   const response=await worker.fetch(new Request('http://localhost'+path,{headers:{accept:'text/html'}}),env,context);
   assert.equal(response.status,200,path);const html=await response.text();for(const pattern of patterns)assert.match(html,pattern,path);

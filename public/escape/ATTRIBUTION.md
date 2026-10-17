@@ -1,0 +1,7 @@
+# Escape imagery
+
+- `earth.jpg`: NASA / Blue Marble. Source collection: https://science.nasa.gov/earth/earth-observatory/collections/blue-marble/ . Source image: https://eoimages.gsfc.nasa.gov/images/imagerecords/57000/57730/land_ocean_ice_2048.jpg . Recompressed for web use. No NASA endorsement is implied.
+- `jordan-pond.jpg` and `jordan-pond-preview.jpg`: Matthew Petroff, Jordan Pond panorama, from https://github.com/mpetroff/pannellum/blob/master/examples/examplepano.jpg . CC BY-SA 3.0: https://creativecommons.org/licenses/by-sa/3.0/ . Image title and author are documented in https://github.com/mpetroff/pannellum/blob/master/examples/example.htm . Recompressed; preview resized.
+- `alma.jpg`, `cerro-toco.jpg`, `mason-circle.jpg`, `spring-house.jpg` and associated previews: Matthew Petroff / Pannellum.org example photographs, CC BY-SA 4.0: https://creativecommons.org/licenses/by-sa/4.0/ . Sources: https://pannellum.org/images/alma.jpg , https://pannellum.org/images/cerro-toco-0.jpg , https://pannellum.org/images/from-tree.jpg and https://pannellum.org/images/bma-0.jpg . Recompressed; previews resized. The image-directory license is documented in https://github.com/mpetroff/pannellum.org/blob/master/readme.md .
+
+These images retain their stated share-alike licenses. They are not AI-generated scenes. Other guided journeys reuse the existing bundled Wikimedia Commons city-guide photographs and link their original file pages. The viewer uses original TerraScope WebGL code and does not load the Pannellum library or any third-party viewer script.

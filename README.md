@@ -120,3 +120,14 @@ Run `node --test tests/trips.test.mjs` for disposable SQLite persistence, tenant
 The public Vercel build uses `NEXT_PUBLIC_STORAGE_MODE=browser`. New records are stored in IndexedDB on the visitor's browser, without a login. They do not sync across devices and clearing site data removes them. No private account records are included. Private Sites builds keep the existing identity-bound D1 API.
 
 Download saved itineraries to keep an independent copy.
+
+## Open-world edition — 17 October 2026
+
+- `/escape`: 12 free journeys, including four 360-degree tours. Real, attributed photographs are bundled locally; the custom WebGL viewer loads on demand, with static fallback, keyboard/touch controls and a motion pause. Saved scenes, the exploration passport and football picks use browser-local storage.
+- The homepage uses NASA Earth imagery in a rotating spherical renderer. The large political atlas is deferred until needed.
+- Country pages add six discovery facts, official UNESCO heritage records and election watch. `app/heritage-data.ts` is the 17 October metadata snapshot of the active UNESCO World Heritage List, with delisted properties excluded.
+- `/elections` uses a reviewed official-source register. Timers count to calendar midnight in a specified zone; no date is manufactured for an unconfirmed election.
+- `/football-archive/greats` separates 30 club top-fives, five domestic top-tens and a 20-player global men's list. Rankings are editorial, not official statistical scores.
+- `docs/TerraScope-Product-Pitch.md` explains positioning, a short pitch, launch ideas and the release's factual boundaries. No outbound posting or analytics are added.
+
+Validation: `node --test tests/data.test.mjs tests/planning.test.mjs tests/trips.test.mjs tests/exploration.test.mjs`; `npx tsc --noEmit`; after the Worker build, `node --test tests/rendered-html.test.mjs`. Existing D1 permissions and Vercel browser-mode trip behaviour are retained.

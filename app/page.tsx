@@ -1,8 +1,10 @@
 import {atlasCountries,atlasByCode} from "./atlas-data";
 import {worldPopulation,populationDataset} from "./population-data";
 import Link from "next/link";
-import {WorldAtlas} from "./components/WorldAtlas";
+import {LazyAtlas} from "./components/LazyAtlas";
 import {SiteHeader} from "./components/SiteHeader";
+import {MovingGlobe} from "./components/MovingGlobe";
+import {SiteFooter} from "./components/SiteFooter";
 
 const continents = [
   { name: "Africa", mark: "AF", size: "continent-hero", location: "Okonjima, Namibia", credit: "Nadine Marfurt", image: "/continents/africa.jpg", copy: "Ancient landscapes, young cities and more genetic, linguistic and cultural diversity than any summary can contain." },
@@ -14,21 +16,26 @@ const continents = [
 
 export default function Home() {
   return (
-    <main>
+    <main className="home-page">
       <SiteHeader />
       <section className="hero">
         <div className="hero-copy">
-          <p className="eyebrow"><span /> Countries, cities & travel</p>
-          <h1>Find your next<br /><em>place to explore.</em></h1>
-          <p className="hero-intro">Browse country profiles, compare destinations, or plan an outing around your interests and budget.</p>
+          <p className="eyebrow"><span /> An atlas for the curious</p>
+          <h1>There’s a whole<br /><em>world out there.</em></h1>
+          <p className="hero-intro">Step into a new landscape. Find the story behind a place. Get lost in football history. A small escape can start right here.</p>
+          <div className="hero-actions"><Link href="/escape" className="ts-button">Take me somewhere <span>↗</span></Link><Link href="/countries">Explore 195 countries →</Link></div>
           <form className="search-bar" action="/countries">
             <span aria-hidden="true">⌕</span><label className="sr-only" htmlFor="country-search">Search countries and cities</label>
-            <input id="country-search" name="q" placeholder="Search a country, capital or region" /><button type="submit">Explore</button>
+            <input id="country-search" name="q" placeholder="Where are you curious about?" /><button type="submit">Find it</button>
           </form>
           <p className="search-hint"><b>Popular:</b> Nigeria · Japan · Brazil · France</p>
         </div>
-        <WorldAtlas compact />
+        <MovingGlobe />
       </section>
+
+      <section className="home-experience-links" aria-label="Ways to explore"><Link href="/escape"><span>01 / Escape</span><b>A change of scene.</b><small>Free 360° views & photo journeys ↗</small></Link><Link href="/countries"><span>02 / Discover</span><b>A world worth knowing.</b><small>Countries, people & historic places ↗</small></Link><Link href="/football-archive/greats"><span>03 / Debate</span><b>The names that live on.</b><small>Club legends, league greats & the GOAT list ↗</small></Link></section>
+
+      <section className="home-escape-section"><div className="section-heading"><div><p className="eyebrow"><span/>A moment somewhere new</p><h2>Your next escape<br/><em>costs nothing.</em></h2></div><p>Turn around a mountain landscape, pause beside the Nile, or follow a city through real photographs. Pick a place and take your time.</p></div><div className="home-escape-grid"><Link href="/escape?scene=giza" className="home-escape-large" style={{backgroundImage:"url('/travel/All%20Gizah%20Pyramids.jpg')"}}><span>Egypt · Guided photo journey</span><div><small>History, on a different scale</small><h3>An afternoon<br/>in ancient Egypt.</h3><b>Start the journey ↗</b></div></Link><Link href="/escape?scene=jordan-pond" className="home-escape-small"><img src="/escape/jordan-pond-preview.jpg" alt="Granite, forest and water near Jordan Pond, Maine" loading="lazy"/><div><span>United States · 360° panorama</span><h3>A quiet mountain morning.</h3><p>Look around. Breathe a little slower. ↗</p></div></Link></div></section>
 
       <section className="global-strip" aria-label="Global statistics">
         <div><small>World population · {worldPopulation.year}</small><strong>{(worldPopulation.value/1e9).toFixed(2)}<em>billion</em></strong></div><div><small>Sovereign country profiles</small><strong>195</strong></div>
@@ -45,6 +52,8 @@ export default function Home() {
           <article><span>03</span><h3>Football</h3><p>More than 50 player dossiers connecting modern stars and legends to their nations.</p></article>
         </div>
       </section>
+
+      <section className="home-map-section"><div className="section-heading"><div><p className="eyebrow"><span/>Your next rabbit hole</p><h2>Put a place<br/><em>to the name.</em></h2></div><p>Touch a country on the map, search for a capital, or choose a continent. Every profile has a different story waiting.</p></div><LazyAtlas/></section>
 
       <section className="discovery" id="explore">
         <div className="section-heading"><div><p className="eyebrow"><span /> Start exploring</p><h2>Start with<br /><em>Nigeria.</em></h2></div><p>Begin with today’s featured nation, browse by continent, or follow the trail of a remarkable person.</p></div>
@@ -84,7 +93,7 @@ export default function Home() {
 
       <section className="atlas-cta"><small>TerraScope · Digital World Encyclopaedia</small><h2>Where would you like to go?</h2><div><Link href="/countries/nigeria">Discover Nigeria <span>↗</span></Link><Link href="/countries">Browse all profiles <span>→</span></Link></div></section>
 
-      <footer><div><span className="brand-mark light">T</span><h2>Go somewhere<br />you’ve never been.</h2></div><p>TerraScope is an independent digital atlas designed to make our complicated world easier—and more delightful—to understand.</p><div className="footer-bottom"><span>© 2026 TerraScope</span><Link href="/method#data-register">Sources &amp; methodology</Link><span>Lagos · WAT</span></div></footer>
+      <SiteFooter/>
     </main>
   );
 }
