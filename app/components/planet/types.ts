@@ -1,0 +1,14 @@
+import type {Feature,Geometry} from 'geojson';
+export type Country={code:string;name:string;slug:string;flag:string;capital:string;region:string;latitude:number;longitude:number;capitalLatitude?:number;capitalLongitude?:number;timezone?:string;facts:string[];population:number;populationYear:number;area:number;perCapita:{value:number;year:number}|null;lifeExpectancy:{value:number;year:number}|null;iq:{score:number;rank:number}|null};
+export type Boundary=Feature<Geometry,{code:string;name?:string;historical?:boolean;year?:number}>;
+export type Camera={lat:number;lng:number;altitude:number};
+export type EarthStyle='satellite'|'night'|'political'|'topographic';
+export type Metric='none'|'population'|'perCapita'|'lifeExpectancy'|'iq';
+export type Layer={id:Exclude<Metric,'none'>;label:string;unit:string;source:string;url:string;period:string;measurement:string;scale:'linear'|'log';min:number;max:number;coverage:number;values:Record<string,{value:number;year:number;rank:number}|null>};
+export type Quake={id:string;lat:number;lng:number;magnitude:number;place:string;time:number};
+export type Arc={id:string;startLat:number;startLng:number;endLat:number;endLng:number;kind:'trade'|'compare';name:string;share?:number;year?:number};
+export type Historic={year:number;features:Boundary[]};
+export type Place={name:string;code:string;country:string;latitude:number;longitude:number;kind:'Capital'|'City'};
+export type TourStop={code:string;lat:number;lon:number;zoom:number;title:string;caption:string};
+export type Tour={id:string;title:string;description:string;stops:TourStop[]};
+export type EngineHandle={flyTo:(camera:Camera,duration?:number)=>void;getCamera:()=>Camera;exportImage:(width:number,height:number,position?:Camera)=>Promise<Blob>;pause:()=>void;resume:()=>void};

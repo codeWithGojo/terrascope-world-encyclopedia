@@ -1,3 +1,4 @@
+import {ExplorePlanet} from './components/planet/ExplorePlanet';
 import {atlasCountries,atlasByCode} from "./atlas-data";
 import {worldPopulation,populationDataset} from "./population-data";
 import Link from "next/link";
@@ -33,6 +34,8 @@ export default function Home() {
         <MovingGlobe />
       </section>
 
+
+      <ExplorePlanet/>
 
       <section className="home-experience-links" aria-label="Ways to explore"><Link href="/escape"><span>01 / Escape</span><b>A change of scene.</b><small>Free 360° views & photo journeys ↗</small></Link><Link href="/countries"><span>02 / Discover</span><b>A world worth knowing.</b><small>Countries, people & historic places ↗</small></Link><Link href="/football-archive/greats"><span>03 / Debate</span><b>The names that live on.</b><small>Club legends, league greats & the GOAT list ↗</small></Link></section>
 
