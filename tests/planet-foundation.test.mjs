@@ -1,0 +1,4 @@
+import test from 'node:test';import assert from 'node:assert/strict';import fs from 'node:fs';
+import {stops,normalizedProgress,storyStep} from '../app/components/planet/story.ts';
+test('Planet foundation is scoped, tokenised and reduced-motion aware',()=>{const t=fs.readFileSync('app/components/planet/tokens.css','utf8'),c=fs.readFileSync('app/components/planet/planet.css','utf8');assert.match(t,/--p-bg:#05070a/);assert.match(t,/--p-gold:#c8a96a/);assert.match(t,/cubic-bezier\(\.22,1,\.36,1\)/);assert.match(c,/prefers-reduced-motion/);assert.doesNotMatch(c,/(^|\})\s*(body|html|:root)\s*\{/);});
+test('scroll story traverses the four regions before interactive mode',()=>{assert.equal(stops.length,6);assert.match(stops[1].label,/Americas/);assert.match(stops[2].label,/Africa/);assert.match(stops[3].label,/Asia/);assert.match(stops[4].label,/Australia/);assert.equal(storyStep(-1),0);assert.equal(storyStep(1),5);assert.equal(normalizedProgress(-500,1000,500),1);});

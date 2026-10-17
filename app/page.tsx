@@ -1,4 +1,5 @@
 import {ExplorePlanet} from './components/planet/ExplorePlanet';
+import {getViewer} from './auth/viewer';
 import {atlasCountries,atlasByCode} from "./atlas-data";
 import {worldPopulation,populationDataset} from "./population-data";
 import Link from "next/link";
@@ -15,7 +16,8 @@ const continents = [
   { name: "Oceania", mark: "OC", size: "continent-standard", location: "Great Barrier Reef, Australia", credit: "Joan Li", image: "/continents/oceania.jpg", copy: "A blue continent: island nations, deep ocean cultures and ecosystems found nowhere else on Earth." },
 ];
 
-export default function Home() {
+export default async function Home() {
+  const {features}=await getViewer();
   return (
     <main className="home-page">
       <SiteHeader />
@@ -35,7 +37,7 @@ export default function Home() {
       </section>
 
 
-      <ExplorePlanet/>
+      <ExplorePlanet access={features}/>
 
       <section className="home-experience-links" aria-label="Ways to explore"><Link href="/escape"><span>01 / Escape</span><b>A change of scene.</b><small>Free 360° views & photo journeys ↗</small></Link><Link href="/countries"><span>02 / Discover</span><b>A world worth knowing.</b><small>Countries, people & historic places ↗</small></Link><Link href="/football-archive/greats"><span>03 / Debate</span><b>The names that live on.</b><small>Club legends, league greats & the GOAT list ↗</small></Link></section>
 

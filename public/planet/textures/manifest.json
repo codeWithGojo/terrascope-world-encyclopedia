@@ -1,0 +1,102 @@
+[
+  {
+    "path": "textures/earth-day-2k.jpg",
+    "sourceUrl": "https://assets.science.nasa.gov/content/dam/science/esd/eo/content-feature/bluemarble/images/land_ocean_ice_2048.jpg",
+    "originalPath": "textures/original/land_ocean_ice_2048.jpg",
+    "originalBytes": 266599,
+    "originalSize": [
+      2048,
+      1024
+    ],
+    "originalSha256": "d4dc80a6ef571939d0abe04a9bed3d3d1e6cd63e59514be1c5e43a6b069e6f1e",
+    "bytes": 234853,
+    "size": [
+      2048,
+      1024
+    ],
+    "mode": "RGB",
+    "sha256": "bb4ed1af1886c5c366c8c7b863280f92debbb2b2f952b83321837babd861e09e",
+    "transformation": "WGS84/equirectangular 2:1 preserved; Lanczos downsample 2048x1024; JPEG quality85 progressive optimized; RGB for color, luminance for alpha/elevation",
+    "retrievedAt": "2026-10-17T18:39:49.054174+00:00"
+  },
+  {
+    "path": "textures/earth-clouds-2k.jpg",
+    "sourceUrl": "https://assets.science.nasa.gov/content/dam/science/esd/eo/content-feature/bluemarble/images/cloud_combined_2048.jpg",
+    "originalPath": "textures/original/cloud_combined_2048.jpg",
+    "originalBytes": 829367,
+    "originalSize": [
+      2048,
+      1024
+    ],
+    "originalSha256": "daddaad84d7a33bbbc86cdda3f591099f57cee8607b7bcf3b67eb7e4f7a1c793",
+    "bytes": 575990,
+    "size": [
+      2048,
+      1024
+    ],
+    "mode": "L",
+    "sha256": "c187ee8a8cc4fbc1fdc4d487aed6e89d52a681ffb8d0ec086d86cd0f2fc444d5",
+    "transformation": "WGS84/equirectangular 2:1 preserved; Lanczos downsample 2048x1024; JPEG quality85 progressive optimized; RGB for color, luminance for alpha/elevation",
+    "retrievedAt": "2026-10-17T18:39:49.116437+00:00"
+  },
+  {
+    "path": "textures/earth-night-color-2k.jpg",
+    "sourceUrl": "https://assets.science.nasa.gov/content/dam/science/esd/eo/images/imagerecords/144000/144898/BlackMarble_2016_01deg.jpg",
+    "originalPath": "textures/original/BlackMarble_2016_01deg.jpg",
+    "originalBytes": 779638,
+    "originalSize": [
+      3600,
+      1800
+    ],
+    "originalSha256": "d87de751a264e4f8ff69c68de5dab9606daee87a6f15ae743c93200743bd7ec1",
+    "bytes": 141512,
+    "size": [
+      2048,
+      1024
+    ],
+    "mode": "RGB",
+    "sha256": "ac03e22c762fb19fc48275caec13ea30618f02324afca0a4e774a354184082a2",
+    "transformation": "WGS84/equirectangular 2:1 preserved; Lanczos downsample 2048x1024; JPEG quality85 progressive optimized; RGB for color, luminance for alpha/elevation",
+    "retrievedAt": "2026-10-17T18:39:49.024575+00:00"
+  },
+  {
+    "path": "textures/earth-night-lights-2k.jpg",
+    "sourceUrl": "https://assets.science.nasa.gov/content/dam/science/esd/eo/images/imagerecords/144000/144897/BlackMarble_2016_01deg_gray.jpg",
+    "originalPath": "textures/original/BlackMarble_2016_01deg_gray.jpg",
+    "originalBytes": 365655,
+    "originalSize": [
+      3600,
+      1800
+    ],
+    "originalSha256": "4d2158f59123dadf0696a1cf8909c45018a1de8d0daab40da04122a5aa7f27c6",
+    "bytes": 87351,
+    "size": [
+      2048,
+      1024
+    ],
+    "mode": "L",
+    "sha256": "640728029fffd76b905f3d3250118446b0f3d8b04541a1fd93dd128da207a300",
+    "transformation": "WGS84/equirectangular 2:1 preserved; Lanczos downsample 2048x1024; JPEG quality85 progressive optimized; RGB for color, luminance for alpha/elevation",
+    "retrievedAt": "2026-10-17T18:39:48.956519+00:00"
+  },
+  {
+    "path": "textures/earth-elevation-2k.jpg",
+    "sourceUrl": "https://assets.science.nasa.gov/content/dam/science/esd/eo/images/bmng/topography/gebco_08_rev_elev_5400x2700.jpg",
+    "originalPath": "textures/original/gebco_08_rev_elev_5400x2700.jpg",
+    "originalBytes": 1244508,
+    "originalSize": [
+      5400,
+      2700
+    ],
+    "originalSha256": "97828a87bcb6549a527232455e478c5f9e4556f761b37d620a46446da17593ab",
+    "bytes": 94566,
+    "size": [
+      2048,
+      1024
+    ],
+    "mode": "L",
+    "sha256": "45a17ba00d841e9c44d27657358ff911cbb5a6bb5f73161ad2bd77bda1b4af50",
+    "transformation": "WGS84/equirectangular 2:1 preserved; Lanczos downsample 2048x1024; JPEG quality85 progressive optimized; RGB for color, luminance for alpha/elevation",
+    "retrievedAt": "2026-10-17T18:39:49.208159+00:00"
+  }
+]

@@ -47,7 +47,7 @@ test("refreshed country records, new city guides and the Fun planner render thro
   ['/countries/nigeria/cities/osogbo',[/Osun-Osogbo/,/Rage room/,/Photography walk/,/UNESCO/]],
   ['/countries/egypt/cities/aswan',[/Philae/,/Unfinished Obelisk/,/Nubian Museum/]],
   ['/trips?destination=Nigeria&city=Lagos',[/Paintball/,/Swimming \/ pool day/,/Sip and paint/,/Shoothouse/,/Rage room/,/Movies/,/Pick activities for my budget/,/Indoor/,/Outdoor/]],
-  ['/compare',[/GDP per person/,/Life expectancy at birth/,/Total area/]],
+  ['/compare',[/Pro/,/A closer look/,/Payments are not open yet/]],
   ['/method',[/countries have at least one metric/,/detailed city guides/,/fun activity types/]],
   ['/escape',[/Somewhere else/,/360° panorama/,/photo journey/i,/exploration passport/]],
   ['/football-archive/greats',[/Club icons/,/League greats/,/The GOAT list/,/Manchester United/,/Subjective/]],

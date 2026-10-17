@@ -1,0 +1,8097 @@
+{
+  "retrievedAt": "2026-10-17",
+  "reporters": [
+    {
+      "code": "AF",
+      "cca3": "AFG",
+      "name": "Afghanistan"
+    },
+    {
+      "code": "AO",
+      "cca3": "AGO",
+      "name": "Angola"
+    },
+    {
+      "code": "AL",
+      "cca3": "ALB",
+      "name": "Albania"
+    },
+    {
+      "code": "AD",
+      "cca3": "AND",
+      "name": "Andorra"
+    },
+    {
+      "code": "AE",
+      "cca3": "ARE",
+      "name": "United Arab Emirates"
+    },
+    {
+      "code": "AR",
+      "cca3": "ARG",
+      "name": "Argentina"
+    },
+    {
+      "code": "AM",
+      "cca3": "ARM",
+      "name": "Armenia"
+    },
+    {
+      "code": "AG",
+      "cca3": "ATG",
+      "name": "Antigua and Barbuda"
+    },
+    {
+      "code": "AU",
+      "cca3": "AUS",
+      "name": "Australia"
+    },
+    {
+      "code": "AT",
+      "cca3": "AUT",
+      "name": "Austria"
+    },
+    {
+      "code": "AZ",
+      "cca3": "AZE",
+      "name": "Azerbaijan"
+    },
+    {
+      "code": "BI",
+      "cca3": "BDI",
+      "name": "Burundi"
+    },
+    {
+      "code": "BE",
+      "cca3": "BEL",
+      "name": "Belgium"
+    },
+    {
+      "code": "BJ",
+      "cca3": "BEN",
+      "name": "Benin"
+    },
+    {
+      "code": "BF",
+      "cca3": "BFA",
+      "name": "Burkina Faso"
+    },
+    {
+      "code": "BD",
+      "cca3": "BGD",
+      "name": "Bangladesh"
+    },
+    {
+      "code": "BG",
+      "cca3": "BGR",
+      "name": "Bulgaria"
+    },
+    {
+      "code": "BH",
+      "cca3": "BHR",
+      "name": "Bahrain"
+    },
+    {
+      "code": "BS",
+      "cca3": "BHS",
+      "name": "Bahamas"
+    },
+    {
+      "code": "BA",
+      "cca3": "BIH",
+      "name": "Bosnia and Herzegovina"
+    },
+    {
+      "code": "BY",
+      "cca3": "BLR",
+      "name": "Belarus"
+    },
+    {
+      "code": "BZ",
+      "cca3": "BLZ",
+      "name": "Belize"
+    },
+    {
+      "code": "BO",
+      "cca3": "BOL",
+      "name": "Bolivia"
+    },
+    {
+      "code": "BR",
+      "cca3": "BRA",
+      "name": "Brazil"
+    },
+    {
+      "code": "BB",
+      "cca3": "BRB",
+      "name": "Barbados"
+    },
+    {
+      "code": "BN",
+      "cca3": "BRN",
+      "name": "Brunei"
+    },
+    {
+      "code": "BT",
+      "cca3": "BTN",
+      "name": "Bhutan"
+    },
+    {
+      "code": "BW",
+      "cca3": "BWA",
+      "name": "Botswana"
+    },
+    {
+      "code": "CF",
+      "cca3": "CAF",
+      "name": "Central African Republic"
+    },
+    {
+      "code": "CA",
+      "cca3": "CAN",
+      "name": "Canada"
+    },
+    {
+      "code": "CH",
+      "cca3": "CHE",
+      "name": "Switzerland"
+    },
+    {
+      "code": "CL",
+      "cca3": "CHL",
+      "name": "Chile"
+    },
+    {
+      "code": "CN",
+      "cca3": "CHN",
+      "name": "China"
+    },
+    {
+      "code": "CI",
+      "cca3": "CIV",
+      "name": "Ivory Coast"
+    },
+    {
+      "code": "CM",
+      "cca3": "CMR",
+      "name": "Cameroon"
+    },
+    {
+      "code": "CD",
+      "cca3": "COD",
+      "name": "DR Congo"
+    },
+    {
+      "code": "CG",
+      "cca3": "COG",
+      "name": "Republic of the Congo"
+    },
+    {
+      "code": "CO",
+      "cca3": "COL",
+      "name": "Colombia"
+    },
+    {
+      "code": "KM",
+      "cca3": "COM",
+      "name": "Comoros"
+    },
+    {
+      "code": "CV",
+      "cca3": "CPV",
+      "name": "Cape Verde"
+    },
+    {
+      "code": "CR",
+      "cca3": "CRI",
+      "name": "Costa Rica"
+    },
+    {
+      "code": "CU",
+      "cca3": "CUB",
+      "name": "Cuba"
+    },
+    {
+      "code": "CY",
+      "cca3": "CYP",
+      "name": "Cyprus"
+    },
+    {
+      "code": "CZ",
+      "cca3": "CZE",
+      "name": "Czechia"
+    },
+    {
+      "code": "DE",
+      "cca3": "DEU",
+      "name": "Germany"
+    },
+    {
+      "code": "DJ",
+      "cca3": "DJI",
+      "name": "Djibouti"
+    },
+    {
+      "code": "DM",
+      "cca3": "DMA",
+      "name": "Dominica"
+    },
+    {
+      "code": "DK",
+      "cca3": "DNK",
+      "name": "Denmark"
+    },
+    {
+      "code": "DO",
+      "cca3": "DOM",
+      "name": "Dominican Republic"
+    },
+    {
+      "code": "DZ",
+      "cca3": "DZA",
+      "name": "Algeria"
+    },
+    {
+      "code": "EC",
+      "cca3": "ECU",
+      "name": "Ecuador"
+    },
+    {
+      "code": "EG",
+      "cca3": "EGY",
+      "name": "Egypt"
+    },
+    {
+      "code": "ER",
+      "cca3": "ERI",
+      "name": "Eritrea"
+    },
+    {
+      "code": "ES",
+      "cca3": "ESP",
+      "name": "Spain"
+    },
+    {
+      "code": "EE",
+      "cca3": "EST",
+      "name": "Estonia"
+    },
+    {
+      "code": "ET",
+      "cca3": "ETH",
+      "name": "Ethiopia"
+    },
+    {
+      "code": "FI",
+      "cca3": "FIN",
+      "name": "Finland"
+    },
+    {
+      "code": "FJ",
+      "cca3": "FJI",
+      "name": "Fiji"
+    },
+    {
+      "code": "FR",
+      "cca3": "FRA",
+      "name": "France"
+    },
+    {
+      "code": "FM",
+      "cca3": "FSM",
+      "name": "Micronesia"
+    },
+    {
+      "code": "GA",
+      "cca3": "GAB",
+      "name": "Gabon"
+    },
+    {
+      "code": "GB",
+      "cca3": "GBR",
+      "name": "United Kingdom"
+    },
+    {
+      "code": "GE",
+      "cca3": "GEO",
+      "name": "Georgia"
+    },
+    {
+      "code": "GH",
+      "cca3": "GHA",
+      "name": "Ghana"
+    },
+    {
+      "code": "GN",
+      "cca3": "GIN",
+      "name": "Guinea"
+    },
+    {
+      "code": "GM",
+      "cca3": "GMB",
+      "name": "Gambia"
+    },
+    {
+      "code": "GW",
+      "cca3": "GNB",
+      "name": "Guinea-Bissau"
+    },
+    {
+      "code": "GQ",
+      "cca3": "GNQ",
+      "name": "Equatorial Guinea"
+    },
+    {
+      "code": "GR",
+      "cca3": "GRC",
+      "name": "Greece"
+    },
+    {
+      "code": "GD",
+      "cca3": "GRD",
+      "name": "Grenada"
+    },
+    {
+      "code": "GT",
+      "cca3": "GTM",
+      "name": "Guatemala"
+    },
+    {
+      "code": "GY",
+      "cca3": "GUY",
+      "name": "Guyana"
+    },
+    {
+      "code": "HN",
+      "cca3": "HND",
+      "name": "Honduras"
+    },
+    {
+      "code": "HR",
+      "cca3": "HRV",
+      "name": "Croatia"
+    },
+    {
+      "code": "HT",
+      "cca3": "HTI",
+      "name": "Haiti"
+    },
+    {
+      "code": "HU",
+      "cca3": "HUN",
+      "name": "Hungary"
+    },
+    {
+      "code": "ID",
+      "cca3": "IDN",
+      "name": "Indonesia"
+    },
+    {
+      "code": "IN",
+      "cca3": "IND",
+      "name": "India"
+    },
+    {
+      "code": "IE",
+      "cca3": "IRL",
+      "name": "Ireland"
+    },
+    {
+      "code": "IR",
+      "cca3": "IRN",
+      "name": "Iran"
+    },
+    {
+      "code": "IQ",
+      "cca3": "IRQ",
+      "name": "Iraq"
+    },
+    {
+      "code": "IS",
+      "cca3": "ISL",
+      "name": "Iceland"
+    },
+    {
+      "code": "IL",
+      "cca3": "ISR",
+      "name": "Israel"
+    },
+    {
+      "code": "IT",
+      "cca3": "ITA",
+      "name": "Italy"
+    },
+    {
+      "code": "JM",
+      "cca3": "JAM",
+      "name": "Jamaica"
+    },
+    {
+      "code": "JO",
+      "cca3": "JOR",
+      "name": "Jordan"
+    },
+    {
+      "code": "JP",
+      "cca3": "JPN",
+      "name": "Japan"
+    },
+    {
+      "code": "KZ",
+      "cca3": "KAZ",
+      "name": "Kazakhstan"
+    },
+    {
+      "code": "KE",
+      "cca3": "KEN",
+      "name": "Kenya"
+    },
+    {
+      "code": "KG",
+      "cca3": "KGZ",
+      "name": "Kyrgyzstan"
+    },
+    {
+      "code": "KH",
+      "cca3": "KHM",
+      "name": "Cambodia"
+    },
+    {
+      "code": "KI",
+      "cca3": "KIR",
+      "name": "Kiribati"
+    },
+    {
+      "code": "KN",
+      "cca3": "KNA",
+      "name": "Saint Kitts and Nevis"
+    },
+    {
+      "code": "KR",
+      "cca3": "KOR",
+      "name": "South Korea"
+    },
+    {
+      "code": "KW",
+      "cca3": "KWT",
+      "name": "Kuwait"
+    },
+    {
+      "code": "LA",
+      "cca3": "LAO",
+      "name": "Laos"
+    },
+    {
+      "code": "LB",
+      "cca3": "LBN",
+      "name": "Lebanon"
+    },
+    {
+      "code": "LR",
+      "cca3": "LBR",
+      "name": "Liberia"
+    },
+    {
+      "code": "LY",
+      "cca3": "LBY",
+      "name": "Libya"
+    },
+    {
+      "code": "LC",
+      "cca3": "LCA",
+      "name": "Saint Lucia"
+    },
+    {
+      "code": "LI",
+      "cca3": "LIE",
+      "name": "Liechtenstein"
+    },
+    {
+      "code": "LK",
+      "cca3": "LKA",
+      "name": "Sri Lanka"
+    },
+    {
+      "code": "LS",
+      "cca3": "LSO",
+      "name": "Lesotho"
+    },
+    {
+      "code": "LT",
+      "cca3": "LTU",
+      "name": "Lithuania"
+    },
+    {
+      "code": "LU",
+      "cca3": "LUX",
+      "name": "Luxembourg"
+    },
+    {
+      "code": "LV",
+      "cca3": "LVA",
+      "name": "Latvia"
+    },
+    {
+      "code": "MA",
+      "cca3": "MAR",
+      "name": "Morocco"
+    },
+    {
+      "code": "MC",
+      "cca3": "MCO",
+      "name": "Monaco"
+    },
+    {
+      "code": "MD",
+      "cca3": "MDA",
+      "name": "Moldova"
+    },
+    {
+      "code": "MG",
+      "cca3": "MDG",
+      "name": "Madagascar"
+    },
+    {
+      "code": "MV",
+      "cca3": "MDV",
+      "name": "Maldives"
+    },
+    {
+      "code": "MX",
+      "cca3": "MEX",
+      "name": "Mexico"
+    },
+    {
+      "code": "MH",
+      "cca3": "MHL",
+      "name": "Marshall Islands"
+    },
+    {
+      "code": "MK",
+      "cca3": "MKD",
+      "name": "North Macedonia"
+    },
+    {
+      "code": "ML",
+      "cca3": "MLI",
+      "name": "Mali"
+    },
+    {
+      "code": "MT",
+      "cca3": "MLT",
+      "name": "Malta"
+    },
+    {
+      "code": "MM",
+      "cca3": "MMR",
+      "name": "Myanmar"
+    },
+    {
+      "code": "ME",
+      "cca3": "MNE",
+      "name": "Montenegro"
+    },
+    {
+      "code": "MN",
+      "cca3": "MNG",
+      "name": "Mongolia"
+    },
+    {
+      "code": "MZ",
+      "cca3": "MOZ",
+      "name": "Mozambique"
+    },
+    {
+      "code": "MR",
+      "cca3": "MRT",
+      "name": "Mauritania"
+    },
+    {
+      "code": "MU",
+      "cca3": "MUS",
+      "name": "Mauritius"
+    },
+    {
+      "code": "MW",
+      "cca3": "MWI",
+      "name": "Malawi"
+    },
+    {
+      "code": "MY",
+      "cca3": "MYS",
+      "name": "Malaysia"
+    },
+    {
+      "code": "NA",
+      "cca3": "NAM",
+      "name": "Namibia"
+    },
+    {
+      "code": "NE",
+      "cca3": "NER",
+      "name": "Niger"
+    },
+    {
+      "code": "NG",
+      "cca3": "NGA",
+      "name": "Nigeria"
+    },
+    {
+      "code": "NI",
+      "cca3": "NIC",
+      "name": "Nicaragua"
+    },
+    {
+      "code": "NL",
+      "cca3": "NLD",
+      "name": "Netherlands"
+    },
+    {
+      "code": "NO",
+      "cca3": "NOR",
+      "name": "Norway"
+    },
+    {
+      "code": "NP",
+      "cca3": "NPL",
+      "name": "Nepal"
+    },
+    {
+      "code": "NR",
+      "cca3": "NRU",
+      "name": "Nauru"
+    },
+    {
+      "code": "NZ",
+      "cca3": "NZL",
+      "name": "New Zealand"
+    },
+    {
+      "code": "OM",
+      "cca3": "OMN",
+      "name": "Oman"
+    },
+    {
+      "code": "PK",
+      "cca3": "PAK",
+      "name": "Pakistan"
+    },
+    {
+      "code": "PA",
+      "cca3": "PAN",
+      "name": "Panama"
+    },
+    {
+      "code": "PE",
+      "cca3": "PER",
+      "name": "Peru"
+    },
+    {
+      "code": "PH",
+      "cca3": "PHL",
+      "name": "Philippines"
+    },
+    {
+      "code": "PW",
+      "cca3": "PLW",
+      "name": "Palau"
+    },
+    {
+      "code": "PG",
+      "cca3": "PNG",
+      "name": "Papua New Guinea"
+    },
+    {
+      "code": "PL",
+      "cca3": "POL",
+      "name": "Poland"
+    },
+    {
+      "code": "KP",
+      "cca3": "PRK",
+      "name": "North Korea"
+    },
+    {
+      "code": "PT",
+      "cca3": "PRT",
+      "name": "Portugal"
+    },
+    {
+      "code": "PY",
+      "cca3": "PRY",
+      "name": "Paraguay"
+    },
+    {
+      "code": "PS",
+      "cca3": "PSE",
+      "name": "Palestine"
+    },
+    {
+      "code": "QA",
+      "cca3": "QAT",
+      "name": "Qatar"
+    },
+    {
+      "code": "RO",
+      "cca3": "ROU",
+      "name": "Romania"
+    },
+    {
+      "code": "RU",
+      "cca3": "RUS",
+      "name": "Russia"
+    },
+    {
+      "code": "RW",
+      "cca3": "RWA",
+      "name": "Rwanda"
+    },
+    {
+      "code": "SA",
+      "cca3": "SAU",
+      "name": "Saudi Arabia"
+    },
+    {
+      "code": "SD",
+      "cca3": "SDN",
+      "name": "Sudan"
+    },
+    {
+      "code": "SN",
+      "cca3": "SEN",
+      "name": "Senegal"
+    },
+    {
+      "code": "SG",
+      "cca3": "SGP",
+      "name": "Singapore"
+    },
+    {
+      "code": "SB",
+      "cca3": "SLB",
+      "name": "Solomon Islands"
+    },
+    {
+      "code": "SL",
+      "cca3": "SLE",
+      "name": "Sierra Leone"
+    },
+    {
+      "code": "SV",
+      "cca3": "SLV",
+      "name": "El Salvador"
+    },
+    {
+      "code": "SM",
+      "cca3": "SMR",
+      "name": "San Marino"
+    },
+    {
+      "code": "SO",
+      "cca3": "SOM",
+      "name": "Somalia"
+    },
+    {
+      "code": "RS",
+      "cca3": "SRB",
+      "name": "Serbia"
+    },
+    {
+      "code": "SS",
+      "cca3": "SSD",
+      "name": "South Sudan"
+    },
+    {
+      "code": "ST",
+      "cca3": "STP",
+      "name": "São Tomé and Príncipe"
+    },
+    {
+      "code": "SR",
+      "cca3": "SUR",
+      "name": "Suriname"
+    },
+    {
+      "code": "SK",
+      "cca3": "SVK",
+      "name": "Slovakia"
+    },
+    {
+      "code": "SI",
+      "cca3": "SVN",
+      "name": "Slovenia"
+    },
+    {
+      "code": "SE",
+      "cca3": "SWE",
+      "name": "Sweden"
+    },
+    {
+      "code": "SZ",
+      "cca3": "SWZ",
+      "name": "Eswatini"
+    },
+    {
+      "code": "SC",
+      "cca3": "SYC",
+      "name": "Seychelles"
+    },
+    {
+      "code": "SY",
+      "cca3": "SYR",
+      "name": "Syria"
+    },
+    {
+      "code": "TD",
+      "cca3": "TCD",
+      "name": "Chad"
+    },
+    {
+      "code": "TG",
+      "cca3": "TGO",
+      "name": "Togo"
+    },
+    {
+      "code": "TH",
+      "cca3": "THA",
+      "name": "Thailand"
+    },
+    {
+      "code": "TJ",
+      "cca3": "TJK",
+      "name": "Tajikistan"
+    },
+    {
+      "code": "TM",
+      "cca3": "TKM",
+      "name": "Turkmenistan"
+    },
+    {
+      "code": "TL",
+      "cca3": "TLS",
+      "name": "Timor-Leste"
+    },
+    {
+      "code": "TO",
+      "cca3": "TON",
+      "name": "Tonga"
+    },
+    {
+      "code": "TT",
+      "cca3": "TTO",
+      "name": "Trinidad and Tobago"
+    },
+    {
+      "code": "TN",
+      "cca3": "TUN",
+      "name": "Tunisia"
+    },
+    {
+      "code": "TR",
+      "cca3": "TUR",
+      "name": "Türkiye"
+    },
+    {
+      "code": "TV",
+      "cca3": "TUV",
+      "name": "Tuvalu"
+    },
+    {
+      "code": "TZ",
+      "cca3": "TZA",
+      "name": "Tanzania"
+    },
+    {
+      "code": "UG",
+      "cca3": "UGA",
+      "name": "Uganda"
+    },
+    {
+      "code": "UA",
+      "cca3": "UKR",
+      "name": "Ukraine"
+    },
+    {
+      "code": "UY",
+      "cca3": "URY",
+      "name": "Uruguay"
+    },
+    {
+      "code": "US",
+      "cca3": "USA",
+      "name": "United States"
+    },
+    {
+      "code": "UZ",
+      "cca3": "UZB",
+      "name": "Uzbekistan"
+    },
+    {
+      "code": "VA",
+      "cca3": "VAT",
+      "name": "Vatican City"
+    },
+    {
+      "code": "VC",
+      "cca3": "VCT",
+      "name": "Saint Vincent and the Grenadines"
+    },
+    {
+      "code": "VE",
+      "cca3": "VEN",
+      "name": "Venezuela"
+    },
+    {
+      "code": "VN",
+      "cca3": "VNM",
+      "name": "Vietnam"
+    },
+    {
+      "code": "VU",
+      "cca3": "VUT",
+      "name": "Vanuatu"
+    },
+    {
+      "code": "WS",
+      "cca3": "WSM",
+      "name": "Samoa"
+    },
+    {
+      "code": "YE",
+      "cca3": "YEM",
+      "name": "Yemen"
+    },
+    {
+      "code": "ZA",
+      "cca3": "ZAF",
+      "name": "South Africa"
+    },
+    {
+      "code": "ZM",
+      "cca3": "ZMB",
+      "name": "Zambia"
+    },
+    {
+      "code": "ZW",
+      "cca3": "ZWE",
+      "name": "Zimbabwe"
+    }
+  ],
+  "byCountry": {
+    "AF": {
+      "reporter": "AFG",
+      "requestedYear": "2019",
+      "year": 2019,
+      "sourceUrl": "https://wits.worldbank.org/CountryProfile/en/Country/AFG/Year/2019/Summarytext",
+      "pageComplete": true,
+      "partners": [
+        {
+          "rank": 1,
+          "name": "India",
+          "valueUsdMillions": 410,
+          "sharePercent": 47.12
+        },
+        {
+          "rank": 2,
+          "name": "Pakistan",
+          "valueUsdMillions": 299,
+          "sharePercent": 34.31
+        },
+        {
+          "rank": 3,
+          "name": "China",
+          "valueUsdMillions": 31,
+          "sharePercent": 3.56
+        },
+        {
+          "rank": 4,
+          "name": "Turkey",
+          "valueUsdMillions": 25,
+          "sharePercent": 2.89
+        },
+        {
+          "rank": 5,
+          "name": "United Arab Emirates",
+          "valueUsdMillions": 25,
+          "sharePercent": 2.87
+        }
+      ],
+      "retrievedSourceUrl": "https://wits.worldbank.org/CountryProfile/en/Country/AFG/Year/LTST/Summarytext"
+    },
+    "AO": {
+      "reporter": "AGO",
+      "requestedYear": "2023",
+      "year": 2023,
+      "sourceUrl": "https://wits.worldbank.org/CountryProfile/en/Country/AGO/Year/2023/Summarytext",
+      "partners": [
+        {
+          "rank": 1,
+          "name": "China",
+          "valueUsdMillions": 18428,
+          "sharePercent": 46.65
+        },
+        {
+          "rank": 2,
+          "name": "Spain",
+          "valueUsdMillions": 2969,
+          "sharePercent": 7.51
+        },
+        {
+          "rank": 3,
+          "name": "Netherlands",
+          "valueUsdMillions": 2400,
+          "sharePercent": 6.08
+        },
+        {
+          "rank": 4,
+          "name": "India",
+          "valueUsdMillions": 2343,
+          "sharePercent": 5.93
+        },
+        {
+          "rank": 5,
+          "name": "France",
+          "valueUsdMillions": 1877,
+          "sharePercent": 4.75
+        }
+      ]
+    },
+    "AL": {
+      "reporter": "ALB",
+      "requestedYear": "2023",
+      "year": 2023,
+      "sourceUrl": "https://wits.worldbank.org/CountryProfile/en/Country/ALB/Year/2023/Summarytext",
+      "partners": [
+        {
+          "rank": 1,
+          "name": "Italy",
+          "valueUsdMillions": 1878,
+          "sharePercent": 42.92
+        },
+        {
+          "rank": 2,
+          "name": "Serbia, FR(Serbia/Montenegro)",
+          "valueUsdMillions": 505,
+          "sharePercent": 11.55
+        },
+        {
+          "rank": 3,
+          "name": "Greece",
+          "valueUsdMillions": 285,
+          "sharePercent": 6.51
+        },
+        {
+          "rank": 4,
+          "name": "Germany",
+          "valueUsdMillions": 230,
+          "sharePercent": 5.25
+        },
+        {
+          "rank": 5,
+          "name": "Spain",
+          "valueUsdMillions": 188,
+          "sharePercent": 4.29
+        }
+      ]
+    },
+    "AD": {
+      "reporter": "AND",
+      "requestedYear": "2023",
+      "year": 2023,
+      "sourceUrl": "https://wits.worldbank.org/CountryProfile/en/Country/AND/Year/2023/Summarytext",
+      "partners": [
+        {
+          "rank": 1,
+          "name": "Spain",
+          "valueUsdMillions": 111,
+          "sharePercent": 43.97
+        },
+        {
+          "rank": 2,
+          "name": "Unspecified",
+          "valueUsdMillions": 57,
+          "sharePercent": 22.58
+        },
+        {
+          "rank": 3,
+          "name": "France",
+          "valueUsdMillions": 32,
+          "sharePercent": 12.54
+        },
+        {
+          "rank": 4,
+          "name": "United Kingdom",
+          "valueUsdMillions": 10,
+          "sharePercent": 4.07
+        },
+        {
+          "rank": 5,
+          "name": "United Arab Emirates",
+          "valueUsdMillions": 7,
+          "sharePercent": 2.62
+        }
+      ]
+    },
+    "AE": {
+      "reporter": "ARE",
+      "requestedYear": "2023",
+      "year": 2023,
+      "sourceUrl": "https://wits.worldbank.org/CountryProfile/en/Country/ARE/Year/2023/Summarytext",
+      "partners": [
+        {
+          "rank": 1,
+          "name": "Unspecified",
+          "valueUsdMillions": 286627,
+          "sharePercent": 50.26
+        },
+        {
+          "rank": 2,
+          "name": "Saudi Arabia",
+          "valueUsdMillions": 29465,
+          "sharePercent": 5.17
+        },
+        {
+          "rank": 3,
+          "name": "India",
+          "valueUsdMillions": 25019,
+          "sharePercent": 4.39
+        },
+        {
+          "rank": 4,
+          "name": "Iraq",
+          "valueUsdMillions": 22701,
+          "sharePercent": 3.98
+        },
+        {
+          "rank": 5,
+          "name": "Turkey",
+          "valueUsdMillions": 18723,
+          "sharePercent": 3.28
+        }
+      ]
+    },
+    "AR": {
+      "reporter": "ARG",
+      "requestedYear": "2023",
+      "year": 2023,
+      "sourceUrl": "https://wits.worldbank.org/CountryProfile/en/Country/ARG/Year/2023/Summarytext",
+      "partners": [
+        {
+          "rank": 1,
+          "name": "Brazil",
+          "valueUsdMillions": 11857,
+          "sharePercent": 17.75
+        },
+        {
+          "rank": 2,
+          "name": "United States",
+          "valueUsdMillions": 5648,
+          "sharePercent": 8.46
+        },
+        {
+          "rank": 3,
+          "name": "China",
+          "valueUsdMillions": 5174,
+          "sharePercent": 7.75
+        },
+        {
+          "rank": 4,
+          "name": "Chile",
+          "valueUsdMillions": 4940,
+          "sharePercent": 7.4
+        },
+        {
+          "rank": 5,
+          "name": "Peru",
+          "valueUsdMillions": 2555,
+          "sharePercent": 3.82
+        }
+      ]
+    },
+    "AM": {
+      "reporter": "ARM",
+      "requestedYear": "2023",
+      "year": 2023,
+      "sourceUrl": "https://wits.worldbank.org/CountryProfile/en/Country/ARM/Year/2023/Summarytext",
+      "partners": [
+        {
+          "rank": 1,
+          "name": "Russian Federation",
+          "valueUsdMillions": 3505,
+          "sharePercent": 41.2
+        },
+        {
+          "rank": 2,
+          "name": "United Arab Emirates",
+          "valueUsdMillions": 2224,
+          "sharePercent": 26.14
+        },
+        {
+          "rank": 3,
+          "name": "Hong Kong, China",
+          "valueUsdMillions": 668,
+          "sharePercent": 7.86
+        },
+        {
+          "rank": 4,
+          "name": "China",
+          "valueUsdMillions": 425,
+          "sharePercent": 5
+        },
+        {
+          "rank": 5,
+          "name": "Netherlands",
+          "valueUsdMillions": 234,
+          "sharePercent": 2.75
+        }
+      ]
+    },
+    "AG": {
+      "reporter": "ATG",
+      "requestedYear": "2023",
+      "year": 2023,
+      "sourceUrl": "https://wits.worldbank.org/CountryProfile/en/Country/ATG/Year/2023/Summarytext",
+      "pageComplete": true,
+      "partners": [
+        {
+          "rank": 1,
+          "name": "United States",
+          "valueUsdMillions": 8,
+          "sharePercent": 25.28
+        },
+        {
+          "rank": 2,
+          "name": "Saint Maarten (Dutch part)",
+          "valueUsdMillions": 4,
+          "sharePercent": 13.58
+        },
+        {
+          "rank": 3,
+          "name": "China",
+          "valueUsdMillions": 3,
+          "sharePercent": 9.39
+        },
+        {
+          "rank": 4,
+          "name": "Netherlands",
+          "valueUsdMillions": 3,
+          "sharePercent": 8.99
+        },
+        {
+          "rank": 5,
+          "name": "Montserrat",
+          "valueUsdMillions": 2,
+          "sharePercent": 6.4
+        }
+      ]
+    },
+    "AU": {
+      "reporter": "AUS",
+      "requestedYear": "2023",
+      "year": 2023,
+      "sourceUrl": "https://wits.worldbank.org/CountryProfile/en/Country/AUS/Year/2023/Summarytext",
+      "partners": [
+        {
+          "rank": 1,
+          "name": "China",
+          "valueUsdMillions": 120219,
+          "sharePercent": 32.56
+        },
+        {
+          "rank": 2,
+          "name": "Unspecified",
+          "valueUsdMillions": 63868,
+          "sharePercent": 17.3
+        },
+        {
+          "rank": 3,
+          "name": "Japan",
+          "valueUsdMillions": 36190,
+          "sharePercent": 9.8
+        },
+        {
+          "rank": 4,
+          "name": "Korea, Rep.",
+          "valueUsdMillions": 20905,
+          "sharePercent": 5.66
+        },
+        {
+          "rank": 5,
+          "name": "India",
+          "valueUsdMillions": 16177,
+          "sharePercent": 4.38
+        }
+      ]
+    },
+    "AT": {
+      "reporter": "AUT",
+      "requestedYear": "2023",
+      "year": 2023,
+      "sourceUrl": "https://wits.worldbank.org/CountryProfile/en/Country/AUT/Year/2023/Summarytext",
+      "partners": [
+        {
+          "rank": 1,
+          "name": "Germany",
+          "valueUsdMillions": 62792,
+          "sharePercent": 29.05
+        },
+        {
+          "rank": 2,
+          "name": "United States",
+          "valueUsdMillions": 15570,
+          "sharePercent": 7.2
+        },
+        {
+          "rank": 3,
+          "name": "Italy",
+          "valueUsdMillions": 13166,
+          "sharePercent": 6.09
+        },
+        {
+          "rank": 4,
+          "name": "Switzerland",
+          "valueUsdMillions": 11163,
+          "sharePercent": 5.16
+        },
+        {
+          "rank": 5,
+          "name": "Belgium",
+          "valueUsdMillions": 8121,
+          "sharePercent": 3.76
+        }
+      ]
+    },
+    "AZ": {
+      "reporter": "AZE",
+      "requestedYear": "2023",
+      "year": 2023,
+      "sourceUrl": "https://wits.worldbank.org/CountryProfile/en/Country/AZE/Year/2023/Summarytext",
+      "partners": [
+        {
+          "rank": 1,
+          "name": "Italy",
+          "valueUsdMillions": 15208,
+          "sharePercent": 44.86
+        },
+        {
+          "rank": 2,
+          "name": "Turkey",
+          "valueUsdMillions": 5359,
+          "sharePercent": 15.81
+        },
+        {
+          "rank": 3,
+          "name": "Israel",
+          "valueUsdMillions": 1402,
+          "sharePercent": 4.13
+        },
+        {
+          "rank": 4,
+          "name": "Greece",
+          "valueUsdMillions": 1363,
+          "sharePercent": 4.02
+        },
+        {
+          "rank": 5,
+          "name": "India",
+          "valueUsdMillions": 1235,
+          "sharePercent": 3.64
+        }
+      ]
+    },
+    "BI": {
+      "reporter": "BDI",
+      "requestedYear": "2023",
+      "year": 2023,
+      "sourceUrl": "https://wits.worldbank.org/CountryProfile/en/Country/BDI/Year/2023/Summarytext",
+      "pageComplete": true,
+      "partners": [
+        {
+          "rank": 1,
+          "name": "United Arab Emirates",
+          "valueUsdMillions": 80,
+          "sharePercent": 37
+        },
+        {
+          "rank": 2,
+          "name": "Congo, Dem. Rep.",
+          "valueUsdMillions": 44,
+          "sharePercent": 20.42
+        },
+        {
+          "rank": 3,
+          "name": "Switzerland",
+          "valueUsdMillions": 14,
+          "sharePercent": 6.4
+        },
+        {
+          "rank": 4,
+          "name": "Belgium",
+          "valueUsdMillions": 9,
+          "sharePercent": 4.11
+        },
+        {
+          "rank": 5,
+          "name": "Sudan",
+          "valueUsdMillions": 9,
+          "sharePercent": 3.96
+        }
+      ]
+    },
+    "BE": {
+      "reporter": "BEL",
+      "requestedYear": "2023",
+      "year": 2023,
+      "sourceUrl": "https://wits.worldbank.org/CountryProfile/en/Country/BEL/Year/2023/Summarytext",
+      "partners": [
+        {
+          "rank": 1,
+          "name": "Germany",
+          "valueUsdMillions": 64055,
+          "sharePercent": 16.29
+        },
+        {
+          "rank": 2,
+          "name": "Netherlands",
+          "valueUsdMillions": 52931,
+          "sharePercent": 13.46
+        },
+        {
+          "rank": 3,
+          "name": "France",
+          "valueUsdMillions": 49739,
+          "sharePercent": 12.65
+        },
+        {
+          "rank": 4,
+          "name": "United States",
+          "valueUsdMillions": 27717,
+          "sharePercent": 7.05
+        },
+        {
+          "rank": 5,
+          "name": "United Kingdom",
+          "valueUsdMillions": 23389,
+          "sharePercent": 5.95
+        }
+      ]
+    },
+    "BJ": {
+      "reporter": "BEN",
+      "requestedYear": "2023",
+      "year": 2023,
+      "sourceUrl": "https://wits.worldbank.org/CountryProfile/en/Country/BEN/Year/2023/Summarytext",
+      "partners": [
+        {
+          "rank": 1,
+          "name": "Bangladesh",
+          "valueUsdMillions": 391,
+          "sharePercent": 37.2
+        },
+        {
+          "rank": 2,
+          "name": "India",
+          "valueUsdMillions": 162,
+          "sharePercent": 15.41
+        },
+        {
+          "rank": 3,
+          "name": "Pakistan",
+          "valueUsdMillions": 76,
+          "sharePercent": 7.21
+        },
+        {
+          "rank": 4,
+          "name": "Togo",
+          "valueUsdMillions": 57,
+          "sharePercent": 5.45
+        },
+        {
+          "rank": 5,
+          "name": "China",
+          "valueUsdMillions": 55,
+          "sharePercent": 5.27
+        }
+      ]
+    },
+    "BF": {
+      "reporter": "BFA",
+      "requestedYear": "2023",
+      "year": 2023,
+      "sourceUrl": "https://wits.worldbank.org/CountryProfile/en/Country/BFA/Year/2023/Summarytext",
+      "partners": [
+        {
+          "rank": 1,
+          "name": "Switzerland",
+          "valueUsdMillions": 3013,
+          "sharePercent": 67.57
+        },
+        {
+          "rank": 2,
+          "name": "United Arab Emirates",
+          "valueUsdMillions": 380,
+          "sharePercent": 8.53
+        },
+        {
+          "rank": 3,
+          "name": "Mali",
+          "valueUsdMillions": 268,
+          "sharePercent": 6.02
+        },
+        {
+          "rank": 4,
+          "name": "Cote d'Ivoire",
+          "valueUsdMillions": 136,
+          "sharePercent": 3.05
+        },
+        {
+          "rank": 5,
+          "name": "India",
+          "valueUsdMillions": 83,
+          "sharePercent": 1.86
+        }
+      ]
+    },
+    "BD": {
+      "reporter": "BGD",
+      "requestedYear": "2015",
+      "year": 2015,
+      "sourceUrl": "https://wits.worldbank.org/CountryProfile/en/Country/BGD/Year/2015/Summarytext",
+      "pageComplete": true,
+      "partners": [
+        {
+          "rank": 1,
+          "name": "United States",
+          "valueUsdMillions": 6139,
+          "sharePercent": 19.35
+        },
+        {
+          "rank": 2,
+          "name": "Germany",
+          "valueUsdMillions": 4673,
+          "sharePercent": 14.73
+        },
+        {
+          "rank": 3,
+          "name": "United Kingdom",
+          "valueUsdMillions": 3500,
+          "sharePercent": 11.03
+        },
+        {
+          "rank": 4,
+          "name": "Spain",
+          "valueUsdMillions": 1845,
+          "sharePercent": 5.82
+        },
+        {
+          "rank": 5,
+          "name": "France",
+          "valueUsdMillions": 1755,
+          "sharePercent": 5.53
+        }
+      ],
+      "retrievedSourceUrl": "https://wits.worldbank.org/CountryProfile/en/Country/BGD/Year/LTST/Summarytext"
+    },
+    "BG": {
+      "reporter": "BGR",
+      "requestedYear": "2023",
+      "year": 2023,
+      "sourceUrl": "https://wits.worldbank.org/CountryProfile/en/Country/BGR/Year/2023/Summarytext",
+      "pageComplete": true,
+      "partners": [
+        {
+          "rank": 1,
+          "name": "Germany",
+          "valueUsdMillions": 6549,
+          "sharePercent": 13.67
+        },
+        {
+          "rank": 2,
+          "name": "Romania",
+          "valueUsdMillions": 4411,
+          "sharePercent": 9.21
+        },
+        {
+          "rank": 3,
+          "name": "Italy",
+          "valueUsdMillions": 3437,
+          "sharePercent": 7.18
+        },
+        {
+          "rank": 4,
+          "name": "Turkey",
+          "valueUsdMillions": 2759,
+          "sharePercent": 5.76
+        },
+        {
+          "rank": 5,
+          "name": "Greece",
+          "valueUsdMillions": 2650,
+          "sharePercent": 5.53
+        }
+      ]
+    },
+    "BH": {
+      "reporter": "BHR",
+      "requestedYear": "2023",
+      "year": 2023,
+      "sourceUrl": "https://wits.worldbank.org/CountryProfile/en/Country/BHR/Year/2023/Summarytext",
+      "pageComplete": true,
+      "partners": [
+        {
+          "rank": 1,
+          "name": "Saudi Arabia",
+          "valueUsdMillions": 2914,
+          "sharePercent": 23.49
+        },
+        {
+          "rank": 2,
+          "name": "United Arab Emirates",
+          "valueUsdMillions": 1771,
+          "sharePercent": 14.28
+        },
+        {
+          "rank": 3,
+          "name": "United States",
+          "valueUsdMillions": 1039,
+          "sharePercent": 8.38
+        },
+        {
+          "rank": 4,
+          "name": "Netherlands",
+          "valueUsdMillions": 540,
+          "sharePercent": 4.35
+        },
+        {
+          "rank": 5,
+          "name": "Egypt, Arab Rep.",
+          "valueUsdMillions": 458,
+          "sharePercent": 3.69
+        }
+      ]
+    },
+    "BS": {
+      "reporter": "BHS",
+      "requestedYear": "2023",
+      "year": 2023,
+      "sourceUrl": "https://wits.worldbank.org/CountryProfile/en/Country/BHS/Year/2023/Summarytext",
+      "pageComplete": true,
+      "partners": [
+        {
+          "rank": 1,
+          "name": "United States",
+          "valueUsdMillions": 562,
+          "sharePercent": 80.24
+        },
+        {
+          "rank": 2,
+          "name": "Unspecified",
+          "valueUsdMillions": 131,
+          "sharePercent": 18.75
+        },
+        {
+          "rank": 3,
+          "name": "China",
+          "valueUsdMillions": 2,
+          "sharePercent": 0.22
+        },
+        {
+          "rank": 4,
+          "name": "Jamaica",
+          "valueUsdMillions": 1,
+          "sharePercent": 0.14
+        },
+        {
+          "rank": 5,
+          "name": "Japan",
+          "valueUsdMillions": 1,
+          "sharePercent": 0.11
+        }
+      ]
+    },
+    "BA": {
+      "reporter": "BIH",
+      "requestedYear": "2023",
+      "year": 2023,
+      "sourceUrl": "https://wits.worldbank.org/CountryProfile/en/Country/BIH/Year/2023/Summarytext",
+      "pageComplete": true,
+      "partners": [
+        {
+          "rank": 1,
+          "name": "Germany",
+          "valueUsdMillions": 1481,
+          "sharePercent": 16.05
+        },
+        {
+          "rank": 2,
+          "name": "Croatia",
+          "valueUsdMillions": 1409,
+          "sharePercent": 15.26
+        },
+        {
+          "rank": 3,
+          "name": "Serbia, FR(Serbia/Montenegro)",
+          "valueUsdMillions": 1218,
+          "sharePercent": 13.2
+        },
+        {
+          "rank": 4,
+          "name": "Austria",
+          "valueUsdMillions": 948,
+          "sharePercent": 10.27
+        },
+        {
+          "rank": 5,
+          "name": "Italy",
+          "valueUsdMillions": 801,
+          "sharePercent": 8.68
+        }
+      ]
+    },
+    "BY": {
+      "reporter": "BLR",
+      "requestedYear": "2021",
+      "year": 2021,
+      "sourceUrl": "https://wits.worldbank.org/CountryProfile/en/Country/BLR/Year/2021/Summarytext",
+      "pageComplete": true,
+      "partners": [
+        {
+          "rank": 1,
+          "name": "Unspecified",
+          "valueUsdMillions": 16087,
+          "sharePercent": 40.33
+        },
+        {
+          "rank": 2,
+          "name": "Russian Federation",
+          "valueUsdMillions": 13972,
+          "sharePercent": 35.03
+        },
+        {
+          "rank": 3,
+          "name": "Poland",
+          "valueUsdMillions": 1584,
+          "sharePercent": 3.97
+        },
+        {
+          "rank": 4,
+          "name": "Ukraine",
+          "valueUsdMillions": 1215,
+          "sharePercent": 3.05
+        },
+        {
+          "rank": 5,
+          "name": "Lithuania",
+          "valueUsdMillions": 1185,
+          "sharePercent": 2.97
+        }
+      ]
+    },
+    "BZ": {
+      "reporter": "BLZ",
+      "requestedYear": "2023",
+      "year": 2023,
+      "sourceUrl": "https://wits.worldbank.org/CountryProfile/en/Country/BLZ/Year/2023/Summarytext",
+      "partners": [
+        {
+          "rank": 1,
+          "name": "United States",
+          "valueUsdMillions": 71,
+          "sharePercent": 28.05
+        },
+        {
+          "rank": 2,
+          "name": "United Kingdom",
+          "valueUsdMillions": 44,
+          "sharePercent": 17.32
+        },
+        {
+          "rank": 3,
+          "name": "Guatemala",
+          "valueUsdMillions": 22,
+          "sharePercent": 8.69
+        },
+        {
+          "rank": 4,
+          "name": "Spain",
+          "valueUsdMillions": 19,
+          "sharePercent": 7.4
+        },
+        {
+          "rank": 5,
+          "name": "Trinidad and Tobago",
+          "valueUsdMillions": 16,
+          "sharePercent": 6.12
+        }
+      ]
+    },
+    "BO": {
+      "reporter": "BOL",
+      "requestedYear": "2023",
+      "year": 2023,
+      "sourceUrl": "https://wits.worldbank.org/CountryProfile/en/Country/BOL/Year/2023/Summarytext",
+      "partners": [
+        {
+          "rank": 1,
+          "name": "Brazil",
+          "valueUsdMillions": 1576,
+          "sharePercent": 14.44
+        },
+        {
+          "rank": 2,
+          "name": "India",
+          "valueUsdMillions": 1319,
+          "sharePercent": 12.08
+        },
+        {
+          "rank": 3,
+          "name": "China",
+          "valueUsdMillions": 1173,
+          "sharePercent": 10.74
+        },
+        {
+          "rank": 4,
+          "name": "Argentina",
+          "valueUsdMillions": 997,
+          "sharePercent": 9.13
+        },
+        {
+          "rank": 5,
+          "name": "Colombia",
+          "valueUsdMillions": 958,
+          "sharePercent": 8.77
+        }
+      ]
+    },
+    "BR": {
+      "reporter": "BRA",
+      "requestedYear": "2023",
+      "year": 2023,
+      "sourceUrl": "https://wits.worldbank.org/CountryProfile/en/Country/BRA/Year/2023/Summarytext",
+      "pageComplete": true,
+      "partners": [
+        {
+          "rank": 1,
+          "name": "China",
+          "valueUsdMillions": 104325,
+          "sharePercent": 30.71
+        },
+        {
+          "rank": 2,
+          "name": "United States",
+          "valueUsdMillions": 37452,
+          "sharePercent": 11.03
+        },
+        {
+          "rank": 3,
+          "name": "Argentina",
+          "valueUsdMillions": 16712,
+          "sharePercent": 4.92
+        },
+        {
+          "rank": 4,
+          "name": "Netherlands",
+          "valueUsdMillions": 12148,
+          "sharePercent": 3.58
+        },
+        {
+          "rank": 5,
+          "name": "Mexico",
+          "valueUsdMillions": 8572,
+          "sharePercent": 2.52
+        }
+      ]
+    },
+    "BB": {
+      "reporter": "BRB",
+      "requestedYear": "2023",
+      "year": 2023,
+      "sourceUrl": "https://wits.worldbank.org/CountryProfile/en/Country/BRB/Year/2023/Summarytext",
+      "pageComplete": true,
+      "partners": [
+        {
+          "rank": 1,
+          "name": "Unspecified",
+          "valueUsdMillions": 150,
+          "sharePercent": 31.56
+        },
+        {
+          "rank": 2,
+          "name": "United States",
+          "valueUsdMillions": 88,
+          "sharePercent": 18.5
+        },
+        {
+          "rank": 3,
+          "name": "Jamaica",
+          "valueUsdMillions": 34,
+          "sharePercent": 7.22
+        },
+        {
+          "rank": 4,
+          "name": "Trinidad and Tobago",
+          "valueUsdMillions": 34,
+          "sharePercent": 7.13
+        },
+        {
+          "rank": 5,
+          "name": "Guyana",
+          "valueUsdMillions": 26,
+          "sharePercent": 5.51
+        }
+      ]
+    },
+    "BN": {
+      "reporter": "BRN",
+      "requestedYear": "2023",
+      "year": 2023,
+      "sourceUrl": "https://wits.worldbank.org/CountryProfile/en/Country/BRN/Year/2023/Summarytext",
+      "pageComplete": true,
+      "partners": [
+        {
+          "rank": 1,
+          "name": "Australia",
+          "valueUsdMillions": 2429,
+          "sharePercent": 21.61
+        },
+        {
+          "rank": 2,
+          "name": "Singapore",
+          "valueUsdMillions": 1919,
+          "sharePercent": 17.07
+        },
+        {
+          "rank": 3,
+          "name": "China",
+          "valueUsdMillions": 1877,
+          "sharePercent": 16.69
+        },
+        {
+          "rank": 4,
+          "name": "Japan",
+          "valueUsdMillions": 1563,
+          "sharePercent": 13.9
+        },
+        {
+          "rank": 5,
+          "name": "Malaysia",
+          "valueUsdMillions": 768,
+          "sharePercent": 6.83
+        }
+      ]
+    },
+    "BT": {
+      "reporter": "BTN",
+      "requestedYear": "2023",
+      "year": 2023,
+      "sourceUrl": "https://wits.worldbank.org/CountryProfile/en/Country/BTN/Year/2023/Summarytext",
+      "pageComplete": true,
+      "partners": [
+        {
+          "rank": 1,
+          "name": "India",
+          "valueUsdMillions": 338,
+          "sharePercent": 77.57
+        },
+        {
+          "rank": 2,
+          "name": "Bangladesh",
+          "valueUsdMillions": 61,
+          "sharePercent": 13.98
+        },
+        {
+          "rank": 3,
+          "name": "Italy",
+          "valueUsdMillions": 18,
+          "sharePercent": 4.24
+        },
+        {
+          "rank": 4,
+          "name": "Nepal",
+          "valueUsdMillions": 9,
+          "sharePercent": 1.99
+        },
+        {
+          "rank": 5,
+          "name": "China",
+          "valueUsdMillions": 4,
+          "sharePercent": 0.83
+        }
+      ]
+    },
+    "BW": {
+      "reporter": "BWA",
+      "requestedYear": "2023",
+      "year": 2023,
+      "sourceUrl": "https://wits.worldbank.org/CountryProfile/en/Country/BWA/Year/2023/Summarytext",
+      "pageComplete": true,
+      "partners": [
+        {
+          "rank": 1,
+          "name": "United Arab Emirates",
+          "valueUsdMillions": 1638,
+          "sharePercent": 29.76
+        },
+        {
+          "rank": 2,
+          "name": "Belgium",
+          "valueUsdMillions": 986,
+          "sharePercent": 17.92
+        },
+        {
+          "rank": 3,
+          "name": "India",
+          "valueUsdMillions": 674,
+          "sharePercent": 12.25
+        },
+        {
+          "rank": 4,
+          "name": "South Africa",
+          "valueUsdMillions": 653,
+          "sharePercent": 11.87
+        },
+        {
+          "rank": 5,
+          "name": "China",
+          "valueUsdMillions": 352,
+          "sharePercent": 6.39
+        }
+      ]
+    },
+    "CF": {
+      "reporter": "CAF",
+      "requestedYear": "2023",
+      "year": 2023,
+      "sourceUrl": "https://wits.worldbank.org/CountryProfile/en/Country/CAF/Year/2023/Summarytext",
+      "partners": [
+        {
+          "rank": 1,
+          "name": "United Arab Emirates",
+          "valueUsdMillions": 79,
+          "sharePercent": 69.37
+        },
+        {
+          "rank": 2,
+          "name": "Italy",
+          "valueUsdMillions": 8,
+          "sharePercent": 7.11
+        },
+        {
+          "rank": 3,
+          "name": "France",
+          "valueUsdMillions": 6,
+          "sharePercent": 5.68
+        },
+        {
+          "rank": 4,
+          "name": "China",
+          "valueUsdMillions": 4,
+          "sharePercent": 3.81
+        },
+        {
+          "rank": 5,
+          "name": "Gabon",
+          "valueUsdMillions": 4,
+          "sharePercent": 3.71
+        }
+      ]
+    },
+    "CA": {
+      "reporter": "CAN",
+      "requestedYear": "2023",
+      "year": 2023,
+      "sourceUrl": "https://wits.worldbank.org/CountryProfile/en/Country/CAN/Year/2023/Summarytext",
+      "partners": [
+        {
+          "rank": 1,
+          "name": "United States",
+          "valueUsdMillions": 438650,
+          "sharePercent": 77.32
+        },
+        {
+          "rank": 2,
+          "name": "China",
+          "valueUsdMillions": 22612,
+          "sharePercent": 3.99
+        },
+        {
+          "rank": 3,
+          "name": "Japan",
+          "valueUsdMillions": 11737,
+          "sharePercent": 2.07
+        },
+        {
+          "rank": 4,
+          "name": "United Kingdom",
+          "valueUsdMillions": 11283,
+          "sharePercent": 1.99
+        },
+        {
+          "rank": 5,
+          "name": "Mexico",
+          "valueUsdMillions": 6571,
+          "sharePercent": 1.16
+        }
+      ]
+    },
+    "CH": {
+      "reporter": "CHE",
+      "requestedYear": "2023",
+      "year": 2023,
+      "sourceUrl": "https://wits.worldbank.org/CountryProfile/en/Country/CHE/Year/2023/Summarytext",
+      "partners": [
+        {
+          "rank": 1,
+          "name": "United States",
+          "valueUsdMillions": 62853,
+          "sharePercent": 14.97
+        },
+        {
+          "rank": 2,
+          "name": "Germany",
+          "valueUsdMillions": 51148,
+          "sharePercent": 12.18
+        },
+        {
+          "rank": 3,
+          "name": "China",
+          "valueUsdMillions": 45163,
+          "sharePercent": 10.76
+        },
+        {
+          "rank": 4,
+          "name": "Italy",
+          "valueUsdMillions": 27018,
+          "sharePercent": 6.43
+        },
+        {
+          "rank": 5,
+          "name": "France",
+          "valueUsdMillions": 20107,
+          "sharePercent": 4.79
+        }
+      ]
+    },
+    "CL": {
+      "reporter": "CHL",
+      "requestedYear": "2023",
+      "year": 2023,
+      "sourceUrl": "https://wits.worldbank.org/CountryProfile/en/Country/CHL/Year/2023/Summarytext",
+      "pageComplete": true,
+      "partners": [
+        {
+          "rank": 1,
+          "name": "China",
+          "valueUsdMillions": 37449,
+          "sharePercent": 39.45
+        },
+        {
+          "rank": 2,
+          "name": "United States",
+          "valueUsdMillions": 14308,
+          "sharePercent": 15.07
+        },
+        {
+          "rank": 3,
+          "name": "Japan",
+          "valueUsdMillions": 6803,
+          "sharePercent": 7.17
+        },
+        {
+          "rank": 4,
+          "name": "Korea, Rep.",
+          "valueUsdMillions": 6020,
+          "sharePercent": 6.34
+        },
+        {
+          "rank": 5,
+          "name": "Brazil",
+          "valueUsdMillions": 4279,
+          "sharePercent": 4.51
+        }
+      ]
+    },
+    "CN": {
+      "reporter": "CHN",
+      "requestedYear": "2023",
+      "year": 2023,
+      "sourceUrl": "https://wits.worldbank.org/CountryProfile/en/Country/CHN/Year/2023/Summarytext",
+      "pageComplete": true,
+      "partners": [
+        {
+          "rank": 1,
+          "name": "United States",
+          "valueUsdMillions": 501221,
+          "sharePercent": 14.83
+        },
+        {
+          "rank": 2,
+          "name": "Hong Kong, China",
+          "valueUsdMillions": 274519,
+          "sharePercent": 8.12
+        },
+        {
+          "rank": 3,
+          "name": "Japan",
+          "valueUsdMillions": 157500,
+          "sharePercent": 4.66
+        },
+        {
+          "rank": 4,
+          "name": "Korea, Rep.",
+          "valueUsdMillions": 148983,
+          "sharePercent": 4.41
+        },
+        {
+          "rank": 5,
+          "name": "Vietnam",
+          "valueUsdMillions": 137607,
+          "sharePercent": 4.07
+        }
+      ]
+    },
+    "CI": {
+      "reporter": "CIV",
+      "requestedYear": "2023",
+      "year": 2023,
+      "sourceUrl": "https://wits.worldbank.org/CountryProfile/en/Country/CIV/Year/2023/Summarytext",
+      "pageComplete": true,
+      "partners": [
+        {
+          "rank": 1,
+          "name": "Netherlands",
+          "valueUsdMillions": 2112,
+          "sharePercent": 11.51
+        },
+        {
+          "rank": 2,
+          "name": "Switzerland",
+          "valueUsdMillions": 1947,
+          "sharePercent": 10.61
+        },
+        {
+          "rank": 3,
+          "name": "Mali",
+          "valueUsdMillions": 1589,
+          "sharePercent": 8.66
+        },
+        {
+          "rank": 4,
+          "name": "Malaysia",
+          "valueUsdMillions": 912,
+          "sharePercent": 4.97
+        },
+        {
+          "rank": 5,
+          "name": "Vietnam",
+          "valueUsdMillions": 912,
+          "sharePercent": 4.97
+        }
+      ]
+    },
+    "CM": {
+      "reporter": "CMR",
+      "requestedYear": "2023",
+      "year": 2023,
+      "sourceUrl": "https://wits.worldbank.org/CountryProfile/en/Country/CMR/Year/2023/Summarytext",
+      "pageComplete": true,
+      "partners": [
+        {
+          "rank": 1,
+          "name": "Netherlands",
+          "valueUsdMillions": 1153,
+          "sharePercent": 23.21
+        },
+        {
+          "rank": 2,
+          "name": "France",
+          "valueUsdMillions": 615,
+          "sharePercent": 12.38
+        },
+        {
+          "rank": 3,
+          "name": "India",
+          "valueUsdMillions": 476,
+          "sharePercent": 9.57
+        },
+        {
+          "rank": 4,
+          "name": "China",
+          "valueUsdMillions": 385,
+          "sharePercent": 7.76
+        },
+        {
+          "rank": 5,
+          "name": "Chad",
+          "valueUsdMillions": 248,
+          "sharePercent": 4.99
+        }
+      ]
+    },
+    "CD": {
+      "reporter": "ZAR",
+      "requestedYear": "2023",
+      "year": 2023,
+      "sourceUrl": "https://wits.worldbank.org/CountryProfile/en/Country/ZAR/Year/2023/Summarytext",
+      "pageComplete": true,
+      "partners": [
+        {
+          "rank": 1,
+          "name": "China",
+          "valueUsdMillions": 15966,
+          "sharePercent": 57.58
+        },
+        {
+          "rank": 2,
+          "name": "South Africa",
+          "valueUsdMillions": 2397,
+          "sharePercent": 8.65
+        },
+        {
+          "rank": 3,
+          "name": "Hong Kong, China",
+          "valueUsdMillions": 2341,
+          "sharePercent": 8.44
+        },
+        {
+          "rank": 4,
+          "name": "Mozambique",
+          "valueUsdMillions": 1575,
+          "sharePercent": 5.68
+        },
+        {
+          "rank": 5,
+          "name": "Singapore",
+          "valueUsdMillions": 1366,
+          "sharePercent": 4.93
+        }
+      ]
+    },
+    "CG": {
+      "reporter": "COG",
+      "requestedYear": "2023",
+      "year": 2023,
+      "sourceUrl": "https://wits.worldbank.org/CountryProfile/en/Country/COG/Year/2023/Summarytext",
+      "pageComplete": true,
+      "partners": [
+        {
+          "rank": 1,
+          "name": "China",
+          "valueUsdMillions": 5148,
+          "sharePercent": 54.39
+        },
+        {
+          "rank": 2,
+          "name": "Netherlands",
+          "valueUsdMillions": 1000,
+          "sharePercent": 10.57
+        },
+        {
+          "rank": 3,
+          "name": "India",
+          "valueUsdMillions": 525,
+          "sharePercent": 5.55
+        },
+        {
+          "rank": 4,
+          "name": "United States",
+          "valueUsdMillions": 337,
+          "sharePercent": 3.56
+        },
+        {
+          "rank": 5,
+          "name": "Malaysia",
+          "valueUsdMillions": 252,
+          "sharePercent": 2.66
+        }
+      ]
+    },
+    "CO": {
+      "reporter": "COL",
+      "requestedYear": "2023",
+      "year": 2023,
+      "sourceUrl": "https://wits.worldbank.org/CountryProfile/en/Country/COL/Year/2023/Summarytext",
+      "pageComplete": true,
+      "partners": [
+        {
+          "rank": 1,
+          "name": "United States",
+          "valueUsdMillions": 14113,
+          "sharePercent": 28.36
+        },
+        {
+          "rank": 2,
+          "name": "Panama",
+          "valueUsdMillions": 4659,
+          "sharePercent": 9.36
+        },
+        {
+          "rank": 3,
+          "name": "China",
+          "valueUsdMillions": 2469,
+          "sharePercent": 4.96
+        },
+        {
+          "rank": 4,
+          "name": "India",
+          "valueUsdMillions": 2398,
+          "sharePercent": 4.82
+        },
+        {
+          "rank": 5,
+          "name": "Netherlands",
+          "valueUsdMillions": 2042,
+          "sharePercent": 4.1
+        }
+      ]
+    },
+    "KM": {
+      "reporter": "COM",
+      "requestedYear": "2021",
+      "year": 2021,
+      "sourceUrl": "https://wits.worldbank.org/CountryProfile/en/Country/COM/Year/2021/Summarytext",
+      "pageComplete": true,
+      "partners": [
+        {
+          "rank": 1,
+          "name": "India",
+          "valueUsdMillions": 8,
+          "sharePercent": 24.8
+        },
+        {
+          "rank": 2,
+          "name": "Tanzania",
+          "valueUsdMillions": 7,
+          "sharePercent": 21.45
+        },
+        {
+          "rank": 3,
+          "name": "France",
+          "valueUsdMillions": 7,
+          "sharePercent": 19.63
+        },
+        {
+          "rank": 4,
+          "name": "United States",
+          "valueUsdMillions": 2,
+          "sharePercent": 5.76
+        },
+        {
+          "rank": 5,
+          "name": "Madagascar",
+          "valueUsdMillions": 2,
+          "sharePercent": 4.68
+        }
+      ]
+    },
+    "CV": {
+      "reporter": "CPV",
+      "requestedYear": "2023",
+      "year": 2023,
+      "sourceUrl": "https://wits.worldbank.org/CountryProfile/en/Country/CPV/Year/2023/Summarytext",
+      "pageComplete": true,
+      "partners": [
+        {
+          "rank": 1,
+          "name": "Unspecified",
+          "valueUsdMillions": 111,
+          "sharePercent": 39.35
+        },
+        {
+          "rank": 2,
+          "name": "Spain",
+          "valueUsdMillions": 54,
+          "sharePercent": 19.22
+        },
+        {
+          "rank": 3,
+          "name": "Portugal",
+          "valueUsdMillions": 41,
+          "sharePercent": 14.73
+        },
+        {
+          "rank": 4,
+          "name": "Togo",
+          "valueUsdMillions": 12,
+          "sharePercent": 4.13
+        },
+        {
+          "rank": 5,
+          "name": "Netherlands",
+          "valueUsdMillions": 11,
+          "sharePercent": 3.9
+        }
+      ]
+    },
+    "CR": {
+      "reporter": "CRI",
+      "requestedYear": "2023",
+      "year": 2023,
+      "sourceUrl": "https://wits.worldbank.org/CountryProfile/en/Country/CRI/Year/2023/Summarytext",
+      "pageComplete": true,
+      "partners": [
+        {
+          "rank": 1,
+          "name": "United States",
+          "valueUsdMillions": 8345,
+          "sharePercent": 46.09
+        },
+        {
+          "rank": 2,
+          "name": "Netherlands",
+          "valueUsdMillions": 1515,
+          "sharePercent": 8.36
+        },
+        {
+          "rank": 3,
+          "name": "Guatemala",
+          "valueUsdMillions": 888,
+          "sharePercent": 4.9
+        },
+        {
+          "rank": 4,
+          "name": "Belgium",
+          "valueUsdMillions": 839,
+          "sharePercent": 4.63
+        },
+        {
+          "rank": 5,
+          "name": "Nicaragua",
+          "valueUsdMillions": 693,
+          "sharePercent": 3.82
+        }
+      ]
+    },
+    "CU": {
+      "reporter": "CUB",
+      "requestedYear": "2022",
+      "year": 2022,
+      "sourceUrl": "https://wits.worldbank.org/CountryProfile/en/Country/CUB/Year/2022/Summarytext",
+      "pageComplete": true,
+      "partners": [
+        {
+          "rank": 1,
+          "name": "Unspecified",
+          "valueUsdMillions": 1286,
+          "sharePercent": 59.25
+        },
+        {
+          "rank": 2,
+          "name": "Spain",
+          "valueUsdMillions": 347,
+          "sharePercent": 15.98
+        },
+        {
+          "rank": 3,
+          "name": "China",
+          "valueUsdMillions": 175,
+          "sharePercent": 8.09
+        },
+        {
+          "rank": 4,
+          "name": "Germany",
+          "valueUsdMillions": 41,
+          "sharePercent": 1.88
+        },
+        {
+          "rank": 5,
+          "name": "France",
+          "valueUsdMillions": 29,
+          "sharePercent": 1.32
+        }
+      ]
+    },
+    "CY": {
+      "reporter": "CYP",
+      "requestedYear": "2023",
+      "year": 2023,
+      "sourceUrl": "https://wits.worldbank.org/CountryProfile/en/Country/CYP/Year/2023/Summarytext",
+      "pageComplete": true,
+      "partners": [
+        {
+          "rank": 1,
+          "name": "Libya",
+          "valueUsdMillions": 775,
+          "sharePercent": 15.11
+        },
+        {
+          "rank": 2,
+          "name": "Lebanon",
+          "valueUsdMillions": 481,
+          "sharePercent": 9.37
+        },
+        {
+          "rank": 3,
+          "name": "Bunkers",
+          "valueUsdMillions": 426,
+          "sharePercent": 8.3
+        },
+        {
+          "rank": 4,
+          "name": "Bermuda",
+          "valueUsdMillions": 403,
+          "sharePercent": 7.85
+        },
+        {
+          "rank": 5,
+          "name": "Greece",
+          "valueUsdMillions": 317,
+          "sharePercent": 6.18
+        }
+      ]
+    },
+    "CZ": {
+      "reporter": "CZE",
+      "requestedYear": "2023",
+      "year": 2023,
+      "sourceUrl": "https://wits.worldbank.org/CountryProfile/en/Country/CZE/Year/2023/Summarytext",
+      "pageComplete": true,
+      "partners": [
+        {
+          "rank": 1,
+          "name": "Germany",
+          "valueUsdMillions": 83188,
+          "sharePercent": 32.84
+        },
+        {
+          "rank": 2,
+          "name": "Slovak Republic",
+          "valueUsdMillions": 19610,
+          "sharePercent": 7.74
+        },
+        {
+          "rank": 3,
+          "name": "Poland",
+          "valueUsdMillions": 18527,
+          "sharePercent": 7.31
+        },
+        {
+          "rank": 4,
+          "name": "France",
+          "valueUsdMillions": 12314,
+          "sharePercent": 4.86
+        },
+        {
+          "rank": 5,
+          "name": "Austria",
+          "valueUsdMillions": 10638,
+          "sharePercent": 4.2
+        }
+      ]
+    },
+    "DE": {
+      "reporter": "DEU",
+      "requestedYear": "2023",
+      "year": 2023,
+      "sourceUrl": "https://wits.worldbank.org/CountryProfile/en/Country/DEU/Year/2023/Summarytext",
+      "pageComplete": true,
+      "partners": [
+        {
+          "rank": 1,
+          "name": "United States",
+          "valueUsdMillions": 173071,
+          "sharePercent": 10.03
+        },
+        {
+          "rank": 2,
+          "name": "France",
+          "valueUsdMillions": 130331,
+          "sharePercent": 7.55
+        },
+        {
+          "rank": 3,
+          "name": "Netherlands",
+          "valueUsdMillions": 121180,
+          "sharePercent": 7.02
+        },
+        {
+          "rank": 4,
+          "name": "China",
+          "valueUsdMillions": 106870,
+          "sharePercent": 6.19
+        },
+        {
+          "rank": 5,
+          "name": "Poland",
+          "valueUsdMillions": 98516,
+          "sharePercent": 5.71
+        }
+      ]
+    },
+    "DJ": {
+      "reporter": "DJI",
+      "requestedYear": "2023",
+      "year": 2023,
+      "sourceUrl": "https://wits.worldbank.org/CountryProfile/en/Country/DJI/Year/2023/Summarytext",
+      "pageComplete": true,
+      "partners": [
+        {
+          "rank": 1,
+          "name": "Ethiopia(excludes Eritrea)",
+          "valueUsdMillions": 3995,
+          "sharePercent": 83.5
+        },
+        {
+          "rank": 2,
+          "name": "United Arab Emirates",
+          "valueUsdMillions": 222,
+          "sharePercent": 4.64
+        },
+        {
+          "rank": 3,
+          "name": "China",
+          "valueUsdMillions": 116,
+          "sharePercent": 2.42
+        },
+        {
+          "rank": 4,
+          "name": "France",
+          "valueUsdMillions": 84,
+          "sharePercent": 1.76
+        },
+        {
+          "rank": 5,
+          "name": "United States",
+          "valueUsdMillions": 76,
+          "sharePercent": 1.59
+        }
+      ]
+    },
+    "DM": {
+      "reporter": "DMA",
+      "requestedYear": "2023",
+      "year": 2023,
+      "sourceUrl": "https://wits.worldbank.org/CountryProfile/en/Country/DMA/Year/2023/Summarytext",
+      "pageComplete": true,
+      "partners": [
+        {
+          "rank": 1,
+          "name": "Iceland",
+          "valueUsdMillions": 5,
+          "sharePercent": 21.42
+        },
+        {
+          "rank": 2,
+          "name": "Antigua and Barbuda",
+          "valueUsdMillions": 4,
+          "sharePercent": 17.95
+        },
+        {
+          "rank": 3,
+          "name": "France",
+          "valueUsdMillions": 2,
+          "sharePercent": 9.36
+        },
+        {
+          "rank": 4,
+          "name": "United States",
+          "valueUsdMillions": 2,
+          "sharePercent": 7.97
+        },
+        {
+          "rank": 5,
+          "name": "St. Lucia",
+          "valueUsdMillions": 2,
+          "sharePercent": 7.1
+        }
+      ]
+    },
+    "DK": {
+      "reporter": "DNK",
+      "requestedYear": "2023",
+      "year": 2023,
+      "sourceUrl": "https://wits.worldbank.org/CountryProfile/en/Country/DNK/Year/2023/Summarytext",
+      "pageComplete": true,
+      "partners": [
+        {
+          "rank": 1,
+          "name": "Special Categories",
+          "valueUsdMillions": 23258,
+          "sharePercent": 18.09
+        },
+        {
+          "rank": 2,
+          "name": "Germany",
+          "valueUsdMillions": 17608,
+          "sharePercent": 13.69
+        },
+        {
+          "rank": 3,
+          "name": "Sweden",
+          "valueUsdMillions": 10670,
+          "sharePercent": 8.3
+        },
+        {
+          "rank": 4,
+          "name": "Netherlands",
+          "valueUsdMillions": 7462,
+          "sharePercent": 5.8
+        },
+        {
+          "rank": 5,
+          "name": "Norway",
+          "valueUsdMillions": 6849,
+          "sharePercent": 5.33
+        }
+      ]
+    },
+    "DO": {
+      "reporter": "DOM",
+      "requestedYear": "2023",
+      "year": 2023,
+      "sourceUrl": "https://wits.worldbank.org/CountryProfile/en/Country/DOM/Year/2023/Summarytext",
+      "pageComplete": true,
+      "partners": [
+        {
+          "rank": 1,
+          "name": "United States",
+          "valueUsdMillions": 7162,
+          "sharePercent": 60.02
+        },
+        {
+          "rank": 2,
+          "name": "Haiti",
+          "valueUsdMillions": 856,
+          "sharePercent": 7.18
+        },
+        {
+          "rank": 3,
+          "name": "Switzerland",
+          "valueUsdMillions": 808,
+          "sharePercent": 6.77
+        },
+        {
+          "rank": 4,
+          "name": "India",
+          "valueUsdMillions": 367,
+          "sharePercent": 3.08
+        },
+        {
+          "rank": 5,
+          "name": "Netherlands",
+          "valueUsdMillions": 351,
+          "sharePercent": 2.94
+        }
+      ]
+    },
+    "DZ": {
+      "reporter": "DZA",
+      "requestedYear": "2017",
+      "year": 2017,
+      "sourceUrl": "https://wits.worldbank.org/CountryProfile/en/Country/DZA/Year/2017/Summarytext",
+      "pageComplete": true,
+      "partners": [
+        {
+          "rank": 1,
+          "name": "Italy",
+          "valueUsdMillions": 5629,
+          "sharePercent": 16
+        },
+        {
+          "rank": 2,
+          "name": "France",
+          "valueUsdMillions": 4431,
+          "sharePercent": 12.59
+        },
+        {
+          "rank": 3,
+          "name": "Spain",
+          "valueUsdMillions": 4103,
+          "sharePercent": 11.66
+        },
+        {
+          "rank": 4,
+          "name": "United States",
+          "valueUsdMillions": 3468,
+          "sharePercent": 9.85
+        },
+        {
+          "rank": 5,
+          "name": "Brazil",
+          "valueUsdMillions": 2128,
+          "sharePercent": 6.05
+        }
+      ],
+      "retrievedSourceUrl": "https://wits.worldbank.org/CountryProfile/en/Country/DZA/Year/LTST/Summarytext"
+    },
+    "EC": {
+      "reporter": "ECU",
+      "requestedYear": "2023",
+      "year": 2023,
+      "sourceUrl": "https://wits.worldbank.org/CountryProfile/en/Country/ECU/Year/2023/Summarytext",
+      "pageComplete": true,
+      "partners": [
+        {
+          "rank": 1,
+          "name": "United States",
+          "valueUsdMillions": 7403,
+          "sharePercent": 23.78
+        },
+        {
+          "rank": 2,
+          "name": "China",
+          "valueUsdMillions": 5673,
+          "sharePercent": 18.23
+        },
+        {
+          "rank": 3,
+          "name": "Panama",
+          "valueUsdMillions": 4473,
+          "sharePercent": 14.37
+        },
+        {
+          "rank": 4,
+          "name": "Chile",
+          "valueUsdMillions": 978,
+          "sharePercent": 3.14
+        },
+        {
+          "rank": 5,
+          "name": "Peru",
+          "valueUsdMillions": 975,
+          "sharePercent": 3.13
+        }
+      ]
+    },
+    "EG": {
+      "reporter": "EGY",
+      "requestedYear": "2023",
+      "year": 2023,
+      "sourceUrl": "https://wits.worldbank.org/CountryProfile/en/Country/EGY/Year/2023/Summarytext",
+      "pageComplete": true,
+      "partners": [
+        {
+          "rank": 1,
+          "name": "Turkey",
+          "valueUsdMillions": 3644,
+          "sharePercent": 8.56
+        },
+        {
+          "rank": 2,
+          "name": "Italy",
+          "valueUsdMillions": 3255,
+          "sharePercent": 7.65
+        },
+        {
+          "rank": 3,
+          "name": "Saudi Arabia",
+          "valueUsdMillions": 2672,
+          "sharePercent": 6.28
+        },
+        {
+          "rank": 4,
+          "name": "United Arab Emirates",
+          "valueUsdMillions": 2224,
+          "sharePercent": 5.23
+        },
+        {
+          "rank": 5,
+          "name": "United States",
+          "valueUsdMillions": 2005,
+          "sharePercent": 4.71
+        }
+      ]
+    },
+    "ER": {
+      "reporter": "ERI",
+      "requestedYear": "2003",
+      "year": 2003,
+      "sourceUrl": "https://wits.worldbank.org/CountryProfile/en/Country/ERI/Year/2003/Summarytext",
+      "pageComplete": true,
+      "partners": [
+        {
+          "rank": 1,
+          "name": "Fm Sudan",
+          "valueUsdMillions": 1,
+          "sharePercent": 19.52
+        },
+        {
+          "rank": 2,
+          "name": "Singapore",
+          "valueUsdMillions": 1,
+          "sharePercent": 12.39
+        },
+        {
+          "rank": 3,
+          "name": "Italy",
+          "valueUsdMillions": 1,
+          "sharePercent": 11.61
+        },
+        {
+          "rank": 4,
+          "name": "Netherlands",
+          "valueUsdMillions": 1,
+          "sharePercent": 10.41
+        },
+        {
+          "rank": 5,
+          "name": "India",
+          "valueUsdMillions": 0,
+          "sharePercent": 7.23
+        }
+      ],
+      "retrievedSourceUrl": "https://wits.worldbank.org/CountryProfile/en/Country/ERI/Year/LTST/Summarytext"
+    },
+    "ES": {
+      "reporter": "ESP",
+      "requestedYear": "2023",
+      "year": 2023,
+      "sourceUrl": "https://wits.worldbank.org/CountryProfile/en/Country/ESP/Year/2023/Summarytext",
+      "pageComplete": true,
+      "partners": [
+        {
+          "rank": 1,
+          "name": "France",
+          "valueUsdMillions": 63198,
+          "sharePercent": 15.04
+        },
+        {
+          "rank": 2,
+          "name": "Germany",
+          "valueUsdMillions": 42268,
+          "sharePercent": 10.06
+        },
+        {
+          "rank": 3,
+          "name": "Italy",
+          "valueUsdMillions": 34858,
+          "sharePercent": 8.3
+        },
+        {
+          "rank": 4,
+          "name": "Portugal",
+          "valueUsdMillions": 33574,
+          "sharePercent": 7.99
+        },
+        {
+          "rank": 5,
+          "name": "United Kingdom",
+          "valueUsdMillions": 24244,
+          "sharePercent": 5.77
+        }
+      ]
+    },
+    "EE": {
+      "reporter": "EST",
+      "requestedYear": "2023",
+      "year": 2023,
+      "sourceUrl": "https://wits.worldbank.org/CountryProfile/en/Country/EST/Year/2023/Summarytext",
+      "pageComplete": true,
+      "partners": [
+        {
+          "rank": 1,
+          "name": "Finland",
+          "valueUsdMillions": 3104,
+          "sharePercent": 15.44
+        },
+        {
+          "rank": 2,
+          "name": "Latvia",
+          "valueUsdMillions": 2334,
+          "sharePercent": 11.61
+        },
+        {
+          "rank": 3,
+          "name": "Sweden",
+          "valueUsdMillions": 1839,
+          "sharePercent": 9.15
+        },
+        {
+          "rank": 4,
+          "name": "Lithuania",
+          "valueUsdMillions": 1636,
+          "sharePercent": 8.14
+        },
+        {
+          "rank": 5,
+          "name": "Germany",
+          "valueUsdMillions": 1282,
+          "sharePercent": 6.37
+        }
+      ]
+    },
+    "ET": {
+      "reporter": "ETH",
+      "requestedYear": "2023",
+      "year": 2023,
+      "sourceUrl": "https://wits.worldbank.org/CountryProfile/en/Country/ETH/Year/2023/Summarytext",
+      "pageComplete": true,
+      "partners": [
+        {
+          "rank": 1,
+          "name": "Saudi Arabia",
+          "valueUsdMillions": 298,
+          "sharePercent": 10.42
+        },
+        {
+          "rank": 2,
+          "name": "United States",
+          "valueUsdMillions": 276,
+          "sharePercent": 9.67
+        },
+        {
+          "rank": 3,
+          "name": "Netherlands",
+          "valueUsdMillions": 219,
+          "sharePercent": 7.65
+        },
+        {
+          "rank": 4,
+          "name": "United Arab Emirates",
+          "valueUsdMillions": 164,
+          "sharePercent": 5.73
+        },
+        {
+          "rank": 5,
+          "name": "Somalia",
+          "valueUsdMillions": 142,
+          "sharePercent": 4.97
+        }
+      ]
+    },
+    "FI": {
+      "reporter": "FIN",
+      "requestedYear": "2023",
+      "year": 2023,
+      "sourceUrl": "https://wits.worldbank.org/CountryProfile/en/Country/FIN/Year/2023/Summarytext",
+      "pageComplete": true,
+      "partners": [
+        {
+          "rank": 1,
+          "name": "United States",
+          "valueUsdMillions": 9069,
+          "sharePercent": 10.98
+        },
+        {
+          "rank": 2,
+          "name": "Sweden",
+          "valueUsdMillions": 8677,
+          "sharePercent": 10.51
+        },
+        {
+          "rank": 3,
+          "name": "Germany",
+          "valueUsdMillions": 8638,
+          "sharePercent": 10.46
+        },
+        {
+          "rank": 4,
+          "name": "Netherlands",
+          "valueUsdMillions": 6590,
+          "sharePercent": 7.98
+        },
+        {
+          "rank": 5,
+          "name": "China",
+          "valueUsdMillions": 3706,
+          "sharePercent": 4.49
+        }
+      ]
+    },
+    "FJ": {
+      "reporter": "FJI",
+      "requestedYear": "2023",
+      "year": 2023,
+      "sourceUrl": "https://wits.worldbank.org/CountryProfile/en/Country/FJI/Year/2023/Summarytext",
+      "pageComplete": true,
+      "partners": [
+        {
+          "rank": 1,
+          "name": "United States",
+          "valueUsdMillions": 212,
+          "sharePercent": 19.9
+        },
+        {
+          "rank": 2,
+          "name": "Bunkers",
+          "valueUsdMillions": 126,
+          "sharePercent": 11.79
+        },
+        {
+          "rank": 3,
+          "name": "Australia",
+          "valueUsdMillions": 104,
+          "sharePercent": 9.73
+        },
+        {
+          "rank": 4,
+          "name": "Tonga",
+          "valueUsdMillions": 73,
+          "sharePercent": 6.85
+        },
+        {
+          "rank": 5,
+          "name": "Unspecified",
+          "valueUsdMillions": 68,
+          "sharePercent": 6.39
+        }
+      ]
+    },
+    "FR": {
+      "reporter": "FRA",
+      "requestedYear": "2023",
+      "year": 2023,
+      "sourceUrl": "https://wits.worldbank.org/CountryProfile/en/Country/FRA/Year/2023/Summarytext",
+      "pageComplete": true,
+      "partners": [
+        {
+          "rank": 1,
+          "name": "Germany",
+          "valueUsdMillions": 86452,
+          "sharePercent": 13.5
+        },
+        {
+          "rank": 2,
+          "name": "Italy",
+          "valueUsdMillions": 57391,
+          "sharePercent": 8.96
+        },
+        {
+          "rank": 3,
+          "name": "Belgium",
+          "valueUsdMillions": 52221,
+          "sharePercent": 8.16
+        },
+        {
+          "rank": 4,
+          "name": "Spain",
+          "valueUsdMillions": 48331,
+          "sharePercent": 7.55
+        },
+        {
+          "rank": 5,
+          "name": "United States",
+          "valueUsdMillions": 45541,
+          "sharePercent": 7.11
+        }
+      ]
+    },
+    "FM": {
+      "reporter": "FSM",
+      "requestedYear": "2013",
+      "year": 2013,
+      "sourceUrl": "https://wits.worldbank.org/CountryProfile/en/Country/FSM/Year/2013/Summarytext",
+      "pageComplete": true,
+      "partners": [
+        {
+          "rank": 1,
+          "name": "Unspecified",
+          "valueUsdMillions": 22,
+          "sharePercent": 79.83
+        },
+        {
+          "rank": 2,
+          "name": "Guam",
+          "valueUsdMillions": 3,
+          "sharePercent": 11.77
+        },
+        {
+          "rank": 3,
+          "name": "Northern Mariana Islands",
+          "valueUsdMillions": 1,
+          "sharePercent": 4.82
+        },
+        {
+          "rank": 4,
+          "name": "United States",
+          "valueUsdMillions": 1,
+          "sharePercent": 2.65
+        },
+        {
+          "rank": 5,
+          "name": "Marshall Islands",
+          "valueUsdMillions": 0,
+          "sharePercent": 0.93
+        }
+      ],
+      "retrievedSourceUrl": "https://wits.worldbank.org/CountryProfile/en/Country/FSM/Year/LTST/Summarytext"
+    },
+    "GA": {
+      "reporter": "GAB",
+      "requestedYear": "2023",
+      "year": 2023,
+      "sourceUrl": "https://wits.worldbank.org/CountryProfile/en/Country/GAB/Year/2023/Summarytext",
+      "pageComplete": true,
+      "partners": [
+        {
+          "rank": 1,
+          "name": "China",
+          "valueUsdMillions": 3516,
+          "sharePercent": 27.7
+        },
+        {
+          "rank": 2,
+          "name": "France",
+          "valueUsdMillions": 1341,
+          "sharePercent": 10.56
+        },
+        {
+          "rank": 3,
+          "name": "Spain",
+          "valueUsdMillions": 755,
+          "sharePercent": 5.95
+        },
+        {
+          "rank": 4,
+          "name": "Netherlands",
+          "valueUsdMillions": 724,
+          "sharePercent": 5.7
+        },
+        {
+          "rank": 5,
+          "name": "Israel",
+          "valueUsdMillions": 680,
+          "sharePercent": 5.36
+        }
+      ]
+    },
+    "GB": {
+      "reporter": "GBR",
+      "requestedYear": "2023",
+      "year": 2023,
+      "sourceUrl": "https://wits.worldbank.org/CountryProfile/en/Country/GBR/Year/2023/Summarytext",
+      "pageComplete": true,
+      "partners": [
+        {
+          "rank": 1,
+          "name": "United States",
+          "valueUsdMillions": 71908,
+          "sharePercent": 13.8
+        },
+        {
+          "rank": 2,
+          "name": "Germany",
+          "valueUsdMillions": 39591,
+          "sharePercent": 7.6
+        },
+        {
+          "rank": 3,
+          "name": "Netherlands",
+          "valueUsdMillions": 36871,
+          "sharePercent": 7.07
+        },
+        {
+          "rank": 4,
+          "name": "Switzerland",
+          "valueUsdMillions": 35632,
+          "sharePercent": 6.84
+        },
+        {
+          "rank": 5,
+          "name": "China",
+          "valueUsdMillions": 34286,
+          "sharePercent": 6.58
+        }
+      ]
+    },
+    "GE": {
+      "reporter": "GEO",
+      "requestedYear": "2023",
+      "year": 2023,
+      "sourceUrl": "https://wits.worldbank.org/CountryProfile/en/Country/GEO/Year/2023/Summarytext",
+      "pageComplete": true,
+      "partners": [
+        {
+          "rank": 1,
+          "name": "Azerbaijan",
+          "valueUsdMillions": 862,
+          "sharePercent": 14.16
+        },
+        {
+          "rank": 2,
+          "name": "Armenia",
+          "valueUsdMillions": 787,
+          "sharePercent": 12.93
+        },
+        {
+          "rank": 3,
+          "name": "Kazakhstan",
+          "valueUsdMillions": 703,
+          "sharePercent": 11.55
+        },
+        {
+          "rank": 4,
+          "name": "Kyrgyz Republic",
+          "valueUsdMillions": 696,
+          "sharePercent": 11.43
+        },
+        {
+          "rank": 5,
+          "name": "Russian Federation",
+          "valueUsdMillions": 657,
+          "sharePercent": 10.8
+        }
+      ]
+    },
+    "GH": {
+      "reporter": "GHA",
+      "requestedYear": "2023",
+      "year": 2023,
+      "sourceUrl": "https://wits.worldbank.org/CountryProfile/en/Country/GHA/Year/2023/Summarytext",
+      "pageComplete": true,
+      "partners": [
+        {
+          "rank": 1,
+          "name": "Switzerland",
+          "valueUsdMillions": 3079,
+          "sharePercent": 18.25
+        },
+        {
+          "rank": 2,
+          "name": "South Africa",
+          "valueUsdMillions": 1974,
+          "sharePercent": 11.7
+        },
+        {
+          "rank": 3,
+          "name": "United Arab Emirates",
+          "valueUsdMillions": 1713,
+          "sharePercent": 10.15
+        },
+        {
+          "rank": 4,
+          "name": "China",
+          "valueUsdMillions": 1377,
+          "sharePercent": 8.16
+        },
+        {
+          "rank": 5,
+          "name": "India",
+          "valueUsdMillions": 1178,
+          "sharePercent": 6.98
+        }
+      ]
+    },
+    "GN": {
+      "reporter": "GIN",
+      "requestedYear": "2016",
+      "year": 2016,
+      "sourceUrl": "https://wits.worldbank.org/CountryProfile/en/Country/GIN/Year/2016/Summarytext",
+      "pageComplete": true,
+      "partners": [
+        {
+          "rank": 1,
+          "name": "United Arab Emirates",
+          "valueUsdMillions": 660,
+          "sharePercent": 27.57
+        },
+        {
+          "rank": 2,
+          "name": "Ghana",
+          "valueUsdMillions": 367,
+          "sharePercent": 15.34
+        },
+        {
+          "rank": 3,
+          "name": "India",
+          "valueUsdMillions": 217,
+          "sharePercent": 9.07
+        },
+        {
+          "rank": 4,
+          "name": "Switzerland",
+          "valueUsdMillions": 184,
+          "sharePercent": 7.68
+        },
+        {
+          "rank": 5,
+          "name": "France",
+          "valueUsdMillions": 145,
+          "sharePercent": 6.07
+        }
+      ],
+      "retrievedSourceUrl": "https://wits.worldbank.org/CountryProfile/en/Country/GIN/Year/LTST/Summarytext"
+    },
+    "GM": {
+      "reporter": "GMB",
+      "requestedYear": "2023",
+      "year": 2023,
+      "sourceUrl": "https://wits.worldbank.org/CountryProfile/en/Country/GMB/Year/2023/Summarytext",
+      "pageComplete": true,
+      "partners": [
+        {
+          "rank": 1,
+          "name": "Guinea-Bissau",
+          "valueUsdMillions": 59,
+          "sharePercent": 71.02
+        },
+        {
+          "rank": 2,
+          "name": "Mali",
+          "valueUsdMillions": 9,
+          "sharePercent": 10.6
+        },
+        {
+          "rank": 3,
+          "name": "China",
+          "valueUsdMillions": 6,
+          "sharePercent": 6.93
+        },
+        {
+          "rank": 4,
+          "name": "India",
+          "valueUsdMillions": 2,
+          "sharePercent": 2.82
+        },
+        {
+          "rank": 5,
+          "name": "Senegal",
+          "valueUsdMillions": 1,
+          "sharePercent": 1.58
+        }
+      ]
+    },
+    "GW": {
+      "reporter": "GNB",
+      "requestedYear": "2018",
+      "year": 2018,
+      "sourceUrl": "https://wits.worldbank.org/CountryProfile/en/Country/GNB/Year/2018/Summarytext",
+      "pageComplete": true,
+      "partners": [
+        {
+          "rank": 1,
+          "name": "India",
+          "valueUsdMillions": 108,
+          "sharePercent": 44.17
+        },
+        {
+          "rank": 2,
+          "name": "China",
+          "valueUsdMillions": 71,
+          "sharePercent": 29.14
+        },
+        {
+          "rank": 3,
+          "name": "Singapore",
+          "valueUsdMillions": 44,
+          "sharePercent": 17.85
+        },
+        {
+          "rank": 4,
+          "name": "Vietnam",
+          "valueUsdMillions": 15,
+          "sharePercent": 6.13
+        },
+        {
+          "rank": 5,
+          "name": "United Arab Emirates",
+          "valueUsdMillions": 4,
+          "sharePercent": 1.7
+        }
+      ],
+      "retrievedSourceUrl": "https://wits.worldbank.org/CountryProfile/en/Country/GNB/Year/LTST/Summarytext"
+    },
+    "GQ": null,
+    "GR": {
+      "reporter": "GRC",
+      "requestedYear": "2023",
+      "year": 2023,
+      "sourceUrl": "https://wits.worldbank.org/CountryProfile/en/Country/GRC/Year/2023/Summarytext",
+      "pageComplete": true,
+      "partners": [
+        {
+          "rank": 1,
+          "name": "Italy",
+          "valueUsdMillions": 6325,
+          "sharePercent": 11.49
+        },
+        {
+          "rank": 2,
+          "name": "Bulgaria",
+          "valueUsdMillions": 3743,
+          "sharePercent": 6.8
+        },
+        {
+          "rank": 3,
+          "name": "Germany",
+          "valueUsdMillions": 3631,
+          "sharePercent": 6.6
+        },
+        {
+          "rank": 4,
+          "name": "Cyprus",
+          "valueUsdMillions": 3355,
+          "sharePercent": 6.09
+        },
+        {
+          "rank": 5,
+          "name": "United States",
+          "valueUsdMillions": 2289,
+          "sharePercent": 4.16
+        }
+      ]
+    },
+    "GD": {
+      "reporter": "GRD",
+      "requestedYear": "2023",
+      "year": 2023,
+      "sourceUrl": "https://wits.worldbank.org/CountryProfile/en/Country/GRD/Year/2023/Summarytext",
+      "pageComplete": true,
+      "partners": [
+        {
+          "rank": 1,
+          "name": "Unspecified",
+          "valueUsdMillions": 24,
+          "sharePercent": 52.22
+        },
+        {
+          "rank": 2,
+          "name": "United States",
+          "valueUsdMillions": 4,
+          "sharePercent": 8.76
+        },
+        {
+          "rank": 3,
+          "name": "St. Vincent and the Grenadines",
+          "valueUsdMillions": 4,
+          "sharePercent": 8.6
+        },
+        {
+          "rank": 4,
+          "name": "Trinidad and Tobago",
+          "valueUsdMillions": 3,
+          "sharePercent": 6.84
+        },
+        {
+          "rank": 5,
+          "name": "St. Kitts and Nevis",
+          "valueUsdMillions": 3,
+          "sharePercent": 6.16
+        }
+      ]
+    },
+    "GT": {
+      "reporter": "GTM",
+      "requestedYear": "2023",
+      "year": 2023,
+      "sourceUrl": "https://wits.worldbank.org/CountryProfile/en/Country/GTM/Year/2023/Summarytext",
+      "pageComplete": true,
+      "partners": [
+        {
+          "rank": 1,
+          "name": "United States",
+          "valueUsdMillions": 4611,
+          "sharePercent": 32.33
+        },
+        {
+          "rank": 2,
+          "name": "El Salvador",
+          "valueUsdMillions": 1875,
+          "sharePercent": 13.14
+        },
+        {
+          "rank": 3,
+          "name": "Honduras",
+          "valueUsdMillions": 1629,
+          "sharePercent": 11.42
+        },
+        {
+          "rank": 4,
+          "name": "Nicaragua",
+          "valueUsdMillions": 986,
+          "sharePercent": 6.91
+        },
+        {
+          "rank": 5,
+          "name": "Mexico",
+          "valueUsdMillions": 674,
+          "sharePercent": 4.73
+        }
+      ]
+    },
+    "GY": {
+      "reporter": "GUY",
+      "requestedYear": "2023",
+      "year": 2023,
+      "sourceUrl": "https://wits.worldbank.org/CountryProfile/en/Country/GUY/Year/2023/Summarytext",
+      "pageComplete": true,
+      "partners": [
+        {
+          "rank": 1,
+          "name": "Trinidad and Tobago",
+          "valueUsdMillions": 1904,
+          "sharePercent": 17.61
+        },
+        {
+          "rank": 2,
+          "name": "United States",
+          "valueUsdMillions": 1785,
+          "sharePercent": 16.51
+        },
+        {
+          "rank": 3,
+          "name": "Singapore",
+          "valueUsdMillions": 1640,
+          "sharePercent": 15.17
+        },
+        {
+          "rank": 4,
+          "name": "Netherlands",
+          "valueUsdMillions": 1003,
+          "sharePercent": 9.28
+        },
+        {
+          "rank": 5,
+          "name": "United Kingdom",
+          "valueUsdMillions": 832,
+          "sharePercent": 7.69
+        }
+      ]
+    },
+    "HN": {
+      "reporter": "HND",
+      "requestedYear": "2023",
+      "year": 2023,
+      "sourceUrl": "https://wits.worldbank.org/CountryProfile/en/Country/HND/Year/2023/Summarytext",
+      "pageComplete": true,
+      "partners": [
+        {
+          "rank": 1,
+          "name": "United States",
+          "valueUsdMillions": 3229,
+          "sharePercent": 45.03
+        },
+        {
+          "rank": 2,
+          "name": "El Salvador",
+          "valueUsdMillions": 464,
+          "sharePercent": 6.47
+        },
+        {
+          "rank": 3,
+          "name": "Nicaragua",
+          "valueUsdMillions": 422,
+          "sharePercent": 5.89
+        },
+        {
+          "rank": 4,
+          "name": "Guatemala",
+          "valueUsdMillions": 410,
+          "sharePercent": 5.72
+        },
+        {
+          "rank": 5,
+          "name": "Germany",
+          "valueUsdMillions": 344,
+          "sharePercent": 4.8
+        }
+      ]
+    },
+    "HR": {
+      "reporter": "HRV",
+      "requestedYear": "2023",
+      "year": 2023,
+      "sourceUrl": "https://wits.worldbank.org/CountryProfile/en/Country/HRV/Year/2023/Summarytext",
+      "pageComplete": true,
+      "partners": [
+        {
+          "rank": 1,
+          "name": "Italy",
+          "valueUsdMillions": 3014,
+          "sharePercent": 12.22
+        },
+        {
+          "rank": 2,
+          "name": "Germany",
+          "valueUsdMillions": 3013,
+          "sharePercent": 12.21
+        },
+        {
+          "rank": 3,
+          "name": "Slovenia",
+          "valueUsdMillions": 2763,
+          "sharePercent": 11.2
+        },
+        {
+          "rank": 4,
+          "name": "Bosnia and Herzegovina",
+          "valueUsdMillions": 2490,
+          "sharePercent": 10.09
+        },
+        {
+          "rank": 5,
+          "name": "Hungary",
+          "valueUsdMillions": 1693,
+          "sharePercent": 6.86
+        }
+      ]
+    },
+    "HT": null,
+    "HU": {
+      "reporter": "HUN",
+      "requestedYear": "2023",
+      "year": 2023,
+      "sourceUrl": "https://wits.worldbank.org/CountryProfile/en/Country/HUN/Year/2023/Summarytext",
+      "pageComplete": true,
+      "partners": [
+        {
+          "rank": 1,
+          "name": "Germany",
+          "valueUsdMillions": 41667,
+          "sharePercent": 26.28
+        },
+        {
+          "rank": 2,
+          "name": "Italy",
+          "valueUsdMillions": 9151,
+          "sharePercent": 5.77
+        },
+        {
+          "rank": 3,
+          "name": "Romania",
+          "valueUsdMillions": 8418,
+          "sharePercent": 5.31
+        },
+        {
+          "rank": 4,
+          "name": "Slovak Republic",
+          "valueUsdMillions": 7901,
+          "sharePercent": 4.98
+        },
+        {
+          "rank": 5,
+          "name": "Poland",
+          "valueUsdMillions": 7271,
+          "sharePercent": 4.59
+        }
+      ]
+    },
+    "ID": {
+      "reporter": "IDN",
+      "requestedYear": "2023",
+      "year": 2023,
+      "sourceUrl": "https://wits.worldbank.org/CountryProfile/en/Country/IDN/Year/2023/Summarytext",
+      "pageComplete": true,
+      "partners": [
+        {
+          "rank": 1,
+          "name": "China",
+          "valueUsdMillions": 64935,
+          "sharePercent": 25.09
+        },
+        {
+          "rank": 2,
+          "name": "United States",
+          "valueUsdMillions": 23285,
+          "sharePercent": 9
+        },
+        {
+          "rank": 3,
+          "name": "Japan",
+          "valueUsdMillions": 20786,
+          "sharePercent": 8.03
+        },
+        {
+          "rank": 4,
+          "name": "India",
+          "valueUsdMillions": 20289,
+          "sharePercent": 7.84
+        },
+        {
+          "rank": 5,
+          "name": "Singapore",
+          "valueUsdMillions": 12607,
+          "sharePercent": 4.87
+        }
+      ]
+    },
+    "IN": {
+      "reporter": "IND",
+      "requestedYear": "2023",
+      "year": 2023,
+      "sourceUrl": "https://wits.worldbank.org/CountryProfile/en/Country/IND/Year/2023/Summarytext",
+      "pageComplete": true,
+      "partners": [
+        {
+          "rank": 1,
+          "name": "United States",
+          "valueUsdMillions": 75805,
+          "sharePercent": 17.57
+        },
+        {
+          "rank": 2,
+          "name": "United Arab Emirates",
+          "valueUsdMillions": 33021,
+          "sharePercent": 7.65
+        },
+        {
+          "rank": 3,
+          "name": "Netherlands",
+          "valueUsdMillions": 23108,
+          "sharePercent": 5.36
+        },
+        {
+          "rank": 4,
+          "name": "China",
+          "valueUsdMillions": 16245,
+          "sharePercent": 3.77
+        },
+        {
+          "rank": 5,
+          "name": "United Kingdom",
+          "valueUsdMillions": 12480,
+          "sharePercent": 2.89
+        }
+      ]
+    },
+    "IE": {
+      "reporter": "IRL",
+      "requestedYear": "2023",
+      "year": 2023,
+      "sourceUrl": "https://wits.worldbank.org/CountryProfile/en/Country/IRL/Year/2023/Summarytext",
+      "pageComplete": true,
+      "partners": [
+        {
+          "rank": 1,
+          "name": "United States",
+          "valueUsdMillions": 58828,
+          "sharePercent": 27.64
+        },
+        {
+          "rank": 2,
+          "name": "United Kingdom",
+          "valueUsdMillions": 24307,
+          "sharePercent": 11.42
+        },
+        {
+          "rank": 3,
+          "name": "Germany",
+          "valueUsdMillions": 22092,
+          "sharePercent": 10.38
+        },
+        {
+          "rank": 4,
+          "name": "Belgium",
+          "valueUsdMillions": 19965,
+          "sharePercent": 9.38
+        },
+        {
+          "rank": 5,
+          "name": "Netherlands",
+          "valueUsdMillions": 18050,
+          "sharePercent": 8.48
+        }
+      ]
+    },
+    "IR": {
+      "reporter": "IRN",
+      "requestedYear": "2022",
+      "year": 2022,
+      "sourceUrl": "https://wits.worldbank.org/CountryProfile/en/Country/IRN/Year/2022/Summarytext",
+      "pageComplete": true,
+      "partners": [
+        {
+          "rank": 1,
+          "name": "China",
+          "valueUsdMillions": 22426,
+          "sharePercent": 27.72
+        },
+        {
+          "rank": 2,
+          "name": "Other Asia, nes",
+          "valueUsdMillions": 13121,
+          "sharePercent": 16.22
+        },
+        {
+          "rank": 3,
+          "name": "Unspecified",
+          "valueUsdMillions": 11655,
+          "sharePercent": 14.41
+        },
+        {
+          "rank": 4,
+          "name": "Iraq",
+          "valueUsdMillions": 7345,
+          "sharePercent": 9.08
+        },
+        {
+          "rank": 5,
+          "name": "United Arab Emirates",
+          "valueUsdMillions": 6006,
+          "sharePercent": 7.42
+        }
+      ]
+    },
+    "IQ": {
+      "reporter": "IRQ",
+      "requestedYear": "2014",
+      "year": 2014,
+      "sourceUrl": "https://wits.worldbank.org/CountryProfile/en/Country/IRQ/Year/2014/Summarytext",
+      "pageComplete": true,
+      "partners": [
+        {
+          "rank": 1,
+          "name": "Unspecified",
+          "valueUsdMillions": 84303,
+          "sharePercent": 99.76
+        },
+        {
+          "rank": 2,
+          "name": "United Arab Emirates",
+          "valueUsdMillions": 129,
+          "sharePercent": 0.15
+        },
+        {
+          "rank": 3,
+          "name": "Syrian Arab Republic",
+          "valueUsdMillions": 34,
+          "sharePercent": 0.04
+        },
+        {
+          "rank": 4,
+          "name": "Turkey",
+          "valueUsdMillions": 18,
+          "sharePercent": 0.02
+        },
+        {
+          "rank": 5,
+          "name": "Jordan",
+          "valueUsdMillions": 14,
+          "sharePercent": 0.02
+        }
+      ],
+      "retrievedSourceUrl": "https://wits.worldbank.org/CountryProfile/en/Country/IRQ/Year/LTST/Summarytext"
+    },
+    "IS": {
+      "reporter": "ISL",
+      "requestedYear": "2023",
+      "year": 2023,
+      "sourceUrl": "https://wits.worldbank.org/CountryProfile/en/Country/ISL/Year/2023/Summarytext",
+      "pageComplete": true,
+      "partners": [
+        {
+          "rank": 1,
+          "name": "Netherlands",
+          "valueUsdMillions": 2440,
+          "sharePercent": 35.84
+        },
+        {
+          "rank": 2,
+          "name": "United States",
+          "valueUsdMillions": 661,
+          "sharePercent": 9.71
+        },
+        {
+          "rank": 3,
+          "name": "United Kingdom",
+          "valueUsdMillions": 592,
+          "sharePercent": 8.7
+        },
+        {
+          "rank": 4,
+          "name": "France",
+          "valueUsdMillions": 437,
+          "sharePercent": 6.43
+        },
+        {
+          "rank": 5,
+          "name": "Norway",
+          "valueUsdMillions": 391,
+          "sharePercent": 5.75
+        }
+      ]
+    },
+    "IL": {
+      "reporter": "ISR",
+      "requestedYear": "2023",
+      "year": 2023,
+      "sourceUrl": "https://wits.worldbank.org/CountryProfile/en/Country/ISR/Year/2023/Summarytext",
+      "pageComplete": true,
+      "partners": [
+        {
+          "rank": 1,
+          "name": "United States",
+          "valueUsdMillions": 17332,
+          "sharePercent": 29.42
+        },
+        {
+          "rank": 2,
+          "name": "Ireland",
+          "valueUsdMillions": 3422,
+          "sharePercent": 5.81
+        },
+        {
+          "rank": 3,
+          "name": "China",
+          "valueUsdMillions": 3400,
+          "sharePercent": 5.77
+        },
+        {
+          "rank": 4,
+          "name": "Netherlands",
+          "valueUsdMillions": 2399,
+          "sharePercent": 4.07
+        },
+        {
+          "rank": 5,
+          "name": "India",
+          "valueUsdMillions": 2240,
+          "sharePercent": 3.8
+        }
+      ]
+    },
+    "IT": {
+      "reporter": "ITA",
+      "requestedYear": "2023",
+      "year": 2023,
+      "sourceUrl": "https://wits.worldbank.org/CountryProfile/en/Country/ITA/Year/2023/Summarytext",
+      "pageComplete": true,
+      "partners": [
+        {
+          "rank": 1,
+          "name": "Germany",
+          "valueUsdMillions": 80719,
+          "sharePercent": 11.92
+        },
+        {
+          "rank": 2,
+          "name": "United States",
+          "valueUsdMillions": 72742,
+          "sharePercent": 10.74
+        },
+        {
+          "rank": 3,
+          "name": "France",
+          "valueUsdMillions": 68508,
+          "sharePercent": 10.12
+        },
+        {
+          "rank": 4,
+          "name": "Spain",
+          "valueUsdMillions": 35641,
+          "sharePercent": 5.26
+        },
+        {
+          "rank": 5,
+          "name": "Switzerland",
+          "valueUsdMillions": 33041,
+          "sharePercent": 4.88
+        }
+      ]
+    },
+    "JM": {
+      "reporter": "JAM",
+      "requestedYear": "2023",
+      "year": 2023,
+      "sourceUrl": "https://wits.worldbank.org/CountryProfile/en/Country/JAM/Year/2023/Summarytext",
+      "pageComplete": true,
+      "partners": [
+        {
+          "rank": 1,
+          "name": "United States",
+          "valueUsdMillions": 1011,
+          "sharePercent": 50.51
+        },
+        {
+          "rank": 2,
+          "name": "Russian Federation",
+          "valueUsdMillions": 138,
+          "sharePercent": 6.9
+        },
+        {
+          "rank": 3,
+          "name": "Latvia",
+          "valueUsdMillions": 131,
+          "sharePercent": 6.55
+        },
+        {
+          "rank": 4,
+          "name": "Iceland",
+          "valueUsdMillions": 95,
+          "sharePercent": 4.74
+        },
+        {
+          "rank": 5,
+          "name": "United Kingdom",
+          "valueUsdMillions": 69,
+          "sharePercent": 3.44
+        }
+      ]
+    },
+    "JO": {
+      "reporter": "JOR",
+      "requestedYear": "2023",
+      "year": 2023,
+      "sourceUrl": "https://wits.worldbank.org/CountryProfile/en/Country/JOR/Year/2023/Summarytext",
+      "pageComplete": true,
+      "partners": [
+        {
+          "rank": 1,
+          "name": "United States",
+          "valueUsdMillions": 2881,
+          "sharePercent": 22.88
+        },
+        {
+          "rank": 2,
+          "name": "India",
+          "valueUsdMillions": 1731,
+          "sharePercent": 13.75
+        },
+        {
+          "rank": 3,
+          "name": "Saudi Arabia",
+          "valueUsdMillions": 1446,
+          "sharePercent": 11.48
+        },
+        {
+          "rank": 4,
+          "name": "Iraq",
+          "valueUsdMillions": 946,
+          "sharePercent": 7.51
+        },
+        {
+          "rank": 5,
+          "name": "Free Zones",
+          "valueUsdMillions": 788,
+          "sharePercent": 6.26
+        }
+      ]
+    },
+    "JP": {
+      "reporter": "JPN",
+      "requestedYear": "2023",
+      "year": 2023,
+      "sourceUrl": "https://wits.worldbank.org/CountryProfile/en/Country/JPN/Year/2023/Summarytext",
+      "pageComplete": true,
+      "partners": [
+        {
+          "rank": 1,
+          "name": "United States",
+          "valueUsdMillions": 145131,
+          "sharePercent": 20.21
+        },
+        {
+          "rank": 2,
+          "name": "China",
+          "valueUsdMillions": 126440,
+          "sharePercent": 17.61
+        },
+        {
+          "rank": 3,
+          "name": "Korea, Rep.",
+          "valueUsdMillions": 46802,
+          "sharePercent": 6.52
+        },
+        {
+          "rank": 4,
+          "name": "Other Asia, nes",
+          "valueUsdMillions": 42821,
+          "sharePercent": 5.96
+        },
+        {
+          "rank": 5,
+          "name": "Hong Kong, China",
+          "valueUsdMillions": 32589,
+          "sharePercent": 4.54
+        }
+      ]
+    },
+    "KZ": {
+      "reporter": "KAZ",
+      "requestedYear": "2023",
+      "year": 2023,
+      "sourceUrl": "https://wits.worldbank.org/CountryProfile/en/Country/KAZ/Year/2023/Summarytext",
+      "pageComplete": true,
+      "partners": [
+        {
+          "rank": 1,
+          "name": "Italy",
+          "valueUsdMillions": 14835,
+          "sharePercent": 18.84
+        },
+        {
+          "rank": 2,
+          "name": "China",
+          "valueUsdMillions": 14759,
+          "sharePercent": 18.74
+        },
+        {
+          "rank": 3,
+          "name": "Russian Federation",
+          "valueUsdMillions": 9788,
+          "sharePercent": 12.43
+        },
+        {
+          "rank": 4,
+          "name": "Netherlands",
+          "valueUsdMillions": 4058,
+          "sharePercent": 5.15
+        },
+        {
+          "rank": 5,
+          "name": "Turkey",
+          "valueUsdMillions": 3969,
+          "sharePercent": 5.04
+        }
+      ]
+    },
+    "KE": {
+      "reporter": "KEN",
+      "requestedYear": "2023",
+      "year": 2023,
+      "sourceUrl": "https://wits.worldbank.org/CountryProfile/en/Country/KEN/Year/2023/Summarytext",
+      "pageComplete": true,
+      "partners": [
+        {
+          "rank": 1,
+          "name": "Uganda",
+          "valueUsdMillions": 897,
+          "sharePercent": 12.53
+        },
+        {
+          "rank": 2,
+          "name": "Pakistan",
+          "valueUsdMillions": 563,
+          "sharePercent": 7.87
+        },
+        {
+          "rank": 3,
+          "name": "Netherlands",
+          "valueUsdMillions": 544,
+          "sharePercent": 7.6
+        },
+        {
+          "rank": 4,
+          "name": "Tanzania",
+          "valueUsdMillions": 488,
+          "sharePercent": 6.81
+        },
+        {
+          "rank": 5,
+          "name": "United States",
+          "valueUsdMillions": 459,
+          "sharePercent": 6.41
+        }
+      ]
+    },
+    "KG": {
+      "reporter": "KGZ",
+      "requestedYear": "2023",
+      "year": 2023,
+      "sourceUrl": "https://wits.worldbank.org/CountryProfile/en/Country/KGZ/Year/2023/Summarytext",
+      "pageComplete": true,
+      "partners": [
+        {
+          "rank": 1,
+          "name": "Switzerland",
+          "valueUsdMillions": 1089,
+          "sharePercent": 32.16
+        },
+        {
+          "rank": 2,
+          "name": "Russian Federation",
+          "valueUsdMillions": 822,
+          "sharePercent": 24.27
+        },
+        {
+          "rank": 3,
+          "name": "Kazakhstan",
+          "valueUsdMillions": 449,
+          "sharePercent": 13.26
+        },
+        {
+          "rank": 4,
+          "name": "Uzbekistan",
+          "valueUsdMillions": 291,
+          "sharePercent": 8.59
+        },
+        {
+          "rank": 5,
+          "name": "United Arab Emirates",
+          "valueUsdMillions": 189,
+          "sharePercent": 5.57
+        }
+      ]
+    },
+    "KH": {
+      "reporter": "KHM",
+      "requestedYear": "2023",
+      "year": 2023,
+      "sourceUrl": "https://wits.worldbank.org/CountryProfile/en/Country/KHM/Year/2023/Summarytext",
+      "pageComplete": true,
+      "partners": [
+        {
+          "rank": 1,
+          "name": "United States",
+          "valueUsdMillions": 8996,
+          "sharePercent": 41.5
+        },
+        {
+          "rank": 2,
+          "name": "China",
+          "valueUsdMillions": 1515,
+          "sharePercent": 6.99
+        },
+        {
+          "rank": 3,
+          "name": "Vietnam",
+          "valueUsdMillions": 1348,
+          "sharePercent": 6.22
+        },
+        {
+          "rank": 4,
+          "name": "Japan",
+          "valueUsdMillions": 1178,
+          "sharePercent": 5.43
+        },
+        {
+          "rank": 5,
+          "name": "Canada",
+          "valueUsdMillions": 870,
+          "sharePercent": 4.01
+        }
+      ]
+    },
+    "KI": {
+      "reporter": "KIR",
+      "requestedYear": "2021",
+      "year": 2021,
+      "sourceUrl": "https://wits.worldbank.org/CountryProfile/en/Country/KIR/Year/2021/Summarytext",
+      "pageComplete": true,
+      "partners": [
+        {
+          "rank": 1,
+          "name": "New Caledonia",
+          "valueUsdMillions": 2,
+          "sharePercent": 27.53
+        },
+        {
+          "rank": 2,
+          "name": "Malaysia",
+          "valueUsdMillions": 2,
+          "sharePercent": 19.12
+        },
+        {
+          "rank": 3,
+          "name": "Japan",
+          "valueUsdMillions": 2,
+          "sharePercent": 19.05
+        },
+        {
+          "rank": 4,
+          "name": "Fiji",
+          "valueUsdMillions": 1,
+          "sharePercent": 12.99
+        },
+        {
+          "rank": 5,
+          "name": "United States",
+          "valueUsdMillions": 1,
+          "sharePercent": 10.38
+        }
+      ]
+    },
+    "KN": {
+      "reporter": "KNA",
+      "requestedYear": "2017",
+      "year": 2017,
+      "sourceUrl": "https://wits.worldbank.org/CountryProfile/en/Country/KNA/Year/2017/Summarytext",
+      "pageComplete": false,
+      "partners": [
+        {
+          "rank": 1,
+          "name": "United States",
+          "valueUsdMillions": 23,
+          "sharePercent": 68.68
+        },
+        {
+          "rank": 2,
+          "name": "St. Lucia",
+          "valueUsdMillions": 2,
+          "sharePercent": 6.82
+        },
+        {
+          "rank": 3,
+          "name": "Trinidad and Tobago",
+          "valueUsdMillions": 2,
+          "sharePercent": 6.53
+        },
+        {
+          "rank": 4,
+          "name": "Antigua and Barbuda",
+          "valueUsdMillions": 1,
+          "sharePercent": 2.81
+        },
+        {
+          "rank": 5,
+          "name": "Unspecified",
+          "valueUsdMillions": 1,
+          "sharePercent": 2.28
+        }
+      ],
+      "retrievedSourceUrl": "https://wits.worldbank.org/CountryProfile/en/Country/KNA/Year/LTST/Summarytext"
+    },
+    "KR": {
+      "reporter": "KOR",
+      "requestedYear": "2023",
+      "year": 2023,
+      "sourceUrl": "https://wits.worldbank.org/CountryProfile/en/Country/KOR/Year/2023/Summarytext",
+      "pageComplete": true,
+      "partners": [
+        {
+          "rank": 1,
+          "name": "China",
+          "valueUsdMillions": 124656,
+          "sharePercent": 19.73
+        },
+        {
+          "rank": 2,
+          "name": "United States",
+          "valueUsdMillions": 116290,
+          "sharePercent": 18.41
+        },
+        {
+          "rank": 3,
+          "name": "Vietnam",
+          "valueUsdMillions": 53474,
+          "sharePercent": 8.46
+        },
+        {
+          "rank": 4,
+          "name": "Japan",
+          "valueUsdMillions": 28997,
+          "sharePercent": 4.59
+        },
+        {
+          "rank": 5,
+          "name": "Hong Kong, China",
+          "valueUsdMillions": 25193,
+          "sharePercent": 3.99
+        }
+      ]
+    },
+    "KW": {
+      "reporter": "KWT",
+      "requestedYear": "2023",
+      "year": 2023,
+      "sourceUrl": "https://wits.worldbank.org/CountryProfile/en/Country/KWT/Year/2023/Summarytext",
+      "pageComplete": true,
+      "partners": [
+        {
+          "rank": 1,
+          "name": "Unspecified",
+          "valueUsdMillions": 78058,
+          "sharePercent": 92.95
+        },
+        {
+          "rank": 2,
+          "name": "United Arab Emirates",
+          "valueUsdMillions": 1300,
+          "sharePercent": 1.55
+        },
+        {
+          "rank": 3,
+          "name": "India",
+          "valueUsdMillions": 1063,
+          "sharePercent": 1.27
+        },
+        {
+          "rank": 4,
+          "name": "Saudi Arabia",
+          "valueUsdMillions": 705,
+          "sharePercent": 0.84
+        },
+        {
+          "rank": 5,
+          "name": "China",
+          "valueUsdMillions": 591,
+          "sharePercent": 0.7
+        }
+      ]
+    },
+    "LA": {
+      "reporter": "LAO",
+      "requestedYear": "2023",
+      "year": 2023,
+      "sourceUrl": "https://wits.worldbank.org/CountryProfile/en/Country/LAO/Year/2023/Summarytext",
+      "pageComplete": true,
+      "partners": [
+        {
+          "rank": 1,
+          "name": "China",
+          "valueUsdMillions": 2310,
+          "sharePercent": 38.23
+        },
+        {
+          "rank": 2,
+          "name": "Vietnam",
+          "valueUsdMillions": 1204,
+          "sharePercent": 19.93
+        },
+        {
+          "rank": 3,
+          "name": "Thailand",
+          "valueUsdMillions": 792,
+          "sharePercent": 13.11
+        },
+        {
+          "rank": 4,
+          "name": "Unspecified",
+          "valueUsdMillions": 471,
+          "sharePercent": 7.8
+        },
+        {
+          "rank": 5,
+          "name": "Australia",
+          "valueUsdMillions": 347,
+          "sharePercent": 5.75
+        }
+      ]
+    },
+    "LB": {
+      "reporter": "LBN",
+      "requestedYear": "2023",
+      "year": 2023,
+      "sourceUrl": "https://wits.worldbank.org/CountryProfile/en/Country/LBN/Year/2023/Summarytext",
+      "pageComplete": true,
+      "partners": [
+        {
+          "rank": 1,
+          "name": "United Arab Emirates",
+          "valueUsdMillions": 1012,
+          "sharePercent": 22.18
+        },
+        {
+          "rank": 2,
+          "name": "Turkey",
+          "valueUsdMillions": 361,
+          "sharePercent": 7.92
+        },
+        {
+          "rank": 3,
+          "name": "Iraq",
+          "valueUsdMillions": 236,
+          "sharePercent": 5.18
+        },
+        {
+          "rank": 4,
+          "name": "Egypt, Arab Rep.",
+          "valueUsdMillions": 228,
+          "sharePercent": 5
+        },
+        {
+          "rank": 5,
+          "name": "United States",
+          "valueUsdMillions": 212,
+          "sharePercent": 4.66
+        }
+      ]
+    },
+    "LR": {
+      "reporter": "LBR",
+      "requestedYear": "2023",
+      "year": 2023,
+      "sourceUrl": "https://wits.worldbank.org/CountryProfile/en/Country/LBR/Year/2023/Summarytext",
+      "pageComplete": true,
+      "partners": [
+        {
+          "rank": 1,
+          "name": "United States",
+          "valueUsdMillions": 58,
+          "sharePercent": 37.45
+        },
+        {
+          "rank": 2,
+          "name": "Belgium",
+          "valueUsdMillions": 33,
+          "sharePercent": 21.43
+        },
+        {
+          "rank": 3,
+          "name": "Cameroon",
+          "valueUsdMillions": 11,
+          "sharePercent": 6.88
+        },
+        {
+          "rank": 4,
+          "name": "Ghana",
+          "valueUsdMillions": 8,
+          "sharePercent": 4.91
+        },
+        {
+          "rank": 5,
+          "name": "Singapore",
+          "valueUsdMillions": 7,
+          "sharePercent": 4.42
+        }
+      ]
+    },
+    "LY": {
+      "reporter": "LBY",
+      "requestedYear": "2019",
+      "year": 2019,
+      "sourceUrl": "https://wits.worldbank.org/CountryProfile/en/Country/LBY/Year/2019/Summarytext",
+      "pageComplete": true,
+      "partners": [
+        {
+          "rank": 1,
+          "name": "Italy",
+          "valueUsdMillions": 9733,
+          "sharePercent": 33.23
+        },
+        {
+          "rank": 2,
+          "name": "China",
+          "valueUsdMillions": 6578,
+          "sharePercent": 22.46
+        },
+        {
+          "rank": 3,
+          "name": "Spain",
+          "valueUsdMillions": 3409,
+          "sharePercent": 11.64
+        },
+        {
+          "rank": 4,
+          "name": "France",
+          "valueUsdMillions": 1465,
+          "sharePercent": 5
+        },
+        {
+          "rank": 5,
+          "name": "United Arab Emirates",
+          "valueUsdMillions": 1211,
+          "sharePercent": 4.13
+        }
+      ],
+      "retrievedSourceUrl": "https://wits.worldbank.org/CountryProfile/en/Country/LBY/Year/LTST/Summarytext"
+    },
+    "LC": {
+      "reporter": "LCA",
+      "requestedYear": "2020",
+      "year": 2020,
+      "sourceUrl": "https://wits.worldbank.org/CountryProfile/en/Country/LCA/Year/2020/Summarytext",
+      "pageComplete": true,
+      "partners": [
+        {
+          "rank": 1,
+          "name": "United States",
+          "valueUsdMillions": 19,
+          "sharePercent": 28.04
+        },
+        {
+          "rank": 2,
+          "name": "Trinidad and Tobago",
+          "valueUsdMillions": 8,
+          "sharePercent": 12.05
+        },
+        {
+          "rank": 3,
+          "name": "United Kingdom",
+          "valueUsdMillions": 6,
+          "sharePercent": 8.97
+        },
+        {
+          "rank": 4,
+          "name": "Barbados",
+          "valueUsdMillions": 6,
+          "sharePercent": 8.26
+        },
+        {
+          "rank": 5,
+          "name": "Dominica",
+          "valueUsdMillions": 5,
+          "sharePercent": 7.26
+        }
+      ],
+      "retrievedSourceUrl": "https://wits.worldbank.org/CountryProfile/en/Country/LCA/Year/LTST/Summarytext"
+    },
+    "LI": null,
+    "LK": {
+      "reporter": "LKA",
+      "requestedYear": "2023",
+      "year": 2023,
+      "sourceUrl": "https://wits.worldbank.org/CountryProfile/en/Country/LKA/Year/2023/Summarytext",
+      "pageComplete": true,
+      "partners": [
+        {
+          "rank": 1,
+          "name": "United States",
+          "valueUsdMillions": 2791,
+          "sharePercent": 23.16
+        },
+        {
+          "rank": 2,
+          "name": "United Kingdom",
+          "valueUsdMillions": 861,
+          "sharePercent": 7.14
+        },
+        {
+          "rank": 3,
+          "name": "India",
+          "valueUsdMillions": 861,
+          "sharePercent": 7.14
+        },
+        {
+          "rank": 4,
+          "name": "Italy",
+          "valueUsdMillions": 684,
+          "sharePercent": 5.68
+        },
+        {
+          "rank": 5,
+          "name": "Germany",
+          "valueUsdMillions": 604,
+          "sharePercent": 5.01
+        }
+      ]
+    },
+    "LS": {
+      "reporter": "LSO",
+      "requestedYear": "2023",
+      "year": 2023,
+      "sourceUrl": "https://wits.worldbank.org/CountryProfile/en/Country/LSO/Year/2023/Summarytext",
+      "pageComplete": true,
+      "partners": [
+        {
+          "rank": 1,
+          "name": "South Africa",
+          "valueUsdMillions": 445,
+          "sharePercent": 53.62
+        },
+        {
+          "rank": 2,
+          "name": "Belgium",
+          "valueUsdMillions": 196,
+          "sharePercent": 23.6
+        },
+        {
+          "rank": 3,
+          "name": "United States",
+          "valueUsdMillions": 157,
+          "sharePercent": 18.88
+        },
+        {
+          "rank": 4,
+          "name": "Eswatini",
+          "valueUsdMillions": 7,
+          "sharePercent": 0.89
+        },
+        {
+          "rank": 5,
+          "name": "Germany",
+          "valueUsdMillions": 6,
+          "sharePercent": 0.69
+        }
+      ]
+    },
+    "LT": {
+      "reporter": "LTU",
+      "requestedYear": "2023",
+      "year": 2023,
+      "sourceUrl": "https://wits.worldbank.org/CountryProfile/en/Country/LTU/Year/2023/Summarytext",
+      "pageComplete": true,
+      "partners": [
+        {
+          "rank": 1,
+          "name": "Latvia",
+          "valueUsdMillions": 4586,
+          "sharePercent": 10.76
+        },
+        {
+          "rank": 2,
+          "name": "Poland",
+          "valueUsdMillions": 3944,
+          "sharePercent": 9.25
+        },
+        {
+          "rank": 3,
+          "name": "Germany",
+          "valueUsdMillions": 3310,
+          "sharePercent": 7.77
+        },
+        {
+          "rank": 4,
+          "name": "Netherlands",
+          "valueUsdMillions": 2528,
+          "sharePercent": 5.93
+        },
+        {
+          "rank": 5,
+          "name": "Estonia",
+          "valueUsdMillions": 2324,
+          "sharePercent": 5.45
+        }
+      ]
+    },
+    "LU": {
+      "reporter": "LUX",
+      "requestedYear": "2023",
+      "year": 2023,
+      "sourceUrl": "https://wits.worldbank.org/CountryProfile/en/Country/LUX/Year/2023/Summarytext",
+      "pageComplete": true,
+      "partners": [
+        {
+          "rank": 1,
+          "name": "Germany",
+          "valueUsdMillions": 4177,
+          "sharePercent": 25.52
+        },
+        {
+          "rank": 2,
+          "name": "France",
+          "valueUsdMillions": 2548,
+          "sharePercent": 15.57
+        },
+        {
+          "rank": 3,
+          "name": "Belgium",
+          "valueUsdMillions": 2015,
+          "sharePercent": 12.31
+        },
+        {
+          "rank": 4,
+          "name": "Netherlands",
+          "valueUsdMillions": 1108,
+          "sharePercent": 6.77
+        },
+        {
+          "rank": 5,
+          "name": "Italy",
+          "valueUsdMillions": 718,
+          "sharePercent": 4.39
+        }
+      ]
+    },
+    "LV": {
+      "reporter": "LVA",
+      "requestedYear": "2023",
+      "year": 2023,
+      "sourceUrl": "https://wits.worldbank.org/CountryProfile/en/Country/LVA/Year/2023/Summarytext",
+      "pageComplete": true,
+      "partners": [
+        {
+          "rank": 1,
+          "name": "Lithuania",
+          "valueUsdMillions": 3698,
+          "sharePercent": 18
+        },
+        {
+          "rank": 2,
+          "name": "Estonia",
+          "valueUsdMillions": 2352,
+          "sharePercent": 11.45
+        },
+        {
+          "rank": 3,
+          "name": "Germany",
+          "valueUsdMillions": 1365,
+          "sharePercent": 6.65
+        },
+        {
+          "rank": 4,
+          "name": "Sweden",
+          "valueUsdMillions": 1224,
+          "sharePercent": 5.96
+        },
+        {
+          "rank": 5,
+          "name": "Russian Federation",
+          "valueUsdMillions": 1223,
+          "sharePercent": 5.95
+        }
+      ]
+    },
+    "MA": {
+      "reporter": "MAR",
+      "requestedYear": "2023",
+      "year": 2023,
+      "sourceUrl": "https://wits.worldbank.org/CountryProfile/en/Country/MAR/Year/2023/Summarytext",
+      "pageComplete": true,
+      "partners": [
+        {
+          "rank": 1,
+          "name": "Spain",
+          "valueUsdMillions": 9571,
+          "sharePercent": 22.54
+        },
+        {
+          "rank": 2,
+          "name": "France",
+          "valueUsdMillions": 8698,
+          "sharePercent": 20.48
+        },
+        {
+          "rank": 3,
+          "name": "Italy",
+          "valueUsdMillions": 2202,
+          "sharePercent": 5.18
+        },
+        {
+          "rank": 4,
+          "name": "United Kingdom",
+          "valueUsdMillions": 1892,
+          "sharePercent": 4.46
+        },
+        {
+          "rank": 5,
+          "name": "Germany",
+          "valueUsdMillions": 1816,
+          "sharePercent": 4.28
+        }
+      ]
+    },
+    "MC": null,
+    "MD": {
+      "reporter": "MDA",
+      "requestedYear": "2023",
+      "year": 2023,
+      "sourceUrl": "https://wits.worldbank.org/CountryProfile/en/Country/MDA/Year/2023/Summarytext",
+      "pageComplete": true,
+      "partners": [
+        {
+          "rank": 1,
+          "name": "Romania",
+          "valueUsdMillions": 1421,
+          "sharePercent": 35.09
+        },
+        {
+          "rank": 2,
+          "name": "Ukraine",
+          "valueUsdMillions": 595,
+          "sharePercent": 14.7
+        },
+        {
+          "rank": 3,
+          "name": "Italy",
+          "valueUsdMillions": 260,
+          "sharePercent": 6.42
+        },
+        {
+          "rank": 4,
+          "name": "Germany",
+          "valueUsdMillions": 221,
+          "sharePercent": 5.47
+        },
+        {
+          "rank": 5,
+          "name": "Czech Republic",
+          "valueUsdMillions": 161,
+          "sharePercent": 3.97
+        }
+      ]
+    },
+    "MG": {
+      "reporter": "MDG",
+      "requestedYear": "2023",
+      "year": 2023,
+      "sourceUrl": "https://wits.worldbank.org/CountryProfile/en/Country/MDG/Year/2023/Summarytext",
+      "pageComplete": true,
+      "partners": [
+        {
+          "rank": 1,
+          "name": "France",
+          "valueUsdMillions": 476,
+          "sharePercent": 14.49
+        },
+        {
+          "rank": 2,
+          "name": "United States",
+          "valueUsdMillions": 413,
+          "sharePercent": 12.58
+        },
+        {
+          "rank": 3,
+          "name": "Japan",
+          "valueUsdMillions": 271,
+          "sharePercent": 8.25
+        },
+        {
+          "rank": 4,
+          "name": "Korea, Rep.",
+          "valueUsdMillions": 271,
+          "sharePercent": 8.24
+        },
+        {
+          "rank": 5,
+          "name": "China",
+          "valueUsdMillions": 268,
+          "sharePercent": 8.15
+        }
+      ]
+    },
+    "MV": {
+      "reporter": "MDV",
+      "requestedYear": "2023",
+      "year": 2023,
+      "sourceUrl": "https://wits.worldbank.org/CountryProfile/en/Country/MDV/Year/2023/Summarytext",
+      "pageComplete": true,
+      "partners": [
+        {
+          "rank": 1,
+          "name": "Thailand",
+          "valueUsdMillions": 87,
+          "sharePercent": 53.91
+        },
+        {
+          "rank": 2,
+          "name": "United Kingdom",
+          "valueUsdMillions": 22,
+          "sharePercent": 13.74
+        },
+        {
+          "rank": 3,
+          "name": "Germany",
+          "valueUsdMillions": 13,
+          "sharePercent": 7.84
+        },
+        {
+          "rank": 4,
+          "name": "France",
+          "valueUsdMillions": 6,
+          "sharePercent": 3.42
+        },
+        {
+          "rank": 5,
+          "name": "India",
+          "valueUsdMillions": 5,
+          "sharePercent": 3.16
+        }
+      ]
+    },
+    "MX": {
+      "reporter": "MEX",
+      "requestedYear": "2023",
+      "year": 2023,
+      "sourceUrl": "https://wits.worldbank.org/CountryProfile/en/Country/MEX/Year/2023/Summarytext",
+      "pageComplete": true,
+      "partners": [
+        {
+          "rank": 1,
+          "name": "United States",
+          "valueUsdMillions": 474696,
+          "sharePercent": 79.95
+        },
+        {
+          "rank": 2,
+          "name": "Unspecified",
+          "valueUsdMillions": 23288,
+          "sharePercent": 3.92
+        },
+        {
+          "rank": 3,
+          "name": "Canada",
+          "valueUsdMillions": 17898,
+          "sharePercent": 3.01
+        },
+        {
+          "rank": 4,
+          "name": "China",
+          "valueUsdMillions": 9212,
+          "sharePercent": 1.55
+        },
+        {
+          "rank": 5,
+          "name": "Germany",
+          "valueUsdMillions": 8847,
+          "sharePercent": 1.49
+        }
+      ]
+    },
+    "MH": null,
+    "MK": {
+      "reporter": "MKD",
+      "requestedYear": "2023",
+      "year": 2023,
+      "sourceUrl": "https://wits.worldbank.org/CountryProfile/en/Country/MKD/Year/2023/Summarytext",
+      "pageComplete": true,
+      "partners": [
+        {
+          "rank": 1,
+          "name": "Germany",
+          "valueUsdMillions": 3963,
+          "sharePercent": 44.05
+        },
+        {
+          "rank": 2,
+          "name": "Serbia, FR(Serbia/Montenegro)",
+          "valueUsdMillions": 869,
+          "sharePercent": 9.66
+        },
+        {
+          "rank": 3,
+          "name": "Bulgaria",
+          "valueUsdMillions": 395,
+          "sharePercent": 4.39
+        },
+        {
+          "rank": 4,
+          "name": "Greece",
+          "valueUsdMillions": 331,
+          "sharePercent": 3.68
+        },
+        {
+          "rank": 5,
+          "name": "Hungary",
+          "valueUsdMillions": 328,
+          "sharePercent": 3.65
+        }
+      ]
+    },
+    "ML": {
+      "reporter": "MLI",
+      "requestedYear": "2019",
+      "year": 2019,
+      "sourceUrl": "https://wits.worldbank.org/CountryProfile/en/Country/MLI/Year/2019/Summarytext",
+      "pageComplete": false,
+      "partners": [
+        {
+          "rank": 1,
+          "name": "South Africa",
+          "valueUsdMillions": 1328,
+          "sharePercent": 36.46
+        },
+        {
+          "rank": 2,
+          "name": "Switzerland",
+          "valueUsdMillions": 1298,
+          "sharePercent": 35.63
+        },
+        {
+          "rank": 3,
+          "name": "Bangladesh",
+          "valueUsdMillions": 259,
+          "sharePercent": 7.1
+        },
+        {
+          "rank": 4,
+          "name": "Cote d'Ivoire",
+          "valueUsdMillions": 154,
+          "sharePercent": 4.24
+        },
+        {
+          "rank": 5,
+          "name": "Burkina Faso",
+          "valueUsdMillions": 101,
+          "sharePercent": 2.76
+        }
+      ],
+      "retrievedSourceUrl": "https://wits.worldbank.org/CountryProfile/en/Country/MLI/Year/LTST/Summarytext"
+    },
+    "MT": {
+      "reporter": "MLT",
+      "requestedYear": "2023",
+      "year": 2023,
+      "sourceUrl": "https://wits.worldbank.org/CountryProfile/en/Country/MLT/Year/2023/Summarytext",
+      "pageComplete": true,
+      "partners": [
+        {
+          "rank": 1,
+          "name": "Germany",
+          "valueUsdMillions": 932,
+          "sharePercent": 26.88
+        },
+        {
+          "rank": 2,
+          "name": "Japan",
+          "valueUsdMillions": 207,
+          "sharePercent": 5.98
+        },
+        {
+          "rank": 3,
+          "name": "Italy",
+          "valueUsdMillions": 186,
+          "sharePercent": 5.38
+        },
+        {
+          "rank": 4,
+          "name": "Bunkers",
+          "valueUsdMillions": 170,
+          "sharePercent": 4.9
+        },
+        {
+          "rank": 5,
+          "name": "Hong Kong, China",
+          "valueUsdMillions": 155,
+          "sharePercent": 4.47
+        }
+      ]
+    },
+    "MM": {
+      "reporter": "MMR",
+      "requestedYear": "2023",
+      "year": 2023,
+      "sourceUrl": "https://wits.worldbank.org/CountryProfile/en/Country/MMR/Year/2023/Summarytext",
+      "pageComplete": true,
+      "partners": [
+        {
+          "rank": 1,
+          "name": "Thailand",
+          "valueUsdMillions": 3580,
+          "sharePercent": 24.27
+        },
+        {
+          "rank": 2,
+          "name": "China",
+          "valueUsdMillions": 3428,
+          "sharePercent": 23.24
+        },
+        {
+          "rank": 3,
+          "name": "Japan",
+          "valueUsdMillions": 1200,
+          "sharePercent": 8.13
+        },
+        {
+          "rank": 4,
+          "name": "India",
+          "valueUsdMillions": 839,
+          "sharePercent": 5.69
+        },
+        {
+          "rank": 5,
+          "name": "United States",
+          "valueUsdMillions": 588,
+          "sharePercent": 3.98
+        }
+      ]
+    },
+    "ME": {
+      "reporter": "MNT",
+      "requestedYear": "2023",
+      "year": 2023,
+      "sourceUrl": "https://wits.worldbank.org/CountryProfile/en/Country/MNT/Year/2023/Summarytext",
+      "pageComplete": true,
+      "partners": [
+        {
+          "rank": 1,
+          "name": "Serbia, FR(Serbia/Montenegro)",
+          "valueUsdMillions": 206,
+          "sharePercent": 28.56
+        },
+        {
+          "rank": 2,
+          "name": "Bosnia and Herzegovina",
+          "valueUsdMillions": 82,
+          "sharePercent": 11.3
+        },
+        {
+          "rank": 3,
+          "name": "Slovenia",
+          "valueUsdMillions": 79,
+          "sharePercent": 11
+        },
+        {
+          "rank": 4,
+          "name": "Unspecified",
+          "valueUsdMillions": 39,
+          "sharePercent": 5.43
+        },
+        {
+          "rank": 5,
+          "name": "Czech Republic",
+          "valueUsdMillions": 32,
+          "sharePercent": 4.44
+        }
+      ]
+    },
+    "MN": {
+      "reporter": "MNG",
+      "requestedYear": "2022",
+      "year": 2022,
+      "sourceUrl": "https://wits.worldbank.org/CountryProfile/en/Country/MNG/Year/2022/Summarytext",
+      "pageComplete": true,
+      "partners": [
+        {
+          "rank": 1,
+          "name": "China",
+          "valueUsdMillions": 10587,
+          "sharePercent": 84.3
+        },
+        {
+          "rank": 2,
+          "name": "Switzerland",
+          "valueUsdMillions": 1031,
+          "sharePercent": 8.21
+        },
+        {
+          "rank": 3,
+          "name": "Singapore",
+          "valueUsdMillions": 346,
+          "sharePercent": 2.75
+        },
+        {
+          "rank": 4,
+          "name": "Korea, Rep.",
+          "valueUsdMillions": 254,
+          "sharePercent": 2.02
+        },
+        {
+          "rank": 5,
+          "name": "Russian Federation",
+          "valueUsdMillions": 112,
+          "sharePercent": 0.89
+        }
+      ]
+    },
+    "MZ": {
+      "reporter": "MOZ",
+      "requestedYear": "2023",
+      "year": 2023,
+      "sourceUrl": "https://wits.worldbank.org/CountryProfile/en/Country/MOZ/Year/2023/Summarytext",
+      "pageComplete": true,
+      "partners": [
+        {
+          "rank": 1,
+          "name": "India",
+          "valueUsdMillions": 1294,
+          "sharePercent": 15.64
+        },
+        {
+          "rank": 2,
+          "name": "China",
+          "valueUsdMillions": 1175,
+          "sharePercent": 14.2
+        },
+        {
+          "rank": 3,
+          "name": "South Africa",
+          "valueUsdMillions": 1156,
+          "sharePercent": 13.97
+        },
+        {
+          "rank": 4,
+          "name": "Korea, Rep.",
+          "valueUsdMillions": 467,
+          "sharePercent": 5.64
+        },
+        {
+          "rank": 5,
+          "name": "United Kingdom",
+          "valueUsdMillions": 400,
+          "sharePercent": 4.83
+        }
+      ]
+    },
+    "MR": {
+      "reporter": "MRT",
+      "requestedYear": "2023",
+      "year": 2023,
+      "sourceUrl": "https://wits.worldbank.org/CountryProfile/en/Country/MRT/Year/2023/Summarytext",
+      "pageComplete": true,
+      "partners": [
+        {
+          "rank": 1,
+          "name": "Canada",
+          "valueUsdMillions": 994,
+          "sharePercent": 24.45
+        },
+        {
+          "rank": 2,
+          "name": "China",
+          "valueUsdMillions": 922,
+          "sharePercent": 22.69
+        },
+        {
+          "rank": 3,
+          "name": "Algeria",
+          "valueUsdMillions": 332,
+          "sharePercent": 8.17
+        },
+        {
+          "rank": 4,
+          "name": "Switzerland",
+          "valueUsdMillions": 299,
+          "sharePercent": 7.36
+        },
+        {
+          "rank": 5,
+          "name": "Spain",
+          "valueUsdMillions": 250,
+          "sharePercent": 6.16
+        }
+      ]
+    },
+    "MU": {
+      "reporter": "MUS",
+      "requestedYear": "2023",
+      "year": 2023,
+      "sourceUrl": "https://wits.worldbank.org/CountryProfile/en/Country/MUS/Year/2023/Summarytext",
+      "pageComplete": true,
+      "partners": [
+        {
+          "rank": 1,
+          "name": "France",
+          "valueUsdMillions": 273,
+          "sharePercent": 14.72
+        },
+        {
+          "rank": 2,
+          "name": "South Africa",
+          "valueUsdMillions": 200,
+          "sharePercent": 10.79
+        },
+        {
+          "rank": 3,
+          "name": "United States",
+          "valueUsdMillions": 175,
+          "sharePercent": 9.44
+        },
+        {
+          "rank": 4,
+          "name": "United Kingdom",
+          "valueUsdMillions": 172,
+          "sharePercent": 9.26
+        },
+        {
+          "rank": 5,
+          "name": "Madagascar",
+          "valueUsdMillions": 136,
+          "sharePercent": 7.33
+        }
+      ]
+    },
+    "MW": {
+      "reporter": "MWI",
+      "requestedYear": "2023",
+      "year": 2023,
+      "sourceUrl": "https://wits.worldbank.org/CountryProfile/en/Country/MWI/Year/2023/Summarytext",
+      "pageComplete": true,
+      "partners": [
+        {
+          "rank": 1,
+          "name": "Belgium",
+          "valueUsdMillions": 154,
+          "sharePercent": 15.94
+        },
+        {
+          "rank": 2,
+          "name": "Tanzania",
+          "valueUsdMillions": 105,
+          "sharePercent": 10.85
+        },
+        {
+          "rank": 3,
+          "name": "China",
+          "valueUsdMillions": 54,
+          "sharePercent": 5.64
+        },
+        {
+          "rank": 4,
+          "name": "South Africa",
+          "valueUsdMillions": 52,
+          "sharePercent": 5.35
+        },
+        {
+          "rank": 5,
+          "name": "Zimbabwe",
+          "valueUsdMillions": 51,
+          "sharePercent": 5.29
+        }
+      ]
+    },
+    "MY": {
+      "reporter": "MYS",
+      "requestedYear": "2023",
+      "year": 2023,
+      "sourceUrl": "https://wits.worldbank.org/CountryProfile/en/Country/MYS/Year/2023/Summarytext",
+      "pageComplete": true,
+      "partners": [
+        {
+          "rank": 1,
+          "name": "Singapore",
+          "valueUsdMillions": 48092,
+          "sharePercent": 15.38
+        },
+        {
+          "rank": 2,
+          "name": "China",
+          "valueUsdMillions": 42145,
+          "sharePercent": 13.48
+        },
+        {
+          "rank": 3,
+          "name": "United States",
+          "valueUsdMillions": 35455,
+          "sharePercent": 11.34
+        },
+        {
+          "rank": 4,
+          "name": "Hong Kong, China",
+          "valueUsdMillions": 19698,
+          "sharePercent": 6.3
+        },
+        {
+          "rank": 5,
+          "name": "Japan",
+          "valueUsdMillions": 18791,
+          "sharePercent": 6.01
+        }
+      ]
+    },
+    "NA": {
+      "reporter": "NAM",
+      "requestedYear": "2023",
+      "year": 2023,
+      "sourceUrl": "https://wits.worldbank.org/CountryProfile/en/Country/NAM/Year/2023/Summarytext",
+      "pageComplete": true,
+      "partners": [
+        {
+          "rank": 1,
+          "name": "South Africa",
+          "valueUsdMillions": 1096,
+          "sharePercent": 19.83
+        },
+        {
+          "rank": 2,
+          "name": "Botswana",
+          "valueUsdMillions": 1063,
+          "sharePercent": 19.23
+        },
+        {
+          "rank": 3,
+          "name": "China",
+          "valueUsdMillions": 679,
+          "sharePercent": 12.28
+        },
+        {
+          "rank": 4,
+          "name": "Zambia",
+          "valueUsdMillions": 488,
+          "sharePercent": 8.83
+        },
+        {
+          "rank": 5,
+          "name": "Belgium",
+          "valueUsdMillions": 291,
+          "sharePercent": 5.26
+        }
+      ]
+    },
+    "NE": {
+      "reporter": "NER",
+      "requestedYear": "2023",
+      "year": 2023,
+      "sourceUrl": "https://wits.worldbank.org/CountryProfile/en/Country/NER/Year/2023/Summarytext",
+      "pageComplete": true,
+      "partners": [
+        {
+          "rank": 1,
+          "name": "France",
+          "valueUsdMillions": 207,
+          "sharePercent": 44.32
+        },
+        {
+          "rank": 2,
+          "name": "United Arab Emirates",
+          "valueUsdMillions": 100,
+          "sharePercent": 21.33
+        },
+        {
+          "rank": 3,
+          "name": "Mali",
+          "valueUsdMillions": 51,
+          "sharePercent": 10.87
+        },
+        {
+          "rank": 4,
+          "name": "Burkina Faso",
+          "valueUsdMillions": 35,
+          "sharePercent": 7.58
+        },
+        {
+          "rank": 5,
+          "name": "Chad",
+          "valueUsdMillions": 16,
+          "sharePercent": 3.52
+        }
+      ]
+    },
+    "NG": {
+      "reporter": "NGA",
+      "requestedYear": "2023",
+      "year": 2023,
+      "sourceUrl": "https://wits.worldbank.org/CountryProfile/en/Country/NGA/Year/2023/Summarytext",
+      "pageComplete": true,
+      "partners": [
+        {
+          "rank": 1,
+          "name": "Netherlands",
+          "valueUsdMillions": 8179,
+          "sharePercent": 12.56
+        },
+        {
+          "rank": 2,
+          "name": "Spain",
+          "valueUsdMillions": 6133,
+          "sharePercent": 9.42
+        },
+        {
+          "rank": 3,
+          "name": "India",
+          "valueUsdMillions": 5447,
+          "sharePercent": 8.36
+        },
+        {
+          "rank": 4,
+          "name": "United States",
+          "valueUsdMillions": 4860,
+          "sharePercent": 7.46
+        },
+        {
+          "rank": 5,
+          "name": "Indonesia",
+          "valueUsdMillions": 4262,
+          "sharePercent": 6.54
+        }
+      ]
+    },
+    "NI": {
+      "reporter": "NIC",
+      "requestedYear": "2023",
+      "year": 2023,
+      "sourceUrl": "https://wits.worldbank.org/CountryProfile/en/Country/NIC/Year/2023/Summarytext",
+      "pageComplete": true,
+      "partners": [
+        {
+          "rank": 1,
+          "name": "United States",
+          "valueUsdMillions": 3707,
+          "sharePercent": 50.24
+        },
+        {
+          "rank": 2,
+          "name": "Mexico",
+          "valueUsdMillions": 1010,
+          "sharePercent": 13.68
+        },
+        {
+          "rank": 3,
+          "name": "El Salvador",
+          "valueUsdMillions": 482,
+          "sharePercent": 6.54
+        },
+        {
+          "rank": 4,
+          "name": "Canada",
+          "valueUsdMillions": 427,
+          "sharePercent": 5.78
+        },
+        {
+          "rank": 5,
+          "name": "Honduras",
+          "valueUsdMillions": 368,
+          "sharePercent": 4.99
+        }
+      ]
+    },
+    "NL": {
+      "reporter": "NLD",
+      "requestedYear": "2023",
+      "year": 2023,
+      "sourceUrl": "https://wits.worldbank.org/CountryProfile/en/Country/NLD/Year/2023/Summarytext",
+      "pageComplete": true,
+      "partners": [
+        {
+          "rank": 1,
+          "name": "Germany",
+          "valueUsdMillions": 167235,
+          "sharePercent": 22.78
+        },
+        {
+          "rank": 2,
+          "name": "Belgium",
+          "valueUsdMillions": 85626,
+          "sharePercent": 11.67
+        },
+        {
+          "rank": 3,
+          "name": "France",
+          "valueUsdMillions": 59240,
+          "sharePercent": 8.07
+        },
+        {
+          "rank": 4,
+          "name": "United Kingdom",
+          "valueUsdMillions": 46564,
+          "sharePercent": 6.34
+        },
+        {
+          "rank": 5,
+          "name": "United States",
+          "valueUsdMillions": 36524,
+          "sharePercent": 4.98
+        }
+      ]
+    },
+    "NO": {
+      "reporter": "NOR",
+      "requestedYear": "2023",
+      "year": 2023,
+      "sourceUrl": "https://wits.worldbank.org/CountryProfile/en/Country/NOR/Year/2023/Summarytext",
+      "pageComplete": true,
+      "partners": [
+        {
+          "rank": 1,
+          "name": "United Kingdom",
+          "valueUsdMillions": 33741,
+          "sharePercent": 19.04
+        },
+        {
+          "rank": 2,
+          "name": "Germany",
+          "valueUsdMillions": 33598,
+          "sharePercent": 18.96
+        },
+        {
+          "rank": 3,
+          "name": "Netherlands",
+          "valueUsdMillions": 14737,
+          "sharePercent": 8.32
+        },
+        {
+          "rank": 4,
+          "name": "Sweden",
+          "valueUsdMillions": 13685,
+          "sharePercent": 7.72
+        },
+        {
+          "rank": 5,
+          "name": "Poland",
+          "valueUsdMillions": 10751,
+          "sharePercent": 6.07
+        }
+      ]
+    },
+    "NP": {
+      "reporter": "NPL",
+      "requestedYear": "2022",
+      "year": 2022,
+      "sourceUrl": "https://wits.worldbank.org/CountryProfile/en/Country/NPL/Year/2022/Summarytext",
+      "pageComplete": true,
+      "partners": [
+        {
+          "rank": 1,
+          "name": "India",
+          "valueUsdMillions": 935,
+          "sharePercent": 71.93
+        },
+        {
+          "rank": 2,
+          "name": "United States",
+          "valueUsdMillions": 147,
+          "sharePercent": 11.32
+        },
+        {
+          "rank": 3,
+          "name": "Germany",
+          "valueUsdMillions": 33,
+          "sharePercent": 2.51
+        },
+        {
+          "rank": 4,
+          "name": "Turkey",
+          "valueUsdMillions": 26,
+          "sharePercent": 2.01
+        },
+        {
+          "rank": 5,
+          "name": "United Kingdom",
+          "valueUsdMillions": 24,
+          "sharePercent": 1.83
+        }
+      ]
+    },
+    "NR": null,
+    "NZ": {
+      "reporter": "NZL",
+      "requestedYear": "2023",
+      "year": 2023,
+      "sourceUrl": "https://wits.worldbank.org/CountryProfile/en/Country/NZL/Year/2023/Summarytext",
+      "pageComplete": true,
+      "partners": [
+        {
+          "rank": 1,
+          "name": "China",
+          "valueUsdMillions": 11311,
+          "sharePercent": 26.85
+        },
+        {
+          "rank": 2,
+          "name": "Australia",
+          "valueUsdMillions": 5416,
+          "sharePercent": 12.86
+        },
+        {
+          "rank": 3,
+          "name": "United States",
+          "valueUsdMillions": 5073,
+          "sharePercent": 12.04
+        },
+        {
+          "rank": 4,
+          "name": "Japan",
+          "valueUsdMillions": 2329,
+          "sharePercent": 5.53
+        },
+        {
+          "rank": 5,
+          "name": "Korea, Rep.",
+          "valueUsdMillions": 1461,
+          "sharePercent": 3.47
+        }
+      ]
+    },
+    "OM": {
+      "reporter": "OMN",
+      "requestedYear": "2023",
+      "year": 2023,
+      "sourceUrl": "https://wits.worldbank.org/CountryProfile/en/Country/OMN/Year/2023/Summarytext",
+      "pageComplete": true,
+      "partners": [
+        {
+          "rank": 1,
+          "name": "Unspecified",
+          "valueUsdMillions": 35799,
+          "sharePercent": 60.67
+        },
+        {
+          "rank": 2,
+          "name": "United Arab Emirates",
+          "valueUsdMillions": 3760,
+          "sharePercent": 6.37
+        },
+        {
+          "rank": 3,
+          "name": "Saudi Arabia",
+          "valueUsdMillions": 2941,
+          "sharePercent": 4.98
+        },
+        {
+          "rank": 4,
+          "name": "India",
+          "valueUsdMillions": 2215,
+          "sharePercent": 3.75
+        },
+        {
+          "rank": 5,
+          "name": "South Africa",
+          "valueUsdMillions": 1442,
+          "sharePercent": 2.44
+        }
+      ]
+    },
+    "PK": {
+      "reporter": "PAK",
+      "requestedYear": "2023",
+      "year": 2023,
+      "sourceUrl": "https://wits.worldbank.org/CountryProfile/en/Country/PAK/Year/2023/Summarytext",
+      "pageComplete": true,
+      "partners": [
+        {
+          "rank": 1,
+          "name": "United States",
+          "valueUsdMillions": 5011,
+          "sharePercent": 17.43
+        },
+        {
+          "rank": 2,
+          "name": "China",
+          "valueUsdMillions": 2743,
+          "sharePercent": 9.54
+        },
+        {
+          "rank": 3,
+          "name": "United Kingdom",
+          "valueUsdMillions": 1975,
+          "sharePercent": 6.87
+        },
+        {
+          "rank": 4,
+          "name": "Germany",
+          "valueUsdMillions": 1518,
+          "sharePercent": 5.28
+        },
+        {
+          "rank": 5,
+          "name": "Netherlands",
+          "valueUsdMillions": 1443,
+          "sharePercent": 5.02
+        }
+      ]
+    },
+    "PA": {
+      "reporter": "PAN",
+      "requestedYear": "2023",
+      "year": 2023,
+      "sourceUrl": "https://wits.worldbank.org/CountryProfile/en/Country/PAN/Year/2023/Summarytext",
+      "pageComplete": true,
+      "partners": [
+        {
+          "rank": 1,
+          "name": "China",
+          "valueUsdMillions": 1316,
+          "sharePercent": 39.1
+        },
+        {
+          "rank": 2,
+          "name": "Japan",
+          "valueUsdMillions": 442,
+          "sharePercent": 13.14
+        },
+        {
+          "rank": 3,
+          "name": "Korea, Rep.",
+          "valueUsdMillions": 233,
+          "sharePercent": 6.92
+        },
+        {
+          "rank": 4,
+          "name": "Spain",
+          "valueUsdMillions": 205,
+          "sharePercent": 6.08
+        },
+        {
+          "rank": 5,
+          "name": "India",
+          "valueUsdMillions": 174,
+          "sharePercent": 5.17
+        }
+      ]
+    },
+    "PE": {
+      "reporter": "PER",
+      "requestedYear": "2023",
+      "year": 2023,
+      "sourceUrl": "https://wits.worldbank.org/CountryProfile/en/Country/PER/Year/2023/Summarytext",
+      "pageComplete": true,
+      "partners": [
+        {
+          "rank": 1,
+          "name": "China",
+          "valueUsdMillions": 23156,
+          "sharePercent": 35.98
+        },
+        {
+          "rank": 2,
+          "name": "United States",
+          "valueUsdMillions": 9181,
+          "sharePercent": 14.27
+        },
+        {
+          "rank": 3,
+          "name": "Canada",
+          "valueUsdMillions": 2988,
+          "sharePercent": 4.64
+        },
+        {
+          "rank": 4,
+          "name": "India",
+          "valueUsdMillions": 2526,
+          "sharePercent": 3.92
+        },
+        {
+          "rank": 5,
+          "name": "Korea, Rep.",
+          "valueUsdMillions": 2344,
+          "sharePercent": 3.64
+        }
+      ]
+    },
+    "PH": {
+      "reporter": "PHL",
+      "requestedYear": "2023",
+      "year": 2023,
+      "sourceUrl": "https://wits.worldbank.org/CountryProfile/en/Country/PHL/Year/2023/Summarytext",
+      "pageComplete": true,
+      "partners": [
+        {
+          "rank": 1,
+          "name": "United States",
+          "valueUsdMillions": 11429,
+          "sharePercent": 15.67
+        },
+        {
+          "rank": 2,
+          "name": "China",
+          "valueUsdMillions": 10648,
+          "sharePercent": 14.6
+        },
+        {
+          "rank": 3,
+          "name": "Japan",
+          "valueUsdMillions": 10425,
+          "sharePercent": 14.3
+        },
+        {
+          "rank": 4,
+          "name": "Hong Kong, China",
+          "valueUsdMillions": 8773,
+          "sharePercent": 12.03
+        },
+        {
+          "rank": 5,
+          "name": "Singapore",
+          "valueUsdMillions": 3521,
+          "sharePercent": 4.83
+        }
+      ]
+    },
+    "PW": {
+      "reporter": "PLW",
+      "requestedYear": "2018",
+      "year": 2018,
+      "sourceUrl": "https://wits.worldbank.org/CountryProfile/en/Country/PLW/Year/2018/Summarytext",
+      "pageComplete": true,
+      "partners": [
+        {
+          "rank": 1,
+          "name": "Japan",
+          "valueUsdMillions": 7,
+          "sharePercent": 77.22
+        },
+        {
+          "rank": 2,
+          "name": "Unspecified",
+          "valueUsdMillions": 1,
+          "sharePercent": 8.95
+        },
+        {
+          "rank": 3,
+          "name": "Panama",
+          "valueUsdMillions": 0,
+          "sharePercent": 4.65
+        },
+        {
+          "rank": 4,
+          "name": "Micronesia, Fed. Sts.",
+          "valueUsdMillions": 0,
+          "sharePercent": 3.31
+        },
+        {
+          "rank": 5,
+          "name": "United States",
+          "valueUsdMillions": 0,
+          "sharePercent": 2.62
+        }
+      ],
+      "retrievedSourceUrl": "https://wits.worldbank.org/CountryProfile/en/Country/PLW/Year/LTST/Summarytext"
+    },
+    "PG": {
+      "reporter": "PNG",
+      "requestedYear": "2021",
+      "year": 2021,
+      "sourceUrl": "https://wits.worldbank.org/CountryProfile/en/Country/PNG/Year/2021/Summarytext",
+      "pageComplete": true,
+      "partners": [
+        {
+          "rank": 1,
+          "name": "Japan",
+          "valueUsdMillions": 2181,
+          "sharePercent": 22.59
+        },
+        {
+          "rank": 2,
+          "name": "China",
+          "valueUsdMillions": 1755,
+          "sharePercent": 18.18
+        },
+        {
+          "rank": 3,
+          "name": "Australia",
+          "valueUsdMillions": 1675,
+          "sharePercent": 17.35
+        },
+        {
+          "rank": 4,
+          "name": "Other Asia, nes",
+          "valueUsdMillions": 690,
+          "sharePercent": 7.15
+        },
+        {
+          "rank": 5,
+          "name": "Singapore",
+          "valueUsdMillions": 638,
+          "sharePercent": 6.61
+        }
+      ]
+    },
+    "PL": {
+      "reporter": "POL",
+      "requestedYear": "2023",
+      "year": 2023,
+      "sourceUrl": "https://wits.worldbank.org/CountryProfile/en/Country/POL/Year/2023/Summarytext",
+      "pageComplete": true,
+      "partners": [
+        {
+          "rank": 1,
+          "name": "Germany",
+          "valueUsdMillions": 106697,
+          "sharePercent": 27.94
+        },
+        {
+          "rank": 2,
+          "name": "Czech Republic",
+          "valueUsdMillions": 24085,
+          "sharePercent": 6.31
+        },
+        {
+          "rank": 3,
+          "name": "France",
+          "valueUsdMillions": 23426,
+          "sharePercent": 6.13
+        },
+        {
+          "rank": 4,
+          "name": "United Kingdom",
+          "valueUsdMillions": 18965,
+          "sharePercent": 4.97
+        },
+        {
+          "rank": 5,
+          "name": "Italy",
+          "valueUsdMillions": 17537,
+          "sharePercent": 4.59
+        }
+      ]
+    },
+    "KP": null,
+    "PT": {
+      "reporter": "PRT",
+      "requestedYear": "2023",
+      "year": 2023,
+      "sourceUrl": "https://wits.worldbank.org/CountryProfile/en/Country/PRT/Year/2023/Summarytext",
+      "pageComplete": true,
+      "partners": [
+        {
+          "rank": 1,
+          "name": "Spain",
+          "valueUsdMillions": 21529,
+          "sharePercent": 25.75
+        },
+        {
+          "rank": 2,
+          "name": "France",
+          "valueUsdMillions": 10943,
+          "sharePercent": 13.09
+        },
+        {
+          "rank": 3,
+          "name": "Germany",
+          "valueUsdMillions": 8952,
+          "sharePercent": 10.71
+        },
+        {
+          "rank": 4,
+          "name": "United States",
+          "valueUsdMillions": 5664,
+          "sharePercent": 6.77
+        },
+        {
+          "rank": 5,
+          "name": "United Kingdom",
+          "valueUsdMillions": 3939,
+          "sharePercent": 4.71
+        }
+      ]
+    },
+    "PY": {
+      "reporter": "PRY",
+      "requestedYear": "2023",
+      "year": 2023,
+      "sourceUrl": "https://wits.worldbank.org/CountryProfile/en/Country/PRY/Year/2023/Summarytext",
+      "pageComplete": true,
+      "partners": [
+        {
+          "rank": 1,
+          "name": "Argentina",
+          "valueUsdMillions": 4295,
+          "sharePercent": 36.12
+        },
+        {
+          "rank": 2,
+          "name": "Brazil",
+          "valueUsdMillions": 3013,
+          "sharePercent": 25.34
+        },
+        {
+          "rank": 3,
+          "name": "Chile",
+          "valueUsdMillions": 1150,
+          "sharePercent": 9.67
+        },
+        {
+          "rank": 4,
+          "name": "United States",
+          "valueUsdMillions": 277,
+          "sharePercent": 2.33
+        },
+        {
+          "rank": 5,
+          "name": "Russian Federation",
+          "valueUsdMillions": 267,
+          "sharePercent": 2.24
+        }
+      ]
+    },
+    "PS": {
+      "reporter": "PSE",
+      "requestedYear": "2023",
+      "year": 2023,
+      "sourceUrl": "https://wits.worldbank.org/CountryProfile/en/Country/PSE/Year/2023/Summarytext",
+      "pageComplete": true,
+      "partners": [
+        {
+          "rank": 1,
+          "name": "Israel",
+          "valueUsdMillions": 1278,
+          "sharePercent": 83.98
+        },
+        {
+          "rank": 2,
+          "name": "Jordan",
+          "valueUsdMillions": 105,
+          "sharePercent": 6.91
+        },
+        {
+          "rank": 3,
+          "name": "United Arab Emirates",
+          "valueUsdMillions": 24,
+          "sharePercent": 1.59
+        },
+        {
+          "rank": 4,
+          "name": "Turkey",
+          "valueUsdMillions": 22,
+          "sharePercent": 1.47
+        },
+        {
+          "rank": 5,
+          "name": "United States",
+          "valueUsdMillions": 21,
+          "sharePercent": 1.37
+        }
+      ]
+    },
+    "QA": {
+      "reporter": "QAT",
+      "requestedYear": "2023",
+      "year": 2023,
+      "sourceUrl": "https://wits.worldbank.org/CountryProfile/en/Country/QAT/Year/2023/Summarytext",
+      "pageComplete": true,
+      "partners": [
+        {
+          "rank": 1,
+          "name": "China",
+          "valueUsdMillions": 19279,
+          "sharePercent": 19.72
+        },
+        {
+          "rank": 2,
+          "name": "Korea, Rep.",
+          "valueUsdMillions": 12318,
+          "sharePercent": 12.6
+        },
+        {
+          "rank": 3,
+          "name": "India",
+          "valueUsdMillions": 11758,
+          "sharePercent": 12.03
+        },
+        {
+          "rank": 4,
+          "name": "Japan",
+          "valueUsdMillions": 7813,
+          "sharePercent": 7.99
+        },
+        {
+          "rank": 5,
+          "name": "Singapore",
+          "valueUsdMillions": 7082,
+          "sharePercent": 7.25
+        }
+      ]
+    },
+    "RO": {
+      "reporter": "ROM",
+      "requestedYear": "2023",
+      "year": 2023,
+      "sourceUrl": "https://wits.worldbank.org/CountryProfile/en/Country/ROM/Year/2023/Summarytext",
+      "pageComplete": true,
+      "partners": [
+        {
+          "rank": 1,
+          "name": "Germany",
+          "valueUsdMillions": 20973,
+          "sharePercent": 20.84
+        },
+        {
+          "rank": 2,
+          "name": "Italy",
+          "valueUsdMillions": 10227,
+          "sharePercent": 10.16
+        },
+        {
+          "rank": 3,
+          "name": "France",
+          "valueUsdMillions": 6383,
+          "sharePercent": 6.34
+        },
+        {
+          "rank": 4,
+          "name": "Hungary",
+          "valueUsdMillions": 5699,
+          "sharePercent": 5.66
+        },
+        {
+          "rank": 5,
+          "name": "Bulgaria",
+          "valueUsdMillions": 4178,
+          "sharePercent": 4.15
+        }
+      ]
+    },
+    "RU": {
+      "reporter": "RUS",
+      "requestedYear": "2021",
+      "year": 2021,
+      "sourceUrl": "https://wits.worldbank.org/CountryProfile/en/Country/RUS/Year/2021/Summarytext",
+      "pageComplete": true,
+      "partners": [
+        {
+          "rank": 1,
+          "name": "China",
+          "valueUsdMillions": 68679,
+          "sharePercent": 13.95
+        },
+        {
+          "rank": 2,
+          "name": "Netherlands",
+          "valueUsdMillions": 42145,
+          "sharePercent": 8.56
+        },
+        {
+          "rank": 3,
+          "name": "Germany",
+          "valueUsdMillions": 29646,
+          "sharePercent": 6.02
+        },
+        {
+          "rank": 4,
+          "name": "Turkey",
+          "valueUsdMillions": 26426,
+          "sharePercent": 5.37
+        },
+        {
+          "rank": 5,
+          "name": "Belarus",
+          "valueUsdMillions": 23130,
+          "sharePercent": 4.7
+        }
+      ]
+    },
+    "RW": {
+      "reporter": "RWA",
+      "requestedYear": "2022",
+      "year": 2022,
+      "sourceUrl": "https://wits.worldbank.org/CountryProfile/en/Country/RWA/Year/2022/Summarytext",
+      "pageComplete": true,
+      "partners": [
+        {
+          "rank": 1,
+          "name": "Congo, Dem. Rep.",
+          "valueUsdMillions": 768,
+          "sharePercent": 38.05
+        },
+        {
+          "rank": 2,
+          "name": "United Arab Emirates",
+          "valueUsdMillions": 590,
+          "sharePercent": 29.23
+        },
+        {
+          "rank": 3,
+          "name": "China",
+          "valueUsdMillions": 97,
+          "sharePercent": 4.79
+        },
+        {
+          "rank": 4,
+          "name": "India",
+          "valueUsdMillions": 71,
+          "sharePercent": 3.52
+        },
+        {
+          "rank": 5,
+          "name": "United Kingdom",
+          "valueUsdMillions": 46,
+          "sharePercent": 2.3
+        }
+      ]
+    },
+    "SA": {
+      "reporter": "SAU",
+      "requestedYear": "2023",
+      "year": 2023,
+      "sourceUrl": "https://wits.worldbank.org/CountryProfile/en/Country/SAU/Year/2023/Summarytext",
+      "pageComplete": true,
+      "partners": [
+        {
+          "rank": 1,
+          "name": "Unspecified",
+          "valueUsdMillions": 247386,
+          "sharePercent": 77.3
+        },
+        {
+          "rank": 2,
+          "name": "United Arab Emirates",
+          "valueUsdMillions": 13759,
+          "sharePercent": 4.3
+        },
+        {
+          "rank": 3,
+          "name": "China",
+          "valueUsdMillions": 7611,
+          "sharePercent": 2.38
+        },
+        {
+          "rank": 4,
+          "name": "India",
+          "valueUsdMillions": 6216,
+          "sharePercent": 1.94
+        },
+        {
+          "rank": 5,
+          "name": "Turkey",
+          "valueUsdMillions": 3073,
+          "sharePercent": 0.96
+        }
+      ]
+    },
+    "SD": {
+      "reporter": "SDN",
+      "requestedYear": "2011",
+      "year": 2011,
+      "sourceUrl": "https://wits.worldbank.org/CountryProfile/en/Country/SDN/Year/2011/Summarytext",
+      "pageComplete": true,
+      "partners": [
+        {
+          "rank": 1,
+          "name": "China",
+          "valueUsdMillions": 6323,
+          "sharePercent": 70.4
+        },
+        {
+          "rank": 2,
+          "name": "United Arab Emirates",
+          "valueUsdMillions": 944,
+          "sharePercent": 10.5
+        },
+        {
+          "rank": 3,
+          "name": "Japan",
+          "valueUsdMillions": 315,
+          "sharePercent": 3.51
+        },
+        {
+          "rank": 4,
+          "name": "Ethiopia(excludes Eritrea)",
+          "valueUsdMillions": 282,
+          "sharePercent": 3.14
+        },
+        {
+          "rank": 5,
+          "name": "Saudi Arabia",
+          "valueUsdMillions": 260,
+          "sharePercent": 2.89
+        }
+      ],
+      "retrievedSourceUrl": "https://wits.worldbank.org/CountryProfile/en/Country/SDN/Year/LTST/Summarytext"
+    },
+    "SN": {
+      "reporter": "SEN",
+      "requestedYear": "2023",
+      "year": 2023,
+      "sourceUrl": "https://wits.worldbank.org/CountryProfile/en/Country/SEN/Year/2023/Summarytext",
+      "pageComplete": true,
+      "partners": [
+        {
+          "rank": 1,
+          "name": "Mali",
+          "valueUsdMillions": 1219,
+          "sharePercent": 22.92
+        },
+        {
+          "rank": 2,
+          "name": "Switzerland",
+          "valueUsdMillions": 646,
+          "sharePercent": 12.15
+        },
+        {
+          "rank": 3,
+          "name": "India",
+          "valueUsdMillions": 544,
+          "sharePercent": 10.24
+        },
+        {
+          "rank": 4,
+          "name": "Bunkers",
+          "valueUsdMillions": 262,
+          "sharePercent": 4.94
+        },
+        {
+          "rank": 5,
+          "name": "China",
+          "valueUsdMillions": 224,
+          "sharePercent": 4.21
+        }
+      ]
+    },
+    "SG": {
+      "reporter": "SGP",
+      "requestedYear": "2023",
+      "year": 2023,
+      "sourceUrl": "https://wits.worldbank.org/CountryProfile/en/Country/SGP/Year/2023/Summarytext",
+      "pageComplete": true,
+      "partners": [
+        {
+          "rank": 1,
+          "name": "China",
+          "valueUsdMillions": 65585,
+          "sharePercent": 13.8
+        },
+        {
+          "rank": 2,
+          "name": "Hong Kong, China",
+          "valueUsdMillions": 50413,
+          "sharePercent": 10.61
+        },
+        {
+          "rank": 3,
+          "name": "United States",
+          "valueUsdMillions": 44923,
+          "sharePercent": 9.45
+        },
+        {
+          "rank": 4,
+          "name": "Malaysia",
+          "valueUsdMillions": 44454,
+          "sharePercent": 9.35
+        },
+        {
+          "rank": 5,
+          "name": "Indonesia",
+          "valueUsdMillions": 35368,
+          "sharePercent": 7.44
+        }
+      ]
+    },
+    "SB": {
+      "reporter": "SLB",
+      "requestedYear": "2018",
+      "year": 2018,
+      "sourceUrl": "https://wits.worldbank.org/CountryProfile/en/Country/SLB/Year/2018/Summarytext",
+      "pageComplete": false,
+      "partners": [
+        {
+          "rank": 1,
+          "name": "China",
+          "valueUsdMillions": 380,
+          "sharePercent": 66.83
+        },
+        {
+          "rank": 2,
+          "name": "Italy",
+          "valueUsdMillions": 41,
+          "sharePercent": 7.22
+        },
+        {
+          "rank": 3,
+          "name": "India",
+          "valueUsdMillions": 29,
+          "sharePercent": 5.08
+        },
+        {
+          "rank": 4,
+          "name": "Switzerland",
+          "valueUsdMillions": 14,
+          "sharePercent": 2.44
+        },
+        {
+          "rank": 5,
+          "name": "Thailand",
+          "valueUsdMillions": 12,
+          "sharePercent": 2.1
+        }
+      ],
+      "retrievedSourceUrl": "https://wits.worldbank.org/CountryProfile/en/Country/SLB/Year/LTST/Summarytext"
+    },
+    "SL": {
+      "reporter": "SLE",
+      "requestedYear": "2018",
+      "year": 2018,
+      "sourceUrl": "https://wits.worldbank.org/CountryProfile/en/Country/SLE/Year/2018/Summarytext",
+      "pageComplete": true,
+      "partners": [
+        {
+          "rank": 1,
+          "name": "China",
+          "valueUsdMillions": 37,
+          "sharePercent": 18.25
+        },
+        {
+          "rank": 2,
+          "name": "Korea, Rep.",
+          "valueUsdMillions": 29,
+          "sharePercent": 13.96
+        },
+        {
+          "rank": 3,
+          "name": "Netherlands",
+          "valueUsdMillions": 28,
+          "sharePercent": 13.55
+        },
+        {
+          "rank": 4,
+          "name": "Somalia",
+          "valueUsdMillions": 22,
+          "sharePercent": 10.8
+        },
+        {
+          "rank": 5,
+          "name": "Ghana",
+          "valueUsdMillions": 17,
+          "sharePercent": 8.04
+        }
+      ],
+      "retrievedSourceUrl": "https://wits.worldbank.org/CountryProfile/en/Country/SLE/Year/LTST/Summarytext"
+    },
+    "SV": {
+      "reporter": "SLV",
+      "requestedYear": "2023",
+      "year": 2023,
+      "sourceUrl": "https://wits.worldbank.org/CountryProfile/en/Country/SLV/Year/2023/Summarytext",
+      "pageComplete": true,
+      "partners": [
+        {
+          "rank": 1,
+          "name": "United States",
+          "valueUsdMillions": 2339,
+          "sharePercent": 36
+        },
+        {
+          "rank": 2,
+          "name": "Guatemala",
+          "valueUsdMillions": 1199,
+          "sharePercent": 18.45
+        },
+        {
+          "rank": 3,
+          "name": "Honduras",
+          "valueUsdMillions": 1059,
+          "sharePercent": 16.3
+        },
+        {
+          "rank": 4,
+          "name": "Nicaragua",
+          "valueUsdMillions": 510,
+          "sharePercent": 7.85
+        },
+        {
+          "rank": 5,
+          "name": "Costa Rica",
+          "valueUsdMillions": 311,
+          "sharePercent": 4.79
+        }
+      ]
+    },
+    "SM": null,
+    "SO": null,
+    "RS": {
+      "reporter": "SER",
+      "requestedYear": "2023",
+      "year": 2023,
+      "sourceUrl": "https://wits.worldbank.org/CountryProfile/en/Country/SER/Year/2023/Summarytext",
+      "pageComplete": true,
+      "partners": [
+        {
+          "rank": 1,
+          "name": "Germany",
+          "valueUsdMillions": 4663,
+          "sharePercent": 15.07
+        },
+        {
+          "rank": 2,
+          "name": "Bosnia and Herzegovina",
+          "valueUsdMillions": 2127,
+          "sharePercent": 6.87
+        },
+        {
+          "rank": 3,
+          "name": "Italy",
+          "valueUsdMillions": 1914,
+          "sharePercent": 6.19
+        },
+        {
+          "rank": 4,
+          "name": "Hungary",
+          "valueUsdMillions": 1687,
+          "sharePercent": 5.45
+        },
+        {
+          "rank": 5,
+          "name": "Romania",
+          "valueUsdMillions": 1561,
+          "sharePercent": 5.05
+        }
+      ]
+    },
+    "SS": null,
+    "ST": {
+      "reporter": "STP",
+      "requestedYear": "2023",
+      "year": 2023,
+      "sourceUrl": "https://wits.worldbank.org/CountryProfile/en/Country/STP/Year/2023/Summarytext",
+      "pageComplete": true,
+      "partners": [
+        {
+          "rank": 1,
+          "name": "Netherlands",
+          "valueUsdMillions": 10,
+          "sharePercent": 60.32
+        },
+        {
+          "rank": 2,
+          "name": "Belgium",
+          "valueUsdMillions": 3,
+          "sharePercent": 20.66
+        },
+        {
+          "rank": 3,
+          "name": "Portugal",
+          "valueUsdMillions": 1,
+          "sharePercent": 4.74
+        },
+        {
+          "rank": 4,
+          "name": "Germany",
+          "valueUsdMillions": 1,
+          "sharePercent": 3.22
+        },
+        {
+          "rank": 5,
+          "name": "Spain",
+          "valueUsdMillions": 1,
+          "sharePercent": 3.15
+        }
+      ]
+    },
+    "SR": {
+      "reporter": "SUR",
+      "requestedYear": "2023",
+      "year": 2023,
+      "sourceUrl": "https://wits.worldbank.org/CountryProfile/en/Country/SUR/Year/2023/Summarytext",
+      "pageComplete": true,
+      "partners": [
+        {
+          "rank": 1,
+          "name": "Unspecified",
+          "valueUsdMillions": 2142,
+          "sharePercent": 92.69
+        },
+        {
+          "rank": 2,
+          "name": "United States",
+          "valueUsdMillions": 74,
+          "sharePercent": 3.21
+        },
+        {
+          "rank": 3,
+          "name": "United Arab Emirates",
+          "valueUsdMillions": 16,
+          "sharePercent": 0.69
+        },
+        {
+          "rank": 4,
+          "name": "Paraguay",
+          "valueUsdMillions": 15,
+          "sharePercent": 0.64
+        },
+        {
+          "rank": 5,
+          "name": "Trinidad and Tobago",
+          "valueUsdMillions": 12,
+          "sharePercent": 0.5
+        }
+      ]
+    },
+    "SK": {
+      "reporter": "SVK",
+      "requestedYear": "2023",
+      "year": 2023,
+      "sourceUrl": "https://wits.worldbank.org/CountryProfile/en/Country/SVK/Year/2023/Summarytext",
+      "pageComplete": true,
+      "partners": [
+        {
+          "rank": 1,
+          "name": "Germany",
+          "valueUsdMillions": 24629,
+          "sharePercent": 21.01
+        },
+        {
+          "rank": 2,
+          "name": "Czech Republic",
+          "valueUsdMillions": 14124,
+          "sharePercent": 12.05
+        },
+        {
+          "rank": 3,
+          "name": "Poland",
+          "valueUsdMillions": 8588,
+          "sharePercent": 7.32
+        },
+        {
+          "rank": 4,
+          "name": "Hungary",
+          "valueUsdMillions": 8388,
+          "sharePercent": 7.15
+        },
+        {
+          "rank": 5,
+          "name": "France",
+          "valueUsdMillions": 6393,
+          "sharePercent": 5.45
+        }
+      ]
+    },
+    "SI": {
+      "reporter": "SVN",
+      "requestedYear": "2023",
+      "year": 2023,
+      "sourceUrl": "https://wits.worldbank.org/CountryProfile/en/Country/SVN/Year/2023/Summarytext",
+      "pageComplete": true,
+      "partners": [
+        {
+          "rank": 1,
+          "name": "Switzerland",
+          "valueUsdMillions": 16210,
+          "sharePercent": 27.24
+        },
+        {
+          "rank": 2,
+          "name": "Germany",
+          "valueUsdMillions": 8021,
+          "sharePercent": 13.48
+        },
+        {
+          "rank": 3,
+          "name": "Italy",
+          "valueUsdMillions": 5092,
+          "sharePercent": 8.56
+        },
+        {
+          "rank": 4,
+          "name": "Croatia",
+          "valueUsdMillions": 4663,
+          "sharePercent": 7.84
+        },
+        {
+          "rank": 5,
+          "name": "Austria",
+          "valueUsdMillions": 3381,
+          "sharePercent": 5.68
+        }
+      ]
+    },
+    "SE": {
+      "reporter": "SWE",
+      "requestedYear": "2023",
+      "year": 2023,
+      "sourceUrl": "https://wits.worldbank.org/CountryProfile/en/Country/SWE/Year/2023/Summarytext",
+      "pageComplete": true,
+      "partners": [
+        {
+          "rank": 1,
+          "name": "Germany",
+          "valueUsdMillions": 20181,
+          "sharePercent": 10.22
+        },
+        {
+          "rank": 2,
+          "name": "Norway",
+          "valueUsdMillions": 18249,
+          "sharePercent": 9.24
+        },
+        {
+          "rank": 3,
+          "name": "United States",
+          "valueUsdMillions": 17090,
+          "sharePercent": 8.65
+        },
+        {
+          "rank": 4,
+          "name": "Denmark",
+          "valueUsdMillions": 13830,
+          "sharePercent": 7
+        },
+        {
+          "rank": 5,
+          "name": "Finland",
+          "valueUsdMillions": 13575,
+          "sharePercent": 6.87
+        }
+      ]
+    },
+    "SZ": {
+      "reporter": "SWZ",
+      "requestedYear": "2023",
+      "year": 2023,
+      "sourceUrl": "https://wits.worldbank.org/CountryProfile/en/Country/SWZ/Year/2023/Summarytext",
+      "pageComplete": true,
+      "partners": [
+        {
+          "rank": 1,
+          "name": "South Africa",
+          "valueUsdMillions": 1415,
+          "sharePercent": 67.52
+        },
+        {
+          "rank": 2,
+          "name": "Kenya",
+          "valueUsdMillions": 90,
+          "sharePercent": 4.28
+        },
+        {
+          "rank": 3,
+          "name": "Mozambique",
+          "valueUsdMillions": 82,
+          "sharePercent": 3.91
+        },
+        {
+          "rank": 4,
+          "name": "Nigeria",
+          "valueUsdMillions": 70,
+          "sharePercent": 3.35
+        },
+        {
+          "rank": 5,
+          "name": "Zimbabwe",
+          "valueUsdMillions": 48,
+          "sharePercent": 2.28
+        }
+      ]
+    },
+    "SC": {
+      "reporter": "SYC",
+      "requestedYear": "2023",
+      "year": 2023,
+      "sourceUrl": "https://wits.worldbank.org/CountryProfile/en/Country/SYC/Year/2023/Summarytext",
+      "pageComplete": true,
+      "partners": [
+        {
+          "rank": 1,
+          "name": "United Arab Emirates",
+          "valueUsdMillions": 197,
+          "sharePercent": 35.91
+        },
+        {
+          "rank": 2,
+          "name": "France",
+          "valueUsdMillions": 126,
+          "sharePercent": 23.06
+        },
+        {
+          "rank": 3,
+          "name": "United Kingdom",
+          "valueUsdMillions": 55,
+          "sharePercent": 10.06
+        },
+        {
+          "rank": 4,
+          "name": "Italy",
+          "valueUsdMillions": 41,
+          "sharePercent": 7.43
+        },
+        {
+          "rank": 5,
+          "name": "Singapore",
+          "valueUsdMillions": 38,
+          "sharePercent": 6.95
+        }
+      ]
+    },
+    "SY": {
+      "reporter": "SYR",
+      "requestedYear": "2010",
+      "year": 2010,
+      "sourceUrl": "https://wits.worldbank.org/CountryProfile/en/Country/SYR/Year/2010/Summarytext",
+      "pageComplete": true,
+      "partners": [
+        {
+          "rank": 1,
+          "name": "Iraq",
+          "valueUsdMillions": 2295,
+          "sharePercent": 20.21
+        },
+        {
+          "rank": 2,
+          "name": "Italy",
+          "valueUsdMillions": 1520,
+          "sharePercent": 13.39
+        },
+        {
+          "rank": 3,
+          "name": "Germany",
+          "valueUsdMillions": 1477,
+          "sharePercent": 13.01
+        },
+        {
+          "rank": 4,
+          "name": "Turkey",
+          "valueUsdMillions": 629,
+          "sharePercent": 5.54
+        },
+        {
+          "rank": 5,
+          "name": "Saudi Arabia",
+          "valueUsdMillions": 543,
+          "sharePercent": 4.78
+        }
+      ],
+      "retrievedSourceUrl": "https://wits.worldbank.org/CountryProfile/en/Country/SYR/Year/LTST/Summarytext"
+    },
+    "TD": null,
+    "TG": {
+      "reporter": "TGO",
+      "requestedYear": "2023",
+      "year": 2023,
+      "sourceUrl": "https://wits.worldbank.org/CountryProfile/en/Country/TGO/Year/2023/Summarytext",
+      "pageComplete": true,
+      "partners": [
+        {
+          "rank": 1,
+          "name": "India",
+          "valueUsdMillions": 327,
+          "sharePercent": 22.48
+        },
+        {
+          "rank": 2,
+          "name": "Burkina Faso",
+          "valueUsdMillions": 133,
+          "sharePercent": 9.16
+        },
+        {
+          "rank": 3,
+          "name": "Benin",
+          "valueUsdMillions": 123,
+          "sharePercent": 8.42
+        },
+        {
+          "rank": 4,
+          "name": "Mali",
+          "valueUsdMillions": 114,
+          "sharePercent": 7.83
+        },
+        {
+          "rank": 5,
+          "name": "Cote d'Ivoire",
+          "valueUsdMillions": 98,
+          "sharePercent": 6.76
+        }
+      ]
+    },
+    "TH": {
+      "reporter": "THA",
+      "requestedYear": "2023",
+      "year": 2023,
+      "sourceUrl": "https://wits.worldbank.org/CountryProfile/en/Country/THA/Year/2023/Summarytext",
+      "pageComplete": true,
+      "partners": [
+        {
+          "rank": 1,
+          "name": "United States",
+          "valueUsdMillions": 48475,
+          "sharePercent": 17
+        },
+        {
+          "rank": 2,
+          "name": "China",
+          "valueUsdMillions": 34173,
+          "sharePercent": 11.99
+        },
+        {
+          "rank": 3,
+          "name": "Japan",
+          "valueUsdMillions": 24594,
+          "sharePercent": 8.63
+        },
+        {
+          "rank": 4,
+          "name": "Australia",
+          "valueUsdMillions": 12215,
+          "sharePercent": 4.28
+        },
+        {
+          "rank": 5,
+          "name": "Malaysia",
+          "valueUsdMillions": 11965,
+          "sharePercent": 4.2
+        }
+      ]
+    },
+    "TJ": {
+      "reporter": "TJK",
+      "requestedYear": "2023",
+      "year": 2023,
+      "sourceUrl": "https://wits.worldbank.org/CountryProfile/en/Country/TJK/Year/2023/Summarytext",
+      "pageComplete": true,
+      "partners": [
+        {
+          "rank": 1,
+          "name": "China",
+          "valueUsdMillions": 313,
+          "sharePercent": 24.81
+        },
+        {
+          "rank": 2,
+          "name": "Kazakhstan",
+          "valueUsdMillions": 254,
+          "sharePercent": 20.19
+        },
+        {
+          "rank": 3,
+          "name": "Turkey",
+          "valueUsdMillions": 165,
+          "sharePercent": 13.12
+        },
+        {
+          "rank": 4,
+          "name": "Uzbekistan",
+          "valueUsdMillions": 135,
+          "sharePercent": 10.75
+        },
+        {
+          "rank": 5,
+          "name": "Russian Federation",
+          "valueUsdMillions": 135,
+          "sharePercent": 10.68
+        }
+      ]
+    },
+    "TM": {
+      "reporter": "TKM",
+      "requestedYear": "2000",
+      "year": 2000,
+      "sourceUrl": "https://wits.worldbank.org/CountryProfile/en/Country/TKM/Year/2000/Summarytext",
+      "pageComplete": true,
+      "partners": [
+        {
+          "rank": 1,
+          "name": "Russian Federation",
+          "valueUsdMillions": 1029,
+          "sharePercent": 41.08
+        },
+        {
+          "rank": 2,
+          "name": "Italy",
+          "valueUsdMillions": 401,
+          "sharePercent": 16.02
+        },
+        {
+          "rank": 3,
+          "name": "Iran, Islamic Rep.",
+          "valueUsdMillions": 242,
+          "sharePercent": 9.66
+        },
+        {
+          "rank": 4,
+          "name": "Turkey",
+          "valueUsdMillions": 186,
+          "sharePercent": 7.42
+        },
+        {
+          "rank": 5,
+          "name": "Ukraine",
+          "valueUsdMillions": 165,
+          "sharePercent": 6.58
+        }
+      ],
+      "retrievedSourceUrl": "https://wits.worldbank.org/CountryProfile/en/Country/TKM/Year/LTST/Summarytext"
+    },
+    "TL": {
+      "reporter": "TMP",
+      "requestedYear": "2023",
+      "year": 2023,
+      "sourceUrl": "https://wits.worldbank.org/CountryProfile/en/Country/TMP/Year/2023/Summarytext",
+      "pageComplete": true,
+      "partners": [
+        {
+          "rank": 1,
+          "name": "China",
+          "valueUsdMillions": 76,
+          "sharePercent": 46.55
+        },
+        {
+          "rank": 2,
+          "name": "Singapore",
+          "valueUsdMillions": 31,
+          "sharePercent": 19.08
+        },
+        {
+          "rank": 3,
+          "name": "Australia",
+          "valueUsdMillions": 28,
+          "sharePercent": 16.83
+        },
+        {
+          "rank": 4,
+          "name": "Indonesia",
+          "valueUsdMillions": 12,
+          "sharePercent": 7.19
+        },
+        {
+          "rank": 5,
+          "name": "Japan",
+          "valueUsdMillions": 5,
+          "sharePercent": 2.96
+        }
+      ]
+    },
+    "TO": {
+      "reporter": "TON",
+      "requestedYear": "LTST",
+      "year": 2014,
+      "sourceUrl": "https://wits.worldbank.org/CountryProfile/en/Country/TON/Year/LTST/Summarytext",
+      "pageComplete": true,
+      "partners": [
+        {
+          "rank": 1,
+          "name": "New Zealand",
+          "valueUsdMillions": 4,
+          "sharePercent": 23.18
+        },
+        {
+          "rank": 2,
+          "name": "Hong Kong, China",
+          "valueUsdMillions": 3,
+          "sharePercent": 17.74
+        },
+        {
+          "rank": 3,
+          "name": "Unspecified",
+          "valueUsdMillions": 3,
+          "sharePercent": 15.47
+        },
+        {
+          "rank": 4,
+          "name": "United States",
+          "valueUsdMillions": 2,
+          "sharePercent": 13.14
+        },
+        {
+          "rank": 5,
+          "name": "Japan",
+          "valueUsdMillions": 2,
+          "sharePercent": 10.88
+        }
+      ]
+    },
+    "TT": {
+      "reporter": "TTO",
+      "requestedYear": "2023",
+      "year": 2023,
+      "sourceUrl": "https://wits.worldbank.org/CountryProfile/en/Country/TTO/Year/2023/Summarytext",
+      "pageComplete": true,
+      "partners": [
+        {
+          "rank": 1,
+          "name": "United States",
+          "valueUsdMillions": 2690,
+          "sharePercent": 34.21
+        },
+        {
+          "rank": 2,
+          "name": "China",
+          "valueUsdMillions": 382,
+          "sharePercent": 4.86
+        },
+        {
+          "rank": 3,
+          "name": "Guyana",
+          "valueUsdMillions": 375,
+          "sharePercent": 4.77
+        },
+        {
+          "rank": 4,
+          "name": "Belgium",
+          "valueUsdMillions": 356,
+          "sharePercent": 4.52
+        },
+        {
+          "rank": 5,
+          "name": "Morocco",
+          "valueUsdMillions": 321,
+          "sharePercent": 4.09
+        }
+      ]
+    },
+    "TN": {
+      "reporter": "TUN",
+      "requestedYear": "2023",
+      "year": 2023,
+      "sourceUrl": "https://wits.worldbank.org/CountryProfile/en/Country/TUN/Year/2023/Summarytext",
+      "pageComplete": true,
+      "partners": [
+        {
+          "rank": 1,
+          "name": "France",
+          "valueUsdMillions": 4571,
+          "sharePercent": 22.81
+        },
+        {
+          "rank": 2,
+          "name": "Italy",
+          "valueUsdMillions": 3673,
+          "sharePercent": 18.33
+        },
+        {
+          "rank": 3,
+          "name": "Germany",
+          "valueUsdMillions": 2637,
+          "sharePercent": 13.16
+        },
+        {
+          "rank": 4,
+          "name": "Unspecified",
+          "valueUsdMillions": 1245,
+          "sharePercent": 6.21
+        },
+        {
+          "rank": 5,
+          "name": "Spain",
+          "valueUsdMillions": 1055,
+          "sharePercent": 5.27
+        }
+      ]
+    },
+    "TR": {
+      "reporter": "TUR",
+      "requestedYear": "2023",
+      "year": 2023,
+      "sourceUrl": "https://wits.worldbank.org/CountryProfile/en/Country/TUR/Year/2023/Summarytext",
+      "pageComplete": true,
+      "partners": [
+        {
+          "rank": 1,
+          "name": "Germany",
+          "valueUsdMillions": 21083,
+          "sharePercent": 8.25
+        },
+        {
+          "rank": 2,
+          "name": "United States",
+          "valueUsdMillions": 14880,
+          "sharePercent": 5.82
+        },
+        {
+          "rank": 3,
+          "name": "Iraq",
+          "valueUsdMillions": 12759,
+          "sharePercent": 4.99
+        },
+        {
+          "rank": 4,
+          "name": "United Kingdom",
+          "valueUsdMillions": 12463,
+          "sharePercent": 4.88
+        },
+        {
+          "rank": 5,
+          "name": "Italy",
+          "valueUsdMillions": 12373,
+          "sharePercent": 4.84
+        }
+      ]
+    },
+    "TV": null,
+    "TZ": {
+      "reporter": "TZA",
+      "requestedYear": "2023",
+      "year": 2023,
+      "sourceUrl": "https://wits.worldbank.org/CountryProfile/en/Country/TZA/Year/2023/Summarytext",
+      "pageComplete": true,
+      "partners": [
+        {
+          "rank": 1,
+          "name": "India",
+          "valueUsdMillions": 1554,
+          "sharePercent": 21.36
+        },
+        {
+          "rank": 2,
+          "name": "South Africa",
+          "valueUsdMillions": 1123,
+          "sharePercent": 15.44
+        },
+        {
+          "rank": 3,
+          "name": "United Arab Emirates",
+          "valueUsdMillions": 686,
+          "sharePercent": 9.44
+        },
+        {
+          "rank": 4,
+          "name": "Switzerland",
+          "valueUsdMillions": 466,
+          "sharePercent": 6.4
+        },
+        {
+          "rank": 5,
+          "name": "China",
+          "valueUsdMillions": 428,
+          "sharePercent": 5.88
+        }
+      ]
+    },
+    "UG": {
+      "reporter": "UGA",
+      "requestedYear": "2023",
+      "year": 2023,
+      "sourceUrl": "https://wits.worldbank.org/CountryProfile/en/Country/UGA/Year/2023/Summarytext",
+      "pageComplete": true,
+      "partners": [
+        {
+          "rank": 1,
+          "name": "United Arab Emirates",
+          "valueUsdMillions": 1366,
+          "sharePercent": 21.67
+        },
+        {
+          "rank": 2,
+          "name": "Kenya",
+          "valueUsdMillions": 737,
+          "sharePercent": 11.69
+        },
+        {
+          "rank": 3,
+          "name": "India",
+          "valueUsdMillions": 728,
+          "sharePercent": 11.55
+        },
+        {
+          "rank": 4,
+          "name": "South Sudan",
+          "valueUsdMillions": 536,
+          "sharePercent": 8.51
+        },
+        {
+          "rank": 5,
+          "name": "Congo, Dem. Rep.",
+          "valueUsdMillions": 411,
+          "sharePercent": 6.52
+        }
+      ]
+    },
+    "UA": {
+      "reporter": "UKR",
+      "requestedYear": "2023",
+      "year": 2023,
+      "sourceUrl": "https://wits.worldbank.org/CountryProfile/en/Country/UKR/Year/2023/Summarytext",
+      "pageComplete": true,
+      "partners": [
+        {
+          "rank": 1,
+          "name": "Poland",
+          "valueUsdMillions": 4759,
+          "sharePercent": 13.15
+        },
+        {
+          "rank": 2,
+          "name": "Romania",
+          "valueUsdMillions": 3765,
+          "sharePercent": 10.4
+        },
+        {
+          "rank": 3,
+          "name": "China",
+          "valueUsdMillions": 2406,
+          "sharePercent": 6.65
+        },
+        {
+          "rank": 4,
+          "name": "Turkey",
+          "valueUsdMillions": 2369,
+          "sharePercent": 6.55
+        },
+        {
+          "rank": 5,
+          "name": "Germany",
+          "valueUsdMillions": 2020,
+          "sharePercent": 5.58
+        }
+      ]
+    },
+    "UY": {
+      "reporter": "URY",
+      "requestedYear": "2023",
+      "year": 2023,
+      "sourceUrl": "https://wits.worldbank.org/CountryProfile/en/Country/URY/Year/2023/Summarytext",
+      "pageComplete": true,
+      "partners": [
+        {
+          "rank": 1,
+          "name": "Brazil",
+          "valueUsdMillions": 1881,
+          "sharePercent": 20.47
+        },
+        {
+          "rank": 2,
+          "name": "China",
+          "valueUsdMillions": 1548,
+          "sharePercent": 16.84
+        },
+        {
+          "rank": 3,
+          "name": "Free Zones",
+          "valueUsdMillions": 1412,
+          "sharePercent": 15.36
+        },
+        {
+          "rank": 4,
+          "name": "United States",
+          "valueUsdMillions": 747,
+          "sharePercent": 8.13
+        },
+        {
+          "rank": 5,
+          "name": "Argentina",
+          "valueUsdMillions": 463,
+          "sharePercent": 5.03
+        }
+      ]
+    },
+    "US": {
+      "reporter": "USA",
+      "requestedYear": "2023",
+      "year": 2023,
+      "sourceUrl": "https://wits.worldbank.org/CountryProfile/en/Country/USA/Year/2023/Summarytext",
+      "pageComplete": true,
+      "partners": [
+        {
+          "rank": 1,
+          "name": "Canada",
+          "valueUsdMillions": 352760,
+          "sharePercent": 17.48
+        },
+        {
+          "rank": 2,
+          "name": "Mexico",
+          "valueUsdMillions": 323228,
+          "sharePercent": 16.01
+        },
+        {
+          "rank": 3,
+          "name": "China",
+          "valueUsdMillions": 147806,
+          "sharePercent": 7.32
+        },
+        {
+          "rank": 4,
+          "name": "Netherlands",
+          "valueUsdMillions": 82186,
+          "sharePercent": 4.07
+        },
+        {
+          "rank": 5,
+          "name": "Germany",
+          "valueUsdMillions": 76473,
+          "sharePercent": 3.79
+        }
+      ]
+    },
+    "UZ": {
+      "reporter": "UZB",
+      "requestedYear": "2023",
+      "year": 2023,
+      "sourceUrl": "https://wits.worldbank.org/CountryProfile/en/Country/UZB/Year/2023/Summarytext",
+      "pageComplete": true,
+      "partners": [
+        {
+          "rank": 1,
+          "name": "Unspecified",
+          "valueUsdMillions": 9160,
+          "sharePercent": 43.58
+        },
+        {
+          "rank": 2,
+          "name": "Russian Federation",
+          "valueUsdMillions": 3023,
+          "sharePercent": 14.38
+        },
+        {
+          "rank": 3,
+          "name": "China",
+          "valueUsdMillions": 1762,
+          "sharePercent": 8.38
+        },
+        {
+          "rank": 4,
+          "name": "Kazakhstan",
+          "valueUsdMillions": 1351,
+          "sharePercent": 6.43
+        },
+        {
+          "rank": 5,
+          "name": "Turkey",
+          "valueUsdMillions": 1316,
+          "sharePercent": 6.26
+        }
+      ]
+    },
+    "VA": null,
+    "VC": {
+      "reporter": "VCT",
+      "requestedYear": "2023",
+      "year": 2023,
+      "sourceUrl": "https://wits.worldbank.org/CountryProfile/en/Country/VCT/Year/2023/Summarytext",
+      "pageComplete": true,
+      "partners": [
+        {
+          "rank": 1,
+          "name": "Barbados",
+          "valueUsdMillions": 9,
+          "sharePercent": 20.84
+        },
+        {
+          "rank": 2,
+          "name": "St. Lucia",
+          "valueUsdMillions": 6,
+          "sharePercent": 15.11
+        },
+        {
+          "rank": 3,
+          "name": "St. Kitts and Nevis",
+          "valueUsdMillions": 5,
+          "sharePercent": 13.33
+        },
+        {
+          "rank": 4,
+          "name": "Dominica",
+          "valueUsdMillions": 5,
+          "sharePercent": 11.65
+        },
+        {
+          "rank": 5,
+          "name": "United States",
+          "valueUsdMillions": 5,
+          "sharePercent": 11.29
+        }
+      ]
+    },
+    "VE": {
+      "reporter": "VEN",
+      "requestedYear": "2013",
+      "year": 2013,
+      "sourceUrl": "https://wits.worldbank.org/CountryProfile/en/Country/VEN/Year/2013/Summarytext",
+      "pageComplete": true,
+      "partners": [
+        {
+          "rank": 1,
+          "name": "Unspecified",
+          "valueUsdMillions": 57807,
+          "sharePercent": 65.72
+        },
+        {
+          "rank": 2,
+          "name": "Other Asia, nes",
+          "valueUsdMillions": 28056,
+          "sharePercent": 31.9
+        },
+        {
+          "rank": 3,
+          "name": "United States",
+          "valueUsdMillions": 550,
+          "sharePercent": 0.63
+        },
+        {
+          "rank": 4,
+          "name": "China",
+          "valueUsdMillions": 254,
+          "sharePercent": 0.29
+        },
+        {
+          "rank": 5,
+          "name": "Colombia",
+          "valueUsdMillions": 236,
+          "sharePercent": 0.27
+        }
+      ],
+      "retrievedSourceUrl": "https://wits.worldbank.org/CountryProfile/en/Country/VEN/Year/LTST/Summarytext"
+    },
+    "VN": {
+      "reporter": "VNM",
+      "requestedYear": "2023",
+      "year": 2023,
+      "sourceUrl": "https://wits.worldbank.org/CountryProfile/en/Country/VNM/Year/2023/Summarytext",
+      "pageComplete": true,
+      "partners": [
+        {
+          "rank": 1,
+          "name": "United States",
+          "valueUsdMillions": 97072,
+          "sharePercent": 27.49
+        },
+        {
+          "rank": 2,
+          "name": "China",
+          "valueUsdMillions": 60574,
+          "sharePercent": 17.16
+        },
+        {
+          "rank": 3,
+          "name": "Korea, Rep.",
+          "valueUsdMillions": 23448,
+          "sharePercent": 6.64
+        },
+        {
+          "rank": 4,
+          "name": "Japan",
+          "valueUsdMillions": 23314,
+          "sharePercent": 6.6
+        },
+        {
+          "rank": 5,
+          "name": "Netherlands",
+          "valueUsdMillions": 10239,
+          "sharePercent": 2.9
+        }
+      ]
+    },
+    "VU": {
+      "reporter": "VUT",
+      "requestedYear": "2011",
+      "year": 2011,
+      "sourceUrl": "https://wits.worldbank.org/CountryProfile/en/Country/VUT/Year/2011/Summarytext",
+      "pageComplete": true,
+      "partners": [
+        {
+          "rank": 1,
+          "name": "Malaysia",
+          "valueUsdMillions": 13,
+          "sharePercent": 20.45
+        },
+        {
+          "rank": 2,
+          "name": "Philippines",
+          "valueUsdMillions": 11,
+          "sharePercent": 18.03
+        },
+        {
+          "rank": 3,
+          "name": "New Zealand",
+          "valueUsdMillions": 7,
+          "sharePercent": 11.41
+        },
+        {
+          "rank": 4,
+          "name": "Australia",
+          "valueUsdMillions": 7,
+          "sharePercent": 11.3
+        },
+        {
+          "rank": 5,
+          "name": "Fiji",
+          "valueUsdMillions": 5,
+          "sharePercent": 8.09
+        }
+      ],
+      "retrievedSourceUrl": "https://wits.worldbank.org/CountryProfile/en/Country/VUT/Year/LTST/Summarytext"
+    },
+    "WS": {
+      "reporter": "WSM",
+      "requestedYear": "2023",
+      "year": 2023,
+      "sourceUrl": "https://wits.worldbank.org/CountryProfile/en/Country/WSM/Year/2023/Summarytext",
+      "pageComplete": true,
+      "partners": [
+        {
+          "rank": 1,
+          "name": "New Zealand",
+          "valueUsdMillions": 9,
+          "sharePercent": 20.92
+        },
+        {
+          "rank": 2,
+          "name": "American Samoa",
+          "valueUsdMillions": 8,
+          "sharePercent": 19.71
+        },
+        {
+          "rank": 3,
+          "name": "Australia",
+          "valueUsdMillions": 6,
+          "sharePercent": 12.95
+        },
+        {
+          "rank": 4,
+          "name": "United States",
+          "valueUsdMillions": 5,
+          "sharePercent": 12.05
+        },
+        {
+          "rank": 5,
+          "name": "Tokelau",
+          "valueUsdMillions": 4,
+          "sharePercent": 10.1
+        }
+      ]
+    },
+    "YE": {
+      "reporter": "YEM",
+      "requestedYear": "2019",
+      "year": 2019,
+      "sourceUrl": "https://wits.worldbank.org/CountryProfile/en/Country/YEM/Year/2019/Summarytext",
+      "pageComplete": true,
+      "partners": [
+        {
+          "rank": 1,
+          "name": "Egypt, Arab Rep.",
+          "valueUsdMillions": 12,
+          "sharePercent": 49.58
+        },
+        {
+          "rank": 2,
+          "name": "Turkey",
+          "valueUsdMillions": 7,
+          "sharePercent": 28.02
+        },
+        {
+          "rank": 3,
+          "name": "Oman",
+          "valueUsdMillions": 3,
+          "sharePercent": 10.53
+        },
+        {
+          "rank": 4,
+          "name": "Sudan",
+          "valueUsdMillions": 2,
+          "sharePercent": 9.34
+        },
+        {
+          "rank": 5,
+          "name": "Eritrea",
+          "valueUsdMillions": 0,
+          "sharePercent": 0.88
+        }
+      ],
+      "retrievedSourceUrl": "https://wits.worldbank.org/CountryProfile/en/Country/YEM/Year/LTST/Summarytext"
+    },
+    "ZA": {
+      "reporter": "ZAF",
+      "requestedYear": "2023",
+      "year": 2023,
+      "sourceUrl": "https://wits.worldbank.org/CountryProfile/en/Country/ZAF/Year/2023/Summarytext",
+      "pageComplete": true,
+      "partners": [
+        {
+          "rank": 1,
+          "name": "China",
+          "valueUsdMillions": 12482,
+          "sharePercent": 11.29
+        },
+        {
+          "rank": 2,
+          "name": "United States",
+          "valueUsdMillions": 8320,
+          "sharePercent": 7.52
+        },
+        {
+          "rank": 3,
+          "name": "Germany",
+          "valueUsdMillions": 7487,
+          "sharePercent": 6.77
+        },
+        {
+          "rank": 4,
+          "name": "Unspecified",
+          "valueUsdMillions": 6393,
+          "sharePercent": 5.78
+        },
+        {
+          "rank": 5,
+          "name": "Mozambique",
+          "valueUsdMillions": 6182,
+          "sharePercent": 5.59
+        }
+      ]
+    },
+    "ZM": {
+      "reporter": "ZMB",
+      "requestedYear": "2023",
+      "year": 2023,
+      "sourceUrl": "https://wits.worldbank.org/CountryProfile/en/Country/ZMB/Year/2023/Summarytext",
+      "pageComplete": true,
+      "partners": [
+        {
+          "rank": 1,
+          "name": "Switzerland",
+          "valueUsdMillions": 4321,
+          "sharePercent": 41.42
+        },
+        {
+          "rank": 2,
+          "name": "China",
+          "valueUsdMillions": 1851,
+          "sharePercent": 17.74
+        },
+        {
+          "rank": 3,
+          "name": "Congo, Dem. Rep.",
+          "valueUsdMillions": 1603,
+          "sharePercent": 15.37
+        },
+        {
+          "rank": 4,
+          "name": "Singapore",
+          "valueUsdMillions": 562,
+          "sharePercent": 5.39
+        },
+        {
+          "rank": 5,
+          "name": "South Africa",
+          "valueUsdMillions": 391,
+          "sharePercent": 3.75
+        }
+      ]
+    },
+    "ZW": {
+      "reporter": "ZWE",
+      "requestedYear": "2023",
+      "year": 2023,
+      "sourceUrl": "https://wits.worldbank.org/CountryProfile/en/Country/ZWE/Year/2023/Summarytext",
+      "pageComplete": true,
+      "partners": [
+        {
+          "rank": 1,
+          "name": "South Africa",
+          "valueUsdMillions": 2233,
+          "sharePercent": 30.91
+        },
+        {
+          "rank": 2,
+          "name": "United Arab Emirates",
+          "valueUsdMillions": 1910,
+          "sharePercent": 26.43
+        },
+        {
+          "rank": 3,
+          "name": "China",
+          "valueUsdMillions": 1280,
+          "sharePercent": 17.72
+        },
+        {
+          "rank": 4,
+          "name": "Mozambique",
+          "valueUsdMillions": 398,
+          "sharePercent": 5.5
+        },
+        {
+          "rank": 5,
+          "name": "Unspecified",
+          "valueUsdMillions": 280,
+          "sharePercent": 3.88
+        }
+      ]
+    }
+  }
+}

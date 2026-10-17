@@ -1,0 +1,23 @@
+[
+  {
+    "year": 1914,
+    "path": "world_1914.geojson",
+    "bytes": 1289554,
+    "sha256": "a99425f9486e2243835fdc75ad7d82e6ddf3c72fcef87a63429f3313d830cf19",
+    "sourceUrl": "https://raw.githubusercontent.com/aourednik/historical-basemaps/da7a4b735ecef70aebdc9c73e409d8a2500d50f3/geojson/world_1914.geojson"
+  },
+  {
+    "year": 1945,
+    "path": "world_1945.geojson",
+    "bytes": 1563965,
+    "sha256": "3005839db7bcc5256d511b3abb01f1140c0cce245189bc5c28e7d557a47bc775",
+    "sourceUrl": "https://raw.githubusercontent.com/aourednik/historical-basemaps/da7a4b735ecef70aebdc9c73e409d8a2500d50f3/geojson/world_1945.geojson"
+  },
+  {
+    "year": 1960,
+    "path": "world_1960.geojson",
+    "bytes": 1502004,
+    "sha256": "6067386755f8fc120a4fca44f198952a18da89cd062aa8013d5a0d08cbad8988",
+    "sourceUrl": "https://raw.githubusercontent.com/aourednik/historical-basemaps/da7a4b735ecef70aebdc9c73e409d8a2500d50f3/geojson/world_1960.geojson"
+  }
+]

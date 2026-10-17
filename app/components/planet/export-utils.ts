@@ -1,0 +1,3 @@
+export const canvasBlob=(canvas:HTMLCanvasElement)=>new Promise<Blob>((resolve,reject)=>canvas.toBlob(blob=>blob?resolve(blob):reject(Error('An image could not be created.')),'image/png'));
+export function download(blob:Blob,name:string){const url=URL.createObjectURL(blob),link=document.createElement('a');link.href=url;link.download=name;link.click();setTimeout(()=>URL.revokeObjectURL(url),30000);}
+export async function shareImage(blob:Blob,name:string,title:string){const file=new File([blob],name,{type:'image/png'});if(navigator.canShare?.({files:[file]}))try{await navigator.share({files:[file],title});return;}catch(e){if((e as Error).name==='AbortError')return;}download(blob,name);}
