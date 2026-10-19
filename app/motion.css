@@ -1,0 +1,30 @@
+/* Six entrance treatments, inspired by the supplied motion reference.
+   Opacity and transforms only; no scroll hijacking or permanent render loop. */
+@keyframes ts-rise{from{opacity:0;transform:translateY(22px)}to{opacity:1;transform:translateY(0)}}
+@keyframes ts-zoom-out{from{opacity:.15;transform:scale(1.065)}to{opacity:1;transform:scale(1)}}
+@keyframes ts-popup{from{opacity:0;transform:translateY(20px) scale(.965)}to{opacity:1;transform:translateY(0) scale(1)}}
+@keyframes ts-fade-scale{from{opacity:.15;transform:scale(.97)}to{opacity:1;transform:scale(1)}}
+@keyframes ts-drop{from{opacity:0;transform:translateY(-12px)}to{opacity:1;transform:translateY(0)}}
+@media(prefers-reduced-motion:no-preference){
+ .hero-copy>*,.football-archive-hero>div>*,.index-hero>*,.travel-heading>div>*{animation:ts-rise .7s cubic-bezier(.22,1,.36,1) both}
+ :is(.hero-copy,.football-archive-hero>div,.index-hero,.travel-heading>div)>:nth-child(2){animation-delay:70ms}
+ :is(.hero-copy,.football-archive-hero>div,.index-hero,.travel-heading>div)>:nth-child(3){animation-delay:140ms}
+ :is(.hero-copy,.football-archive-hero>div,.index-hero,.travel-heading>div)>:nth-child(n+4){animation-delay:210ms}
+ .hero>.globe-studio{animation:ts-zoom-out .95s cubic-bezier(.22,1,.36,1) both}
+ .travel-map-section{animation:ts-fade-scale .8s cubic-bezier(.22,1,.36,1) both}
+ .player-modal-backdrop[open] .player-dossier,.travel-editor[open],.command-dialog[open],.layer-sheet{animation:ts-popup .34s cubic-bezier(.22,1,.36,1) both}
+ .player-modal-backdrop[open] .dossier-story>*{animation:ts-rise .5s cubic-bezier(.22,1,.36,1) both}
+ .player-modal-backdrop[open] .dossier-story>:nth-child(n+2){animation-delay:75ms}
+ .player-modal-backdrop[open] .dossier-story>:nth-child(n+4){animation-delay:125ms}
+ .nav-more[open]>div{animation:ts-popup .24s cubic-bezier(.22,1,.36,1) both;transform-origin:top right}
+ .nav-more[open]>div>a,.main-nav.is-open>a,.main-nav.is-open>.nav-more{animation:ts-drop .36s cubic-bezier(.22,1,.36,1) both}
+ .nav-more[open]>div>:nth-child(2),.main-nav.is-open>:nth-child(2){animation-delay:30ms}
+ .nav-more[open]>div>:nth-child(3),.main-nav.is-open>:nth-child(3){animation-delay:60ms}
+ .nav-more[open]>div>:nth-child(4),.main-nav.is-open>:nth-child(4){animation-delay:90ms}
+ .nav-more[open]>div>:nth-child(5),.main-nav.is-open>:nth-child(5){animation-delay:120ms}
+ .nav-more[open]>div>:nth-child(n+6),.main-nav.is-open>:nth-child(n+6){animation-delay:150ms}
+ .compare-tray{animation:ts-popup .3s cubic-bezier(.22,1,.36,1) both}
+}
+@media(prefers-reduced-motion:reduce){
+ .hero-copy>*,.football-archive-hero>div>*,.index-hero>*,.travel-heading>div>*,.hero>.globe-studio,.travel-map-section,.player-dossier,.travel-editor,.command-dialog,.layer-sheet,.dossier-story>*,.nav-more[open]>div,.nav-more[open]>div>a,.main-nav.is-open>*,.compare-tray{animation:none!important}
+}
