@@ -37,7 +37,7 @@ export default function FootballArchive(){
     </section>
 
     <section className="football-tools" aria-label="Filter football archive">
-      <label className="football-search"><span>⌕</span><input value={query} onChange={(event)=>setQuery(event.target.value)} placeholder="Search player, nation or club…"/></label>
+      <label className="football-search"><span>⌕</span><input aria-label="Search football players" value={query} onChange={(event)=>setQuery(event.target.value)} placeholder="Search player, nation or club…"/></label>
       <div className="era-buttons">{eras.map((item)=><button className={era===item?"active":""} onClick={()=>setEra(item)} key={item}>{item}</button>)}</div>
       <label><span>Position</span><select value={position} onChange={(event)=>setPosition(event.target.value as typeof position)}>{positions.map((item)=><option key={item}>{item}</option>)}</select></label>
       <label><span>Nation</span><select value={country} onChange={(event)=>setCountry(event.target.value)}>{countries.map((item)=><option key={item}>{item}</option>)}</select></label>

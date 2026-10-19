@@ -28,3 +28,8 @@
 @media(prefers-reduced-motion:reduce){
  .hero-copy>*,.football-archive-hero>div>*,.index-hero>*,.travel-heading>div>*,.hero>.globe-studio,.travel-map-section,.player-dossier,.travel-editor,.command-dialog,.layer-sheet,.dossier-story>*,.nav-more[open]>div,.nav-more[open]>div>a,.main-nav.is-open>*,.compare-tray{animation:none!important}
 }
+
+/* Keep football portraits and text readable in both site themes. */
+.football-people-page{--football-card:var(--surface-2);--football-line:var(--line)}
+.football-tools{background:var(--surface)}
+.era-buttons button.active,.shortlist.active,.shortlist:hover,.dossier-body aside>button.active,.dossier-body aside>button:hover,.dossier-body aside a:hover,.dossier-close:hover,.no-player-results button{color:#fff}
