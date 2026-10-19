@@ -1,8 +1,10 @@
 "use client";
 
-import {useMemo,useState} from "react";
+import {useEffect,useMemo,useRef,useState} from "react";
 import Link from "next/link";
 import {footballPeople,type FootballEra,type FootballPerson,type FootballPosition} from "./football-people";
+
+import {PlayerPortrait,PhotoCredit} from "./PlayerPortrait";
 
 const eras:("All eras"|FootballEra)[]=["All eras","New generation","Modern icon","Legend"];
 const positions:("All positions"|FootballPosition)[]=["All positions","Forward","Midfielder","Defender","Goalkeeper"];
@@ -15,6 +17,8 @@ export default function FootballArchive(){
   const [position,setPosition]=useState<(typeof positions)[number]>("All positions");
   const [country,setCountry]=useState("All nations");
   const [selected,setSelected]=useState<FootballPerson|null>(null);
+  const modal=useRef<HTMLDialogElement>(null);
+  useEffect(()=>{if(selected&&!modal.current?.open)modal.current?.showModal();else if(!selected&&modal.current?.open)modal.current.close();},[selected]);
   const [shortlist,setShortlist]=useState<string[]>([]);
   const countries=useMemo(()=>["All nations",...Array.from(new Set(footballPeople.map((person)=>person.country))).sort()],[]);
   const filtered=useMemo(()=>footballPeople.filter((person)=>{
@@ -33,7 +37,7 @@ export default function FootballArchive(){
     </section>
 
     <section className="football-tools" aria-label="Filter football archive">
-      <label className="football-search"><span>⌕</span><input value={query} onChange={(event)=>setQuery(event.target.value)} placeholder="Search player, nation or club…"/></label>
+      <label className="football-search"><span>⌕</span><input aria-label="Search football players" value={query} onChange={(event)=>setQuery(event.target.value)} placeholder="Search player, nation or club…"/></label>
       <div className="era-buttons">{eras.map((item)=><button className={era===item?"active":""} onClick={()=>setEra(item)} key={item}>{item}</button>)}</div>
       <label><span>Position</span><select value={position} onChange={(event)=>setPosition(event.target.value as typeof position)}>{positions.map((item)=><option key={item}>{item}</option>)}</select></label>
       <label><span>Nation</span><select value={country} onChange={(event)=>setCountry(event.target.value)}>{countries.map((item)=><option key={item}>{item}</option>)}</select></label>
@@ -43,24 +47,24 @@ export default function FootballArchive(){
       <header><div><b>{filtered.length}</b><span>players found</span></div><p>Click any player to open the full dossier. Add two to your shortlist for a quick career comparison.</p></header>
       <div className="football-person-grid">{filtered.map((person,index)=><article className="football-person-card" key={person.name}>
         <button type="button" className="football-card-main" onClick={()=>setSelected(person)}>
-          <div className="football-monogram"><small>{String(index+1).padStart(2,"0")}</small><span>{person.initials}</span><i>{person.flag}</i></div>
-          <div><span>{person.era} · {person.position}</span><h2>{person.name}</h2><p>{person.country} · {person.years}</p><small>{person.story}</small><b>Open full dossier <i>→</i></b></div>
+          <div className="football-monogram"><PlayerPortrait name={person.name} priority={index<3}/><small>{String(index+1).padStart(2,"0")}</small><i>{person.flag}</i></div>
+          <div><span>{person.clubLegacy??person.era} · {person.position}</span><h2>{person.name}</h2><p>{person.country} · {person.years}</p><small>{person.story}</small><b>Open full dossier <i>→</i></b></div>
         </button>
         <button type="button" className={shortlist.includes(person.name)?"shortlist active":"shortlist"} onClick={()=>toggleShortlist(person.name)}>{shortlist.includes(person.name)?"✓ Shortlisted":"＋ Compare"}</button>
       </article>)}</div>
       {!filtered.length&&<div className="no-player-results"><b>No player matches those filters.</b><button onClick={()=>{setQuery("");setEra("All eras");setPosition("All positions");setCountry("All nations")}}>Reset the archive</button></div>}
     </section>
 
-    {selected&&<div className="player-modal-backdrop" role="presentation" onMouseDown={(event)=>{if(event.currentTarget===event.target)setSelected(null)}}>
-      <section className="player-dossier" role="dialog" aria-modal="true" aria-label={`${selected.name} football profile`}>
+    <dialog ref={modal} aria-label={selected?`${selected.name} football profile`:"Player profile"} className="player-modal-backdrop" onCancel={()=>setSelected(null)} onClick={(event)=>{if(event.currentTarget===event.target)setSelected(null)}}>{selected&&<>
+      <section className="player-dossier" aria-label={`${selected.name} football profile`}>
         <button className="dossier-close" onClick={()=>setSelected(null)} aria-label="Close profile">×</button>
-        <header><div className="dossier-monogram"><span>{selected.initials}</span><i>{selected.flag}</i></div><div><small>{selected.era} · {selected.position}</small><h2>{selected.name}</h2><p>{selected.country} · {selected.years}</p></div></header>
+        <header><div className="dossier-monogram"><PlayerPortrait name={selected.name} priority/><i>{selected.flag}</i></div><div><small>{selected.clubLegacy??selected.era} · {selected.position}</small><h2>{selected.name}</h2><p>{selected.country} · {selected.years}</p></div></header>
         <div className="dossier-body">
-          <div className="dossier-story"><span>Career story</span><p>{selected.story}</p><span>How they played</span><p>{selected.style}</p><span>Why they matter</span><p>{selected.legacy}</p></div>
-          <aside><div><small>Selected career clubs · historical</small><p>{selected.clubs}</p></div><div><small>Defining honours</small><ul>{selected.honours.map((honour)=><li key={honour}>{honour}</li>)}</ul></div><Link href={`/countries/${slug(selected.country)}`}>Explore {selected.country} <span>↗</span></Link><button className={shortlist.includes(selected.name)?"active":""} onClick={()=>toggleShortlist(selected.name)}>{shortlist.includes(selected.name)?"✓ Added to comparison":"＋ Add to comparison"}</button></aside>
+          <div className="dossier-story"><div className="dossier-update"><span>Latest chapter · reviewed 19 October 2026</span><p>{selected.recent}</p></div><span>Career story</span><p>{selected.story}</p><span>How they played</span><p>{selected.style}</p><span>Why they matter</span><p>{selected.legacy}</p><div className="dossier-sources"><span>Sources</span>{selected.sources.map(source=><a key={source.url} href={source.url} target="_blank" rel="noreferrer">{source.label} ↗</a>)}<PhotoCredit name={selected.name}/></div></div>
+          <aside><div><small>Selected career clubs · historical</small><p>{selected.clubs}</p></div><div><small>Selected playing honours</small><ul>{selected.honours.map((honour)=><li key={honour}>{honour}</li>)}</ul></div><Link href={`/countries/${slug(selected.country)}`}>Explore {selected.country} <span>↗</span></Link><button className={shortlist.includes(selected.name)?"active":""} onClick={()=>toggleShortlist(selected.name)}>{shortlist.includes(selected.name)?"✓ Added to comparison":"＋ Add to comparison"}</button></aside>
         </div>
       </section>
-    </div>}
+    </>}</dialog>
 
     {!!compared.length&&<aside className="compare-tray"><div><small>Quick comparison</small><b>{compared.map((person)=>person.name).join("  vs  ")}</b></div><div>{compared.map((person)=><button key={person.name} onClick={()=>setSelected(person)}><span>{person.flag}</span>{person.name}<i onClick={(event)=>{event.stopPropagation();toggleShortlist(person.name)}}>×</i></button>)}</div>{compared.length===2&&<p><b>{compared[0].era}</b> meets <b>{compared[1].era}</b> · open either dossier to compare style, honours and influence.</p>}</aside>}
   </div>

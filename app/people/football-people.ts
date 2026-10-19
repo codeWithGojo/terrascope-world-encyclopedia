@@ -1,12 +1,15 @@
+import profileUpdates from "./football-profile-updates.json";
+
 export type FootballEra = "New generation" | "Modern icon" | "Legend";
 export type FootballPosition = "Forward" | "Midfielder" | "Defender" | "Goalkeeper";
 
 export type FootballPerson = {
   name:string; country:string; flag:string; era:FootballEra; position:FootballPosition;
   years:string; initials:string; clubs:string; honours:string[]; story:string; style:string; legacy:string;
+  recent:string; reviewedAt:string; sources:{label:string;url:string}[]; clubLegacy?:string;
 };
 
-const player = (name:string,country:string,flag:string,era:FootballEra,position:FootballPosition,years:string,initials:string,clubs:string,honours:string[],story:string,style:string,legacy:string):FootballPerson => ({name,country,flag,era,position,years,initials,clubs,honours,story,style,legacy});
+const player = (name:string,country:string,flag:string,era:FootballEra,position:FootballPosition,years:string,initials:string,clubs:string,honours:string[],story:string,style:string,legacy:string):FootballPerson => Object.assign({name,country,flag,era,position,years,initials,clubs,honours,story,style,legacy},profileUpdates[name as keyof typeof profileUpdates]) as FootballPerson;
 
 export const footballPeople:FootballPerson[] = [
   player("Erling Haaland","Norway","🇳🇴","New generation","Forward","2000 —","EH","Molde · Salzburg · Borussia Dortmund · Manchester City",["UEFA Champions League winner","Premier League champion","European Golden Shoe"],"A physically dominant centre-forward who turned elite scoring into a repeatable routine before his mid-twenties. His arrival in England immediately altered expectations for what a Premier League debut season could look like.","Explosive runs behind the defence, ruthless one-touch finishing and unusual speed for his size.","Haaland represents the modern specialist striker: fewer decorative touches, maximum danger whenever space opens."),

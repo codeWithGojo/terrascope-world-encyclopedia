@@ -1,0 +1,569 @@
+{
+  "Erling Haaland": {
+    "src": "/football/players/erling-haaland.webp",
+    "width": 427,
+    "height": 640,
+    "credit": "Bryan Berlin",
+    "license": "Attribution-Share Alike 4.0 International",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/deed.en",
+    "source": "https://en.wikipedia.org/wiki/File:Erling_Haaland_Morocco_v_Norway_7_June_2026-51.jpg"
+  },
+  "Kylian Mbappé": {
+    "src": "/football/players/kylian-mbappe.webp",
+    "width": 427,
+    "height": 640,
+    "credit": "Bryan Berlin / WikiPortraits",
+    "license": "Attribution-Share Alike 4.0 International",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/deed.en",
+    "source": "https://en.wikipedia.org/wiki/File:Kylian_Mbappe_France_v_Senegal_16_June_2026-391_(cropped).jpg"
+  },
+  "Bukayo Saka": {
+    "src": "/football/players/bukayo-saka.webp",
+    "width": 427,
+    "height": 640,
+    "credit": "Bryan Berlin / WikiPortraits",
+    "license": "Attribution-Share Alike 4.0 International",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/deed.en",
+    "source": "https://en.wikipedia.org/wiki/File:Bukayo_Saka_England_v_Ghana_23_June_2026-057_(cropped).jpg"
+  },
+  "Jude Bellingham": {
+    "src": "/football/players/jude-bellingham.webp",
+    "width": 427,
+    "height": 640,
+    "credit": "Bryan Berlin / WikiPortraits",
+    "license": "Attribution-Share Alike 4.0 International",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/deed.en",
+    "source": "https://en.wikipedia.org/wiki/File:Jude_Bellingham_England_v_Ghana_23_June_2026-061_(cropped).jpg"
+  },
+  "Vinícius Júnior": {
+    "src": "/football/players/vinicius-junior.webp",
+    "width": 427,
+    "height": 640,
+    "credit": "Bryan Berlin / WikiPortraits",
+    "license": "Attribution-Share Alike 4.0 International",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/deed.en",
+    "source": "https://en.wikipedia.org/wiki/File:Vin%C3%ADcius_J%C3%BAnior_Brazil_V_Morocco_13_June_2026-207_(cropped).jpg"
+  },
+  "Lamine Yamal": {
+    "src": "/football/players/lamine-yamal.webp",
+    "width": 427,
+    "height": 640,
+    "credit": "Bryan Berlin / WikiPortraits",
+    "license": "Attribution-Share Alike 4.0 International",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/deed.en",
+    "source": "https://en.wikipedia.org/wiki/File:Lamine_Yamal_France_v_Spain_7.24.26-142.jpg"
+  },
+  "Jamal Musiala": {
+    "src": "/football/players/jamal-musiala.webp",
+    "width": 416,
+    "height": 640,
+    "credit": "Bryan Berlin / WikiPortraits",
+    "license": "Attribution-Share Alike 4.0 International",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/deed.en",
+    "source": "https://en.wikipedia.org/wiki/File:Jamal_Musiala_Ecuador_v_Germany_25_June_2026-174_(cropped).jpg"
+  },
+  "Florian Wirtz": {
+    "src": "/football/players/florian-wirtz.webp",
+    "width": 419,
+    "height": 640,
+    "credit": "Bryan Berlin / WikiPortraits",
+    "license": "Attribution-Share Alike 4.0 International",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/deed.en",
+    "source": "https://en.wikipedia.org/wiki/File:Florian_Wirtz_Ecuador_v_Germany_25_June_2026-181_(cropped).jpg"
+  },
+  "Cole Palmer": {
+    "src": "/football/players/cole-palmer.webp",
+    "width": 286,
+    "height": 513,
+    "credit": "The White House",
+    "license": "Public domain (see source)",
+    "licenseUrl": "https://en.wikipedia.org/wiki/File:Cole_Palmer_2025_FIFA_Club_World_Cup_Final.jpg",
+    "source": "https://en.wikipedia.org/wiki/File:Cole_Palmer_2025_FIFA_Club_World_Cup_Final.jpg"
+  },
+  "Pedri": {
+    "src": "/football/players/pedri.webp",
+    "width": 427,
+    "height": 640,
+    "credit": "Bryan Berlin / WikiPortraits",
+    "license": "Attribution-Share Alike 4.0 International",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/deed.en",
+    "source": "https://en.wikipedia.org/wiki/File:Pedri_France_v_Spain_7.24.26-245.jpg"
+  },
+  "Rodri": {
+    "src": "/football/players/rodri.webp",
+    "width": 464,
+    "height": 640,
+    "credit": "Bryan Berlin",
+    "license": "Attribution-Share Alike 4.0 International",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/deed.en",
+    "source": "https://en.wikipedia.org/wiki/File:Rodri_Argentina_v_Spain_19_July_2026-187_(cropped).jpg"
+  },
+  "Mohamed Salah": {
+    "src": "/football/players/mohamed-salah.webp",
+    "width": 442,
+    "height": 640,
+    "credit": "Bryan Berlin / WikiPortraits",
+    "license": "Attribution-Share Alike 4.0 International",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/deed.en",
+    "source": "https://en.wikipedia.org/wiki/File:Mohamed_Salah_Argentina_v_Egypt_7_July_2026-163_(cropped).jpg"
+  },
+  "Marcus Rashford": {
+    "src": "/football/players/marcus-rashford.webp",
+    "width": 427,
+    "height": 640,
+    "credit": "Bryan Berlin / WikiPortraits",
+    "license": "Attribution-Share Alike 4.0 International",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/deed.en",
+    "source": "https://en.wikipedia.org/wiki/File:Marcus_Rashford_England_v_Ghana_23_June_2026-073.jpg"
+  },
+  "Harry Kane": {
+    "src": "/football/players/harry-kane.webp",
+    "width": 462,
+    "height": 640,
+    "credit": "Bryan Berlin / WikiPortraits",
+    "license": "Attribution-Share Alike 4.0 International",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/deed.en",
+    "source": "https://en.wikipedia.org/wiki/File:Harry_Kane_England_v_Ghana_23_June_2026-024_(cropped).jpg"
+  },
+  "Kevin De Bruyne": {
+    "src": "/football/players/kevin-de-bruyne.webp",
+    "width": 480,
+    "height": 639,
+    "credit": "Bryan Berlin",
+    "license": "Attribution-Share Alike 4.0 International",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/deed.en",
+    "source": "https://en.wikipedia.org/wiki/File:Kevin_De_Bruyne_USMNT_v_Belgium_Mar_28_2026-64_(cropped).jpg"
+  },
+  "Son Heung-min": {
+    "src": "/football/players/son-heung-min.webp",
+    "width": 473,
+    "height": 640,
+    "credit": "Ujishadow",
+    "license": "Attribution-Share Alike 4.0 International",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/deed.en",
+    "source": "https://en.wikipedia.org/wiki/File:BFA_2023_-2_Heung-Min_Son_(cropped).jpg"
+  },
+  "Victor Osimhen": {
+    "src": "/football/players/victor-osimhen.webp",
+    "width": 479,
+    "height": 640,
+    "credit": "Fédération Guinéenne Football",
+    "license": "Public Domain Mark",
+    "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+    "source": "https://en.wikipedia.org/wiki/File:Victor-osimhen-nigeria-2024-3-4.jpg"
+  },
+  "Aitana Bonmatí": {
+    "src": "/football/players/aitana-bonmati.webp",
+    "width": 427,
+    "height": 640,
+    "credit": "Barcex",
+    "license": "Attribution-Share Alike 4.0 International",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/deed.en",
+    "source": "https://en.wikipedia.org/wiki/File:25th_Laureus_World_Sports_Awards_-_240422_214032.jpg"
+  },
+  "Alexia Putellas": {
+    "src": "/football/players/alexia-putellas.webp",
+    "width": 464,
+    "height": 640,
+    "credit": "Pedro J Pacheco",
+    "license": "Attribution-Share Alike 4.0 International",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/deed.en",
+    "source": "https://en.wikipedia.org/wiki/File:Premios_Goya_2026_-_Alexia_Putellas_(cropped).jpg"
+  },
+  "Sam Kerr": {
+    "src": "/football/players/sam-kerr.webp",
+    "width": 427,
+    "height": 640,
+    "credit": "Bryan Berlin",
+    "license": "Attribution-Share Alike 4.0 International",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/deed.en",
+    "source": "https://en.wikipedia.org/wiki/File:Sam_Kerr_Gotham_v_Seattle_18_July_2026-378_(cropped).jpg"
+  },
+  "Lionel Messi": {
+    "src": "/football/players/lionel-messi.webp",
+    "width": 427,
+    "height": 640,
+    "credit": "Bryan Berlin / WikiPortraits",
+    "license": "Attribution-Share Alike 4.0 International",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/deed.en",
+    "source": "https://en.wikipedia.org/wiki/File:Leo_Messi_Argentina_v_Egypt_7_July_2026-1.jpg"
+  },
+  "Cristiano Ronaldo": {
+    "src": "/football/players/cristiano-ronaldo.webp",
+    "width": 427,
+    "height": 640,
+    "credit": "Bryan Berlin / WikiPortraits",
+    "license": "Attribution-Share Alike 4.0 International",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/deed.en",
+    "source": "https://en.wikipedia.org/wiki/File:Cristiano_Ronaldo_Croatia_v_Portugal_2_July_2026-075_(cropped).jpg"
+  },
+  "Neymar": {
+    "src": "/football/players/neymar.webp",
+    "width": 427,
+    "height": 640,
+    "credit": "Bryan Berlin / WikiPortraits",
+    "license": "Attribution-Share Alike 4.0 International",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/deed.en",
+    "source": "https://en.wikipedia.org/wiki/File:Neymar_Junior_Brazil_V_Morocco_13_June_2026-40.jpg"
+  },
+  "Luka Modrić": {
+    "src": "/football/players/luka-modric.webp",
+    "width": 427,
+    "height": 640,
+    "credit": "Bryan Berlin / WikiPortraits",
+    "license": "Attribution-Share Alike 4.0 International",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/deed.en",
+    "source": "https://en.wikipedia.org/wiki/File:Luka_Modric_Croatia_v_Portugal_2_July_2026-055.jpg"
+  },
+  "Robert Lewandowski": {
+    "src": "/football/players/robert-lewandowski.webp",
+    "width": 427,
+    "height": 640,
+    "credit": "Bryan Berlin",
+    "license": "Attribution-Share Alike 4.0 International",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/deed.en",
+    "source": "https://en.wikipedia.org/wiki/File:Robert_Lewandowski_NYCFC_v_Chicago_25_July_2026-383.jpg"
+  },
+  "Marta": {
+    "src": "/football/players/marta.webp",
+    "width": 460,
+    "height": 640,
+    "credit": "Hameltion",
+    "license": "Attribution-Share Alike 4.0 International",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/deed.en",
+    "source": "https://en.wikipedia.org/wiki/File:NC_Courage_vs_Orlando_Pride_(Jun_2024)_073_(cropped).jpg"
+  },
+  "Pelé": {
+    "src": "/football/players/pele.webp",
+    "width": 388,
+    "height": 526,
+    "credit": "Unknown photographer",
+    "license": "This file has been identified as being free of known restrictions under copyright law, including all related and neighboring rights.",
+    "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/deed.en",
+    "source": "https://en.wikipedia.org/wiki/File:Pele_con_brasil_(cropped).jpg"
+  },
+  "Diego Maradona": {
+    "src": "/football/players/diego-maradona.webp",
+    "width": 365,
+    "height": 572,
+    "credit": "Unknown photographer",
+    "license": "Public domain (see source)",
+    "licenseUrl": "https://en.wikipedia.org/wiki/File:Argentina_celebrando_copa_(cropped).jpg",
+    "source": "https://en.wikipedia.org/wiki/File:Argentina_celebrando_copa_(cropped).jpg"
+  },
+  "Johan Cruyff": {
+    "src": "/football/players/johan-cruyff.webp",
+    "width": 480,
+    "height": 640,
+    "credit": "Rob Mieremet / Anefo",
+    "license": "CC0 1.0 Universal Public Domain Dedication",
+    "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/deed.en",
+    "source": "https://en.wikipedia.org/wiki/File:Johan_Cruijff_(1974).jpg"
+  },
+  "Zinedine Zidane": {
+    "src": "/football/players/zinedine-zidane.webp",
+    "width": 410,
+    "height": 544,
+    "credit": "Hadi Abyar",
+    "license": "Attribution 4.0 International",
+    "licenseUrl": "https://creativecommons.org/licenses/by/4.0/deed.en",
+    "source": "https://en.wikipedia.org/wiki/File:Zinedine_Zidane_by_Tasnim_03.jpg"
+  },
+  "Ronaldinho": {
+    "src": "/football/players/ronaldinho.webp",
+    "width": 480,
+    "height": 640,
+    "credit": "Marcos Corrêa/PR",
+    "license": "Attribution 2.0 Generic",
+    "licenseUrl": "https://creativecommons.org/licenses/by/2.0/deed.en",
+    "source": "https://en.wikipedia.org/wiki/File:Ronaldinho_in_2019.jpg"
+  },
+  "Ronaldo Nazário": {
+    "src": "/football/players/ronaldo-nazario.webp",
+    "width": 444,
+    "height": 640,
+    "credit": "Lula Oficial",
+    "license": "Attribution-Share Alike 4.0 International",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/deed.en",
+    "source": "https://en.wikipedia.org/wiki/File:12.12.2025_%E2%80%93_Cerim%C3%B4nia_de_lan%C3%A7amento_do_SBT_News_-_54980664160_(cropped2).jpg"
+  },
+  "Thierry Henry": {
+    "src": "/football/players/thierry-henry.webp",
+    "width": 480,
+    "height": 640,
+    "credit": "Web Summit",
+    "license": "Attribution 2.0 Generic",
+    "licenseUrl": "https://creativecommons.org/licenses/by/2.0/deed.en",
+    "source": "https://en.wikipedia.org/wiki/File:Thierry_Henry_(51649035951)_(cropped).jpg"
+  },
+  "Wayne Rooney": {
+    "src": "/football/players/wayne-rooney.webp",
+    "width": 420,
+    "height": 640,
+    "credit": "All-Pro Reels from District of Columbia, USA",
+    "license": "Attribution-Share Alike 2.0 Generic",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0/deed.en",
+    "source": "https://en.wikipedia.org/wiki/File:Wayne_Rooney_(50121495731)_(cropped).jpg"
+  },
+  "David Beckham": {
+    "src": "/football/players/david-beckham.webp",
+    "width": 473,
+    "height": 640,
+    "credit": "Soccer Aid for Unicef",
+    "license": "Attribution 3.0 Unported",
+    "licenseUrl": "https://creativecommons.org/licenses/by/3.0/deed.en",
+    "source": "https://en.wikipedia.org/wiki/File:David_Beckham_UNICEF_(cropped2).jpg"
+  },
+  "Andrés Iniesta": {
+    "src": "/football/players/andres-iniesta.webp",
+    "width": 480,
+    "height": 608,
+    "credit": "Bryan Berlin",
+    "license": "Attribution-Share Alike 4.0 International",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/deed.en",
+    "source": "https://en.wikipedia.org/wiki/File:Andr%C3%A9s_Iniesta_Argentina_v_Spain_19_July_2026-034_(cropped).jpg"
+  },
+  "Xavi Hernández": {
+    "src": "/football/players/xavi-hernandez.webp",
+    "width": 452,
+    "height": 604,
+    "credit": "Meysam Mehabadi",
+    "license": "licence",
+    "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+    "source": "https://en.wikipedia.org/wiki/File:Xavi,_Persepolis_vs._Al_Sadd,_20190520_02_(cropped).jpg"
+  },
+  "Andrea Pirlo": {
+    "src": "/football/players/andrea-pirlo.webp",
+    "width": 349,
+    "height": 523,
+    "credit": "Clément Bucco-Lechat",
+    "license": "Attribution-Share Alike 3.0 Unported",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0/deed.en",
+    "source": "https://en.wikipedia.org/wiki/File:20150616_-_Portugal_-_Italie_-_Gen%C3%A8ve_-_Andrea_Pirlo_(cropped).jpg"
+  },
+  "Paolo Maldini": {
+    "src": "/football/players/paolo-maldini.webp",
+    "width": 480,
+    "height": 494,
+    "credit": "GOAL TV",
+    "license": "Attribution 3.0 Unported",
+    "licenseUrl": "https://creativecommons.org/licenses/by/3.0/deed.en",
+    "source": "https://en.wikipedia.org/wiki/File:Paolo_Maldini_AC_Milan_Technical_director_2018.jpg"
+  },
+  "Franz Beckenbauer": {
+    "src": "/football/players/franz-beckenbauer.webp",
+    "width": 468,
+    "height": 640,
+    "credit": "Panini Group",
+    "license": "Public domain (see source)",
+    "licenseUrl": "https://en.wikipedia.org/wiki/File:Franz_Beckenbauer_(1975).jpg",
+    "source": "https://en.wikipedia.org/wiki/File:Franz_Beckenbauer_(1975).jpg"
+  },
+  "Gianluigi Buffon": {
+    "src": "/football/players/gianluigi-buffon.webp",
+    "width": 480,
+    "height": 605,
+    "credit": "MichaelEmilio",
+    "license": "Attribution 4.0 International",
+    "licenseUrl": "https://creativecommons.org/licenses/by/4.0/deed.en",
+    "source": "https://en.wikipedia.org/wiki/File:Norway_Italy_-_June_2025_A_44_(Gianluigi_Buffon).jpg"
+  },
+  "Iker Casillas": {
+    "src": "/football/players/iker-casillas.webp",
+    "width": 480,
+    "height": 522,
+    "credit": "Web Summit",
+    "license": "Attribution 2.0 Generic",
+    "licenseUrl": "https://creativecommons.org/licenses/by/2.0/deed.en",
+    "source": "https://en.wikipedia.org/wiki/File:Iker-Casillas-SportsTrade-2021-cropped.jpg"
+  },
+  "Lev Yashin": {
+    "src": "/football/players/lev-yashin.webp",
+    "width": 480,
+    "height": 640,
+    "credit": "Kroon, Ron for Anefo",
+    "license": "Attribution-Share Alike 3.0 Netherlands",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0/nl/deed.en",
+    "source": "https://en.wikipedia.org/wiki/File:LevYashin.JPG"
+  },
+  "Roberto Carlos": {
+    "src": "/football/players/roberto-carlos.webp",
+    "width": 480,
+    "height": 640,
+    "credit": "Web Summit",
+    "license": "Attribution 2.0 Generic",
+    "licenseUrl": "https://creativecommons.org/licenses/by/2.0/deed.en",
+    "source": "https://en.wikipedia.org/wiki/File:LS3_1288_(53332367864)_(cropped).jpg"
+  },
+  "Cafu": {
+    "src": "/football/players/cafu.webp",
+    "width": 480,
+    "height": 606,
+    "credit": "Lula Oficial",
+    "license": "Attribution-Share Alike 4.0 International",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/deed.en",
+    "source": "https://en.wikipedia.org/wiki/File:Cafu_-_26.02.2026_-_Cerim%C3%B4nia_de_apresenta%C3%A7%C3%A3o_das_ta%C3%A7as_da_Copa_do_Mundo_de_2026.jpg"
+  },
+  "Didier Drogba": {
+    "src": "/football/players/didier-drogba.webp",
+    "width": 480,
+    "height": 619,
+    "credit": "Y.Leclercq©",
+    "license": "Attribution-Share Alike 4.0 International",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/deed.en",
+    "source": "https://en.wikipedia.org/wiki/File:Didier_Drogba_(2019)_(cropped2).jpg"
+  },
+  "Samuel Eto’o": {
+    "src": "/football/players/samuel-etoo.webp",
+    "width": 427,
+    "height": 640,
+    "credit": "BACHELOR45",
+    "license": "Attribution-Share Alike 4.0 International",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/deed.en",
+    "source": "https://en.wikipedia.org/wiki/File:Sammuel_Eto'o_Fils_02.jpg"
+  },
+  "Kaká": {
+    "src": "/football/players/kaka.webp",
+    "width": 427,
+    "height": 640,
+    "credit": "Евгений Асмолов",
+    "license": "Attribution-Share Alike 3.0 Unported",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0/deed.en",
+    "source": "https://en.wikipedia.org/wiki/File:Kak%C3%A1_visited_Stadium_St._Petersburg.jpg"
+  },
+  "Steven Gerrard": {
+    "src": "/football/players/steven-gerrard.webp",
+    "width": 412,
+    "height": 619,
+    "credit": "Эдгар Брещанов",
+    "license": "Attribution-Share Alike 3.0 Unported",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0/deed.en",
+    "source": "https://en.wikipedia.org/wiki/File:Steven_Gerrard_2018.jpg"
+  },
+  "Frank Lampard": {
+    "src": "/football/players/frank-lampard.webp",
+    "width": 446,
+    "height": 640,
+    "credit": "Mehdi Bolourian",
+    "license": "licence",
+    "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+    "source": "https://en.wikipedia.org/wiki/File:Frank_Lampard_2019.jpg"
+  },
+  "Paul Scholes": {
+    "src": "/football/players/paul-scholes.webp",
+    "width": 460,
+    "height": 640,
+    "credit": "James Adams",
+    "license": "Attribution 2.0 Generic",
+    "licenseUrl": "https://creativecommons.org/licenses/by/2.0/deed.en",
+    "source": "https://en.wikipedia.org/wiki/File:P_Scholes.jpg"
+  },
+  "George Best": {
+    "src": "/football/players/george-best.webp",
+    "width": 462,
+    "height": 640,
+    "credit": "Bert Verhoeff for Anefo \n\n, NL-HaNA, ANEFO / neg. stroken, 1945-1989",
+    "license": "CC0 1.0 Universal Public Domain Dedication",
+    "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/deed.en",
+    "source": "https://en.wikipedia.org/wiki/File:George_best_1976.jpg"
+  },
+  "Eusébio": {
+    "src": "/football/players/eusebio.webp",
+    "width": 480,
+    "height": 637,
+    "credit": "Panini",
+    "license": "Public domain (see source)",
+    "licenseUrl": "https://en.wikipedia.org/wiki/File:Eusebio_en_1973.jpg",
+    "source": "https://en.wikipedia.org/wiki/File:Eusebio_en_1973.jpg"
+  },
+  "Ferenc Puskás": {
+    "src": "/football/players/ferenc-puskas.webp",
+    "width": 317,
+    "height": 409,
+    "credit": "Panini",
+    "license": "Public domain (see source)",
+    "licenseUrl": "https://en.wikipedia.org/wiki/File:Ferenc_Puskas_en_1965.jpg",
+    "source": "https://en.wikipedia.org/wiki/File:Ferenc_Puskas_en_1965.jpg"
+  },
+  "Alfredo Di Stéfano": {
+    "src": "/football/players/alfredo-di-stefano.webp",
+    "width": 471,
+    "height": 640,
+    "credit": "Unknown photographer",
+    "license": "Public domain (see source)",
+    "licenseUrl": "https://en.wikipedia.org/wiki/File:Alfredo_Di_Stefano_River_Plate.jpg",
+    "source": "https://en.wikipedia.org/wiki/File:Alfredo_Di_Stefano_River_Plate.jpg"
+  },
+  "Garrincha": {
+    "src": "/football/players/garrincha.webp",
+    "width": 480,
+    "height": 634,
+    "credit": "El Gráfico, n° 2233",
+    "license": "Public domain (see source)",
+    "licenseUrl": "https://en.wikipedia.org/wiki/File:Manoel_Francisco_dos_Santos-Garrincha.jpg",
+    "source": "https://en.wikipedia.org/wiki/File:Manoel_Francisco_dos_Santos-Garrincha.jpg"
+  },
+  "Sócrates": {
+    "src": "/football/players/socrates.webp",
+    "width": 480,
+    "height": 478,
+    "credit": "Unknown photographer",
+    "license": "Public domain (see source)",
+    "licenseUrl": "https://en.wikipedia.org/wiki/File:Socrates_elgrafico_1983.jpg",
+    "source": "https://en.wikipedia.org/wiki/File:Socrates_elgrafico_1983.jpg"
+  },
+  "Marco van Basten": {
+    "src": "/football/players/marco-van-basten.webp",
+    "width": 393,
+    "height": 524,
+    "credit": "Paul Blank",
+    "license": "Attribution 2.5 Generic",
+    "licenseUrl": "https://creativecommons.org/licenses/by/2.5/deed.en",
+    "source": "https://en.wikipedia.org/wiki/File:Marco_van_Basten_(2)_(cropped).jpg"
+  },
+  "Ruud Gullit": {
+    "src": "/football/players/ruud-gullit.webp",
+    "width": 454,
+    "height": 640,
+    "credit": "Barcex",
+    "license": "Attribution-Share Alike 4.0 International",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/deed.en",
+    "source": "https://en.wikipedia.org/wiki/File:25th_Laureus_World_Sports_Awards_-_Ruud_Gullit_-_240422_131911_(cropped).jpg"
+  },
+  "Roberto Baggio": {
+    "src": "/football/players/roberto-baggio.webp",
+    "width": 473,
+    "height": 600,
+    "credit": "AbolfaZl0990",
+    "license": "Attribution-Share Alike 4.0 International",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/deed.en",
+    "source": "https://en.wikipedia.org/wiki/File:%D8%B1%D9%88%D8%A8%D8%B1%D8%AA%D9%88_%D8%A8%D8%A7%D8%AC%D9%88_(cropped).jpg"
+  },
+  "Carles Puyol": {
+    "src": "/football/players/carles-puyol.webp",
+    "width": 427,
+    "height": 640,
+    "credit": "Pedro J Pacheco",
+    "license": "Attribution-Share Alike 4.0 International",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/deed.en",
+    "source": "https://en.wikipedia.org/wiki/File:Premios_Goya_2020_-_Carles_Pujol.jpg"
+  },
+  "Sergio Ramos": {
+    "src": "/football/players/sergio-ramos.webp",
+    "width": 475,
+    "height": 640,
+    "credit": "Real Madrid",
+    "license": "Attribution 3.0 Unported",
+    "licenseUrl": "https://creativecommons.org/licenses/by/3.0/deed.en",
+    "source": "https://en.wikipedia.org/wiki/File:Sergio_Ramos_Interview_2021_(cropped).jpg"
+  },
+  "Manuel Neuer": {
+    "src": "/football/players/manuel-neuer.webp",
+    "width": 427,
+    "height": 640,
+    "credit": "Bryan Berlin / WikiPortraits",
+    "license": "Attribution-Share Alike 4.0 International",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/deed.en",
+    "source": "https://en.wikipedia.org/wiki/File:Manuel_Neuer_Ecuador_v_Germany_25_June_2026-148.jpg"
+  }
+}

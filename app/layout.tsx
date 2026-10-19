@@ -5,6 +5,7 @@ import "./experience.css";
 import "./premium.css";
 import "./country-features.css";
 import "./engagement.css";
+import "./motion.css";
 import {ThemeProvider} from "./components/ThemeProvider";
 import {MotionProvider} from "./components/motion/MotionProvider";
 import {themeBootScript} from "./theme";
