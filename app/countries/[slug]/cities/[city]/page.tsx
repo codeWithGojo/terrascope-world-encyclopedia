@@ -10,6 +10,12 @@ import {
 import {SiteHeader} from "../../../../components/SiteHeader";
 import {SiteFooter} from "../../../../components/SiteFooter";
 
+export async function generateMetadata({params}:{params:Promise<{slug:string;city:string}>}) {
+  const {slug,city}=await params;
+  const guide=cityGuideByPath.get(`${slug}/${city}`);
+  return guide?{title:`${guide.name}, ${guide.country} · Travel guide | TerraScope`,description:guide.overview}:{};
+}
+
 export function generateStaticParams() {
   return cityGuides.map((guide) => ({
     slug: guide.countrySlug,
@@ -28,6 +34,8 @@ export default async function CityGuidePage({
   const extra = cityGuideExtrasByPath[path];
 
   if (!guide || !extra) notFound();
+  const [cover,...gallery] = guide.gallery;
+  const photoSource=(photo:(typeof guide.gallery)[number])=>photo.sourceUrl??(photo.url.startsWith("/travel/")?`https://commons.wikimedia.org/wiki/File:${photo.url.slice("/travel/".length)}`:photo.url);
 
   return (
     <main className="city-guide-page">
@@ -54,6 +62,11 @@ export default async function CityGuidePage({
         </div>
       </section>
 
+      {cover&&<figure className="city-guide-cover">
+        <img src={cover.url} alt={cover.alt} width={cover.width??1280} height={cover.height??853} decoding="async"/>
+        <figcaption><span>{cover.alt}</span><a href={photoSource(cover)} target="_blank" rel="noreferrer">{cover.credit} ↗</a></figcaption>
+      </figure>}
+
       <p className="trip-country-action"><Link href={`/trips?destination=${encodeURIComponent(guide.country)}&city=${encodeURIComponent(guide.name)}`}>Plan a trip to {guide.name}</Link></p>
       <section className="city-guide-body">
         <aside>
@@ -65,7 +78,7 @@ export default async function CityGuidePage({
           <a href="#day-trips">Day trips</a>
           <a href="#move">Getting around</a>
           <a href="#local-tips">Local tips</a>
-          {guide.gallery.length>0&&<a href="#gallery">Photo gallery</a>}
+          {gallery.length>0&&<a href="#gallery">Photo gallery</a>}
         </aside>
 
         <div>
@@ -159,16 +172,16 @@ export default async function CityGuidePage({
             </ol>
           </section>
 
-          {guide.gallery.length>0&&<section id="gallery" className="city-guide-section">
+          {gallery.length>0&&<section id="gallery" className="city-guide-section">
             <p className="eyebrow"><span />Open-image archive</p>
             <h2>City<br /><em>gallery.</em></h2>
             <div className="city-gallery">
-              {guide.gallery.map((photo) => (
+              {gallery.map((photo) => (
                 <figure key={photo.url}>
-                  <img src={photo.url} alt={photo.alt} />
+                  <img src={photo.url} alt={photo.alt} width={photo.width??960} height={photo.height??640} loading="lazy" decoding="async"/>
                   <figcaption>
                     <b>{photo.alt}</b>
-                    <a href={photo.url.startsWith("/travel/")?`https://commons.wikimedia.org/wiki/File:${photo.url.slice("/travel/".length)}`:photo.url} target="_blank" rel="noreferrer">{photo.credit} ↗</a>
+                    <a href={photoSource(photo)} target="_blank" rel="noreferrer">{photo.credit} ↗</a>
                   </figcaption>
                 </figure>
               ))}

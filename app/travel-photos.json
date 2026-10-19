@@ -1,0 +1,102 @@
+{
+  "egypt/alexandria": {
+    "url": "/travel/destinations/egypt-alexandria.webp",
+    "alt": "Alexandria city view",
+    "credit": "TheEgyptian · CC BY-SA 3.0",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:San_Stefano_Grand_Plaza.JPG",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+    "description": "San Stefano Grand Plaza",
+    "width": 1280,
+    "height": 598
+  },
+  "egypt/aswan": {
+    "url": "/travel/destinations/egypt-aswan.webp",
+    "alt": "Aswan city view",
+    "credit": "Vyacheslav Argenberg · CC BY 4.0",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Panoramic_view_of_Aswan,_Egypt.jpg",
+    "licenseUrl": "https://creativecommons.org/licenses/by/4.0",
+    "description": "Aswan is slower than most places in Egypt, laid-back and pleasant. The Nile river is wide, languorous and beautiful here, flowing gently down from Lake Nasser, around dramatic black-granite boulders and palm islands. Aswan, Egypt.",
+    "width": 1280,
+    "height": 853
+  },
+  "egypt/luxor": {
+    "url": "/travel/destinations/egypt-luxor.webp",
+    "alt": "Luxor city view",
+    "credit": "Roland Unger · CC BY-SA 3.0",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:LuxorHotelsIbnWalidSt.jpg",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+    "description": "Hotels in the Khaled Ibn el-Walid St, Luxor, Egypt",
+    "width": 800,
+    "height": 530
+  },
+  "nigeria/abeokuta": {
+    "url": "/travel/destinations/nigeria-abeokuta.webp",
+    "alt": "Abeokuta city view",
+    "credit": "Diplenty multimedia · CC BY-SA 4.0",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:New_cultural_center_abeokuta_side_view.jpg",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "description": "This is right side of the new look after renovation",
+    "width": 1280,
+    "height": 853
+  },
+  "nigeria/abuja": {
+    "url": "/travel/destinations/nigeria-abuja.webp",
+    "alt": "Abuja city view",
+    "credit": "MediaMOF · CC BY-SA 4.0",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Abuja_heritages_30.jpg",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "description": "Abuja, the capital city of Nigeria, proudly boasts a diverse array of significant monuments and landmarks that vividly reflect its rich cultural, religious, and natural heritage.",
+    "width": 1280,
+    "height": 854
+  },
+  "nigeria/asaba": {
+    "url": "/travel/destinations/nigeria-asaba.webp",
+    "alt": "Asaba city view",
+    "credit": "Idoghor Melody · CC BY-SA 4.0",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Asaba_2.jpg",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "description": "A view of Inter-bau roundabout/Beginning of Okpanam road",
+    "width": 1280,
+    "height": 960
+  },
+  "nigeria/benin-city": {
+    "url": "/travel/destinations/nigeria-benin-city.webp",
+    "alt": "Benin City city view",
+    "credit": "DipoTayo · CC BY-SA 4.0",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Nat_Museum,_Benin.jpg",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "description": "",
+    "width": 1280,
+    "height": 960
+  },
+  "nigeria/ibadan": {
+    "url": "/travel/destinations/nigeria-ibadan.webp",
+    "alt": "Ibadan city view",
+    "credit": "ExploreWithTunde · CC BY-SA 4.0",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Aerial_view_of_the_National_Museum_of_Unity,_Aleshinloye,_Ibadan_2024-06-02.jpg",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "description": "Ibadan's Aleshinloye Museum is a museum that displays Yoruba artifacts, artworks, and historical exhibits, preserving the city's cultural heritage and promoting education.",
+    "width": 1280,
+    "height": 720
+  },
+  "nigeria/osogbo": {
+    "url": "/travel/destinations/nigeria-osogbo.webp",
+    "alt": "Osun-Osogbo city view",
+    "credit": "ABORISADEADETONA · CC BY-SA 4.0",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Osun_groove_Osogbo.jpg",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "description": "The Osun-Osogbo Grove is among the last of the sacred forests which usually adjoined the edges of most Yoruba cities before extensive urbanization. In recognition of its global significance.",
+    "width": 1280,
+    "height": 1160
+  },
+  "nigeria/port-harcourt": {
+    "url": "/travel/destinations/nigeria-port-harcourt.webp",
+    "alt": "Port Harcourt city view",
+    "credit": "Kalabarian · CC BY-SA 3.0",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Pitakwa.jpg",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+    "description": "Port Harcourt, Rivers State, Nigeria.",
+    "width": 1024,
+    "height": 565
+  }
+}

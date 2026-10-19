@@ -90,7 +90,8 @@ export default async function CountryPage({params}:{params: Promise<{slug: strin
   const renderTravelPlace = (place:(typeof travelPlaces)[number],index:number) => {
     const guide = guides.find((item)=>item.name===place.name);
     const relatedGuide = country.code==="EG" && ["Giza pyramid complex","Saqqara"].includes(place.name) ? guides.find((item)=>item.citySlug==="cairo") : undefined;
-    return <article key={place.name}><span>{String(index+1).padStart(2,"0")}</span><small>{place.kind}</small><h3>{place.name}</h3><p>{place.note}</p>{(guide||relatedGuide)&&<Link href={`/countries/${country.slug}/cities/${(guide||relatedGuide)?.citySlug}`}>Explore nearby city guide →</Link>}</article>;
+    const photo=place.name==="Giza pyramid complex"?relatedGuide?.gallery.find(photo=>photo.alt==="Giza pyramids"):guide?.gallery[0];
+    return <article key={place.name}>{photo&&<Link className="travel-place-photo" href={`/countries/${country.slug}/cities/${(guide||relatedGuide)?.citySlug}`} tabIndex={-1} aria-hidden="true"><img src={photo.url} alt="" width={photo.width??960} height={photo.height??640} loading="lazy" decoding="async"/></Link>}<span>{String(index+1).padStart(2,"0")}</span><small>{place.kind}</small><h3>{place.name}</h3><p>{place.note}</p>{(guide||relatedGuide)&&<Link href={`/countries/${country.slug}/cities/${(guide||relatedGuide)?.citySlug}`}>Explore nearby city guide →</Link>}</article>;
   };
   const notes = country.code === "NG" ? nigeriaFieldNotes : generatedNotes(country);
   const summary = editorial?.summary ?? `${country.name} is a sovereign state in ${country.subregion}. This profile connects its political geography, language, currency, borders and national football record to TerraScope’s complete world index.`;

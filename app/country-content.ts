@@ -1,12 +1,14 @@
 export type NotableCategory = "Politics" | "Sports" | "Entertainment" | "Science" | "Literature";
 export type NotablePerson = {name:string; category:NotableCategory; description:string; wikipedia:string; image?:string};
 export type TravelPlace = {name:string; kind:"City"|"Landmark"; note:string};
+export type TravelPhoto = {url:string; alt:string; credit:string; sourceUrl?:string; licenseUrl?:string; width?:number; height?:number};
 export type CityGuide = {
   countryCode:string; countrySlug:string; citySlug:string; name:string; country:string;
   overview:string; bestTime:string; attractions:string[]; food:string[]; gettingAround:string;
-  safety:string; gallery:{url:string; alt:string; credit:string}[];
+  safety:string; gallery:TravelPhoto[];
 };
 export type CityGuideExtra = {gateway:string;neighbourhoods:{name:string;note:string}[];dayTrips:{name:string;note:string}[];itinerary:{day:string;title:string;plan:string}[];cultureTips:string[]};
+import travelPhotos from "./travel-photos.json";
 import {travelCatalogByCode} from "./travel-catalog";
 import {discoveryGuides,discoveryGuideExtras} from "./discovery-guides";
 import {additionalCityGuides, additionalCityGuideExtras} from "./additional-guides";
@@ -61,7 +63,7 @@ export const mostVisitedCountries = [
 
 // The verified Commons images are shipped with the site to avoid broken hotlinks.
 const commons = (file:string) => `/travel/${encodeURIComponent(file)}`;
-export const cityGuides: CityGuide[] = [
+const baseCityGuides: CityGuide[] = [
   {countryCode:"NG",countrySlug:"nigeria",citySlug:"lagos",name:"Lagos",country:"Nigeria",overview:"Lagos is Nigeria’s commercial and creative engine: a fast-moving lagoon city of music, food, beaches, markets and ambitious contemporary culture.",bestTime:"November to February, when rain is lighter and humidity is usually lower.",attractions:["Nike Art Gallery","Lekki Conservation Centre","Freedom Park","Tarkwa Bay","National Museum Lagos"],food:["Jollof rice","Suya","Ewa agoyin","Seafood pepper soup"],gettingAround:"Ride-hailing is the simplest option for visitors. Allow generous time for traffic and use ferries on selected lagoon routes.",safety:"Use trusted transport at night, keep valuables discreet and confirm local conditions before visiting beaches or crowded markets.",gallery:[{url:commons("Lagos Island.jpg"),alt:"Lagos city view",credit:"Wikimedia Commons"},{url:commons("Lekki Ikoyi Link Bridge.jpg"),alt:"Lekki-Ikoyi Link Bridge",credit:"Wikimedia Commons"},{url:commons("National Arts Theatre, Lagos.jpg"),alt:"National Theatre Lagos",credit:"Wikimedia Commons"}]},
   {countryCode:"JP",countrySlug:"japan",citySlug:"tokyo",name:"Tokyo",country:"Japan",overview:"Tokyo combines neighbourhood-scale detail with one of the world’s largest urban systems: temples, design, food, rail and late-night energy.",bestTime:"March to May or October to November for mild weather; cherry blossom dates vary each year.",attractions:["Sensō-ji","Meiji Shrine","Shibuya Crossing","Tokyo National Museum","teamLab Borderless"],food:["Sushi","Ramen","Tempura","Monjayaki"],gettingAround:"The rail and metro network covers almost everything. Use a rechargeable IC card and avoid peak commuter hours with luggage.",safety:"Tokyo is generally safe, but normal big-city awareness still applies. Follow quiet-carriage etiquette and local rules around smoking and rubbish.",gallery:[{url:commons("Tokyo Montage 2015.jpg"),alt:"Tokyo city scenes",credit:"Wikimedia Commons"},{url:commons("20100725 Tokyo Five-storied Pagoda Sensoji 5379.jpg"),alt:"Sensō-ji temple",credit:"Wikimedia Commons"},{url:commons("Shibuya crossing, seen from Shibuya Stream.jpg"),alt:"Shibuya Crossing",credit:"Wikimedia Commons"}]},
   {countryCode:"BR",countrySlug:"brazil",citySlug:"rio-de-janeiro",name:"Rio de Janeiro",country:"Brazil",overview:"Rio is a dramatic meeting of Atlantic beaches, granite peaks, samba history and dense urban neighbourhoods.",bestTime:"May to October for drier weather; Carnival season is electric but crowded and expensive.",attractions:["Christ the Redeemer","Sugarloaf Mountain","Ipanema","Tijuca National Park","Museum of Tomorrow"],food:["Feijoada","Churrasco","Açaí","Pão de queijo"],gettingAround:"Metro and VLT work well for central routes; use licensed taxis or ride-hailing after dark and for hillside journeys.",safety:"Plan routes before leaving, avoid displaying valuables and ask accommodation staff for current neighbourhood guidance.",gallery:[{url:commons("Botafogo Bay and Corcovado viewed from Sugarloaf Mountain, Rio de Janeiro, Brazil.jpg"),alt:"Rio de Janeiro landscape",credit:"Wikimedia Commons"},{url:commons("Posto7 Rio de Janeiro Ipanema.jpg"),alt:"Ipanema Beach",credit:"Wikimedia Commons"},{url:commons("Escadaria Selaron em 2022.jpg"),alt:"Selarón Steps",credit:"Wikimedia Commons"}]},
@@ -75,6 +77,12 @@ export const cityGuides: CityGuide[] = [
   ...additionalCityGuides,
   ...discoveryGuides,
 ];
+
+const assignedPhotos:Record<string,TravelPhoto> = travelPhotos;
+export const cityGuides:CityGuide[] = baseCityGuides.map(guide=>({
+  ...guide,
+  gallery:guide.gallery.length?guide.gallery:assignedPhotos[`${guide.countrySlug}/${guide.citySlug}`]?[assignedPhotos[`${guide.countrySlug}/${guide.citySlug}`]]:[],
+}));
 
 export const cityGuideByPath = new Map(cityGuides.map((guide) => [`${guide.countrySlug}/${guide.citySlug}`, guide]));
 
