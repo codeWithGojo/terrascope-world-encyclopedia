@@ -1,0 +1,149 @@
+/* TerraScope glass edition. Static lighting; no animated or canvas-wide blur. */
+:root,[data-theme=light]{
+  --paper:#edf4f6;
+  --glass-panel:#f8fbfc;
+  --glass-strong:#f9fcfd;
+  --glass-soft:#e5f1ef;
+  --glass-edge:rgba(255,255,255,.9);
+  --glass-highlight:rgba(255,255,255,.64);
+  --glass-outline:rgba(57,98,110,.16);
+  --glass-shadow:0 12px 36px rgba(26,65,79,.075),inset 0 1px 0 rgba(255,255,255,.9);
+  --glass-glow-a:rgba(95,189,174,.19);
+  --glass-glow-b:rgba(107,165,204,.18);
+  --glass-glow-c:rgba(218,188,131,.13);
+}
+[data-theme=dark]{
+  --paper:#09141f;
+  --glass-panel:#142638;
+  --glass-strong:#142332;
+  --glass-soft:#193b3d;
+  --glass-edge:rgba(181,221,233,.16);
+  --glass-highlight:rgba(195,231,244,.075);
+  --glass-outline:rgba(162,201,220,.16);
+  --glass-shadow:0 16px 42px rgba(0,6,16,.24),inset 0 1px 0 rgba(218,242,252,.09);
+  --glass-glow-a:rgba(45,140,128,.18);
+  --glass-glow-b:rgba(50,105,155,.2);
+  --glass-glow-c:rgba(174,142,88,.08);
+}
+body{
+  background-color:var(--paper);
+  background-image:radial-gradient(ellipse 850px 550px at 5% 120px,var(--glass-glow-a),transparent 72%),radial-gradient(ellipse 850px 650px at 100% 400px,var(--glass-glow-b),transparent 72%),radial-gradient(ellipse 750px 550px at 30% 1200px,var(--glass-glow-c),transparent 72%);
+  background-repeat:no-repeat;
+}
+.home-page>.hero,.home-escape-section,.home-map-section,.discovery,.continents,.world-threads,.atlas-principle,
+.city-guide-page,.dataset-page,.football-people-page,.dashboard-page,.terra-dashboard-shell,
+.terra-dashboard-shell .world-dashboard,.terra-topbar,.dashboard-deep-rankings{background:transparent}
+.site-header{
+  background:var(--glass-strong)!important;
+  border-bottom:1px solid var(--glass-edge);
+  box-shadow:0 4px 26px rgba(5,35,48,.06),inset 0 -1px 0 var(--glass-outline);
+  -webkit-backdrop-filter:none;
+  backdrop-filter:none;
+}
+:is(.country-card,.country-feature,.daily-fact,.person-card,.home-escape-small,.journey-card,.heritage-card,.greats-club,.election-card,.football-person-card,.trip-panel,.activity-card,.account-card,.game-play,.game-result,.pro-plan,.travel-place-grid>article,.country-statistics-grid>article,.city-guide-neighbourhoods>article,.city-itinerary>article,.city-day-trips>article,.city-fun-grid>article){
+  background-color:var(--glass-panel);
+  background-image:linear-gradient(135deg,var(--glass-highlight),transparent 48%);
+  border:1px solid var(--glass-edge);
+  border-radius:18px;
+  box-shadow:var(--glass-shadow);
+}
+.country-card:hover,.heritage-card:hover,.football-person-card:hover{
+  background-color:var(--glass-strong);
+  border-color:var(--accent);
+}
+.home-experience-links{
+  background:var(--glass-panel);
+  border-color:var(--glass-outline);
+  box-shadow:inset 0 1px 0 var(--glass-edge),inset 0 -1px 0 var(--glass-edge);
+}
+.profile-hero,.city-guide-hero,.dataset-hero,.index-hero{
+  background:linear-gradient(125deg,var(--glass-highlight),transparent 75%);
+}
+.profile-quick{gap:10px;padding-block:18px;border-color:var(--glass-outline)}
+.profile-quick>div{background:var(--glass-panel);border:1px solid var(--glass-edge);border-radius:14px}
+.profile-body>aside{top:110px}
+.travel-place-grid{gap:14px;background:transparent;border:0}
+.travel-practical-grid{gap:10px;background:transparent;border:0}
+.travel-practical-grid>article{background:var(--glass-panel);border:1px solid var(--glass-edge);border-radius:14px}
+.city-advice-grid{gap:14px;background:transparent;border:0}
+.city-advice-grid>article{background:var(--glass-panel);border:1px solid var(--glass-edge);border-radius:18px}
+.city-guide-cover{border-radius:20px;overflow:hidden;box-shadow:var(--glass-shadow);border-color:var(--glass-edge);background:var(--glass-panel)}
+.city-gallery figure{border-radius:16px}
+.terra-dashboard-shell .dashboard-stats article,.terra-dashboard-shell .overview-card,.terra-dashboard-shell .ranking-dashboard{
+  background:linear-gradient(135deg,var(--glass-highlight),transparent 48%),var(--glass-panel);
+  border:1px solid var(--glass-edge);
+  border-radius:20px;
+  box-shadow:var(--glass-shadow);
+}
+.terra-dashboard-shell .dashboard-map,.terra-dashboard-shell .dashboard-ranking{background:transparent}
+.terra-dashboard-shell .dashboard-map{border-color:var(--glass-outline)}
+.terra-dashboard-shell .dashboard-stats article>svg{background:var(--glass-soft);border:1px solid var(--glass-edge);color:var(--accent)}
+.terra-dashboard-shell .ranking-tabs{gap:8px}
+.terra-dashboard-shell .ranking-tabs button{background:var(--glass-panel);border-color:var(--glass-edge);border-radius:12px}
+.terra-dashboard-shell .ranking-tabs button.active{background:var(--green);color:var(--on-accent);border-color:var(--green)}
+.terra-dashboard-shell .ranking-tabs button.active small{color:var(--on-accent)}
+.terra-dashboard-shell .ranking-row{background:transparent}
+.terra-dashboard-shell .ranking-row:hover{background:var(--glass-soft)}
+.terra-dashboard-shell .ranking-method{background:var(--glass-soft);color:var(--ink);border-color:var(--glass-outline)}
+.terra-dashboard-shell .ranking-method p,.terra-dashboard-shell .ranking-method>div span{color:var(--muted)}
+.terra-dashboard-shell .ranking-method a{color:var(--accent)}
+.ranking-feature-routes>a{background:var(--glass-panel);border:1px solid var(--glass-edge);border-radius:16px;box-shadow:var(--glass-shadow)}
+.ranking-dashboard>header,.ranking-description,.ranking-row{border-color:var(--glass-outline)}
+.search-bar,.home-page .hero .search-bar,.explorer-tools>label,.data-table-tools>label,
+.globe-layer-switcher,.football-search,.football-tools>label:not(.football-search){background:var(--glass-panel);border-color:var(--glass-edge);box-shadow:inset 0 1px 0 var(--glass-highlight)}
+.trip-form input,.trip-form select,.trip-form textarea,.activity-filters>label,.activity-tools select{background:var(--glass-strong);border-color:var(--glass-outline)}
+.activity-card.picked{background:var(--glass-soft);border-color:var(--accent);box-shadow:inset 0 0 0 1px var(--accent)}
+.trip-studio-layout{gap:18px}
+.football-tools{background:var(--glass-strong);border-color:var(--glass-outline)}
+.nav-more>div,.theme-options,.command-dialog,.layer-sheet,.player-dossier{
+  background:var(--glass-strong);
+  border:1px solid var(--glass-edge);
+  box-shadow:var(--glass-shadow);
+}
+.player-dossier{border-radius:20px}
+.icon-button,.mobile-menu-toggle{background:var(--glass-panel)!important;border-color:var(--glass-outline)}
+
+/* My Travels keeps its existing dark palette and rose accent. */
+.travel-page,.travel-editor{
+  --glass-panel:#1c2926;
+  --glass-strong:#17211e;
+  --glass-soft:#30282d;
+  --glass-edge:rgba(229,243,235,.14);
+  --glass-highlight:rgba(238,248,242,.06);
+  --glass-outline:rgba(229,243,235,.15);
+  --glass-shadow:0 12px 34px rgba(0,0,0,.18),inset 0 1px 0 rgba(255,255,255,.08);
+}
+main.travel-page{background:radial-gradient(ellipse 800px 500px at 90% 0,rgba(121,74,96,.16),transparent 75%),radial-gradient(ellipse 700px 600px at 0 500px,rgba(67,111,96,.17),transparent 75%),var(--paper)}
+.travel-page .site-header{background:var(--glass-strong)!important}
+.travel-page .travel-stat,.travel-page .travel-progress,.travel-page .travel-editor{background:linear-gradient(125deg,var(--glass-highlight),transparent 55%),var(--glass-panel);border-color:var(--glass-edge);box-shadow:var(--glass-shadow)}
+.travel-page .travel-progress{background:linear-gradient(120deg,rgba(244,120,150,.14),transparent 70%),var(--glass-panel)}
+.travel-page .travel-world-map{filter:none}
+
+@supports ((backdrop-filter:blur(1px)) or (-webkit-backdrop-filter:blur(1px))){
+  :root,[data-theme=light]{--glass-panel:rgba(255,255,255,.68);--glass-strong:rgba(249,253,255,.93);--glass-soft:rgba(214,239,233,.8)}
+  [data-theme=dark]{--glass-panel:rgba(23,43,61,.7);--glass-strong:rgba(16,32,47,.94);--glass-soft:rgba(28,63,64,.84)}
+  .travel-page,.travel-editor{--glass-panel:rgba(29,43,37,.78);--glass-strong:rgba(21,32,27,.95);--glass-soft:rgba(48,40,45,.88)}
+  .site-header{-webkit-backdrop-filter:blur(12px) saturate(135%);backdrop-filter:blur(12px) saturate(135%)}
+  /* Only a few primary panels blur; repeated cards use tint and edge lighting. */
+  .terra-dashboard-shell .overview-card,.trip-panel{-webkit-backdrop-filter:blur(8px);backdrop-filter:blur(8px)}
+}
+@media(max-width:1100px){
+  .site-header .main-nav.is-open{background:var(--glass-strong);border-color:var(--glass-edge);border-radius:0 0 18px 18px;box-shadow:var(--glass-shadow)}
+  .site-header .nav-more>div{background:transparent;box-shadow:none;border:0}
+}
+@media(max-width:768px){
+  .terra-dashboard-shell .overview-card,.trip-panel{-webkit-backdrop-filter:none;backdrop-filter:none}
+  .site-header{-webkit-backdrop-filter:blur(6px);backdrop-filter:blur(6px)}
+  :is(.country-card,.heritage-card,.football-person-card,.activity-card){box-shadow:0 5px 18px rgba(9,37,49,.07),inset 0 1px 0 var(--glass-edge)}
+  .profile-quick{gap:8px}
+  .travel-place-grid,.city-advice-grid{gap:12px}
+}
+@media(prefers-reduced-transparency:reduce){
+  :root,[data-theme=light],[data-theme=dark],.travel-page,.travel-editor{--glass-panel:var(--surface);--glass-strong:var(--surface);--glass-soft:var(--surface-2);--glass-highlight:transparent}
+  body,.travel-page{background-image:none}
+  .site-header,.terra-dashboard-shell .overview-card,.trip-panel,.football-tools{-webkit-backdrop-filter:none;backdrop-filter:none}
+}
+@media(forced-colors:active){
+  body,.travel-page{background:Canvas}
+  .site-header,.country-card,.trip-panel,.overview-card,.ranking-dashboard,.travel-stat{background:Canvas!important;border:1px solid CanvasText;box-shadow:none;-webkit-backdrop-filter:none;backdrop-filter:none}
+}
