@@ -147,3 +147,9 @@ main.travel-page{background:radial-gradient(ellipse 800px 500px at 90% 0,rgba(12
   body,.travel-page{background:Canvas}
   .site-header,.country-card,.trip-panel,.overview-card,.ranking-dashboard,.travel-stat{background:Canvas!important;border:1px solid CanvasText;box-shadow:none;-webkit-backdrop-filter:none;backdrop-filter:none}
 }
+
+/* One orbital mark across site chrome and browser icons. */
+.brand-logo{display:block;width:40px;height:40px;flex:0 0 40px;object-fit:contain}
+.inner-footer .footer-brand-logo{width:56px;height:56px;flex-basis:56px}
+@media(max-width:650px){.site-header .brand-logo{width:32px;height:32px;flex-basis:32px}}
+@media(max-width:380px){.site-header .brand-logo{width:29px;height:29px;flex-basis:29px}}
