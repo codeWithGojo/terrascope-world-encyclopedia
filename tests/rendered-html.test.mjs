@@ -31,7 +31,8 @@ test("renders TerraScope's production homepage without development metadata", as
   );
   const html=await response.text();
   assert.match(html, /TerraScope/);
-  assert.match(html, /Take me somewhere/);
+  assert.match(html, /A little further/);
+  assert.match(html, /Open the 3D Earth/);
   assert.doesNotMatch(html, developmentPreviewMeta);
 });
 

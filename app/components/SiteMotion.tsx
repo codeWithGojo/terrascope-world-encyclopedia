@@ -11,7 +11,7 @@ export function SiteMotion(){
   const controls=new Map<Element,ReturnType<typeof animate>>();
   const target=(e:Event)=>e.target instanceof Element?e.target.closest<HTMLElement>('button:not(:disabled),a:not(.skip-link),summary,[data-interactive]'):null;
   const play=(el:HTMLElement,scale:number,y:number)=>{if(el.closest('[data-native-motion]')||el.tagName==='path')return;controls.get(el)?.stop();controls.set(el,animate(el,{scale,y},{type:"spring",stiffness:410,damping:23}));};
-  const over=(e:PointerEvent)=>{if(e.pointerType==='touch')return;const el=target(e);if(el)play(el,1.025,-2);};
+  const over=(e:PointerEvent)=>{if(e.pointerType==='touch'||matchMedia('(max-width:760px)').matches)return;const el=target(e);if(el)play(el,1.025,-2);};
   const out=(e:PointerEvent)=>{const el=target(e);if(el&&(!(e.relatedTarget instanceof Node)||!el.contains(e.relatedTarget)))play(el,1,0);};
   let pressed:HTMLElement|null=null;const down=(e:PointerEvent)=>{const el=target(e);if(el){pressed=el;play(el,.96,1);}};const up=()=>{if(pressed){play(pressed,1,0);pressed=null;}};const keydown=(e:KeyboardEvent)=>{if(e.key!=='Enter'&&e.key!==' ')return;const el=target(e);if(el){pressed=el;play(el,.97,1);}};
   document.addEventListener('pointerover',over);document.addEventListener('pointerout',out);document.addEventListener('pointerdown',down);document.addEventListener('pointerup',up);document.addEventListener('pointercancel',up);document.addEventListener('keydown',keydown);document.addEventListener('keyup',up);
@@ -21,7 +21,7 @@ export function SiteMotion(){
    if(!entry.isIntersecting)return;
    const el=entry.target as HTMLElement;
    const index=el.parentElement?Array.from(el.parentElement.children).indexOf(el):0;
-   const scale=el.matches('.continent-photo,.journey-card')?[1.055,1]:el.matches('.travel-stats-grid>article,.greats-club')?[.96,1]:[1,1];
+   const scale=[1,1];
    controls.set(el,animate(el,{opacity:[.2,1],y:[22,0],scale},{duration:.6,delay:Math.min(index%6,4)*.055,ease:[.22,1,.36,1]}));
    observer.unobserve(el);
   }),{threshold:.06});

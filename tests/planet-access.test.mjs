@@ -8,7 +8,9 @@ import {entitlements} from '../app/access.ts';
 test('Planet uses the existing trusted account entitlements and denies forged browser metadata',()=>{
  assert.deepEqual(entitlements({user_metadata:{terrascope_pro:true}}),entitlements(null));
  const home=fs.readFileSync('app/page.tsx','utf8'),planet=fs.readFileSync('app/components/planet/ExplorePlanet.tsx','utf8');
- assert.match(home,/await getViewer\(\)/);assert.match(home,/<ExplorePlanet access=\{features\}/);
+ assert.match(home,/await getViewer\(\)/);assert.match(home,/<PlanetLaunch access=\{features\}/);
+ const launch=fs.readFileSync('app/components/planet/PlanetLaunch.tsx','utf8');
+ assert.match(launch,/<ExplorePlanet access=\{access\}/);
  assert.match(planet,/access\.compare\?<ComparePanel/);assert.match(planet,/access\.history\?<HistoryPanel/);
  assert.match(planet,/if\(hd&&!access\.hdExport\)/);assert.match(planet,/hd,!access\.pro\)/);
  assert.doesNotMatch(planet,/localStorage.*(?:isPro|terrascope_pro)|searchParams\.get\('pro'\)/);
