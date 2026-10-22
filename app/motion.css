@@ -33,3 +33,33 @@
 .football-people-page{--football-card:var(--surface-2);--football-line:var(--line)}
 .football-tools{background:var(--surface)}
 .era-buttons button.active,.shortlist.active,.shortlist:hover,.dossier-body aside>button.active,.dossier-body aside>button:hover,.dossier-body aside a:hover,.dossier-close:hover,.no-player-results button{color:#fff}
+
+/* Travel edition: camera settles, chapters arrive, photographs respond. */
+.ts-reading-progress{position:fixed;inset:0 0 auto;height:3px;z-index:110;pointer-events:none}.ts-reading-progress span{display:block;height:100%;background:var(--rust);transform:scaleX(0);transform-origin:left}
+.ts-motion-toggle{position:fixed;right:12px;bottom:12px;z-index:80;min-height:44px;padding:9px 13px;border:1px solid var(--line);border-radius:999px;background:var(--surface);color:var(--ink);font:12px/1.4 var(--font-geist),sans-serif;cursor:pointer}.ts-motion-toggle:disabled{cursor:default}
+.terra-topbar h1{margin:0;font-size:clamp(24px,3vw,38px);line-height:1.15;letter-spacing:-.04em;font-weight:600}
+@keyframes ts-camera-settle{from{transform:scale(1.07)}to{transform:scale(1)}}
+@keyframes ts-line-open{from{transform:scaleX(0)}to{transform:scaleX(1)}}
+@media(prefers-reduced-motion:no-preference){
+ html:not([data-motion="off"]) .travel-cover-image{animation:ts-camera-settle 1.7s cubic-bezier(.16,1,.3,1) both}
+ html:not([data-motion="off"]) .travel-cover-copy>*{animation:ts-rise .9s cubic-bezier(.16,1,.3,1) both}
+ html:not([data-motion="off"]) .travel-cover-copy>:nth-child(2){animation-delay:60ms}
+ html:not([data-motion="off"]) .travel-cover-copy>:nth-child(n+3){animation-delay:120ms}
+ .region-cover img,.nearby-city img,.escape-cover-card img,.escape-story-image img{transition:transform .85s cubic-bezier(.16,1,.3,1)}
+ .atlas-text-link span,.travel-quicklinks>a>span:last-child,.nearby-city h3 span,.reference-paths b{display:inline-block;transition:transform .3s cubic-bezier(.16,1,.3,1)}
+ .atlas-section-head{position:relative}
+ html:not([data-motion="off"]) .ranking-row>div>span>em,.dashboard-rank-list div>span em{transform-origin:left;animation:ts-line-open .7s cubic-bezier(.16,1,.3,1)}
+ .ranking-row,.country-card,.travel-quicklinks a{transition:background .25s,border-color .25s}
+ button:active:not(:disabled){scale:.98}
+ @media(hover:hover) and (pointer:fine){
+ .region-cover:hover img,.escape-cover-card:hover img{transform:scale(1.055)}
+ .nearby-city:hover img,.escape-story-card:hover img{transform:scale(1.04)}
+ .atlas-text-link:hover span,.nearby-city:hover h3 span{transform:translate(3px,-3px)}
+ .travel-quicklinks>a:hover>span:last-child{transform:translate(3px,-3px)}
+ .reference-paths a:hover b{transform:translateX(4px)}
+ }
+}
+html[data-motion="off"] *,html[data-motion="off"] *::before,html[data-motion="off"] *::after{animation:none!important;transition:none!important;scroll-behavior:auto!important}
+html[data-motion="off"] .ts-reading-progress{display:none}
+@media(prefers-reduced-motion:reduce){*,*::before,*::after{animation:none!important;transition:none!important;scroll-behavior:auto!important}.ts-reading-progress{display:none}}
+@media(prefers-reduced-motion:no-preference){html:not([data-motion="off"]) .page-transition{animation:ts-rise .45s cubic-bezier(.16,1,.3,1)}}

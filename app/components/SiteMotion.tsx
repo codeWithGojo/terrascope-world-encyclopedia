@@ -1,39 +1,37 @@
 "use client";
-import {useEffect} from "react";
-import {usePathname} from "next/navigation";
-import {animate,useReducedMotion} from "framer-motion";
-// Delegation gives existing and newly rendered controls the same tactile response.
+import {useEffect,useRef,useState,useSyncExternalStore} from 'react';
+import {usePathname} from 'next/navigation';
+
+
+const subscribeMotion=(callback:()=>void)=>{window.addEventListener("storage",callback);return ()=>window.removeEventListener("storage",callback);};
+const savedMotion=()=>{try{return localStorage.getItem("terrascope-motion")==="off";}catch{return false;}};
+const subscribeReduced=(callback:()=>void)=>{const query=matchMedia("(prefers-reduced-motion: reduce)");query.addEventListener("change",callback);return ()=>query.removeEventListener("change",callback);};
+const reducedSnapshot=()=>matchMedia("(prefers-reduced-motion: reduce)").matches;
 export function SiteMotion(){
- const path=usePathname();const reduced=useReducedMotion();
- useEffect(()=>{document.documentElement.dataset.motion=reduced?"off":"on";window.dispatchEvent(new Event("terrascope-motion"));},[reduced]);
+ const path=usePathname();const reduced=useSyncExternalStore(subscribeReduced,reducedSnapshot,()=>false);
+ const saved=useSyncExternalStore(subscribeMotion,savedMotion,()=>false);
+ const [override,setPaused]=useState<boolean|null>(null);const paused=override??saved;const progress=useRef<HTMLSpanElement>(null);
+ const off=Boolean(reduced||paused);
+ useEffect(()=>{document.documentElement.dataset.motion=off?'off':'on';window.dispatchEvent(new Event('terrascope-motion'));},[off]);
  useEffect(()=>{
-  if(reduced)return;
-  const controls=new Map<Element,ReturnType<typeof animate>>();
-  const target=(e:Event)=>e.target instanceof Element?e.target.closest<HTMLElement>('button:not(:disabled),a:not(.skip-link),summary,[data-interactive]'):null;
-  const play=(el:HTMLElement,scale:number,y:number)=>{if(el.closest('[data-native-motion]')||el.tagName==='path')return;controls.get(el)?.stop();controls.set(el,animate(el,{scale,y},{type:"spring",stiffness:410,damping:23}));};
-  const over=(e:PointerEvent)=>{if(e.pointerType==='touch'||matchMedia('(max-width:760px)').matches)return;const el=target(e);if(el)play(el,1.025,-2);};
-  const out=(e:PointerEvent)=>{const el=target(e);if(el&&(!(e.relatedTarget instanceof Node)||!el.contains(e.relatedTarget)))play(el,1,0);};
-  let pressed:HTMLElement|null=null;const down=(e:PointerEvent)=>{const el=target(e);if(el){pressed=el;play(el,.96,1);}};const up=()=>{if(pressed){play(pressed,1,0);pressed=null;}};const keydown=(e:KeyboardEvent)=>{if(e.key!=='Enter'&&e.key!==' ')return;const el=target(e);if(el){pressed=el;play(el,.97,1);}};
-  document.addEventListener('pointerover',over);document.addEventListener('pointerout',out);document.addEventListener('pointerdown',down);document.addEventListener('pointerup',up);document.addEventListener('pointercancel',up);document.addEventListener('keydown',keydown);document.addEventListener('keyup',up);
-  const selector='.ts-reveal,.heritage-card,.journey-card,.greats-club,.country-card,.country-feature,.continent-photo,.lens-grid article,.world-threads a,.profile-content>section>h2,.football-person-card,.travel-stats-grid>article,.travel-visited-list>div,.home-experience-links>a,.section-heading,.travel-section-heading';
-  const elements=new Set<HTMLElement>();
-  const observer=new IntersectionObserver(entries=>entries.forEach((entry)=>{
+  if(off||reducedSnapshot()||!('IntersectionObserver' in window)||!Element.prototype.animate)return;
+  const running=new Set<Animation>(),seen=new WeakSet<Element>();
+  const observer=new IntersectionObserver(entries=>entries.forEach(entry=>{
    if(!entry.isIntersecting)return;
-   const el=entry.target as HTMLElement;
-   const index=el.parentElement?Array.from(el.parentElement.children).indexOf(el):0;
-   const scale=[1,1];
-   controls.set(el,animate(el,{opacity:[.2,1],y:[22,0],scale},{duration:.6,delay:Math.min(index%6,4)*.055,ease:[.22,1,.36,1]}));
-   observer.unobserve(el);
+   const el=entry.target as HTMLElement,index=Array.from(el.parentElement?.children??[]).indexOf(el);
+   const photo=el.matches('.escape-cover-card,.escape-story-card,.region-cover,.nearby-city,.city-guide-hero>figure');
+   const animation=el.animate([{opacity:.15,transform:photo?'translateY(30px) scale(.97)':'translateY(22px)'},{opacity:1,transform:'none'}],{duration:photo?850:620,delay:Math.min(index%5,4)*55,easing:'cubic-bezier(.16,1,.3,1)'});
+   running.add(animation);animation.onfinish=()=>running.delete(animation);observer.unobserve(el);
   }),{threshold:.06});
-  const register=(root:Document|HTMLElement)=>{
-   const found=Array.from(root.querySelectorAll<HTMLElement>(selector));
-   if(root instanceof HTMLElement&&root.matches(selector))found.unshift(root);
-   found.forEach(el=>{if(!elements.has(el)){elements.add(el);observer.observe(el);}});
-  };
-  register(document);
-  // Register newly filtered cards without running a scroll handler or animation loop.
-  const mutations=new MutationObserver(records=>{for(const record of records){for(const node of record.addedNodes)if(node instanceof HTMLElement)register(node);for(const node of record.removedNodes)if(node instanceof HTMLElement){for(const el of elements)if(node===el||node.contains(el)){observer.unobserve(el);controls.get(el)?.stop();controls.delete(el);elements.delete(el);}}}});
+  const selector='.ts-reveal,.heritage-card,.journey-card,.greats-club,.country-card,.country-feature,.continent-photo,.lens-grid article,.world-threads a,.football-person-card,.travel-stats-grid>article,.travel-visited-list>div,.home-experience-links>a,.section-heading,.travel-section-heading,.atlas-section-head>div,.escape-cover-card,.escape-story-card,.region-cover,.nearby-city,.atlas-map-copy,.reference-paths>a,.atlas-data-footer>div,.dashboard-stats>article,.dashboard-rank-list>a,.ranking-row,.city-guide-hero>figure,.city-guide-page>section>h2,.profile-content>section>h2';
+  const register=(root:Document|HTMLElement)=>{const found=Array.from(root.querySelectorAll<HTMLElement>(selector));if(root instanceof HTMLElement&&root.matches(selector))found.unshift(root);found.forEach(el=>{if(!seen.has(el)){seen.add(el);observer.observe(el);}});};register(document);
+  const mutations=new MutationObserver(records=>records.forEach(record=>{record.addedNodes.forEach(node=>{if(node instanceof HTMLElement)register(node);});record.removedNodes.forEach(node=>{if(node instanceof HTMLElement){observer.unobserve(node);node.querySelectorAll(selector).forEach(el=>observer.unobserve(el));}});}));
   mutations.observe(document.getElementById('main-content')??document.body,{childList:true,subtree:true});
-  return()=>{mutations.disconnect();observer.disconnect();controls.forEach(c=>c.stop());elements.forEach(el=>{el.style.opacity='';el.style.transform='';});document.removeEventListener('pointerover',over);document.removeEventListener('pointerout',out);document.removeEventListener('pointerdown',down);document.removeEventListener('pointerup',up);document.removeEventListener('pointercancel',up);document.removeEventListener('keydown',keydown);document.removeEventListener('keyup',up);};
- },[path,reduced]);return null;
+  let frame=0;
+  const update=()=>{frame=0;const total=document.documentElement.scrollHeight-innerHeight;if(progress.current)progress.current.style.transform=`scaleX(${total>0?scrollY/total:0})`;};
+  const scroll=()=>{if(!frame)frame=requestAnimationFrame(update);};update();window.addEventListener('scroll',scroll,{passive:true});window.addEventListener('resize',scroll);
+  const resize=new ResizeObserver(scroll);resize.observe(document.body);
+  return()=>{observer.disconnect();mutations.disconnect();resize.disconnect();running.forEach(a=>a.cancel());cancelAnimationFrame(frame);window.removeEventListener('scroll',scroll);window.removeEventListener('resize',scroll);};
+ },[path,off]);
+ return <><div className="ts-reading-progress" aria-hidden="true"><span ref={progress}/></div><button type="button" className="ts-motion-toggle" aria-pressed={off} disabled={Boolean(reduced)} onClick={()=>{const next=!paused;setPaused(next);try{localStorage.setItem('terrascope-motion',next?'off':'on');}catch{/* Optional preference. */}}} title={reduced?'Reduced motion follows your device setting':'Control decorative animation'}>{off?'▷ Motion off':'Ⅱ Pause motion'}</button></>;
 }

@@ -1,3 +1,5 @@
+import {pageMetadata} from "../seo";
+export const metadata=pageMetadata("/rankings","World rankings · Population, economy & more | TerraScope","Compare countries across population, economic output, territory, tourism and football, with reporting years, definitions and source links.");
 import RankingsExplorer from "./RankingsExplorer";
 import WorldDashboard from "./WorldDashboard";
 import Link from "next/link";

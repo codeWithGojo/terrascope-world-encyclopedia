@@ -1,3 +1,4 @@
+import {siteOrigin} from "./seo";
 import type { Metadata } from "next";
 import { Geist } from "next/font/google";
 import "./globals.css";
@@ -15,6 +16,7 @@ import {SiteMotion} from "./components/SiteMotion";
 
 const geist = Geist({ variable: "--font-geist", subsets: ["latin"] });
 export const metadata: Metadata = {
+  metadataBase: new URL(siteOrigin),
   title: "TerraScope · Explore a little further",
   description: "Free virtual escapes, country histories, remarkable places and football greats. Explore the world with TerraScope.",
   icons: {

@@ -1,3 +1,4 @@
+import {pageMetadata} from "../../seo";
 import Link from "next/link";
 import type {Metadata} from "next";
 import {getViewer} from "../../auth/viewer";
@@ -25,8 +26,8 @@ export function generateStaticParams() { return atlasCountries.map((country) => 
 export async function generateMetadata({params}:{params:Promise<{slug:string}>}):Promise<Metadata> {
   const {slug}=await params,country=atlasBySlug.get(slug);
   if(!country)return {title:'Country not found | TerraScope'};
-  const origin=process.env.NEXT_PUBLIC_SITE_URL||'https://terrascope-world-encyclopedia.vercel.app';
-  return {title:`${country.name} · History, facts & travel | TerraScope`,openGraph:{title:`Discover ${country.name}`,images:[{url:new URL(`/api/countries/${slug}/card?size=landscape`,origin).href,width:600,height:315}]},twitter:{card:'summary_large_image'}};
+  const description=`Explore ${country.name}: capital ${country.capital}, history, culture, dated statistics and a travel guide to cities and landmarks in ${country.subregion}.`;
+  return pageMetadata(`/countries/${slug}`,`${country.name} · History, facts & travel | TerraScope`,description,`/api/countries/${slug}/card?size=landscape`);
 }
 
 const confederations: Record<AtlasCountry["region"], string> = {Africa:"CAF",Americas:"CONCACAF / CONMEBOL",Asia:"AFC",Europe:"UEFA",Oceania:"OFC"};

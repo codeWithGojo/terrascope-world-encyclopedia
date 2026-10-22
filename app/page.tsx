@@ -1,3 +1,5 @@
+import {pageMetadata} from "./seo";
+export const metadata=pageMetadata("/","TerraScope · Explore a little further","Explore 195 countries, discover Nigeria’s cities, take virtual escapes and plan your next trip with dated facts and clear sources.");
 import Link from 'next/link';
 import {getViewer} from './auth/viewer';
 import {atlasCountries,atlasByCode} from './atlas-data';

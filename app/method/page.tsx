@@ -1,3 +1,5 @@
+import {pageMetadata} from "../seo";
+export const metadata=pageMetadata("/method",'Sources & methodology | TerraScope','Read the sources, observation dates, definitions and editorial methods behind TerraScope’s country profiles and rankings.');
 import {populationDataset,populationByCode} from "../population-data";
 import {indicatorDataset,indicatorsByCode} from "../country-indicators";
 import {cityGuides,curatedFactsByCode,notablePeopleByCode} from "../country-content";

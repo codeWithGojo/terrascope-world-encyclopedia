@@ -1,3 +1,5 @@
+import {pageMetadata} from "../seo";
+export const metadata=pageMetadata("/countries",'Explore 195 countries | TerraScope','Browse country profiles by region, search capitals and discover history, culture, dated statistics and travel guides.');
 import {SiteHeader} from "../components/SiteHeader";
 import {SiteFooter} from "../components/SiteFooter";
 import {WorldAtlas} from "../components/WorldAtlas";

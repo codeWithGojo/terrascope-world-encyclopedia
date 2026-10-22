@@ -1,3 +1,4 @@
+import {pageMetadata} from "../../../../seo";
 import {discoverySources} from "../../../../discovery-guides";
 import {funFor} from "../../../../fun-activities";
 import Link from "next/link";
@@ -13,7 +14,7 @@ import {SiteFooter} from "../../../../components/SiteFooter";
 export async function generateMetadata({params}:{params:Promise<{slug:string;city:string}>}) {
   const {slug,city}=await params;
   const guide=cityGuideByPath.get(`${slug}/${city}`);
-  return guide?{title:`${guide.name}, ${guide.country} · Travel guide | TerraScope`,description:guide.overview}:{};
+  return guide?pageMetadata(`/countries/${slug}/cities/${city}`,`${guide.name}, ${guide.country} · Travel guide | TerraScope`,guide.overview,guide.gallery[0]?.url):{};
 }
 
 export function generateStaticParams() {

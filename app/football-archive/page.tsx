@@ -1,3 +1,5 @@
+import {pageMetadata} from "../seo";
+export const metadata=pageMetadata("/football-archive",'Football archive · Players, clubs & legends | TerraScope','Explore football players, club legends and career records in TerraScope’s searchable football archive.');
 import {SiteHeader} from "../components/SiteHeader";
 import {SiteFooter} from "../components/SiteFooter";
 import FootballArchive from "../people/FootballArchive";

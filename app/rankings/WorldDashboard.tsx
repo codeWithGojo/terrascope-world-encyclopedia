@@ -51,7 +51,7 @@ export default function WorldDashboard({children}:{children?:ReactNode}) {
 
   return <div className="terra-dashboard-shell">
     <div className="terra-dashboard-main">
-      <header className="terra-topbar"><div><small>TerraScope / world index</small><strong>World rankings</strong><span className="designed-credit">Designed by <b>Favour</b></span></div><div><Link href="/method">How we measure</Link><Link className="topbar-primary" href="/countries">Explore countries ↗</Link></div></header>
+      <header className="terra-topbar"><div><small>TerraScope / world index</small><h1>World rankings</h1><span className="designed-credit">Designed by <b>Favour</b></span></div><div><Link href="/method">How we measure</Link><Link className="topbar-primary" href="/countries">Explore countries ↗</Link></div></header>
       <section className="world-dashboard" aria-label="TerraScope world dashboard">
 
     <div className="dashboard-stats">

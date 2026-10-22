@@ -1,3 +1,5 @@
+import {pageMetadata} from "../seo";
+export const metadata=pageMetadata("/compare",'Compare countries | TerraScope','Compare two countries with dated population, area, economic indicators and clear source context.');
 import {SiteHeader} from "../components/SiteHeader";import {SiteFooter} from "../components/SiteFooter";import CompareTool from "./CompareTool";
 import {getViewer} from "../auth/viewer";
 import {ProGate} from "../components/ProGate";
