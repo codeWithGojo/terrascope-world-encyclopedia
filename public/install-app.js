@@ -4,8 +4,10 @@
  navigator.serviceWorker.register('/sw.js').catch(()=>{});
  let prompt=null;const installed=()=>matchMedia('(display-mode: standalone)').matches||navigator.standalone;
  const button=document.createElement('button');button.type='button';button.className='app-install';button.setAttribute('aria-label','Install app');button.innerHTML='<svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><path d="M12 3v12m-5-5 5 5 5-5M4 16v5h16v-5"/></svg><span class="app-install-label">Install app</span>';
- const attach=()=>{const slot=['#more-menu>div','header .header-tools','header nav','header'].map(selector=>document.querySelector(selector)).find(Boolean);if(slot){slot.append(button);return true;}return false;};
- if(!attach()){const observer=new MutationObserver(()=>{if(attach())observer.disconnect();});observer.observe(document.documentElement,{childList:true,subtree:true});}
+ const mobile=matchMedia('(max-width:760px)');
+ const attach=()=>{const mobileNav=mobile.matches&&document.querySelector('header #site-navigation');const slot=mobileNav||['#more-menu>div','header .header-tools','header nav','header'].map(selector=>document.querySelector(selector)).find(Boolean);if(slot){if(button.parentElement!==slot)slot.append(button);return true;}return false;};
+ attach();const observer=new MutationObserver(()=>{if(!button.isConnected)attach();});observer.observe(document.documentElement,{childList:true,subtree:true});
+ mobile.addEventListener('change',()=>attach());
  button.hidden=installed();
  window.addEventListener('beforeinstallprompt',event=>{event.preventDefault();prompt=event;button.hidden=installed();});
  window.addEventListener('appinstalled',()=>{button.hidden=true;prompt=null;});

@@ -19,3 +19,30 @@ html{scroll-behavior:auto;scroll-padding-top:96px}body{background:var(--paper);b
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*::before,*::after{animation-duration:.01ms!important;transition-duration:.01ms!important}.region-cover:hover>img,.nearby-city:hover img{transform:none}}
 @media(prefers-reduced-transparency:reduce){.site-header,.photo-tag,.globe-tooltip{backdrop-filter:none;background:var(--surface)}}
 @media(forced-colors:active){.site-header,.country-card,.trip-panel,.overview-card,.ranking-dashboard{border:1px solid CanvasText}.travel-cover-copy{background:Canvas;color:CanvasText}.travel-cover h1,.travel-cover h1 span{color:CanvasText}}
+
+/* Header controls get a fixed lane; the brand never sits underneath a button. */
+.inline-icon{display:inline-block;vertical-align:middle;flex-shrink:0}
+.site-header .brand{min-width:0;flex-shrink:0}.site-header .brand-logo{flex-shrink:0}
+.site-header .header-tools,.site-header .mobile-menu-toggle{flex-shrink:0}
+.site-header .mobile-menu-label{margin:0}
+.cover-search input{min-width:0}.cover-search button{flex-shrink:0;white-space:nowrap}
+@media(max-width:760px){
+ .site-header{display:grid;grid-template-columns:minmax(0,1fr) auto auto;column-gap:8px;padding-inline:16px}
+ .site-header .brand{font-size:18px;gap:7px;overflow:hidden;min-width:0}
+ .site-header .brand>span{white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+ .site-header .brand-logo{width:28px;height:28px}
+ .site-header .header-tools{margin:0;gap:4px}
+ .site-header .icon-button{height:44px;width:44px;min-width:44px;min-height:44px;padding:0}
+ .site-header .command-trigger kbd{display:none}
+ .site-header .mobile-menu-toggle{margin:0;padding:0 10px;min-width:44px;min-height:44px;gap:6px}
+ .site-header .main-nav{grid-column:1/-1}
+ .site-header .main-nav>.app-install{margin-top:8px;min-height:44px;justify-content:flex-start}
+ .site-header .theme-options{right:0;max-width:calc(100vw - 24px)}
+}
+@media(max-width:390px){.site-header{padding-inline:12px;column-gap:6px}.site-header .brand{font-size:17px;gap:6px}.site-header .mobile-menu-label{display:none}.site-header .mobile-menu-toggle{width:44px;padding:0}}
+
+.daily-country-spotlight{display:grid;grid-template-columns:minmax(160px,.7fr) minmax(0,1.3fr) auto;align-items:center;column-gap:24px;row-gap:10px;padding:26px clamp(20px,5.5vw,84px);border-block:1px solid var(--line);background:var(--surface-2);color:var(--ink)}
+.daily-country-label .eyebrow{margin:0 0 6px}.daily-country-label time,.daily-country-name p,.daily-country-spotlight>small{font-size:11px;color:var(--muted)}.daily-country-name{display:flex;align-items:center;gap:14px;min-width:0}.daily-country-name>span{font-size:36px}.daily-country-name h2{font-size:clamp(22px,2.2vw,30px);line-height:1.15;margin:0 0 6px;letter-spacing:-.03em}.daily-country-name p{margin:0}.daily-country-spotlight>small{grid-column:2/-1;font-size:9px}.daily-country-spotlight>.atlas-text-link{font-size:12px}
+@media(max-width:700px){.daily-country-spotlight{grid-template-columns:1fr;gap:16px;padding:24px 20px}.daily-country-label{display:flex;justify-content:space-between;align-items:center;gap:10px}.daily-country-label .eyebrow{margin:0}.daily-country-spotlight>small{grid-column:1}.daily-country-spotlight>.atlas-text-link{justify-self:start}}
+
+@media(max-width:760px){.travel-cover-copy{width:100%;min-width:0}.cover-search{width:100%;min-width:0;box-sizing:border-box}}
