@@ -12,6 +12,7 @@ import "../shared/motion/styles.css";
 import {PageTransition} from "./components/motion/PageTransition";
 import "./travel-guide.css";
 import "./glass.css";
+import "./travel-tools.css";
 import {ThemeProvider} from "./components/ThemeProvider";
 import {MotionProvider} from "./components/motion/MotionProvider";
 import {themeBootScript} from "./theme";

@@ -19,7 +19,7 @@
     "data:indicators": "bash scripts/sites-env.sh -- node scripts/refresh-indicators.mjs",
     "data:notable": "node scripts/refresh-notable-people.mjs",
     "db:generate": "bash scripts/sites-env.sh -- drizzle-kit generate",
-    "test:features": "node --import ./tests/ts-loader.mjs --test tests/country-features.test.mjs tests/engagement.test.mjs tests/football-audit.test.mjs tests/discovery.test.mjs tests/theme.test.mjs tests/country-of-day.test.mjs"
+    "test:features": "node --import ./tests/ts-loader.mjs --test tests/country-features.test.mjs tests/engagement.test.mjs tests/football-audit.test.mjs tests/discovery.test.mjs tests/theme.test.mjs tests/country-of-day.test.mjs tests/travel-tools.test.mjs"
   },
   "dependencies": {
     "@supabase/ssr": "0.12.7",

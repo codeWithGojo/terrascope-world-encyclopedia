@@ -112,6 +112,8 @@ export function SiteHeader({ active }: { active?: string }) {
             >
               My travels
             </Link>
+            <Link href="/travel" onClick={closeNavigation}>Travel tools</Link>
+            <Link href="/quiz" onClick={closeNavigation}>Flag, capital & anthem quizzes</Link>
             <Link href="/daily" onClick={closeNavigation}>
               Guess the Country
             </Link>

@@ -1,33 +1,41 @@
-# Requested TerraScope features — 22 October 2026
+# TerraScope feature delivery — 22 October 2026
 
-This is the implementation map for the feature list supplied with the screenshot bug report. A row marked planned has not been shipped in this release.
-
-| Request | Status | Implementation or next dependency |
+| Feature | Delivered behavior | Coverage / limits |
 | --- | --- | --- |
-| Economy and quick stats | Existing, partial | Country profiles already expose sourced GDP/population and a live currency converter. Currency strength needs a defined measure; cost-of-living comparisons need a dated, comparable dataset. An exchange rate alone is not an affordability score. |
-| Passport power and visa checker | Planned | Passport/destination selectors, visa categories, visit-purpose/duration rules and checked dates need a maintained entry-requirements dataset and official-source links. |
-| Safety and best time | Existing city guidance, partial | Detailed city guides contain safety notes and best-time advice. Country-level risk ratings and current advisories need verified dated sources and regional exceptions. |
-| Food and cuisine | Existing city guidance, partial | Detailed city guides contain food suggestions. A full country-level dishes register needs curated dish descriptions and sources. |
-| Languages with pronunciation | Language lists exist; audio planned | Basic phrases, translations and audio/voice-language support need a reviewed phrase register and explicit playback controls. |
-| Flag, capital and anthem quizzes | Planned | Guess the Country exists at `/daily`; new modes need separate scoring/clue rules. Anthem mode also needs cleared audio sources and a silent-accessible alternative. |
-| Country of the Day | Added | Public homepage spotlight, stable per UTC day, full 195-country rotation, linking to the existing country profile. It does not use the daily game's answer state. |
-| Live/travel matcher | Planned | Budget/climate/vibe inputs can use current country climate and planner structures, but budget comparisons need a consistent cost register and an explanation of each match. |
-| Saved trips and itinerary builder | Existing | `/trips` supports budget allowances, activities, day plans, downloads, saved trips and itinerary editing. The current production browser mode stores plans on the current browser; it is not cross-device account sync. |
-| Time zone calling planner | Planned | Live country clocks exist. A multi-person planner needs city/IANA-zone selection, a selected date, daylight-saving handling and overlapping calling hours. |
+| Economy quick stats | Existing dated GDP/population plus new household-price comparison and 30-day currency change on country profiles | World Bank household PPP / same-year official FX gives a broad US=100 comparison, not monthly rent. Currency change needs both Frankfurter dates; missing series stays unavailable |
+| Passport explorer | `/travel#passport`, passport/destination/category/search filters and separate visa-free/arrival/ETA counts | MIT-licensed 17 February 2026 community matrix, visibly dated and flagged as older than 90 days. It is not current clearance or a global passport rank; check immigration rules before booking |
+| Safety / best time | Country-profile FCDO advisory retrieval with regional warning labels, official links, update/check dates; city-specific seasons | UK government advice is scoped to British travellers. No country is labelled universally safe. Missing advice remains unavailable |
+| Food / cuisine | Country cuisine sections consolidate dishes from existing city guides and link back to those guides | Reviewed dishes exist for the ten editorial countries; other profiles link to cuisine research rather than inventing national dishes |
+| Phrase pronunciation | 13 phrase packs with explicit speech controls and visible text on every country profile | Browser-synthesised audio requires a matching installed voice. Text stays usable when audio is unsupported; not a native-speaker recording |
+| Flag / capital / anthem quiz | `/quiz` alongside `/daily`: ten questions, four choices, feedback, score, browser-local best score, reduced motion | Flags/capitals use 195-country atlas; anthem **title** mode uses 28 titles. No uncleared anthem recordings are included |
+| Country of the Day | Existing public UTC daily spotlight with a 195-country rotation | Separate from the daily outline game's answer state |
+| Live / travel matcher | `/travel#matcher`: budget, reference basket, climate and vibe filters, reasons and itinerary links | Model uses a user-adjustable US basket and dated household price ratios. Climate only uses the existing eight-country verified seed; selected climate filters exclude missing data |
+| Saved trips / itinerary | Existing `/trips` builder, saved plans, edits and downloads; linked from matching and country tools | Production storage remains on the current browser, not cross-device account sync |
+| Calling planner | `/travel#calling`: two or three IANA zones, date, local availability, overlapping whole 30-minute calls, local dates and `.ics` export | UTC date is explicit; IANA rules handle daylight saving |
 
-## Screenshot fixes in this release
+## Changed / new files
 
-- Header controls have separate fixed lanes and no longer overlap the brand at 320–440px.
-- Mobile installation lives in the navigation menu; the same button moves back into the desktop header. It is reattached after client-side page navigation.
-- More, Theme and Search share controlled state. Opening one closes the others; choosing a theme closes its chooser. Escape/outside click and keyboard search remain usable.
-- Homepage and header action arrows use a monochrome SVG, avoiding iPhone emoji substitution.
+Shared: existing `shared/motion` source is reused. Quiz transitions use Motion with the shared spring/reveal conventions and reduced-motion support.
 
-## Delivery order
+TerraScope:
 
-The first new return-visit feature in this release is Country of the Day. Next: reuse the existing IANA zones for a calling planner and existing country data for flag/capital quiz modes. Source the cost, visa, safety and phrase/audio datasets before exposing those features as complete.
+- `app/travel/page.tsx`, `TravelMatcher.tsx`, `PassportChecker.tsx`, `CallingPlanner.tsx`, `tools.ts`, `PhrasePlayer.tsx`, `phrases.ts`: public travel tools and pure, testable helpers.
+- `app/quiz/page.tsx`, `WorldQuiz.tsx`, `engine.ts`: the three quiz modes and local practice state.
+- `app/components/country/TravelEssentials.tsx`: price/FX comparison, advisories, cuisine and pronunciation.
+- `app/api/countries/[slug]/travel/route.ts`, `strength/route.ts`: bounded official-advice and FX requests with unavailable states.
+- `app/datasets/household-prices.json`, `visas.json`, `visas-LICENSE.txt`: dated, attributed reference data.
+- `app/travel-tools.css`, `app/layout.tsx`, `app/components/SiteHeader.tsx`, `app/countries/[slug]/page.tsx`, `app/daily/page.tsx`: existing-site integration and navigation.
+- `scripts/refresh-travel-tools.py`: reproducible World Bank pairing and pinned visa snapshot, preserving the actual observation date.
+- `tests/travel-tools.test.mjs`, `package.json`: visa categories, calling overlaps/DST/input failures, quiz uniqueness and source-based vibe matching.
 
-Verification is recorded in the release result. Visual checks use Chromium desktop/mobile viewport emulation; they are not a physical iPhone Safari test.
+## Sources and refresh
 
-## Verified for this release
+Price data: [World Bank household consumption PPP](https://data.worldbank.org/indicator/PA.NUS.PRVT.PP) paired with `PA.NUS.FCRF` in the same year; 200 two-letter economy records in the dataset, displayed only within the 195-country atlas. Retrieved 22 October 2026, provider updated 8 October 2026. The conversion is `100 × household PPP / official exchange rate`; no GDP price ratio was substituted.
 
-Next production build and TypeScript checks passed, including 237 generated static pages. All 22 feature tests passed. Targeted ESLint had no errors (the existing unoptimized logo image warning remains). Chromium checks at 320, 360, 390, 393, 440, 768, 1024 and 1440px found no header overlap, brand truncation, clipped search form or document overflow. Desktop/mobile menu exclusivity, theme selection, keyboard search, Escape, installation guidance, reduced motion, Country of the Day, and installer reattachment after client navigation all passed with zero browser runtime errors.
+Visa matrix: [imorte/passport-index-data](https://github.com/imorte/passport-index-data), pinned commit `9c59780dd0dbaefcbdfa0134d21cd99d0d547509`, actual source date 17 February 2026, MIT notice retained. Retrieval date does not refresh the underlying rules. `python scripts/refresh-travel-tools.py` preserves that distinction.
+
+Safety: [GOV.UK content API](https://content-api.publishing.service.gov.uk/reference.html), source-linked FCDO pages. Rates: [Frankfurter](https://frankfurter.dev/). Climate: existing World Bank CCKP / CRU 1991–2020 source register. Phrase packs link to their Wikivoyage language references; browser voices supply audio. Existing country/city editorial source registers remain intact.
+
+## Verification
+
+Next production build and TypeScript pass. 27 feature tests pass, including whole-slot calling overlaps and DST changes. Targeted ESLint passes. Chromium checks at 320/390/768/1440px cover travel layouts, passport/category/search changes, calling selection and calendar downloads, all quiz modes through a complete ten-question round, cuisine, phrase-language selection and reduced motion. No browser runtime errors. These are desktop Chromium viewport checks, not physical-device Safari tests. Actual voice availability, live visa rules and real travel booking outcomes are not asserted.

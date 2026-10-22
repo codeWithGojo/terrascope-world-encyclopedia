@@ -1,3 +1,4 @@
+import {TravelEssentials} from "../../components/country/TravelEssentials";
 import {TenureTimeline,CountryFacts,CompactStat} from "../../components/motion/CountryMotion";
 import {FlagFlip,AnimatedDetails} from "../../../shared/motion/gestures";
 import {TextReveal} from "../../../shared/motion/primitives";
@@ -120,7 +121,7 @@ export default async function CountryPage({params}:{params: Promise<{slug: strin
     </section>
 
     <section className="profile-body">
-      <aside><b>On this page</b><a href="#overview">Essential facts</a><a href="#statistics">Economy & wellbeing</a><a href="#story">Country in depth</a>{historyByCode[country.code]&&<a href="#history">History timeline</a>}<a href="#live">Time, weather & money</a><a href="#share-country">Share a country card</a><a href="#interesting-facts">10 interesting facts</a><a href="#more-facts">Six more discoveries</a><a href="#heritage">Historic places</a><a href="#government">Leadership</a><a href="#next-election">Next election</a><a href="#places">Travel file</a><a href="#football">Football dossier</a><a href="#people">Notable people</a><Link href="/escape">Take a virtual escape ↗</Link><Link href="/rankings">Open world rankings ↗</Link></aside>
+      <aside><b>On this page</b><a href="#overview">Essential facts</a><a href="#statistics">Economy & wellbeing</a><a href="#travel-essentials">Travel essentials</a><a href="#cuisine">Food & cuisine</a><a href="#phrases">Language & pronunciation</a><a href="#story">Country in depth</a>{historyByCode[country.code]&&<a href="#history">History timeline</a>}<a href="#live">Time, weather & money</a><a href="#share-country">Share a country card</a><a href="#interesting-facts">10 interesting facts</a><a href="#more-facts">Six more discoveries</a><a href="#heritage">Historic places</a><a href="#government">Leadership</a><a href="#next-election">Next election</a><a href="#places">Travel file</a><a href="#football">Football dossier</a><a href="#people">Notable people</a><Link href="/escape">Take a virtual escape ↗</Link><Link href="/rankings">Open world rankings ↗</Link></aside>
       <div className="profile-content">
         <section id="overview"><p className="eyebrow"><span/>National record · {country.code}</p><h2>Essential<br/><em>facts.</em></h2><div className="fact-table expanded-facts">{essentialFacts.map(([key, value]) => <div key={key}><span>{key}</span><b>{value}</b></div>)}</div>{editorial && <blockquote><small>Field fact</small>{editorial.fact}</blockquote>}</section>
 
@@ -145,6 +146,6 @@ export default async function CountryPage({params}:{params: Promise<{slug: strin
         <p className="source-note">Geographic structure: ISO 3166 / world-countries reference data. Population: World Bank SP.POP.TOTL latest available observation, with Vatican City’s official 2024 resident count used for that record. Time zones: IANA-linked country data. Football dossiers contain selected historical honours; Spain’s men’s World Cup record includes 2026. Other honours panels remain historical editorial selections; current-player panels are curated highlights, not complete squads. The 10 featured leadership records have official references checked on 2026-09-30; other profiles leave office-holders unfilled. The World Bank statistical dataset was refreshed on 2026-09-30. <Link href="/method#data-register">View source editions and coverage →</Link></p>
       </div>
     </section>
-    <SiteFooter/>
+    <TravelEssentials code={country.code} slug={country.slug} name={country.name} languages={country.languages} guides={guides.map(g=>({name:g.name,citySlug:g.citySlug,food:g.food,bestTime:g.bestTime,safety:g.safety}))}/><SiteFooter/>
   </main>;
 }
