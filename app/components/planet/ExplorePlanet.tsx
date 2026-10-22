@@ -1,6 +1,6 @@
 "use client";
 import Link from 'next/link';
-import {lazy,Suspense,useCallback,useEffect,useRef,useState} from 'react';import {useReducedMotion} from 'framer-motion';
+import {lazy,Suspense,useCallback,useEffect,useRef,useState} from 'react';import {useReducedMotion} from 'motion/react';
 import {ProPill,UpgradePreview} from './UpgradePreview';import type {entitlements,ProFeature} from '../../access';
 import {CountUp} from './CountUp';import {PlanetBoundary} from './Boundary';import {CountryCard} from './CountryCard';import {PlanetSearch} from './PlanetSearch';import {LayerControls} from './LayerControls';import {TradePanel} from './TradePanel';import {useEarthquakes} from './useEarthquakes';import {useTravels} from './useTravels';import {compareCamera,metricText,timeAgo} from './math';import {shareImage} from './export-utils';import {normalizedProgress,storyStep,stops} from './story';import type {Arc,Boundary,Camera,Country,EarthStyle,EngineHandle,Historic,Layer,Metric,Tour,TourStop} from './types';import './tokens.css';import './planet.css';
 const CityView=lazy(()=>import('./CityView').then(m=>({default:m.CityView})));

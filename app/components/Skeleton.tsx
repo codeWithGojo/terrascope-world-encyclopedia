@@ -1,1 +1,3 @@
-export function Skeleton({className="",label="Loading"}:{className?:string;label?:string}){return <div className={`skeleton ${className}`} role="status" aria-label={label}><span className="sr-only">{label}…</span></div>;}
+'use client';
+import {Skeleton as SharedSkeleton} from '../../shared/motion/primitives';
+export function Skeleton({className='',label='Loading content'}:{className?:string;label?:string}){return <SharedSkeleton className={`skeleton ${className}`} label={label}/>;}

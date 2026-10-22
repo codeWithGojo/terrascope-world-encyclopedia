@@ -1,5 +1,7 @@
 "use client";
 
+import {motion,useReducedMotion} from "motion/react";
+import {reveal} from "../../shared/motion/config";
 import {useMemo, useState} from "react";
 import Link from "next/link";
 import worldMap from "@svg-maps/world";
@@ -15,6 +17,7 @@ function validRegion(value?: string): AtlasRegion {
 }
 
 export function WorldAtlas({initialRegion = "All", compact = false}:{initialRegion?: string; compact?: boolean}) {
+  const reduced=useReducedMotion();
   const [region, setRegion] = useState<AtlasRegion>(validRegion(initialRegion));
   const [selectedCode, setSelectedCode] = useState("NG");
   const [hoveredCode, setHoveredCode] = useState("");
@@ -66,6 +69,7 @@ export function WorldAtlas({initialRegion = "All", compact = false}:{initialRegi
               onKeyDown={(event) => { if (event.key === "Enter" || event.key === " ") setSelectedCode(country.code); }}
             />;
           })}
+          <motion.path key={hoveredCode||selectedCode} d={(worldMap.locations as WorldMapLocation[]).find(l=>l.id===(hoveredCode||selectedCode).toLowerCase())?.path} fill="none" stroke="var(--accent)" strokeWidth="2" pointerEvents="none" initial={reduced?false:{pathLength:0}} animate={{pathLength:1}} transition={reveal}/>
         </svg>
         <div className="map-readout" aria-live="polite">
           <span>{hovered ? "Pointing at" : "Selected country"}</span>

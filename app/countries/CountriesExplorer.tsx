@@ -1,10 +1,14 @@
 "use client";
 
+import {motion,useReducedMotion} from "motion/react";
+import {spring,reveal} from "../../shared/motion/config";
 import {useMemo, useState} from "react";
 import Link from "next/link";
 import {atlasCountries, atlasRegions, regionColours, type AtlasRegion} from "../atlas-data";
 
+const MotionLink=motion.create(Link);
 export default function CountriesExplorer({initialQuery = "", initialRegion = "All"}:{initialQuery?: string; initialRegion?: string}) {
+  const reduced=useReducedMotion();
   const safeRegion = atlasRegions.includes(initialRegion as AtlasRegion) ? initialRegion as AtlasRegion : "All";
   const [query, setQuery] = useState(initialQuery);
   const [region, setRegion] = useState<AtlasRegion>(safeRegion);
@@ -24,14 +28,14 @@ export default function CountriesExplorer({initialQuery = "", initialRegion = "A
     <div className="results-line"><span><b>{visible.length}</b> of 195 country profiles</span><span>Geographic index · 2026 edition</span></div>
     <div className="country-grid">{visible.map((country, index) => {
       const editorial = country.editorial;
-      return <Link href={`/countries/${country.slug}`} className="country-card" key={country.slug} style={{"--country": editorial?.color ?? regionColours[country.region]} as React.CSSProperties}>
+      return <MotionLink data-motion-owned whileHover={reduced?undefined:{y:-4,scale:1.02}} whileTap={reduced?undefined:{scale:.97}} transition={spring} initial={false} href={`/countries/${country.slug}`} className="country-card" key={country.slug} style={{"--country": editorial?.color ?? regionColours[country.region]} as React.CSSProperties}>
         <div className="card-top"><span>{String(index + 1).padStart(3, "0")}</span><b>{country.code}</b></div>
-        <div className="emoji-flag" role="img" aria-label={`${country.name} flag`}>{country.flag}</div>
+        <motion.div className="emoji-flag" role="img" aria-label={`${country.name} flag`} layoutId={reduced?undefined:`country-flag-${country.code}`} transition={spring}>{country.flag}</motion.div>
         <small>{country.subregion}</small><h2>{country.name}</h2><p>{country.capital}</p>
         <div className="card-stats"><span><small>{editorial ? "Population" : "Official name"}</small>{editorial?`${country.populationLabel} · ${country.populationYear}`:country.official}</span><span><small>Area</small>{country.areaLabel}</span></div>
         <div className="card-leader"><small>{editorial ? editorial.leaderTitle : "Currency"}</small><span>{editorial?.leader ?? (country.currencies.join(" · ") || "No national currency")}</span></div>
         <i>{editorial ? "Open extended profile" : "Open country record"} →</i>
-      </Link>;
+      </MotionLink>;
     })}</div>
     {!visible.length && <div className="empty-state"><b>No country matched that search.</b><p>Try a capital, continent or shorter spelling.</p></div>}
   </>;

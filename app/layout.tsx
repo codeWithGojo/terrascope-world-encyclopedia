@@ -1,4 +1,5 @@
 import {siteOrigin} from "./seo";
+import Script from "next/script";
 import type { Metadata } from "next";
 import { Geist } from "next/font/google";
 import "./globals.css";
@@ -7,6 +8,8 @@ import "./premium.css";
 import "./country-features.css";
 import "./engagement.css";
 import "./motion.css";
+import "../shared/motion/styles.css";
+import {PageTransition} from "./components/motion/PageTransition";
 import "./travel-guide.css";
 import "./glass.css";
 import {ThemeProvider} from "./components/ThemeProvider";
@@ -16,6 +19,8 @@ import {SiteMotion} from "./components/SiteMotion";
 
 const geist = Geist({ variable: "--font-geist", subsets: ["latin"] });
 export const metadata: Metadata = {
+  manifest:"/manifest.webmanifest",
+  appleWebApp:{capable:true,title:"TerraScope",statusBarStyle:"default"},
   metadataBase: new URL(siteOrigin),
   title: "TerraScope · Explore a little further",
   description: "Free virtual escapes, country histories, remarkable places and football greats. Explore the world with TerraScope.",
@@ -31,4 +36,4 @@ export const metadata: Metadata = {
     apple:[{url:"/icons/apple-touch-icon.png?v=ts-logo-20261019",type:"image/png",sizes:"180x180"}],
   },
 };
-export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) { return <html lang="en" suppressHydrationWarning><head><script dangerouslySetInnerHTML={{__html:themeBootScript}}/></head><body className={geist.variable}><ThemeProvider><MotionProvider><a className="skip-link" href="#main-content">Skip to content</a><div id="main-content">{children}</div><SiteMotion/></MotionProvider></ThemeProvider></body></html>; }
+export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) { return <html lang="en" suppressHydrationWarning><head><link rel="stylesheet" href="/install-app.css"/><script dangerouslySetInnerHTML={{__html:themeBootScript}}/></head><body className={geist.variable}><ThemeProvider><MotionProvider><a className="skip-link" href="#main-content">Skip to content</a><div id="main-content"><PageTransition>{children}</PageTransition></div><SiteMotion/></MotionProvider></ThemeProvider><Script src="/install-app.js" strategy="afterInteractive"/></body></html>; }

@@ -2,7 +2,7 @@
 import {useEffect,useMemo,useRef,useState} from 'react';
 import {geoArea,geoContains,geoDistance,geoGraticule10,geoOrthographic,geoPath} from 'd3-geo';
 import type {Feature,FeatureCollection,Geometry} from 'geojson';
-import {useReducedMotion} from 'framer-motion';
+import {useReducedMotion} from 'motion/react';
 import type {GlobeLayer} from '../../globe-types';
 import {layerFraction,mixColour,type GlobeCountry} from './globe-math';
 import {renderBoundary} from '../geo/render-boundaries';

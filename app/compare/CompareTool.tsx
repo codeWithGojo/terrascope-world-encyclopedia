@@ -1,5 +1,7 @@
 "use client";
 
+import {motion,AnimatePresence,useReducedMotion} from "motion/react";
+import {reveal,spring} from "../../shared/motion/config";
 import {useState} from "react";
 import Link from "next/link";
 import {atlasCountries,regionColours,type AtlasCountry} from "../atlas-data";
@@ -12,6 +14,7 @@ const metric=(country:AtlasCountry,key:keyof CountryIndicators)=>{const record=i
 const colour=(country:AtlasCountry)=>country.editorial?.color??regionColours[country.region];
 
 export default function CompareTool(){
+  const reduced=useReducedMotion();
   const [first,setFirst]=useState("nigeria");
   const [second,setSecond]=useState("japan");
   const a=atlasCountries.find((country)=>country.slug===first)??atlasCountries[0];
@@ -30,7 +33,7 @@ export default function CompareTool(){
   function chooseSecond(next:string){if(next===first)setFirst(second);setSecond(next);}
   return <>
     <div className="compare-selectors"><label><span>Country A · 195 available</span><select value={first} onChange={(event)=>chooseFirst(event.target.value)}>{atlasCountries.map((country)=><option value={country.slug} key={country.slug}>{country.flag} {country.code} {country.name}</option>)}</select></label><i>VERSUS</i><label><span>Country B · 195 available</span><select value={second} onChange={(event)=>chooseSecond(event.target.value)}>{atlasCountries.map((country)=><option value={country.slug} key={country.slug}>{country.flag} {country.code} {country.name}</option>)}</select></label></div>
-    <div className="compare-head"><div style={{"--country":colour(a)} as React.CSSProperties}><span>{a.flag}</span><small>{a.subregion}</small><h2>{a.name}</h2><Link href={`/countries/${a.slug}`}>View profile ↗</Link></div><div style={{"--country":colour(b)} as React.CSSProperties}><span>{b.flag}</span><small>{b.subregion}</small><h2>{b.name}</h2><Link href={`/countries/${b.slug}`}>View profile ↗</Link></div></div>
+    <AnimatePresence mode="wait"><motion.div key={`${first}-${second}`} className="compare-head" initial={reduced?false:{opacity:0}} animate={{opacity:1}} exit={{opacity:0}} transition={reveal}><motion.div initial={reduced?false:{x:-20,opacity:0}} animate={{x:0,opacity:1}} transition={reveal} style={{"--country":colour(a)} as React.CSSProperties}><span>{a.flag}</span><small>{a.subregion}</small><h2>{a.name}</h2><Link href={`/countries/${a.slug}`}>View profile ↗</Link></motion.div><motion.div initial={reduced?false:{x:20,opacity:0}} animate={{x:0,opacity:1}} transition={reveal} style={{"--country":colour(b)} as React.CSSProperties}><span>{b.flag}</span><small>{b.subregion}</small><h2>{b.name}</h2><Link href={`/countries/${b.slug}`}>View profile ↗</Link></motion.div></motion.div></AnimatePresence>
     <div className="comparison-table"><div className="comparison-row"><p>Population</p><div><b>{population(a.population)}</b><i style={{width:`${a.population/Math.max(a.population,b.population)*100}%`,background:colour(a)}}/></div><div><b>{population(b.population)}</b><i style={{width:`${b.population/Math.max(a.population,b.population)*100}%`,background:colour(b)}}/></div></div><div className="comparison-row"><p>Total area</p><div><b>{number(Math.round(a.area))} km²</b><i style={{width:`${a.area/Math.max(a.area,b.area)*100}%`,background:colour(a)}}/></div><div><b>{number(Math.round(b.area))} km²</b><i style={{width:`${b.area/Math.max(a.area,b.area)*100}%`,background:colour(b)}}/></div></div>{rows.map((row)=><div className="comparison-row text" key={row[0]}><p>{row[0]}</p><b>{row[1]}</b><b>{row[2]}</b></div>)}</div>
     <p className="source-note">World Bank figures show each observation year; latest available years can differ. GDP per person is output, not a salary. Density uses total reference area. <Link href="/method#data-register">Source editions & definitions →</Link></p>
   </>;
