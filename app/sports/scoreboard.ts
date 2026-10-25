@@ -19,12 +19,12 @@ export function normaliseScoreboard(raw:unknown,competition:typeof scoreCompetit
  const data=obj(raw), result:ScoreMatch[]=[];
  function add(event:ObjectValue,match:ObjectValue,label:string,cricket=false){
   const full=obj(match.fullStatus), type=obj(obj(match.status).type),stateValue=cricket?str(match.status):str(type.state),state=["pre","in","post"].includes(stateValue)?stateValue as ScoreMatch["state"]:"unknown";
-  const competitors=list(match.competitors).map(c=>{const x=obj(c),team=obj(x.team),athlete=obj(x.athlete);const scores=list(x.linescores).map(s=>str(obj(s).value)).filter(Boolean);return {name:str(team.displayName||athlete.displayName||x.displayName||x.name)||"Name unavailable",score:state==="pre"?"—":str(x.score)||(scores.length?scores.join(" "):"—"),winner:x.winner===true};});
+  const competitors=list(match.competitors).map(c=>{const x=obj(c),team=obj(x.team),athlete=obj(x.athlete),roster=obj(x.roster);const scores=list(x.linescores).map(s=>str(obj(s).value)).filter(Boolean);return {name:str(team.displayName||athlete.displayName||roster.displayName||x.displayName||x.name)||"Name unavailable",score:state==="pre"?"—":str(x.score)||(scores.length?scores.join(" "):"—"),winner:x.winner===true};});
   const when=str(match.date||event.date);if(competitors.length<2||!when||!Number.isFinite(Date.parse(when)))return;
   // Tennis feeds return whole tournaments; only show matches on the requested UTC date.
   if(!cricket&&new Date(when).toISOString().slice(0,10)!==date)return;
   const links=list(match.links||event.links).map(obj),link=match.link||links.find(l=>list(l.rel).includes("summary"))?.href||links.find(l=>str(l.href).startsWith("https:"))?.href;
-  result.push({id:`${competition.id}:${str(match.id||event.id)}`,competition:label,name:str(match.name||event.name)||competitors.map(c=>c.name).join(" v "),date:when,state,status:str(type.shortDetail||type.detail||match.summary||full.summary||type.description)||(state==="pre"?"Scheduled":state==="post"?"Final":state==="in"?"In progress":"Status unavailable"),competitors,url:safeScoreLink(link,competition.url)});
+  result.push({id:`${competition.id}:${str(match.id||event.id)}`,competition:label,name:str(match.name||event.name)||competitors.map(c=>c.name).join(" v "),date:when,state,status:str((competition.sport==="tennis"?type.detail:type.shortDetail)||type.detail||type.shortDetail||match.summary||full.summary||type.description)||(state==="pre"?"Scheduled":state==="post"?"Final":state==="in"?"In progress":"Status unavailable"),competitors,url:safeScoreLink(link,competition.url)});
  }
  if(competition.id==="cricket"){
   if(!Array.isArray(data.sports))throw Error("Score feed unavailable");

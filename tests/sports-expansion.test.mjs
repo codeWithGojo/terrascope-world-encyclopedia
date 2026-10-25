@@ -26,6 +26,10 @@ test('cricket retains multi-day matches and complete innings strings',()=>{
  const rows=normaliseScoreboard({sports:[{leagues:[{name:'Test series',events:[{id:'c',date:'2026-10-23T09:00:00Z',status:'in',summary:'Stumps',competitors:[{displayName:'Side A',score:'317'},{displayName:'Side B',score:'113 & 106/2 (36 ov)'}]}]}]}]},competition('cricket'),date);
  assert.equal(rows.length,1);assert.equal(rows[0].state,'in');assert.equal(rows[0].status,'Stumps');assert.equal(rows[0].competitors[1].score,'113 & 106/2 (36 ov)');
 });
+test('tennis doubles competitors use roster names rather than missing athlete records',()=>{
+ const rows=normaliseScoreboard({events:[{name:'Doubles final',groupings:[{competitions:[{...match('d','in'),status:{type:{state:'in',detail:'2nd Set',shortDetail:'2nd'}},competitors:[{roster:{displayName:'A / B'},linescores:[{value:6},{value:3}]},{roster:{displayName:'C / D'},linescores:[{value:4},{value:5}]}]}]}]}]},competition('atp'),date);
+ assert.equal(rows[0].competitors[0].name,'A / B');assert.equal(rows[0].competitors[1].name,'C / D');assert.equal(rows[0].status,'2nd Set');
+});
 test('malformed provider data, unsafe links and invalid dates fail closed',()=>{
  assert.throws(()=>normaliseScoreboard({error:'blocked'},competition('nba'),date));assert.equal(validScoreDate('2026-02-30'),false);assert.equal(validScoreDate('2026-10-25'),true);
  assert.equal(safeScoreLink('javascript:alert(1)','https://www.espn.com/'),'https://www.espn.com/');assert.equal(safeScoreLink('https://espn.com.evil.test/','https://www.espn.com/'),'https://www.espn.com/');

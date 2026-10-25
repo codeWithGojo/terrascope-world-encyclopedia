@@ -47,7 +47,12 @@ export function careerStats(person: Athlete): CareerStat[] {
  }
  if(person.sport==="tennis")return [s("Major singles titles",tennis[person.id],person.id==="novak-djokovic"?"At Paris 2024 Olympic victory":person.id==="naomi-osaka"?"Through February 2021":"Completed career")];
  if(person.sport==="cricket")return cricket[person.id]||[];
- return [s("Senior World Cup winner editions",worldCups[person.id]??"—",person.id==="marta"?"Women's FIFA World Cup · through 2023":"Men's FIFA World Cup · through 2022")];
+ const extra: Record<string,CareerStat[]>={
+ "lionel-messi":[s("Men's Ballon d’Or awards",8,"Through 2023"),s("Champions League winner editions",4,"Through 2024")],
+ "cristiano-ronaldo":[s("Men's Ballon d’Or awards",5,"Through 2023"),s("Champions League winner editions",5,"Through 2024")],
+ "bukayo-saka":[s("Men's Ballon d’Or awards",0,"Through 2023"),s("Champions League winner editions",0,"Through 2024")]
+ };
+ return [s("Senior World Cup winner editions",worldCups[person.id]??"—",person.id==="marta"?"Women's FIFA World Cup · through 2023":"Men's FIFA World Cup · through 2022"),...(extra[person.id]||[])];
 }
 const timelineSources: Record<string,{label:string;url:string}[]> = {
  "serena-williams":[{label:"WTA official title record",url:"https://www.wtatennis.com/legends/230234/name/record"}],
