@@ -1,0 +1,8 @@
+"use client";
+import {useState} from "react";
+import type {EsportsEntry} from "./esports-data";
+import {FavouriteButton} from "./FavouriteButton";
+export function EsportsDirectory({entries}:{entries:EsportsEntry[]}){
+ const [kind,setKind]=useState("all"),[query,setQuery]=useState("");const filtered=entries.filter(e=>(kind==="all"||e.kind===kind)&&`${e.name} ${e.region} ${e.summary}`.toLowerCase().includes(query.toLowerCase().trim()));
+ return <><div className="sp-form-row"><label>Search CODM profiles<input type="search" placeholder="Team or player…" value={query} onChange={e=>setQuery(e.target.value)}/></label><label>Show<select value={kind} onChange={e=>setKind(e.target.value)}><option value="all">Teams & players</option><option value="team">Teams</option><option value="player">Players</option></select></label></div><p className="sp-small" role="status">{filtered.length} profiles · historical records, reviewed 25 October 2026</p><div className="sp-esports-grid">{filtered.map(entry=><article key={entry.id} id={entry.id}><p className="sp-kicker">{entry.kind} / {entry.region}</p><h2>{entry.name}</h2><p>{entry.summary}</p><ul>{entry.milestones.map(m=><li key={m}>{m}</li>)}</ul><FavouriteButton id={`esports-${entry.kind}:${entry.id}`} name={entry.name}/><details><summary>Profile sources</summary>{entry.sources.map(s=><a key={s.url} className="sports-source-link" href={s.url} target="_blank" rel="noreferrer">{s.label} ↗</a>)}</details></article>)}</div>{!filtered.length&&<div className="sp-message"><h2>No CODM profiles match.</h2><button type="button" onClick={()=>{setKind("all");setQuery("");}}>Reset esports filters</button></div>}</>;
+}

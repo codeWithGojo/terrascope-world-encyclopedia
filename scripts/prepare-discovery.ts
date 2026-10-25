@@ -6,6 +6,8 @@ import {iqRankings,iqDataset} from '../app/iq-data';
 import {cityGuides,travelPlacesByCode} from '../app/country-content';
 import {footballGreats} from '../app/football-greats-data';
 import {sports,athletes} from '../app/sports/data';
+import {sportsTools,sportsTeams} from '../app/sports/catalog';
+import {esportsEntries} from '../app/sports/esports-data';
 import {countries as editorial} from '../app/data';
 const root=process.cwd();fs.mkdirSync('public/data',{recursive:true});fs.mkdirSync('app/datasets',{recursive:true});
 const countries=atlasCountries.map(c=>({code:c.code,name:c.name,slug:c.slug,flag:c.flag,capital:c.capital,latitude:c.latitude,longitude:c.longitude,region:c.region}));
@@ -24,5 +26,8 @@ for(const l of footballGreats){index.push({id:`league-${l.id}`,label:l.name,grou
 index.push({id:'sports-hub',label:'Sports',group:'Sports',detail:'Football, basketball, cricket and tennis',href:'/sports'});
 for(const sport of sports)index.push({id:`sport-${sport.id}`,label:sport.name,group:'Sports',detail:'Athletes, competitions and country connections',href:`/sports/${sport.id}`,keywords:sport.summary});
 for(const person of athletes.filter(p=>p.sport!=='football'))index.push({id:`athlete-${person.id}`,label:person.name,group:'Athletes',detail:`${person.sport} · ${person.nation}`,href:`/sports/${person.sport}?athlete=${person.id}`,countryCode:person.countryCodes[0],keywords:person.role+' '+person.milestones.join(' ')});
+for(const t of sportsTools)index.push({id:`sports-tool-${t.mark}`,label:t.name,group:'Sports',detail:t.description,href:t.href});
+for(const t of sportsTeams)index.push({id:`sports-team-${t.id}`,label:t.name,group:'Sports teams',detail:`${t.sport} · ${t.location}`,href:`/sports/teams/${t.id}`,keywords:t.icons.join(' ')});
+for(const e of esportsEntries)index.push({id:`esports-${e.kind}-${e.id}`,label:e.name,group:'Esports',detail:e.region,href:`/sports/esports#${e.id}`});
 fs.writeFileSync('public/data/discovery-index.json',JSON.stringify(index));
 console.log(`${countries.length} countries, ${features.length} boundaries, ${index.length} search entries. Geometry ${Math.round(fs.statSync('public/data/world-boundaries.json').size/1024)} KB`);
