@@ -58,7 +58,7 @@ export function SiteHeader({ active }: { active?: string }) {
     { id: "escape", label: "Escape", href: "/escape" },
     { id: "countries", label: "Countries", href: "/countries" },
     { id: "trips", label: "Trip planner", href: "/trips" },
-    { id: "football", label: "Football", href: "/football-archive" },
+    { id: "sports", label: "Sports", href: "/sports" },
     { id: "rankings", label: "Rankings", href: "/rankings" },
     { id: "elections", label: "Elections", href: "/elections" },
   ];
@@ -83,8 +83,8 @@ export function SiteHeader({ active }: { active?: string }) {
       >
         {nav.map((item) => (
           <Link
-            className={active === item.id ? "active" : ""}
-            aria-current={active === item.id ? "page" : undefined}
+            className={active === item.id || (item.id === "sports" && active === "football") ? "active" : ""}
+            aria-current={active === item.id || (item.id === "sports" && active === "football") ? "page" : undefined}
             href={item.href}
             key={item.href}
             onClick={closeNavigation}
