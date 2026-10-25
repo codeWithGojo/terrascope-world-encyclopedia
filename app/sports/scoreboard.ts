@@ -14,12 +14,13 @@ type ObjectValue=Record<string,unknown>;
 const obj=(v:unknown):ObjectValue=>v&&typeof v==="object"&&!Array.isArray(v)?v as ObjectValue:{};
 const list=(v:unknown):unknown[]=>Array.isArray(v)?v:[];
 const str=(v:unknown)=>typeof v==="string"||typeof v==="number"?String(v):"";
+export function formatSetScore(value:unknown){const x=obj(value),games=str(x.value),points=str(x.tiebreak);return points?Number(games)<=1?`[${points}]`:`${games}(${points})`:games;}
 export function safeScoreLink(value:unknown,fallback:string){try{const u=new URL(str(value));return u.protocol==="https:"&&/(^|\.)(espn\.com|espn\.in|espncricinfo\.com)$/.test(u.hostname)?u.href:fallback;}catch{return fallback;}}
 export function normaliseScoreboard(raw:unknown,competition:typeof scoreCompetitions[number],date:string):ScoreMatch[]{
  const data=obj(raw), result:ScoreMatch[]=[];
  function add(event:ObjectValue,match:ObjectValue,label:string,cricket=false){
   const full=obj(match.fullStatus), type=obj(obj(match.status).type),stateValue=cricket?str(match.status):str(type.state),state=["pre","in","post"].includes(stateValue)?stateValue as ScoreMatch["state"]:"unknown";
-  const competitors=list(match.competitors).map(c=>{const x=obj(c),team=obj(x.team),athlete=obj(x.athlete),roster=obj(x.roster);const scores=list(x.linescores).map(s=>str(obj(s).value)).filter(Boolean);return {name:str(team.displayName||athlete.displayName||roster.displayName||x.displayName||x.name)||"Name unavailable",score:state==="pre"?"—":str(x.score)||(scores.length?scores.join(" "):"—"),winner:x.winner===true};});
+  const competitors=list(match.competitors).map(c=>{const x=obj(c),team=obj(x.team),athlete=obj(x.athlete),roster=obj(x.roster);const scores=list(x.linescores).map(formatSetScore).filter(Boolean);return {name:str(team.displayName||athlete.displayName||roster.displayName||x.displayName||x.name)||"Name unavailable",score:state==="pre"?"—":str(x.score)||(scores.length?scores.join(" "):"—"),winner:x.winner===true};});
   const when=str(match.date||event.date);if(competitors.length<2||!when||!Number.isFinite(Date.parse(when)))return;
   // Tennis feeds return whole tournaments; only show matches on the requested UTC date.
   if(!cricket&&new Date(when).toISOString().slice(0,10)!==date)return;

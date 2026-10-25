@@ -1,7 +1,7 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
 import {readFile,stat} from 'node:fs/promises';
-import {scoreCompetitions,normaliseScoreboard,validScoreDate,safeScoreLink,isScoreboard} from '../app/sports/scoreboard.ts';
+import {scoreCompetitions,normaliseScoreboard,validScoreDate,safeScoreLink,isScoreboard,formatSetScore} from '../app/sports/scoreboard.ts';
 import {getSportsScores} from '../app/server/sports-scores.ts';
 import {GET} from '../app/api/sports/scores/route.ts';
 import {parseFavourites} from '../app/sports/favourites-store.ts';
@@ -29,6 +29,9 @@ test('cricket retains multi-day matches and complete innings strings',()=>{
 test('tennis doubles competitors use roster names rather than missing athlete records',()=>{
  const rows=normaliseScoreboard({events:[{name:'Doubles final',groupings:[{competitions:[{...match('d','in'),status:{type:{state:'in',detail:'2nd Set',shortDetail:'2nd'}},competitors:[{roster:{displayName:'A / B'},linescores:[{value:6},{value:3}]},{roster:{displayName:'C / D'},linescores:[{value:4},{value:5}]}]}]}]}]},competition('atp'),date);
  assert.equal(rows[0].competitors[0].name,'A / B');assert.equal(rows[0].competitors[1].name,'C / D');assert.equal(rows[0].status,'2nd Set');
+});
+test('tennis preserves normal and deciding match tie-break points',()=>{
+ assert.equal(formatSetScore({value:7,tiebreak:7}),'7(7)');assert.equal(formatSetScore({value:6,tiebreak:3}),'6(3)');assert.equal(formatSetScore({value:1,tiebreak:10}),'[10]');assert.equal(formatSetScore({value:0,tiebreak:2}),'[2]');assert.equal(formatSetScore({value:0}),'0');
 });
 test('malformed provider data, unsafe links and invalid dates fail closed',()=>{
  assert.throws(()=>normaliseScoreboard({error:'blocked'},competition('nba'),date));assert.equal(validScoreDate('2026-02-30'),false);assert.equal(validScoreDate('2026-10-25'),true);
