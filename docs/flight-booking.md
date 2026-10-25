@@ -4,9 +4,9 @@
 
 ## Configuration
 
-Set `DUFFEL_ACCESS_TOKEN` as a **server-only** Vercel Secret on the flight feature branch's Preview environment. Only a token beginning with `duffel_test_` is accepted. No browser environment prefix, token in source, or live-token fallback is used. No new SDK is needed: server requests use HTTP and `Duffel-Version: v2`.
+Set `DUFFEL_ACCESS_TOKEN` as a **server-only** Vercel Secret in Production and on the flight feature branch's Preview environment. Only a token beginning with `duffel_test_` is accepted. No browser environment prefix, token in source, or live-token fallback is used. No new SDK is needed: server requests use HTTP and `Duffel-Version: v2`.
 
-The public production deployment has not been enabled for flight transactions. The preview never collects a real payment card and cannot accept live Duffel credentials. It uses the provider's simulated balance. Prices and ticket documents from the sandbox are not valid for travel.
+Open **More → Flights (test mode)** in the main navigation, or visit `/flights`. The public site exposes the same sandbox flow; real flight sales are not enabled. The preview never collects a real payment card and cannot accept live Duffel credentials. It uses the provider's simulated balance. Prices and ticket documents from the sandbox are not valid for travel.
 
 ## Boundaries
 

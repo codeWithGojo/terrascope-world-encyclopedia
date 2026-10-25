@@ -1,0 +1,178 @@
+{
+  "football-cover": {
+    "src": "/sports/football-cover.webp",
+    "alt": "Association football",
+    "author": "Rick Dikeman",
+    "license": "CC BY-SA 3.0",
+    "licenseUrl": "http://creativecommons.org/licenses/by-sa/3.0/",
+    "source": "https://commons.wikimedia.org/wiki/File:Football_in_Bloomington,_Indiana,_1995.jpg"
+  },
+  "basketball-cover": {
+    "src": "/sports/basketball-cover.webp",
+    "alt": "Basketball",
+    "author": "kris krüg from Vancouver, Canada",
+    "license": "CC BY-SA 2.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+    "source": "https://commons.wikimedia.org/wiki/File:USA_vs._China_Mens_Basketball_-_Beijing_2008_Olympic_Games_(2751923597).jpg"
+  },
+  "cricket-cover": {
+    "src": "/sports/cricket-cover.webp",
+    "alt": "Cricket",
+    "author": "Prescott Pym on Flickr",
+    "license": "CC BY 2.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by/2.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Pollock_to_Hussey.jpg"
+  },
+  "tennis-cover": {
+    "src": "/sports/tennis-cover.webp",
+    "alt": "Tennis",
+    "author": "Brendan Dennis",
+    "license": "CC BY-SA 3.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+    "source": "https://commons.wikimedia.org/wiki/File:2013_Australian_Open_-_Guillaume_Rufin.jpg"
+  },
+  "michael-jordan": {
+    "src": "/sports/michael-jordan.webp",
+    "alt": "Michael Jordan",
+    "author": "Zach Catanzareti Photo",
+    "license": "CC BY 2.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by/2.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Michael_jordan_admad_rashad_(51276390562)_(cropped).jpg"
+  },
+  "lebron-james": {
+    "src": "/sports/lebron-james.webp",
+    "alt": "LeBron James",
+    "author": "Erik Drost",
+    "license": "CC BY 2.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by/2.0",
+    "source": "https://commons.wikimedia.org/wiki/File:LeBron_James_(51959977144)_(cropped2).jpg"
+  },
+  "kobe-bryant": {
+    "src": "/sports/kobe-bryant.webp",
+    "alt": "Kobe Bryant",
+    "author": "Keith Allison",
+    "license": "CC BY-SA 2.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Kobe_Bryant_Dec_2014.jpg"
+  },
+  "hakeem-olajuwon": {
+    "src": "/sports/hakeem-olajuwon.webp",
+    "alt": "Hakeem Olajuwon",
+    "author": "U.S. Department of State",
+    "license": "Public domain",
+    "licenseUrl": "",
+    "source": "https://commons.wikimedia.org/wiki/File:Nigerian_President_Buhari_Stands_With_Secretary_Kerry,_U.S._Delegation_After_They_Attended_His_Inauguration_Ceremony_(cropped).jpg"
+  },
+  "lisa-leslie": {
+    "src": "/sports/lisa-leslie.webp",
+    "alt": "Lisa Leslie",
+    "author": "Angela George at https://www.flickr.com/photos/sharongraphics/",
+    "license": "CC BY-SA 3.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+    "source": "https://commons.wikimedia.org/wiki/File:LisaLeslieDec10.jpg"
+  },
+  "lauren-jackson": {
+    "src": "/sports/lauren-jackson.webp",
+    "alt": "Lauren Jackson",
+    "author": "Bidgee",
+    "license": "CC BY-SA 3.0 au",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0/au/deed.en",
+    "source": "https://commons.wikimedia.org/wiki/File:Lauren_Jackson_at_the_Welcome_Home_parade_in_Sydney_(1).jpg"
+  },
+  "sachin-tendulkar": {
+    "src": "/sports/sachin-tendulkar.webp",
+    "alt": "Sachin Tendulkar",
+    "author": "British High Commission, New Delhi",
+    "license": "CC BY-SA 2.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+    "source": "https://commons.wikimedia.org/wiki/File:The_cricket_legend_Sachin_Tendulkar_at_the_Oval_Maidan_in_Mumbai_During_the_Duke_and_Duchess_of_Cambridge_Visit(26271019082).jpg"
+  },
+  "don-bradman": {
+    "src": "/sports/don-bradman.webp",
+    "alt": "Don Bradman",
+    "author": "State Library of South Australia from Australia",
+    "license": "CC BY 2.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by/2.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Don_Bradman_1930.jpg"
+  },
+  "viv-richards": {
+    "src": "/sports/viv-richards.webp",
+    "alt": "Viv Richards",
+    "author": "Original image by Pamri",
+    "license": "Public domain",
+    "licenseUrl": "",
+    "source": "https://commons.wikimedia.org/wiki/File:Vivian_richards_crop.jpg"
+  },
+  "brian-lara": {
+    "src": "/sports/brian-lara.webp",
+    "alt": "Brian Lara",
+    "author": "Bollywood Hungama",
+    "license": "CC BY 3.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by/3.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Brian_Lara_at_2012_Mumbai_Marathon_pre_bash.jpg"
+  },
+  "muttiah-muralitharan": {
+    "src": "/sports/muttiah-muralitharan.webp",
+    "alt": "Muttiah Muralitharan",
+    "author": "Bollywood Hungama",
+    "license": "CC BY 3.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by/3.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Photograph_of_Muttiah_Muralitharan.jpg"
+  },
+  "mithali-raj": {
+    "src": "/sports/mithali-raj.webp",
+    "alt": "Mithali Raj",
+    "author": "President's Secretariat",
+    "license": "GODL-India",
+    "licenseUrl": "https://data.gov.in/sites/default/files/Gazette_Notification_OGDL.pdf",
+    "source": "https://commons.wikimedia.org/wiki/File:Mithali_Raj_with_Padma_Shri_Award_(cropped).jpg"
+  },
+  "serena-williams": {
+    "src": "/sports/serena-williams.webp",
+    "alt": "Serena Williams",
+    "author": "AndrewHenkelman",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Serena-Smiling-2020.png"
+  },
+  "roger-federer": {
+    "src": "/sports/roger-federer.webp",
+    "alt": "Roger Federer",
+    "author": "Tatiana from Moscow, Russia",
+    "license": "CC BY-SA 2.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Roger_Federer_2015_(cropped).jpg"
+  },
+  "rafael-nadal": {
+    "src": "/sports/rafael-nadal.webp",
+    "alt": "Rafael Nadal",
+    "author": "Barcex",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Rafael_Nadal_en_2024_(cropped).jpg"
+  },
+  "novak-djokovic": {
+    "src": "/sports/novak-djokovic.webp",
+    "alt": "Novak Djokovic",
+    "author": "Andymiah",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Novak_Djokovic_Paris_2024_Olympic_Games_(cropped).jpg"
+  },
+  "steffi-graf": {
+    "src": "/sports/steffi-graf.webp",
+    "alt": "Steffi Graf",
+    "author": "Steffi_Graf_in_Hamburg.jpg: Mark Henckel from Hamburg-Altona, Deutschland (http://sommer-in-hamburg.de/)\nderivative work: César",
+    "license": "CC BY-SA 2.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Steffi_Graf_in_Hamburg_2010_(cropped).jpg"
+  },
+  "naomi-osaka": {
+    "src": "/sports/naomi-osaka.webp",
+    "alt": "Naomi Osaka",
+    "author": "AndrewHenkelman",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:NaomiOsaka-smile-2020_(cropped_tight).png"
+  }
+}

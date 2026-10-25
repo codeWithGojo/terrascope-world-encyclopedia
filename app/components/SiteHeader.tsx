@@ -58,7 +58,7 @@ export function SiteHeader({ active }: { active?: string }) {
     { id: "escape", label: "Escape", href: "/escape" },
     { id: "countries", label: "Countries", href: "/countries" },
     { id: "trips", label: "Trip planner", href: "/trips" },
-    { id: "football", label: "Football", href: "/football-archive" },
+    { id: "sports", label: "Sports", href: "/sports" },
     { id: "rankings", label: "Rankings", href: "/rankings" },
     { id: "elections", label: "Elections", href: "/elections" },
   ];
@@ -83,8 +83,8 @@ export function SiteHeader({ active }: { active?: string }) {
       >
         {nav.map((item) => (
           <Link
-            className={active === item.id ? "active" : ""}
-            aria-current={active === item.id ? "page" : undefined}
+            className={active === item.id || (item.id === "sports" && active === "football") ? "active" : ""}
+            aria-current={active === item.id || (item.id === "sports" && active === "football") ? "page" : undefined}
             href={item.href}
             key={item.href}
             onClick={closeNavigation}
@@ -105,6 +105,7 @@ export function SiteHeader({ active }: { active?: string }) {
             More <span aria-hidden="true">⌄</span>
           </summary>
           <div id="more-navigation">
+            <Link href="/flights" aria-current={active === "flights" ? "page" : undefined} onClick={closeNavigation}>Flights (test mode)</Link>
             <Link
               href="/my-travels"
               aria-current={active === "my-travels" ? "page" : undefined}
@@ -113,7 +114,6 @@ export function SiteHeader({ active }: { active?: string }) {
               My travels
             </Link>
             <Link href="/travel" onClick={closeNavigation}>Travel tools</Link>
-            <Link href="/flights" aria-current={active === "flights" ? "page" : undefined} onClick={closeNavigation}>Flights · booking preview</Link>
             <Link href="/quiz" onClick={closeNavigation}>Flag, capital & anthem quizzes</Link>
             <Link href="/daily" onClick={closeNavigation}>
               Guess the Country
