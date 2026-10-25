@@ -113,6 +113,7 @@ export function SiteHeader({ active }: { active?: string }) {
               My travels
             </Link>
             <Link href="/travel" onClick={closeNavigation}>Travel tools</Link>
+            <Link href="/flights" aria-current={active === "flights" ? "page" : undefined} onClick={closeNavigation}>Flights · booking preview</Link>
             <Link href="/quiz" onClick={closeNavigation}>Flag, capital & anthem quizzes</Link>
             <Link href="/daily" onClick={closeNavigation}>
               Guess the Country

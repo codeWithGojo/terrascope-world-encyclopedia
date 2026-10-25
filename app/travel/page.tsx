@@ -64,6 +64,7 @@ export default async function TravelPage({
           <a href="#passport">Passport explorer</a>
           <a href="#calling">Calling planner</a>
           <a href="/trips">Saved trips & itineraries</a>
+          <a href="/flights">Flight booking preview</a>
         </nav>
       </section>
       <TravelMatcher countries={matcher} />
