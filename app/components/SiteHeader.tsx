@@ -105,6 +105,7 @@ export function SiteHeader({ active }: { active?: string }) {
             More <span aria-hidden="true">⌄</span>
           </summary>
           <div id="more-navigation">
+            <Link href="/space" aria-current={active === "space" ? "page" : undefined} onClick={closeNavigation}>Space · Solar system</Link>
             <Link href="/flights" aria-current={active === "flights" ? "page" : undefined} onClick={closeNavigation}>Flights (test mode)</Link>
             <Link
               href="/my-travels"

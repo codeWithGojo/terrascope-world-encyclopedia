@@ -1,0 +1,268 @@
+{
+  "checkedAt": "2026-10-26",
+  "notes": "Approximate equatorial diameters, mean distances and solar days. Temperatures for giants refer to the 1-bar atmosphere; gravity includes rotation at the equator. Moon counts are dated snapshots and can change.",
+  "numericSource": "https://nssdc.gsfc.nasa.gov/planetary/factsheet/",
+  "moonSource": "https://spaceplace.nasa.gov/how-many-moons/en/",
+  "planets": [
+    {
+      "diameterKm": 4879,
+      "distanceMillionKm": 57.9,
+      "dayHours": 4222.6,
+      "yearDays": 88,
+      "moons": 0,
+      "temperatureC": 167,
+      "gravity": 3.7,
+      "color": "#aaa49a",
+      "kind": "Rocky planet",
+      "atmosphere": "A tenuous exosphere, including oxygen, sodium and hydrogen.",
+      "name": "Mercury",
+      "slug": "mercury",
+      "order": 1,
+      "facts": [
+        "Smallest of the eight planets.",
+        "Closest planet to the Sun.",
+        "Its iron core occupies much of its interior.",
+        "Its surface is heavily cratered.",
+        "Water ice survives in permanently shadowed polar craters.",
+        "It has no moons.",
+        "It has no rings.",
+        "It has a weak global magnetic field.",
+        "Its orbit is unusually eccentric.",
+        "A solar day lasts about two Mercury years."
+      ],
+      "missions": [
+        "Mariner 10 \u00b7 flybys, 1974\u20131975",
+        "MESSENGER \u00b7 orbit, 2011\u20132015"
+      ],
+      "source": "https://science.nasa.gov/mercury/facts/"
+    },
+    {
+      "diameterKm": 12104,
+      "distanceMillionKm": 108.2,
+      "dayHours": 2802,
+      "yearDays": 224.7,
+      "moons": 0,
+      "temperatureC": 464,
+      "gravity": 8.9,
+      "color": "#dfbd82",
+      "kind": "Rocky planet",
+      "atmosphere": "Mostly carbon dioxide with nitrogen and sulfuric-acid clouds.",
+      "name": "Venus",
+      "slug": "venus",
+      "order": 2,
+      "facts": [
+        "Hottest planet on average.",
+        "Rotates in a retrograde direction.",
+        "Its rotation takes longer than its year.",
+        "Has no moons.",
+        "Has no rings.",
+        "Has a rocky surface.",
+        "Clouds conceal its surface in visible light.",
+        "Its atmosphere produces an extreme greenhouse effect.",
+        "Surface pressure is about 92 times Earth\u2019s.",
+        "Its size is close to Earth\u2019s."
+      ],
+      "missions": [
+        "Mariner 2 \u00b7 flyby, 1962",
+        "Venera 7 \u00b7 landing, 1970",
+        "Magellan \u00b7 radar mapping, 1990\u20131994"
+      ],
+      "source": "https://science.nasa.gov/venus/facts/"
+    },
+    {
+      "diameterKm": 12756,
+      "distanceMillionKm": 149.6,
+      "dayHours": 24,
+      "yearDays": 365.2,
+      "moons": 1,
+      "temperatureC": 15,
+      "gravity": 9.8,
+      "color": "#509bd7",
+      "kind": "Rocky planet",
+      "atmosphere": "Mostly nitrogen and oxygen; water vapour varies.",
+      "name": "Earth",
+      "slug": "earth",
+      "order": 3,
+      "facts": [
+        "Only world known to host life.",
+        "Liquid oceans cover most of its surface.",
+        "Has one natural moon.",
+        "Has no rings.",
+        "Its magnetic field helps deflect charged particles.",
+        "Its crust is divided into moving plates.",
+        "Its atmosphere is mostly nitrogen.",
+        "Oxygen supports familiar animal life.",
+        "Its axis is tilted about 23 degrees.",
+        "Sunlight takes about eight minutes to arrive."
+      ],
+      "missions": [
+        "Landsat 1 \u00b7 Earth observation, launched 1972",
+        "Terra \u00b7 Earth observation, launched 1999"
+      ],
+      "source": "https://science.nasa.gov/earth/facts/"
+    },
+    {
+      "diameterKm": 6792,
+      "distanceMillionKm": 228,
+      "dayHours": 24.7,
+      "yearDays": 687,
+      "moons": 2,
+      "temperatureC": -65,
+      "gravity": 3.7,
+      "color": "#c86844",
+      "kind": "Rocky planet",
+      "atmosphere": "Thin atmosphere dominated by carbon dioxide.",
+      "name": "Mars",
+      "slug": "mars",
+      "order": 4,
+      "facts": [
+        "Iron minerals give it a rusty colour.",
+        "Has two small moons.",
+        "Olympus Mons is a giant volcano.",
+        "Valles Marineris is a vast canyon system.",
+        "Has polar ice caps.",
+        "Ancient river channels record flowing water.",
+        "Its atmosphere is thin.",
+        "Dust storms can grow planet-wide.",
+        "Its day is close to Earth\u2019s.",
+        "Has no global magnetic field today."
+      ],
+      "missions": [
+        "Viking 1 \u00b7 landing, 1976",
+        "Curiosity \u00b7 landing, 2012",
+        "Perseverance \u00b7 landing, 2021"
+      ],
+      "source": "https://science.nasa.gov/mars/facts/"
+    },
+    {
+      "diameterKm": 142984,
+      "distanceMillionKm": 778.5,
+      "dayHours": 9.9,
+      "yearDays": 4331,
+      "moons": 115,
+      "temperatureC": -110,
+      "gravity": 23.1,
+      "color": "#c9aa87",
+      "kind": "Gas giant",
+      "atmosphere": "Mostly hydrogen and helium, with ammonia clouds.",
+      "name": "Jupiter",
+      "slug": "jupiter",
+      "order": 5,
+      "facts": [
+        "Largest planet in the solar system.",
+        "Has a faint ring system.",
+        "The Great Red Spot is a long-lived storm.",
+        "Its atmosphere forms alternating bands.",
+        "Ganymede is the largest moon in the solar system.",
+        "Europa has an ocean beneath ice.",
+        "Io is volcanically active.",
+        "Has a powerful magnetic field.",
+        "Has no solid surface to stand on.",
+        "Spins faster than any other planet."
+      ],
+      "missions": [
+        "Pioneer 10 \u00b7 flyby, 1973",
+        "Voyager 1 and 2 \u00b7 flybys, 1979",
+        "Galileo \u00b7 orbit, 1995\u20132003",
+        "Juno \u00b7 orbit arrival, 2016"
+      ],
+      "source": "https://science.nasa.gov/jupiter/facts/"
+    },
+    {
+      "diameterKm": 120536,
+      "distanceMillionKm": 1432,
+      "dayHours": 10.7,
+      "yearDays": 10747,
+      "moons": 293,
+      "temperatureC": -140,
+      "gravity": 9,
+      "color": "#e1cf9c",
+      "kind": "Gas giant",
+      "atmosphere": "Mostly hydrogen and helium.",
+      "name": "Saturn",
+      "slug": "saturn",
+      "order": 6,
+      "facts": [
+        "Its rings are mostly water ice.",
+        "Second-largest planet.",
+        "Its average density is less than water\u2019s.",
+        "Titan has a thick atmosphere.",
+        "Enceladus ejects icy plumes.",
+        "Has no solid surface.",
+        "Its rings include gaps.",
+        "Its north pole has a hexagonal weather pattern.",
+        "Its axis is tilted, giving it seasons.",
+        "Cassini explored its system for 13 years."
+      ],
+      "missions": [
+        "Pioneer 11 \u00b7 flyby, 1979",
+        "Voyager 1 \u00b7 flyby, 1980",
+        "Voyager 2 \u00b7 flyby, 1981",
+        "Cassini-Huygens \u00b7 arrival, 2004"
+      ],
+      "source": "https://science.nasa.gov/saturn/facts/"
+    },
+    {
+      "diameterKm": 51118,
+      "distanceMillionKm": 2867,
+      "dayHours": 17.2,
+      "yearDays": 30589,
+      "moons": 29,
+      "temperatureC": -195,
+      "gravity": 8.7,
+      "color": "#91d0d5",
+      "kind": "Ice giant",
+      "atmosphere": "Hydrogen and helium with methane absorbing red light.",
+      "name": "Uranus",
+      "slug": "uranus",
+      "order": 7,
+      "facts": [
+        "Rotates nearly on its side.",
+        "An ice giant.",
+        "Methane contributes to its blue-green colour.",
+        "Has dark rings.",
+        "Its magnetic axis is strongly tilted.",
+        "Voyager 2 visited in 1986.",
+        "Its seasons last decades.",
+        "Its moons include Titania and Oberon.",
+        "Discovered by William Herschel in 1781.",
+        "Its interior contains water, ammonia and methane-rich material."
+      ],
+      "missions": [
+        "Voyager 2 \u00b7 flyby, 1986"
+      ],
+      "source": "https://science.nasa.gov/uranus/facts/"
+    },
+    {
+      "diameterKm": 49528,
+      "distanceMillionKm": 4515,
+      "dayHours": 16.1,
+      "yearDays": 59800,
+      "moons": 16,
+      "temperatureC": -200,
+      "gravity": 11,
+      "color": "#526de0",
+      "kind": "Ice giant",
+      "atmosphere": "Hydrogen, helium and methane above a deep fluid interior.",
+      "name": "Neptune",
+      "slug": "neptune",
+      "order": 8,
+      "facts": [
+        "Most distant of the eight planets.",
+        "An ice giant.",
+        "Voyager 2 visited in 1989.",
+        "Has faint rings and arcs.",
+        "Triton orbits in a retrograde direction.",
+        "Its winds can be extremely fast.",
+        "Discovered in 1846.",
+        "Mathematical predictions helped locate it.",
+        "Its year is about 164 Earth years.",
+        "Emits more energy than it receives from the Sun."
+      ],
+      "missions": [
+        "Voyager 2 \u00b7 flyby, 1989"
+      ],
+      "source": "https://science.nasa.gov/neptune/facts/"
+    }
+  ]
+}

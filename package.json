@@ -22,6 +22,9 @@
     "test:features": "node --import ./tests/ts-loader.mjs --test tests/country-features.test.mjs tests/engagement.test.mjs tests/football-audit.test.mjs tests/discovery.test.mjs tests/theme.test.mjs tests/country-of-day.test.mjs tests/travel-tools.test.mjs"
   },
   "dependencies": {
+    "@react-three/fiber": "9.8.2",
+    "@react-three/handle": "6.6.32",
+    "@react-three/xr": "6.6.32",
     "@supabase/ssr": "0.12.7",
     "@supabase/supabase-js": "2.118.0",
     "@svg-maps/world": "^2.0.0",
