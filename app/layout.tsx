@@ -14,6 +14,7 @@ import "./travel-guide.css";
 import "./glass.css";
 import "./travel-tools.css";
 import "./editorial.css";
+import "./discovery-polish.css";
 import {ThemeProvider} from "./components/ThemeProvider";
 import {MotionProvider} from "./components/motion/MotionProvider";
 import {themeBootScript} from "./theme";
