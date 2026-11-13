@@ -13,22 +13,23 @@ export type VisaCategory =
   | "restricted"
   | "home"
   | "unknown";
-type VisaReview = { category: VisaCategory; label: string; authority: string; checkedAt: string };
+type VisaReview = { category: VisaCategory; label: string; authority: string; checkedAt: string; note?: string };
 const visaReviews: Record<string, VisaReview> = Object.fromEntries([
   ["NG-GB", "required", "Visa before travel", "https://www.gov.uk/check-uk-visa"],
+  ["NG-US", "restricted", "B-1/B-2 visitor visa issuance partially suspended", "https://travel.state.gov/en/newsroom/visas/2026/suspension-of-visa-issuance-to-foreign-nationals-to-protect-the-security-of-the-united-states.html", "The proclamation applies to affected nationals who were outside the U.S. and did not hold a valid visa on 1 January 2026. Exceptions apply."],
   ["NG-CA", "required", "Visa before travel", "https://www.canada.ca/en/immigration-refugees-citizenship/services/visit-canada/entry-requirements-country.html"],
   ["NG-GH", "visa-free", "Visa-free for eligible ECOWAS visitors", "https://gis.gov.gh/service/emergency-entry-visa/"],
   ["GH-NG", "visa-free", "Visa-free for eligible ECOWAS visitors", "https://immigration.gov.ng/info-center/tourism-visa-f5a/"],
   ["GB-NG", "e-visa", "Tourism e-visa before travel", "https://immigration.gov.ng/info-center/tourism-visa-f5a/"],
   ["US-NG", "e-visa", "Tourism e-visa before travel", "https://immigration.gov.ng/info-center/tourism-visa-f5a/"],
   ["CA-NG", "e-visa", "Tourism e-visa before travel", "https://immigration.gov.ng/info-center/tourism-visa-f5a/"],
-].map(([route, category, label, authority]) => [
-  route, { category: category as VisaCategory, label, authority, checkedAt: "2026-11-13" },
+].map(([route, category, label, authority, note]) => [
+  route, { category: category as VisaCategory, label, authority, note, checkedAt: "2026-11-13" },
 ]));
 export function visaRequirement(
   passport: string,
   destination: string,
-): { category: VisaCategory; label: string; days?: number; authority?: string; checkedAt?: string } {
+): { category: VisaCategory; label: string; days?: number; authority?: string; checkedAt?: string; note?: string } {
   const reviewed = visaReviews[`${passport}-${destination}`];
   if (reviewed) return reviewed;
   const row = (visas.rows as Record<string, string[]>)[passport],

@@ -7,11 +7,13 @@ const money = new Intl.NumberFormat("en", { style: "currency", currency: "USD", 
 const distance = new Intl.NumberFormat("en");
 const countryNames = new Intl.DisplayNames(["en"], { type: "region" });
 
-function AirportField({ label, value, onChange }: { label: string; value: string; onChange: (code: string) => void }) {
+function AirportField({ label, value, onChange, initialCountry }: { label: string; value: string; onChange: (code: string) => void; initialCountry?: string }) {
+  const [country, setCountry] = useState(initialCountry);
   const [query, setQuery] = useState("");
   const search = query.trim().toLowerCase();
-  const matches = airports.filter(([code, city, name, country]) =>
-    !search || `${code} ${city} ${name} ${countryNames.of(country) ?? country}`.toLowerCase().includes(search),
+  const matches = airports.filter(([code, city, name, airportCountry]) =>
+    (!country || airportCountry === country) &&
+    (!search || `${code} ${city} ${name} ${countryNames.of(airportCountry) ?? airportCountry}`.toLowerCase().includes(search)),
   );
   const matching = matches.slice(0, 100);
   const selected = airports.find(([code]) => code === value);
@@ -19,6 +21,9 @@ function AirportField({ label, value, onChange }: { label: string; value: string
 
   return (
     <div className="flight-airport">
+      {country && (
+        <p>Showing airports in {countryNames.of(country)}. <button type="button" className="flight-clear-filter" onClick={() => setCountry(undefined)}>Show all countries</button></p>
+      )}
       <label>
         {label} airport search
         <input type="search" placeholder="City, country or airport code" value={query} onChange={(event) => setQuery(event.target.value)} />
@@ -39,9 +44,7 @@ function AirportField({ label, value, onChange }: { label: string; value: string
 
 export function FlightEstimator({ destinationCountry }: { destinationCountry?: string }) {
   const [origin, setOrigin] = useState("LOS");
-  const [destination, setDestination] = useState(() =>
-    airports.find(([code, , , country]) => country === destinationCountry && code !== "LOS")?.[0] ?? "",
-  );
+  const [destination, setDestination] = useState("");
   const [roundTrip, setRoundTrip] = useState(true);
   const [passengers, setPassengers] = useState(1);
   const [result, setResult] = useState<{ from: Airport; to: Airport; passengers: number; roundTrip: boolean; estimate: ReturnType<typeof estimateFlight> }>();
@@ -74,7 +77,7 @@ export function FlightEstimator({ destinationCountry }: { destinationCountry?: s
       <form className="flight-panel" onSubmit={submit}>
         <div className="flight-fields">
           <AirportField label="Departure" value={origin} onChange={(value) => { setOrigin(value); clearResult(); }} />
-          <AirportField label="Arrival" value={destination} onChange={(value) => { setDestination(value); clearResult(); }} />
+          <AirportField label="Arrival" initialCountry={destinationCountry} value={destination} onChange={(value) => { setDestination(value); clearResult(); }} />
           <label>
             Trip type
             <select value={roundTrip ? "round" : "one-way"} onChange={(event) => { setRoundTrip(event.target.value === "round"); clearResult(); }}>

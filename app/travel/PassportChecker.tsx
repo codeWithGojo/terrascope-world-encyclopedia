@@ -75,7 +75,7 @@ export function PassportChecker({
             <option value="eta">ETA</option>
             <option value="e-visa">E-visa</option>
             <option value="required">Visa before travel</option>
-            <option value="restricted">Entry restricted</option>
+            <option value="restricted">Restricted</option>
           </select>
         </label>
         <label>
@@ -104,6 +104,7 @@ export function PassportChecker({
                 <Link href={`/countries/${r.slug}`}>{r.name}</Link>
               </h3>
               <p>{r.label}</p>
+              {r.note && <p>{r.note}</p>}
               <a
                 href={r.authority ?? "https://www.iata.org/travel-centre/"}
                 target="_blank"

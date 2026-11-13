@@ -73,3 +73,14 @@
   .flight-fields, .flight-result dl { grid-template-columns: 1fr; }
   .flight-action { width: 100%; }
 }
+
+.flight-airport p { margin: 0; }
+.flight-clear-filter {
+  min-height: 44px;
+  border: 0;
+  padding: 0 4px;
+  background: none;
+  color: var(--ink);
+  text-decoration: underline;
+  cursor: pointer;
+}
