@@ -77,12 +77,12 @@ export function TravelEssentials({
             </strong>
             <p>
               {price
-                ? `Household prices relative to an approximate US=100 basket · ${price.year}.`
-                : "This country has no paired household PPP and exchange-rate observation."}
+                ? `Household prices relative to the US (US=100) · ${price.year}.`
+                : "The World Bank price index has no comparable observation for this country."}
             </p>
             <p className="source-note">
-              World Bank consumption PPP ÷ official FX, same year. Broad
-              national price level, not a rent or travel quote.{" "}
+              World Bank household consumption price index. This measures national
+              price levels. Rent and visitor costs vary locally.{" "}
               <a href={prices.sourceUrl}>Source & definition</a>
             </p>
           </article>

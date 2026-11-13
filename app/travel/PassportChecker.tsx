@@ -32,10 +32,11 @@ export function PassportChecker({
       <p className="eyebrow">Passport explorer</p>
       <h2>Where could you go?</h2>
       <p className="source-note">
-        Dated reference: {visaMeta.asOf}. This community snapshot is older than
-        90 days. Rules may have changed; check the destination’s immigration
-        authority for your passport, purpose, residency and stay length before
-        booking. ETA and e-visa both require action before travel.
+        Routes with an official review show their review date. Other results
+        use the community snapshot from {visaMeta.asOf}. Check the latest
+        requirements for your passport, purpose, residency and length of stay
+        before you travel.{" "}
+        <a href="https://www.iata.org/travel-centre/">Open the IATA Travel Centre ↗</a>
       </p>
       <div className="tool-fields">
         <label>
@@ -104,11 +105,11 @@ export function PassportChecker({
               </h3>
               <p>{r.label}</p>
               <a
-                href="https://www.passportindex.org/"
+                href={r.authority ?? "https://www.iata.org/travel-centre/"}
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                Check latest Passport Index →
+                {r.checkedAt ? `Official source · reviewed ${r.checkedAt} ↗` : "Check current entry requirements ↗"}
               </a>
             </div>
           </article>

@@ -49,7 +49,12 @@ export const parisMedals = [
   {code:"IT",noc:"Italy",gold:12,silver:13,bronze:15}, {code:"DE",noc:"Germany",gold:12,silver:13,bronze:8},
 ];
 export const medalSource = src("Australian Olympic Committee · Paris 2024 medal table", "https://www.olympics.com.au/games/paris-2024/medal-table/");
+const worldCup2026 = src("FIFA · 2026 World Cup final standings", "https://www.fifa.com/en/tournaments/mens/worldcup/canadamexicousa2026/articles/final-tournament-standings");
 export const nationalMilestones = [
+  {code:"ES",sport:"football",year:"2026",text:"Spain won its second men's FIFA World Cup, beating Argentina 1–0 after extra time.",source:worldCup2026},
+  {code:"AR",sport:"football",year:"2026",text:"Argentina finished runner-up at the men's FIFA World Cup.",source:worldCup2026},
+  {code:"GB",sport:"football",year:"2026",text:"England finished third at the men's FIFA World Cup, beating France 6–4 in the bronze match.",source:worldCup2026},
+  {code:"FR",sport:"football",year:"2026",text:"France finished fourth at the men's FIFA World Cup.",source:worldCup2026},
   {code:"NG",sport:"football",year:"1996",text:"First African men's Olympic football champion, at Atlanta.",source:src("FIFA · Atlanta 1996","https://www.fifa.com/en/tournaments/olympicgames/paris2024/articles/nigeria-triumph-atlanta-1996")},
   ...sportsTeams.filter(t=>!t.kind.includes("Club")&&!t.kind.includes("club")).flatMap(t=>t.countryCodes.map(code=>({code,sport:t.sport,year:"Selected honours",text:`${t.name}: ${t.honours.join("; ")}.`,source:t.sources[0]}))),
 ];

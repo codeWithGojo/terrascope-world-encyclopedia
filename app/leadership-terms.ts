@@ -9,7 +9,7 @@ export const leadershipTerms: Record<
       name: "Bola Ahmed Tinubu",
       start: 2023,
       end: 2026,
-      label: "29 May 2023 – snapshot 30 Sep 2026",
+      label: "29 May 2023 – snapshot 13 Nov 2026",
       source: "https://statehouse.gov.ng/team/bola-ahmed-tinubu/",
     },
   ],
