@@ -2,26 +2,26 @@
 export type IndicatorRecord={value:number;year:number};
 export type CountryIndicators={gdp?:IndicatorRecord;perCapita?:IndicatorRecord;lifeExpectancy?:IndicatorRecord;internet?:IndicatorRecord};
 export const indicatorDataset={
-  "refreshedAt": "2026-09-30",
+  "refreshedAt": "2026-11-13",
   "sources": {
     "gdp": {
       "indicator": "NY.GDP.MKTP.CD",
-      "lastUpdated": "2026-07-13",
+      "lastUpdated": "2026-11-11",
       "url": "https://api.worldbank.org/v2/country/all/indicator/NY.GDP.MKTP.CD?format=json&mrnev=1&per_page=400"
     },
     "perCapita": {
       "indicator": "NY.GDP.PCAP.CD",
-      "lastUpdated": "2026-07-13",
+      "lastUpdated": "2026-11-11",
       "url": "https://api.worldbank.org/v2/country/all/indicator/NY.GDP.PCAP.CD?format=json&mrnev=1&per_page=400"
     },
     "lifeExpectancy": {
       "indicator": "SP.DYN.LE00.IN",
-      "lastUpdated": "2026-07-13",
+      "lastUpdated": "2026-11-11",
       "url": "https://api.worldbank.org/v2/country/all/indicator/SP.DYN.LE00.IN?format=json&mrnev=1&per_page=400"
     },
     "internet": {
       "indicator": "IT.NET.USER.ZS",
-      "lastUpdated": "2026-07-13",
+      "lastUpdated": "2026-11-11",
       "url": "https://api.worldbank.org/v2/country/all/indicator/IT.NET.USER.ZS?format=json&mrnev=1&per_page=400"
     }
   }

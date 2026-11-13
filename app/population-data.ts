@@ -5,8 +5,8 @@ export type PopulationRecord = {value:number;year:number;source:"World Bank"|"Va
 
 export const populationDataset = {
   indicator: "SP.POP.TOTL",
-  worldBankLastUpdated: "2026-07-13",
-  refreshedAt: "2026-09-30",
+  worldBankLastUpdated: "2026-11-11",
+  refreshedAt: "2026-11-13",
   worldBankUrl: "https://api.worldbank.org/v2/country/all/indicator/SP.POP.TOTL?format=json&mrnev=1&per_page=400",
   vaticanUrl: "https://www.vaticanstate.va/en/state-and-government/general-informations/population.html",
 } as const;

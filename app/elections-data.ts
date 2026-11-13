@@ -1,5 +1,5 @@
 /**
- * Editorial election register, reviewed on 17 October 2026.
+ * Editorial election register. Each entry records its own review date.
  *
  * A `date` is a published national polling date, never an estimate based on a
  * term length. `timezone` is the reference zone for displaying the calendar day;
@@ -15,7 +15,7 @@ export type ElectionInfo = {
   timezone: string;
   sourceLabel: string;
   sourceUrl: string;
-  checkedAt: '2026-10-17';
+  checkedAt: string;
   note: string;
 };
 
@@ -28,8 +28,8 @@ export const electionRegister: ElectionInfo[] = [
     timezone: 'Africa/Lagos',
     sourceLabel: 'INEC · official election calendar',
     sourceUrl: 'https://www.inecnigeria.org/elections/calendar',
-    checkedAt: '2026-10-17',
-    note: 'INEC lists 16 January 2027 for the nationwide presidential and National Assembly elections. Governorship and state assembly polls are listed separately for 6 February.',
+    checkedAt: '2026-11-13',
+    note: 'INEC lists 16 January 2027 for the nationwide presidential and National Assembly elections. Governorship and state assembly polls are scheduled separately for 6 February.',
   },
   {
     countryCode: 'US',
@@ -37,10 +37,10 @@ export const electionRegister: ElectionInfo[] = [
     date: '2026-11-03',
     status: 'confirmed',
     timezone: 'America/New_York',
-    sourceLabel: 'Federal Election Commission · 2026 election dates',
-    sourceUrl: 'https://www.fec.gov/help-candidates-and-committees/dates-and-deadlines/2026-reporting-dates/electioneering-communications-periods-general-election-2026/',
-    checkedAt: '2026-10-17',
-    note: 'The next nationwide federal election is the 3 November congressional midterm, not a presidential election. Polling hours and time zones vary by state.',
+    sourceLabel: 'Federal Election Commission · election information',
+    sourceUrl: 'https://www.fec.gov/introduction-campaign-finance/election-results-and-voting-information/',
+    checkedAt: '2026-11-13',
+    note: 'The federal congressional midterm took place on 3 November 2026. See the FEC for official federal results and state election offices.',
   },
   {
     countryCode: 'BR',
@@ -48,10 +48,10 @@ export const electionRegister: ElectionInfo[] = [
     date: '2026-10-25',
     status: 'confirmed',
     timezone: 'America/Sao_Paulo',
-    sourceLabel: 'Brazilian Electoral Justice · TRE-RS',
-    sourceUrl: 'https://www.tre-rs.jus.br/comunicacao/noticias/2026/Outubro/eleitor-que-nao-votou-no-1o-turno-pode-votar-no-2o-turno',
-    checkedAt: '2026-10-17',
-    note: 'The first round has already taken place. Electoral Justice confirms the presidential second round on 25 October, with voting from 08:00 to 17:00 Brasília time.',
+    sourceLabel: 'Brazilian Superior Electoral Court · runoff results',
+    sourceUrl: 'https://www.tse.jus.br/comunicacao/noticias/2026/Outubro/presidente-do-tse-anuncia-reeleicao-de-lula-e-faz-balanco-do-2o-turno-das-eleicoes-2026',
+    checkedAt: '2026-11-13',
+    note: 'The Superior Electoral Court announced Luiz Inácio Lula da Silva’s reelection after the 25 October runoff.',
   },
   {
     countryCode: 'FR',
@@ -60,9 +60,9 @@ export const electionRegister: ElectionInfo[] = [
     status: 'confirmed',
     timezone: 'Europe/Paris',
     sourceLabel: 'Service Public · French government election calendar',
-    sourceUrl: 'https://www.service-public.gouv.fr/particuliers/vosdroits/F1939',
-    checkedAt: '2026-10-17',
-    note: 'The official calendar lists 18 April for the first round and 2 May 2027 for the second round. Some overseas electorates vote the preceding Saturday because of time-zone differences.',
+    sourceUrl: 'https://www.service-public.gouv.fr/particuliers/actualites/A15053',
+    checkedAt: '2026-11-13',
+    note: 'The French government lists 18 April for the first round and 2 May 2027 for the second round. Some overseas electorates vote the preceding Saturday.',
   },
   {
     countryCode: 'DE',
@@ -72,8 +72,8 @@ export const electionRegister: ElectionInfo[] = [
     timezone: 'Europe/Berlin',
     sourceLabel: 'Federal Returning Officer · future elections',
     sourceUrl: 'https://www.bundeswahlleiterin.de/en/service/wahltermine.html',
-    checkedAt: '2026-10-17',
-    note: 'The federal election authority lists spring 2029 for the next regular Bundestag election without an exact polling date. This is an official expected window, not a countdown target; an early election remains possible.',
+    checkedAt: '2026-11-13',
+    note: 'The federal election authority lists spring 2029 for the next regular Bundestag election. The exact date is pending.',
   },
   {
     countryCode: 'ES',
@@ -83,7 +83,7 @@ export const electionRegister: ElectionInfo[] = [
     timezone: 'Europe/Madrid',
     sourceLabel: 'INE · Electoral Census Office',
     sourceUrl: 'https://www.ine.es/dyngs/CEL/en/index.htm?cid=1699',
-    checkedAt: '2026-10-17',
+    checkedAt: '2026-11-13',
     note: 'The Electoral Census Office confirms 29 November 2026 under Royal Decree 806/2026, published on 6 October. This replaces the previous expectation of a 2027 general election.',
   },
   {
@@ -94,7 +94,7 @@ export const electionRegister: ElectionInfo[] = [
     timezone: 'Europe/London',
     sourceLabel: 'House of Commons Library · election timetable',
     sourceUrl: 'https://commonslibrary.parliament.uk/research-briefings/cbp-10971/',
-    checkedAt: '2026-10-17',
+    checkedAt: '2026-11-13',
     note: 'The Commons Library identifies 15 August 2029 as the last possible polling day under the current timetable. It is a legal latest date, not a scheduled election; the government may call an earlier vote.',
   },
   {
@@ -114,10 +114,10 @@ export const electionRegister: ElectionInfo[] = [
     date: '2026-11-07',
     status: 'confirmed',
     timezone: 'Pacific/Auckland',
-    sourceLabel: 'New Zealand Electoral Commission · key dates',
-    sourceUrl: 'https://vote.nz/2026-general-election/about/overview/key-dates',
-    checkedAt: '2026-10-17',
-    note: 'Election day is Saturday, 7 November 2026. Overseas voting begins on 21 October and advance voting in New Zealand begins on 26 October.',
+    sourceLabel: 'New Zealand Electoral Commission · election results',
+    sourceUrl: 'https://www.electionresults.govt.nz/',
+    checkedAt: '2026-11-13',
+    note: 'The election took place on 7 November. Preliminary results are available, with the official count expected on 27 November 2026.',
   },
   {
     countryCode: 'GM',
@@ -126,9 +126,9 @@ export const electionRegister: ElectionInfo[] = [
     status: 'confirmed',
     timezone: 'Africa/Banjul',
     sourceLabel: 'The Gambia · Independent Electoral Commission',
-    sourceUrl: 'https://iec.gm/',
-    checkedAt: '2026-10-17',
-    note: 'The Independent Electoral Commission publishes 5 December 2026 as presidential election day. National Assembly and local elections follow separate schedules.',
+    sourceUrl: 'https://iec.gm/electoral-calendar-2026-2027/',
+    checkedAt: '2026-11-13',
+    note: 'The commission lists 5 December 2026 as presidential election day. National Assembly and local elections follow separate schedules.',
   },
   {
     countryCode: 'IL',
@@ -136,10 +136,10 @@ export const electionRegister: ElectionInfo[] = [
     date: '2026-10-27',
     status: 'confirmed',
     timezone: 'Asia/Jerusalem',
-    sourceLabel: 'Israel · Ministry of Foreign Affairs election notice',
-    sourceUrl: 'https://embassies.gov.il/sanfrancisco/he/announcements/vote10-2026',
-    checkedAt: '2026-10-17',
-    note: 'The official consular election notice identifies Tuesday, 27 October 2026 for the election to the 26th Knesset and links to government voter information.',
+    sourceLabel: 'The Knesset · official election results',
+    sourceUrl: 'https://m.knesset.gov.il/EN/mk/Pages/ElectionsResults26.aspx',
+    checkedAt: '2026-11-13',
+    note: 'The Knesset published final results for the 27 October election.',
   },
 ];
 
